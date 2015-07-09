@@ -1,0 +1,8 @@
+digraph "tos.chips.atm128rfa1.timer.LocalTime62khzC" {
+  n0x40cab110 [shape=ellipse, style=filled, label="LocalTime", fontsize=12];
+  "LocalTime62khzC.CounterToLocalTimeC" [fontsize=12, shape=box, style=dashed, label="CounterToLocalTimeC", URL="../chtml/tos.lib.timer.CounterToLocalTimeC.html"];
+  "LocalTime62khzC.CounterToLocalTimeC" [fontsize=12, shape=box, style=dashed, label="CounterToLocalTimeC", URL="../chtml/tos.lib.timer.CounterToLocalTimeC.html"];
+  "Counter62khz32C" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.atm128rfa1.timer.Counter62khz32C.html"];
+  "n0x40cab110" -> "LocalTime62khzC.CounterToLocalTimeC" [label="LocalTime<T62khz>", URL="../ihtml/tos.lib.timer.LocalTime.html", fontsize=10];
+  "LocalTime62khzC.CounterToLocalTimeC" -> "Counter62khz32C" [label="Counter<T62khz, uint32_t>", URL="../ihtml/tos.lib.timer.Counter.html", fontsize=10];
+}

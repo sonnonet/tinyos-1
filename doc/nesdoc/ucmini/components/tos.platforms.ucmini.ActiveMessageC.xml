@@ -1,0 +1,497 @@
+<?xml version="1.0" ?><component loc="26:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC">
+      <configuration/>
+      <wiring>
+        <wire loc="53:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x40422bb0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x40810e88" scoped=""/></to>
+        </wire>
+        <wire loc="58:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="SendNotifier" ref="0x40807d20" scoped=""/></from>
+          <to><interface-ref name="SendNotifier" ref="0x40825e68" scoped=""/></to>
+        </wire>
+        <wire loc="55:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x4080b550" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x40826770" scoped=""/></to>
+        </wire>
+        <wire loc="57:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="Snoop" ref="0x4080a5c8" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x408257f0" scoped=""/></to>
+        </wire>
+        <wire loc="60:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x408080a0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x40823010" scoped=""/></to>
+        </wire>
+        <wire loc="64:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="LowPowerListening" ref="0x4081a130" scoped=""/></from>
+          <to><interface-ref name="LowPowerListening" ref="0x40822978" scoped=""/></to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x4080bf10" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x40825158" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStampRadio" ref="0x408137c0" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampRadio" ref="0x40830750" scoped=""/></to>
+        </wire>
+        <wire loc="63:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x408064d0" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x408223f0" scoped=""/></to>
+        </wire>
+        <wire loc="65:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="PacketLink" ref="0x40816a40" scoped=""/></from>
+          <to><interface-ref name="PacketLink" ref="0x40821010" scoped=""/></to>
+        </wire>
+        <wire loc="61:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40808790" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x40823700" scoped=""/></to>
+        </wire>
+        <wire loc="68:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStampMilli" ref="0x408111a0" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampMilli" ref="0x4082b130" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="30:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="SplitControl" provided="1" ref="0x40422bb0">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SplitControl" ref="0x40422bb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40422d88" scoped=""/>
+        <function-ref name="stopDone" ref="0x40422e68" scoped=""/>
+        <function-ref name="start" ref="0x4080b010" scoped=""/>
+        <function-ref name="stop" ref="0x4080b0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="SendNotifier" provided="1" ref="0x40807d20">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SendNotifier" ref="0x40807d20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SendNotifier" qname="SendNotifier"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x404446a0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="aboutToSend" ref="0x40807ef8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="32:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="AMSend" provided="1" ref="0x4080b550">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMSend" ref="0x4080b550" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x4080b728" scoped=""/>
+        <function-ref name="getPayload" ref="0x4080b808" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x4080b8e8" scoped=""/>
+        <function-ref name="cancel" ref="0x4080b9c8" scoped=""/>
+        <function-ref name="sendDone" ref="0x4080baa8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="34:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="Snoop" provided="1" ref="0x4080a5c8">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Snoop" ref="0x4080a5c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x4080a7a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="Packet" provided="1" ref="0x408080a0">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Packet" ref="0x408080a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40808278" scoped=""/>
+        <function-ref name="payloadLength" ref="0x40808358" scoped=""/>
+        <function-ref name="getPayload" ref="0x40808438" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40808518" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x408085f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="LowPowerListening" provided="1" ref="0x4081a130">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LowPowerListening" ref="0x4081a130" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LowPowerListening" qname="LowPowerListening"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setRemoteWakeupInterval" ref="0x4081a308" scoped=""/>
+        <function-ref name="getRemoteWakeupInterval" ref="0x4081a3e8" scoped=""/>
+        <function-ref name="getLocalWakeupInterval" ref="0x4081a4c8" scoped=""/>
+        <function-ref name="setLocalWakeupInterval" ref="0x4081a5a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="33:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="Receive" provided="1" ref="0x4080bf10">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x4080bf10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x4080a108" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="PacketTimeStampRadio" provided="1" ref="0x408137c0">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeStampRadio" ref="0x408137c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T62khz" ref="0x4043b6e0"/>
+            <typename><typedef-ref name="TRadio" ref="0x40439890"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x408172d8" scoped=""/>
+        <function-ref name="clear" ref="0x40817688" scoped=""/>
+        <function-ref name="isValid" ref="0x40813f10" scoped=""/>
+        <function-ref name="set" ref="0x40817a38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="PacketAcknowledgements" provided="1" ref="0x408064d0">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketAcknowledgements" ref="0x408064d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketAcknowledgements" qname="PacketAcknowledgements"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="requestAck" ref="0x408066a8" scoped=""/>
+        <function-ref name="noAck" ref="0x40806788" scoped=""/>
+        <function-ref name="wasAcked" ref="0x40806868" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="PacketLink" provided="1" ref="0x40816a40">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketLink" ref="0x40816a40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketLink" qname="PacketLink"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRetryDelay" ref="0x40816c18" scoped=""/>
+        <function-ref name="setRetries" ref="0x40816cf8" scoped=""/>
+        <function-ref name="getRetries" ref="0x40816dd8" scoped=""/>
+        <function-ref name="setRetryDelay" ref="0x40816eb8" scoped=""/>
+        <function-ref name="wasDelivered" ref="0x40805010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="AMPacket" provided="1" ref="0x40808790">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMPacket" ref="0x40808790" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x40808968" scoped=""/>
+        <function-ref name="source" ref="0x40808a48" scoped=""/>
+        <function-ref name="address" ref="0x40808b28" scoped=""/>
+        <function-ref name="destination" ref="0x40808c08" scoped=""/>
+        <function-ref name="setSource" ref="0x40808ce8" scoped=""/>
+        <function-ref name="setDestination" ref="0x40808dc8" scoped=""/>
+        <function-ref name="type" ref="0x40808ea8" scoped=""/>
+        <function-ref name="setType" ref="0x40806010" scoped=""/>
+        <function-ref name="isForMe" ref="0x408060f0" scoped=""/>
+        <function-ref name="setGroup" ref="0x408061d0" scoped=""/>
+        <function-ref name="localGroup" ref="0x408062b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="PacketTimeStampMilli" provided="1" ref="0x408111a0">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeStampMilli" ref="0x408111a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421508"/>
+            <typename><typedef-ref name="TMilli" ref="0x404216d0"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x40811ca0" scoped=""/>
+        <function-ref name="clear" ref="0x40810068" scoped=""/>
+        <function-ref name="isValid" ref="0x408118f0" scoped=""/>
+        <function-ref name="set" ref="0x40810418" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="50:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="Snoop" provided="1" ref="0x408257f0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Snoop" ref="0x408257f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x404446a0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x408259c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="AMPacket" provided="1" ref="0x40823700">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMPacket" ref="0x40823700" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x408238d8" scoped=""/>
+        <function-ref name="source" ref="0x408239b8" scoped=""/>
+        <function-ref name="address" ref="0x40823a98" scoped=""/>
+        <function-ref name="destination" ref="0x40823b78" scoped=""/>
+        <function-ref name="setSource" ref="0x40823c58" scoped=""/>
+        <function-ref name="setDestination" ref="0x40823d38" scoped=""/>
+        <function-ref name="type" ref="0x40823e18" scoped=""/>
+        <function-ref name="setType" ref="0x40823ef8" scoped=""/>
+        <function-ref name="isForMe" ref="0x40822010" scoped=""/>
+        <function-ref name="setGroup" ref="0x408220f0" scoped=""/>
+        <function-ref name="localGroup" ref="0x408221d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="SplitControl" provided="1" ref="0x40810e88">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SplitControl" ref="0x40810e88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40826070" scoped=""/>
+        <function-ref name="stopDone" ref="0x40826150" scoped=""/>
+        <function-ref name="start" ref="0x40826230" scoped=""/>
+        <function-ref name="stop" ref="0x40826310" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="LowPowerListening" provided="1" ref="0x40822978">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LowPowerListening" ref="0x40822978" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LowPowerListening" qname="LowPowerListening"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setRemoteWakeupInterval" ref="0x40822b50" scoped=""/>
+        <function-ref name="getRemoteWakeupInterval" ref="0x40822c30" scoped=""/>
+        <function-ref name="getLocalWakeupInterval" ref="0x40822d10" scoped=""/>
+        <function-ref name="setLocalWakeupInterval" ref="0x40822df0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="PacketAcknowledgements" provided="1" ref="0x408223f0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketAcknowledgements" ref="0x408223f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketAcknowledgements" qname="PacketAcknowledgements"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="requestAck" ref="0x408225c8" scoped=""/>
+        <function-ref name="noAck" ref="0x408226a8" scoped=""/>
+        <function-ref name="wasAcked" ref="0x40822788" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="AMSend" provided="1" ref="0x40826770">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMSend" ref="0x40826770" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x404446a0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="send" ref="0x40826948" scoped=""/>
+        <function-ref name="getPayload" ref="0x40826a28" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40826b08" scoped=""/>
+        <function-ref name="cancel" ref="0x40826be8" scoped=""/>
+        <function-ref name="sendDone" ref="0x40826cc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="Receive" provided="1" ref="0x40825158">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x40825158" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x404446a0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40825330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="72:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="PacketTimeStampMilli" provided="1" ref="0x4082b130">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeStampMilli" ref="0x4082b130" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421508"/>
+            <typename><typedef-ref name="TMilli" ref="0x404216d0"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x4082bc30" scoped=""/>
+        <function-ref name="clear" ref="0x4082a010" scoped=""/>
+        <function-ref name="isValid" ref="0x4082b880" scoped=""/>
+        <function-ref name="set" ref="0x4082a3c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="71:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="PacketTimeStampRadio" provided="1" ref="0x40830750">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeStampRadio" ref="0x40830750" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T62khz" ref="0x4043b6e0"/>
+            <typename><typedef-ref name="TRadio" ref="0x40439890"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x4082f280" scoped=""/>
+        <function-ref name="clear" ref="0x4082f630" scoped=""/>
+        <function-ref name="isValid" ref="0x40830ea0" scoped=""/>
+        <function-ref name="set" ref="0x4082f9e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="SendNotifier" provided="1" ref="0x40825e68">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SendNotifier" ref="0x40825e68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SendNotifier" qname="SendNotifier"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x404446a0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="aboutToSend" ref="0x40824050" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="PacketLink" provided="1" ref="0x40821010">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketLink" ref="0x40821010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketLink" qname="PacketLink"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRetryDelay" ref="0x408211e8" scoped=""/>
+        <function-ref name="setRetries" ref="0x408212c8" scoped=""/>
+        <function-ref name="getRetries" ref="0x408213a8" scoped=""/>
+        <function-ref name="setRetryDelay" ref="0x40821488" scoped=""/>
+        <function-ref name="wasDelivered" ref="0x40821568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" name="Packet" provided="1" ref="0x40823010">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Packet" ref="0x40823010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x408231e8" scoped=""/>
+        <function-ref name="payloadLength" ref="0x408232c8" scoped=""/>
+        <function-ref name="getPayload" ref="0x408233a8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40823488" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x40823568" scoped=""/>
+      </interface-functions>
+    </interface><component loc="42:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc" nicename="tos.chips.atm128rfa1.radio.RFA1ActiveMessageC" qname="RFA1ActiveMessageC">
+      <configuration/>
+      <wiring>
+        <wire loc="80:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x40810e88" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x4082ad70" scoped=""/></to>
+        </wire>
+        <wire loc="100:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="PacketRSSI" ref="0x408338a0" scoped=""/></from>
+          <to><interface-ref name="PacketRSSI" ref="0x4085c390" scoped=""/></to>
+        </wire>
+        <wire loc="104:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStampMilli" ref="0x4082b130" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampMilli" ref="0x40857288" scoped=""/></to>
+        </wire>
+        <wire loc="85:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="SendNotifier" ref="0x40825e68" scoped=""/></from>
+          <to><interface-ref name="SendNotifier" ref="0x4083fe10" scoped=""/></to>
+        </wire>
+        <wire loc="90:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x40823010" scoped=""/></from>
+          <to><interface-ref name="PacketForActiveMessage" ref="0x4083dd28" scoped=""/></to>
+        </wire>
+        <wire loc="82:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x40826770" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x40841710" scoped=""/></to>
+        </wire>
+        <wire loc="84:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="Snoop" ref="0x408257f0" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x4083f798" scoped=""/></to>
+        </wire>
+        <wire loc="99:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="PacketTransmitPower" ref="0x40834530" scoped=""/></from>
+          <to><interface-ref name="PacketTransmitPower" ref="0x40844010" scoped=""/></to>
+        </wire>
+        <wire loc="94:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="LowPowerListening" ref="0x40822978" scoped=""/></from>
+          <to><interface-ref name="LowPowerListening" ref="0x4084c7b8" scoped=""/></to>
+        </wire>
+        <wire loc="83:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x40825158" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x4083f100" scoped=""/></to>
+        </wire>
+        <wire loc="105:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStampRadio" ref="0x40830750" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampRadio" ref="0x4085a750" scoped=""/></to>
+        </wire>
+        <wire loc="103:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="LocalTimeRadio" ref="0x4082dba0" scoped=""/></from>
+          <to><interface-ref name="LocalTimeRadio" ref="0x4085bb78" scoped=""/></to>
+        </wire>
+        <wire loc="98:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="PacketLinkQuality" ref="0x4081f0e0" scoped=""/></from>
+          <to><interface-ref name="PacketLinkQuality" ref="0x40846c40" scoped=""/></to>
+        </wire>
+        <wire loc="93:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x408223f0" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x4084c230" scoped=""/></to>
+        </wire>
+        <wire loc="87:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="ReceiveDefault" ref="0x40824578" scoped=""/></from>
+          <to><interface-ref name="ReceiveDefault" ref="0x4083e538" scoped=""/></to>
+        </wire>
+        <wire loc="95:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="PacketLink" ref="0x40821010" scoped=""/></from>
+          <to><interface-ref name="PacketLink" ref="0x4084cdd8" scoped=""/></to>
+        </wire>
+        <wire loc="91:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40823700" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x4083d010" scoped=""/></to>
+        </wire>
+        <wire loc="96:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="RadioChannel" ref="0x4081e950" scoped=""/></from>
+          <to><interface-ref name="RadioChannel" ref="0x40846550" scoped=""/></to>
+        </wire>
+        <wire loc="101:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="LinkPacketMetadata" ref="0x4082e978" scoped=""/></from>
+          <to><interface-ref name="LinkPacketMetadata" ref="0x4085b680" scoped=""/></to>
+        </wire>
+        <wire loc="88:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1ActiveMessageC.nc">
+          <from><interface-ref name="SnoopDefault" ref="0x40824c58" scoped=""/></from>
+          <to><interface-ref name="SnoopDefault" ref="0x4083ec18" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

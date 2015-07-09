@@ -1,0 +1,15 @@
+configuration TH20SensorC {
+}
+
+implementation {
+  components TH20SensorP, new TimerMilliC(); 
+  TH20SensorP.Timer -> TimerMilliC;
+
+	components LedsC;
+	//components NoLedsC as LedsC;
+  TH20SensorP.Leds -> LedsC;
+
+	components new SensirionSht11C() as Sht7;
+	TH20SensorP.Temperature -> Sht7.Temperature;
+	TH20SensorP.Humidity -> Sht7.Humidity;
+}

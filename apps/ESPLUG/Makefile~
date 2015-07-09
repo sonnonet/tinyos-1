@@ -1,0 +1,7 @@
+COMPONENT=ESPLUGAppC
+CFLAGS += -DCOSS
+CFLAGS += -DDEFAULT_BAUDRATE=9600		#Basic Sensor
+CFLAGS += -I./splug2/spi
+CFLAGS += -I./splug2
+CFLAGS += -I./esp8266
+include $(MAKERULES)

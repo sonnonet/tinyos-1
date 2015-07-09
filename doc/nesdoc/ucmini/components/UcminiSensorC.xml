@@ -1,0 +1,941 @@
+<?xml version="1.0" ?><component loc="37:UcminiSensorC.nc" nicename="UcminiSensorC" qname="UcminiSensorC">
+      <configuration/>
+      <wiring>
+        <wire loc="46:UcminiSensorC.nc">
+          <from><interface-ref name="Boot" ref="0x404251c0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x40421b60" scoped=""/></to>
+        </wire>
+        <wire loc="47:UcminiSensorC.nc">
+          <from><interface-ref name="TempRead" ref="0x4042da40" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40ca15a8" scoped=""/></to>
+        </wire>
+        <wire loc="48:UcminiSensorC.nc">
+          <from><interface-ref name="HumiRead" ref="0x40427748" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40cf25f8" scoped=""/></to>
+        </wire>
+        <wire loc="49:UcminiSensorC.nc">
+          <from><interface-ref name="LightRead" ref="0x40426480" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40a7dba0" scoped=""/></to>
+        </wire>
+        <wire loc="50:UcminiSensorC.nc">
+          <from><interface-ref name="PressRead" ref="0x4042c1a8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40c91b38" scoped=""/></to>
+        </wire>
+        <wire loc="51:UcminiSensorC.nc">
+          <from><interface-ref name="Temp2Read" ref="0x4042ce88" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40c90da8" scoped=""/></to>
+        </wire>
+        <wire loc="52:UcminiSensorC.nc">
+          <from><interface-ref name="ReadRef" ref="0x404371c0" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40ca4ca0" scoped=""/></to>
+        </wire>
+        <wire loc="53:UcminiSensorC.nc">
+          <from><interface-ref name="Temp3Read" ref="0x4042aba0" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40951a68" scoped=""/></to>
+        </wire>
+        <wire loc="54:UcminiSensorC.nc">
+          <from><interface-ref name="VoltageRead" ref="0x404298b8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40a61c50" scoped=""/></to>
+        </wire>
+        <wire loc="55:UcminiSensorC.nc">
+          <from><interface-ref name="Timer" ref="0x40481ea8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x40499930" scoped=""/></to>
+        </wire>
+        <wire loc="56:UcminiSensorC.nc">
+          <from><interface-ref name="MeasSend" ref="0x40475b60" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x40d17920" scoped=""/></to>
+        </wire>
+        <wire loc="57:UcminiSensorC.nc">
+          <from><interface-ref name="CalibSend" ref="0x40475410" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x40d58920" scoped=""/></to>
+        </wire>
+        <wire loc="58:UcminiSensorC.nc">
+          <from><interface-ref name="Receive" ref="0x40474d50" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x40d54c60" scoped=""/></to>
+        </wire>
+        <wire loc="59:UcminiSensorC.nc">
+          <from><interface-ref name="Packet" ref="0x4047be50" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x40d5b010" scoped=""/></to>
+        </wire>
+        <wire loc="60:UcminiSensorC.nc">
+          <from><interface-ref name="Leds" ref="0x4048b0d8" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x407f3a20" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="39:UcminiSensorP.nc" name="Boot" provided="0" ref="0x404251c0">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Boot" ref="0x404251c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40425398" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc" name="AMSend" provided="1" ref="0x40d58920">
+      <component-ref nicename="tos.lib.serial.SerialAMSenderC" qname="UcminiSensorC.CalibSend"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMSend" ref="0x40d58920" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40d58af8" scoped=""/>
+        <function-ref name="getPayload" ref="0x40d58bd8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40d58cb8" scoped=""/>
+        <function-ref name="cancel" ref="0x40d58d98" scoped=""/>
+        <function-ref name="sendDone" ref="0x40d58e78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:UcminiSensorP.nc" name="TempRead" provided="0" ref="0x4042da40">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TempRead" ref="0x4042da40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40427088" scoped=""/>
+        <function-ref name="readDone" ref="0x404272e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:UcminiSensorP.nc" name="CalibSend" provided="0" ref="0x40475410">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="CalibSend" ref="0x40475410" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x404755e8" scoped=""/>
+        <function-ref name="getPayload" ref="0x404756c8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x404757a8" scoped=""/>
+        <function-ref name="cancel" ref="0x40475888" scoped=""/>
+        <function-ref name="sendDone" ref="0x40475968" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc" name="Receive" provided="1" ref="0x40d54c60">
+      <component-ref nicename="tos.lib.serial.SerialAMReceiverC" qname="UcminiSensorC.SerialAMReceiverC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x40d54c60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40d54e38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:UcminiSensorP.nc" name="Packet" provided="0" ref="0x4047be50">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Packet" ref="0x4047be50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40476050" scoped=""/>
+        <function-ref name="payloadLength" ref="0x40476130" scoped=""/>
+        <function-ref name="getPayload" ref="0x40476210" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x404762f0" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x404763d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/chips/ms5607/Ms5607TemperatureC.nc" name="Read" provided="1" ref="0x40c90da8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607TemperatureC" qname="UcminiSensorC.Temperature1C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40c90da8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="short" size="I:2">
+            <typename><typedef-ref name="int16_t" ref="0x40039e90"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c8f3e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40c8f638" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:UcminiSensorP.nc" name="HumiRead" provided="0" ref="0x40427748">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HumiRead" ref="0x40427748" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40427d70" scoped=""/>
+        <function-ref name="readDone" ref="0x40426010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc" name="Leds" provided="1" ref="0x407f3a20">
+      <component-ref nicename="tos.platforms.ucmini.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Leds" ref="0x407f3a20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x407f3bf8" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x407f3cd8" scoped=""/>
+        <function-ref name="led1On" ref="0x407f3db8" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x407f3e98" scoped=""/>
+        <function-ref name="led3Off" ref="0x407fa010" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x407fa0f0" scoped=""/>
+        <function-ref name="get" ref="0x407fa1d0" scoped=""/>
+        <function-ref name="led1Off" ref="0x407fa2b0" scoped=""/>
+        <function-ref name="led3Toggle" ref="0x407fa390" scoped=""/>
+        <function-ref name="led3On" ref="0x407fa470" scoped=""/>
+        <function-ref name="led0On" ref="0x407fa550" scoped=""/>
+        <function-ref name="led2Off" ref="0x407fa630" scoped=""/>
+        <function-ref name="led2On" ref="0x407fa710" scoped=""/>
+        <function-ref name="set" ref="0x407fa870" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc" name="AMSend" provided="1" ref="0x40d17920">
+      <component-ref nicename="tos.lib.serial.SerialAMSenderC" qname="UcminiSensorC.MeasSend"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMSend" ref="0x40d17920" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40d17af8" scoped=""/>
+        <function-ref name="getPayload" ref="0x40d17bd8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40d17cb8" scoped=""/>
+        <function-ref name="cancel" ref="0x40d17d98" scoped=""/>
+        <function-ref name="sendDone" ref="0x40d17e78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/usr/src/tinyos/tos/system/MainC.nc" name="Boot" provided="1" ref="0x40421b60">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Boot" ref="0x40421b60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40421d38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:UcminiSensorP.nc" name="Temp3Read" provided="0" ref="0x4042aba0">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Temp3Read" ref="0x4042aba0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x404291e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40429438" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:UcminiSensorP.nc" name="VoltageRead" provided="0" ref="0x404298b8">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="VoltageRead" ref="0x404298b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40429ee0" scoped=""/>
+        <function-ref name="readDone" ref="0x40432150" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:UcminiSensorP.nc" name="ReadRef" provided="0" ref="0x404371c0">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadRef" ref="0x404371c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x404377e8" scoped=""/>
+        <function-ref name="readDone" ref="0x40437b78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/PressureC.nc" name="Read" provided="1" ref="0x40c91b38">
+      <component-ref nicename="tos.platforms.ucmini.chips.ms5607.PressureC" qname="UcminiSensorC.PressureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40c91b38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40a601e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40a60438" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/sensors/AtmegaTemperatureC.nc" name="Read" provided="1" ref="0x40951a68">
+      <component-ref nicename="tos.chips.atm128rfa1.sensors.AtmegaTemperatureC" qname="UcminiSensorC.AtmegaTemperatureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40951a68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x409500b8" scoped=""/>
+        <function-ref name="readDone" ref="0x40950310" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/platforms/ucmini/chips/bh1750fvi/LightC.nc" name="Read" provided="1" ref="0x40a7dba0">
+      <component-ref nicename="tos.platforms.ucmini.chips.bh1750fvi.LightC" qname="UcminiSensorC.LightC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40a7dba0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40a651e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40a65438" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:UcminiSensorP.nc" name="MeasSend" provided="0" ref="0x40475b60">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="MeasSend" ref="0x40475b60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40475d38" scoped=""/>
+        <function-ref name="getPayload" ref="0x40475e18" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40475ef8" scoped=""/>
+        <function-ref name="cancel" ref="0x40444010" scoped=""/>
+        <function-ref name="sendDone" ref="0x404440f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/platforms/ucmini/chips/sht21/HumidityC.nc" name="Read" provided="1" ref="0x40cf25f8">
+      <component-ref nicename="tos.platforms.ucmini.chips.sht21.HumidityC" qname="UcminiSensorC.HumidityC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40cf25f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40cf2c20" scoped=""/>
+        <function-ref name="readDone" ref="0x40cf2e78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:UcminiSensorP.nc" name="PressRead" provided="0" ref="0x4042c1a8">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PressRead" ref="0x4042c1a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x4042c7d0" scoped=""/>
+        <function-ref name="readDone" ref="0x4042ca28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc" name="Read" provided="1" ref="0x40ca4ca0">
+      <component-ref nicename="tos.chips.ms5607.Ms5607CalibrationC" qname="UcminiSensorC.Ms5607CalibrationC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40ca4ca0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40ca32e8" scoped=""/>
+        <function-ref name="readDone" ref="0x40ca3678" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:UcminiSensorP.nc" name="LightRead" provided="0" ref="0x40426480">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LightRead" ref="0x40426480" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40426aa8" scoped=""/>
+        <function-ref name="readDone" ref="0x40426d00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x40499930">
+      <component-ref nicename="tos.system.TimerMilliC" qname="UcminiSensorC.TimerMilliC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x40499930" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40453928"/>
+            <typename><typedef-ref name="TMilli" ref="0x40453af0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x409534c8" scoped=""/>
+        <function-ref name="fired" ref="0x40829768" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40829e70" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40829c18" scoped=""/>
+        <function-ref name="getdt" ref="0x40953978" scoped=""/>
+        <function-ref name="gett0" ref="0x40953720" scoped=""/>
+        <function-ref name="isRunning" ref="0x408299c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40829010" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x409531a8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40829290" scoped=""/>
+        <function-ref name="stop" ref="0x40829510" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:UcminiSensorP.nc" name="Timer" provided="0" ref="0x40481ea8">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x40481ea8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40453928"/>
+            <typename><typedef-ref name="TMilli" ref="0x40453af0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4047a9a8" scoped=""/>
+        <function-ref name="fired" ref="0x4047fc40" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4047a368" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4047a110" scoped=""/>
+        <function-ref name="getdt" ref="0x4047ae58" scoped=""/>
+        <function-ref name="gett0" ref="0x4047ac00" scoped=""/>
+        <function-ref name="isRunning" ref="0x4047fe98" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4047f4e8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4047a688" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4047f768" scoped=""/>
+        <function-ref name="stop" ref="0x4047f9e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/platforms/ucmini/chips/sht21/TemperatureC.nc" name="Read" provided="1" ref="0x40ca15a8">
+      <component-ref nicename="tos.platforms.ucmini.chips.sht21.TemperatureC" qname="UcminiSensorC.TemperatureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40ca15a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40ca1bd0" scoped=""/>
+        <function-ref name="readDone" ref="0x40ca1e28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:UcminiSensorP.nc" name="Leds" provided="0" ref="0x4048b0d8">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Leds" ref="0x4048b0d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4048b2b0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4048b390" scoped=""/>
+        <function-ref name="led1On" ref="0x4048b470" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4048b550" scoped=""/>
+        <function-ref name="led3Off" ref="0x4048b630" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4048b710" scoped=""/>
+        <function-ref name="get" ref="0x4048b7f0" scoped=""/>
+        <function-ref name="led1Off" ref="0x4048b8d0" scoped=""/>
+        <function-ref name="led3Toggle" ref="0x4048b9b0" scoped=""/>
+        <function-ref name="led3On" ref="0x4048ba90" scoped=""/>
+        <function-ref name="led0On" ref="0x4048bb70" scoped=""/>
+        <function-ref name="led2Off" ref="0x4048bc50" scoped=""/>
+        <function-ref name="led2On" ref="0x4048bd30" scoped=""/>
+        <function-ref name="set" ref="0x4048be90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/chips/atm128rfa1/sensors/AtmegaVoltageC.nc" name="Read" provided="1" ref="0x40a61c50">
+      <component-ref nicename="tos.chips.atm128rfa1.sensors.AtmegaVoltageC" qname="UcminiSensorC.AtmegaVoltageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40a61c50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40a692c8" scoped=""/>
+        <function-ref name="readDone" ref="0x40a69520" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc" name="Packet" provided="1" ref="0x40d5b010">
+      <component-ref nicename="tos.lib.serial.SerialAMSenderC" qname="UcminiSensorC.MeasSend"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Packet" ref="0x40d5b010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40d5b1e8" scoped=""/>
+        <function-ref name="payloadLength" ref="0x40d5b2c8" scoped=""/>
+        <function-ref name="getPayload" ref="0x40d5b3a8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40d5b488" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x40d5b568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:UcminiSensorP.nc" name="Receive" provided="0" ref="0x40474d50">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x40474d50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40443010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:UcminiSensorP.nc" name="Temp2Read" provided="0" ref="0x4042ce88">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Temp2Read" ref="0x4042ce88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="short" size="I:2">
+            <typename><typedef-ref name="int16_t" ref="0x40039e90"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x4042a4d8" scoped=""/>
+        <function-ref name="readDone" ref="0x4042a730" scoped=""/>
+      </interface-functions>
+    </interface><component loc="40(UcminiSensorC.AtmegaVoltageC):/usr/src/tinyos/tos/chips/atm128rfa1/sensors/AtmegaVoltageC.nc" nicename="tos.chips.atm128rfa1.sensors.AtmegaVoltageC" qname="UcminiSensorC.AtmegaVoltageC">
+      <documentation loc="34:/usr/src/tinyos/tos/chips/atm128rfa1/sensors/AtmegaVoltageC.nc">
+        <short>
+ Battery Voltage.</short>
+        <long>
+ Battery Voltage. The returned value represents the difference
+ between the battery voltage and V_BG (1.23V). The formula to convert
+ it to mV is: 1223 * 1024 / value.
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.atm128rfa1.sensors.AtmegaVoltageC" qname="AtmegaVoltageC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="46:/usr/src/tinyos/tos/chips/atm128rfa1/sensors/AtmegaVoltageC.nc">
+          <from><interface-ref name="Read" ref="0x40a61c50" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40e9eeb8" scoped=""/></to>
+        </wire>
+        <wire loc="47:/usr/src/tinyos/tos/chips/atm128rfa1/sensors/AtmegaVoltageC.nc">
+          <from><interface-ref name="Atm128AdcConfig" ref="0x40e9da60" scoped=""/></from>
+          <to><interface-ref name="Atm128AdcConfig" ref="0x40a5f200" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="47(UcminiSensorC.CalibSend):/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc" nicename="tos.lib.serial.SerialAMSenderC" qname="UcminiSensorC.CalibSend">
+      <documentation loc="71:/usr/src/tinyos/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.lib.serial.SerialAMSenderC" qname="SerialAMSenderC"/>
+        <arguments>
+          <value cst="I:11">
+            <type-int alignment="I:1" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="63:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="AMSend" ref="0x40d58920" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x4103b3b0" scoped=""/></to>
+        </wire>
+        <wire loc="64:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="Packet" ref="0x40d57010" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x405806f0" scoped=""/></to>
+        </wire>
+        <wire loc="65:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40d576a8" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x40592628" scoped=""/></to>
+        </wire>
+        <wire loc="66:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="Acks" ref="0x40d56330" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x40591798" scoped=""/></to>
+        </wire>
+        <wire loc="60:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="Send" ref="0x4103ba78" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x40d2f010" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="61:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="AMPacket" ref="0x41039150" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x40592628" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/usr/src/tinyos/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="1:/usr/src/tinyos/tos/platforms/ucmini/hardware.h">
+        <short>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</short>
+        <long>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
+  downloading, copying, installing or using the software you agree to
+  this license.  If you do not agree to this license, do not download,
+  install, copy or use the software.
+
+  Copyright (c) 2004-2005 Crossbow Technology, Inc.
+  Copyright (c) 2002-2003 Intel Corporation.
+  Copyright (c) 2000-2003 The Regents of the University  of California.    
+  All rights reserved.
+
+  Permission to use, copy, modify, and distribute this software and its
+  documentation for any purpose, without fee, and without written
+  agreement is hereby granted, provided that the above copyright
+  notice, the (updated) modification history and the author appear in
+  all copies of this source code.
+
+  Permission is also granted to distribute this software under the
+  standard BSD license as contained in the TinyOS distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE INTEL OR ITS
+  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  @author Jason Hill, Philip Levis, Nelson Lee, David Gay
+  @author Alan Broad &lt;abroad@xbow.com&gt;
+  @author Matt Miller &lt;mmiller@xbow.com&gt;
+  @author Martin Turon &lt;mturon@xbow.com&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x40421b60" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x404a3778" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x404a3b10" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x4032fb58" scoped=""/></to>
+        </wire>
+        <wire loc="68:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x40828100" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x404a1010" scoped=""/></to>
+        </wire>
+        <wire loc="71:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40828508" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x404987a0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="35(UcminiSensorC.HumidityC):/usr/src/tinyos/tos/platforms/ucmini/chips/sht21/HumidityC.nc" nicename="tos.platforms.ucmini.chips.sht21.HumidityC" qname="UcminiSensorC.HumidityC">
+      <instance number="0">
+        <component-ref nicename="tos.platforms.ucmini.chips.sht21.HumidityC" qname="HumidityC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="43:/usr/src/tinyos/tos/platforms/ucmini/chips/sht21/HumidityC.nc">
+          <from><interface-ref name="Read" ref="0x40cf25f8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x4102f010" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="34(UcminiSensorC.AtmegaTemperatureC):/usr/src/tinyos/tos/chips/atm128rfa1/sensors/AtmegaTemperatureC.nc" nicename="tos.chips.atm128rfa1.sensors.AtmegaTemperatureC" qname="UcminiSensorC.AtmegaTemperatureC">
+      <instance number="0">
+        <component-ref nicename="tos.chips.atm128rfa1.sensors.AtmegaTemperatureC" qname="AtmegaTemperatureC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="40:/usr/src/tinyos/tos/chips/atm128rfa1/sensors/AtmegaTemperatureC.nc">
+          <from><interface-ref name="Read" ref="0x40951a68" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40e70168" scoped=""/></to>
+        </wire>
+        <wire loc="41:/usr/src/tinyos/tos/chips/atm128rfa1/sensors/AtmegaTemperatureC.nc">
+          <from><interface-ref name="Atm128AdcConfig" ref="0x40e70cf0" scoped=""/></from>
+          <to><interface-ref name="Atm128AdcConfig" ref="0x40a6bef8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="47(UcminiSensorC.MeasSend):/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc" nicename="tos.lib.serial.SerialAMSenderC" qname="UcminiSensorC.MeasSend">
+      <documentation loc="71:/usr/src/tinyos/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.lib.serial.SerialAMSenderC" qname="SerialAMSenderC"/>
+        <arguments>
+          <value cst="I:10">
+            <type-int alignment="I:1" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="63:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="AMSend" ref="0x40d17920" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x4102a420" scoped=""/></to>
+        </wire>
+        <wire loc="64:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="Packet" ref="0x40d5b010" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x405806f0" scoped=""/></to>
+        </wire>
+        <wire loc="65:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40d5b6a8" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x40592628" scoped=""/></to>
+        </wire>
+        <wire loc="66:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="Acks" ref="0x40d59330" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x40591798" scoped=""/></to>
+        </wire>
+        <wire loc="60:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="Send" ref="0x4102aae8" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x40d2f010" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="61:/usr/src/tinyos/tos/lib/serial/SerialAMSenderC.nc">
+          <from><interface-ref name="AMPacket" ref="0x41029230" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x40592628" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="43(UcminiSensorC.SerialAMReceiverC):/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc" nicename="tos.lib.serial.SerialAMReceiverC" qname="UcminiSensorC.SerialAMReceiverC">
+      <documentation loc="33:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc">
+        <short>
+ The virtualized AM reception abstraction.</short>
+        <long>
+ The virtualized AM reception abstraction.
+
+ @author Philip Levis
+ @date   Jan 16 2006
+ @see    TEP 116: Packet Protocols
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.lib.serial.SerialAMReceiverC" qname="SerialAMReceiverC"/>
+        <arguments>
+          <value cst="I:11">
+            <type-int alignment="I:1" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="55:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc">
+          <from><interface-ref name="Packet" ref="0x40d53010" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x405806f0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc">
+          <from><interface-ref name="Receive" ref="0x40d54c60" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x40580398" scoped=""/>
+          <arguments>
+            <value cst="I:11">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="am_id_t" ref="0x4045c6a0"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40d536a8" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x40592628" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="37(UcminiSensorC.Ms5607CalibrationC):/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc" nicename="tos.chips.ms5607.Ms5607CalibrationC" qname="UcminiSensorC.Ms5607CalibrationC">
+      <instance number="0">
+        <component-ref nicename="tos.chips.ms5607.Ms5607CalibrationC" qname="Ms5607CalibrationC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="53:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc">
+          <from><interface-ref name="Read" ref="0x40ca4ca0" scoped=""/></from>
+          <to><interface-ref name="ReadRef" ref="0x40fde440" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc">
+          <from><interface-ref name="SetPrecision" ref="0x40ca3b30" scoped=""/></from>
+          <to><interface-ref name="SetPrecision" ref="0x40baf860" scoped=""/></to>
+        </wire>
+        <wire loc="54:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc">
+          <from><interface-ref name="Resource" ref="0x40fdc0a0" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x40baf010" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="55:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc">
+          <from><interface-ref name="Service" ref="0x40fdd2d8" scoped=""/></from>
+          <to><interface-ref name="ReadCalibration" ref="0x40bb1eb8" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="37:UcminiSensorP.nc" nicename="UcminiSensorP" qname="UcminiSensorP">
+      <module/>
+    </component><component loc="41:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc" nicename="tos.platforms.ucmini.LedsC" qname="LedsC">
+      <documentation loc="35:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+        <short>
+ </short>
+        <long>
+ @author Joe Polastre
+ @author Jan Beutel
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="47:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x407f3a20" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x407f7470" scoped=""/></to>
+        </wire>
+        <wire loc="49:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x40813450" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x407f7128" scoped=""/></to>
+        </wire>
+        <wire loc="50:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x407f6480" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x407f9c20" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x407f6e68" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x40815660" scoped=""/></to>
+        </wire>
+        <wire loc="52:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x4080f860" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x40814060" scoped=""/></to>
+        </wire>
+        <wire loc="53:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Led3" ref="0x4080e2e0" scoped=""/></from>
+          <to><interface-ref name="Led3" ref="0x40814a48" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="35(UcminiSensorC.LightC):/usr/src/tinyos/tos/platforms/ucmini/chips/bh1750fvi/LightC.nc" nicename="tos.platforms.ucmini.chips.bh1750fvi.LightC" qname="UcminiSensorC.LightC">
+      <instance number="0">
+        <component-ref nicename="tos.platforms.ucmini.chips.bh1750fvi.LightC" qname="LightC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="43:/usr/src/tinyos/tos/platforms/ucmini/chips/bh1750fvi/LightC.nc">
+          <from><interface-ref name="Read" ref="0x40a7dba0" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40e98ba8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="35(UcminiSensorC.PressureC):/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/PressureC.nc" nicename="tos.platforms.ucmini.chips.ms5607.PressureC" qname="UcminiSensorC.PressureC">
+      <instance number="0">
+        <component-ref nicename="tos.platforms.ucmini.chips.ms5607.PressureC" qname="PressureC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="46:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/PressureC.nc">
+          <from><interface-ref name="Read" ref="0x40c91b38" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40f450f0" scoped=""/></to>
+        </wire>
+        <wire loc="44:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/PressureC.nc">
+          <from><interface-ref name="SetPrecision" ref="0x40a607e0" scoped=""/></from>
+          <to><interface-ref name="SetPrecision" ref="0x40f45d18" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="44(UcminiSensorC.TimerMilliC):/usr/src/tinyos/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="UcminiSensorC.TimerMilliC">
+      <documentation loc="33:/usr/src/tinyos/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="52:/usr/src/tinyos/tos/system/TimerMilliC.nc">
+          <from><interface-ref name="Timer" ref="0x40499930" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x4081eb58" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="35(UcminiSensorC.Temperature1C):/usr/src/tinyos/tos/chips/ms5607/Ms5607TemperatureC.nc" nicename="tos.chips.ms5607.Ms5607TemperatureC" qname="UcminiSensorC.Temperature1C">
+      <instance number="0">
+        <component-ref nicename="tos.chips.ms5607.Ms5607TemperatureC" qname="Ms5607TemperatureC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="44:/usr/src/tinyos/tos/chips/ms5607/Ms5607TemperatureC.nc">
+          <from><interface-ref name="Read" ref="0x40c90da8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40fc23c8" scoped=""/></to>
+        </wire>
+        <wire loc="45:/usr/src/tinyos/tos/chips/ms5607/Ms5607TemperatureC.nc">
+          <from><interface-ref name="SetPrecision" ref="0x40c8f9e0" scoped=""/></from>
+          <to><interface-ref name="SetPrecision" ref="0x40f928c8" scoped=""/></to>
+        </wire>
+        <wire loc="46:/usr/src/tinyos/tos/chips/ms5607/Ms5607TemperatureC.nc">
+          <from><interface-ref name="Get" ref="0x40fc0cb0" scoped=""/></from>
+          <to><interface-ref name="Get" ref="0x40fc3188" scoped=""/></to>
+        </wire>
+        <wire loc="47:/usr/src/tinyos/tos/chips/ms5607/Ms5607TemperatureC.nc">
+          <from><interface-ref name="ReadDt" ref="0x40fc0010" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40fc44a8" scoped=""/></to>
+        </wire>
+        <wire loc="49:/usr/src/tinyos/tos/chips/ms5607/Ms5607TemperatureC.nc">
+          <from><interface-ref name="ReadRawTemp" ref="0x40f8e9a0" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40f93c90" scoped=""/></to>
+        </wire>
+        <wire loc="50:/usr/src/tinyos/tos/chips/ms5607/Ms5607TemperatureC.nc">
+          <from><interface-ref name="ReadCalib" ref="0x40f8d610" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40f919e0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="35(UcminiSensorC.TemperatureC):/usr/src/tinyos/tos/platforms/ucmini/chips/sht21/TemperatureC.nc" nicename="tos.platforms.ucmini.chips.sht21.TemperatureC" qname="UcminiSensorC.TemperatureC">
+      <instance number="0">
+        <component-ref nicename="tos.platforms.ucmini.chips.sht21.TemperatureC" qname="TemperatureC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="43:/usr/src/tinyos/tos/platforms/ucmini/chips/sht21/TemperatureC.nc">
+          <from><interface-ref name="Read" ref="0x40ca15a8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40fd6520" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

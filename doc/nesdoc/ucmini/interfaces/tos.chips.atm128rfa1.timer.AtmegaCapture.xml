@@ -1,0 +1,126 @@
+<?xml version="1.0" ?><interfacedef loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture">
+      <parameters>
+        <typedef loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="size_type" ref="0x40759478">
+          <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="size_type" ref="0x40759478" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <function command="" loc="70:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="setMode" provided="0" ref="0x4076cae0">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="70:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="mode" ref="0x4076c988">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="test" provided="0" ref="0x4076e668">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="48:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="fired" provided="0" ref="0x4076e288">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="40:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="get" provided="0" ref="0x40759970">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-var alignment="U:" size="U:"><typedef-ref name="size_type" ref="0x40759478" scoped=""/></type-var>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="54:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="reset" provided="0" ref="0x4076ea20">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="73:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="getMode" provided="0" ref="0x4076cef0">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="65:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="isOn" provided="0" ref="0x4076c588">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="set" provided="0" ref="0x40759eb0">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-var alignment="U:" size="U:"><typedef-ref name="size_type" ref="0x40759478" scoped=""/></type-var>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="value" ref="0x40759d58">
+            <type-var alignment="U:" size="U:"><typedef-ref name="size_type" ref="0x40759478" scoped=""/></type-var>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="59:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="start" provided="0" ref="0x4076ede8">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="62:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCapture.nc" name="stop" provided="0" ref="0x4076c1a8">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

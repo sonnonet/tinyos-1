@@ -1,0 +1,11 @@
+COMPONENT=BlinkAppC
+
+PFLAGS += -DCC2420_DEF_CHANNEL=25
+DEFAULT_LOCAL_GROUP=0x26
+
+CFLAGS += -I./usci
+CFLAGS += -I./timer
+CFLAGS += -I./cc2420
+
+include $(MAKERULES)
+

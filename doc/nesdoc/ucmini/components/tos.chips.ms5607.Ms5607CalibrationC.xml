@@ -1,0 +1,223 @@
+<?xml version="1.0" ?><component abstract="" loc="37:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc" nicename="tos.chips.ms5607.Ms5607CalibrationC" qname="Ms5607CalibrationC">
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="53:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc">
+          <from><interface-ref name="Read" ref="0x40c2bab0" scoped=""/></from>
+          <to><interface-ref name="ReadRef" ref="0x40c4f0a0" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc">
+          <from><interface-ref name="SetPrecision" ref="0x40c28a40" scoped=""/></from>
+          <to><interface-ref name="SetPrecision" ref="0x40baf860" scoped=""/></to>
+        </wire>
+        <wire loc="54:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc">
+          <from><interface-ref name="Resource" ref="0x40c4ecd8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x40baf010" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="55:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc">
+          <from><interface-ref name="Service" ref="0x40c4ff20" scoped=""/></from>
+          <to><interface-ref name="ReadCalibration" ref="0x40bb1eb8" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="40:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc" name="Read" provided="1" ref="0x40c2bab0">
+      <component-ref nicename="tos.chips.ms5607.Ms5607CalibrationC" qname="Ms5607CalibrationC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40c2bab0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c28100" scoped=""/>
+        <function-ref name="readDone" ref="0x40c28490" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc" name="SetPrecision" provided="1" ref="0x40c28a40">
+      <component-ref nicename="tos.chips.ms5607.Ms5607CalibrationC" qname="Ms5607CalibrationC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SetPrecision" ref="0x40c28a40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Set" qname="Set"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="set" ref="0x40c50088" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="25:/usr/src/tinyos/tos/chips/ms5607/ResourceReadRefC.nc" name="ReadRef" provided="1" ref="0x40c4f0a0">
+      <component-ref nicename="tos.chips.ms5607.ResourceReadRefC" qname="Ms5607CalibrationC.ResourceReadRefC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadRef" ref="0x40c4f0a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c4f6c8" scoped=""/>
+        <function-ref name="readDone" ref="0x40c4fa58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc" name="ReadCalibration" provided="1" ref="0x40bb1eb8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607RawArbiterP" qname="Ms5607RawArbiterP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadCalibration" ref="0x40bb1eb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40bb0500" scoped=""/>
+        <function-ref name="readDone" ref="0x40bb0890" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc" name="Resource" provided="1" ref="0x40baf010">
+      <component-ref nicename="tos.chips.ms5607.Ms5607RawArbiterP" qname="Ms5607RawArbiterP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x40baf010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x40baf1e8" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40baf2c8" scoped=""/>
+        <function-ref name="request" ref="0x40baf3a8" scoped=""/>
+        <function-ref name="granted" ref="0x40baf488" scoped=""/>
+        <function-ref name="isOwner" ref="0x40baf568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="27:/usr/src/tinyos/tos/chips/ms5607/ResourceReadRefC.nc" name="Service" provided="0" ref="0x40c4ff20">
+      <component-ref nicename="tos.chips.ms5607.ResourceReadRefC" qname="Ms5607CalibrationC.ResourceReadRefC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Service" ref="0x40c4ff20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c4e560" scoped=""/>
+        <function-ref name="readDone" ref="0x40c4e8f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc" name="SetPrecision" provided="1" ref="0x40baf860">
+      <component-ref nicename="tos.chips.ms5607.Ms5607RawArbiterP" qname="Ms5607RawArbiterP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SetPrecision" ref="0x40baf860" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Set" qname="Set"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="set" ref="0x40bafe88" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:/usr/src/tinyos/tos/chips/ms5607/ResourceReadRefC.nc" name="Resource" provided="0" ref="0x40c4ecd8">
+      <component-ref nicename="tos.chips.ms5607.ResourceReadRefC" qname="Ms5607CalibrationC.ResourceReadRefC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x40c4ecd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40c4eeb0" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40c40010" scoped=""/>
+        <function-ref name="request" ref="0x40c400f0" scoped=""/>
+        <function-ref name="granted" ref="0x40c401d0" scoped=""/>
+        <function-ref name="isOwner" ref="0x40c402b0" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="24(Ms5607CalibrationC.ResourceReadRefC):/usr/src/tinyos/tos/chips/ms5607/ResourceReadRefC.nc" nicename="tos.chips.ms5607.ResourceReadRefC" qname="Ms5607CalibrationC.ResourceReadRefC">
+      <documentation loc="10:/usr/src/tinyos/tos/chips/ms5607/ResourceReadRefC.nc">
+        <short>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.</short>
+        <long>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.
+
+ Note that this code does not deal with unexpected events: it assumes
+ that all events it receives are in response to commands that it
+ made. See tos/chips/atm128/adc for an example of using ArbitratedReadC 
+ in a safe way.
+
+ @param width_t Width of the underlying Read interface.
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.chips.ms5607.ResourceReadRefC" qname="ResourceReadRefC"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="37:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc" nicename="tos.chips.ms5607.Ms5607RawArbiterP" qname="Ms5607RawArbiterP">
+      <configuration/>
+      <wiring>
+        <wire loc="59:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc">
+          <from><interface-ref name="ReadPressure" ref="0x40bb3dd0" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40c1f668" scoped=""/></to>
+        </wire>
+        <wire loc="55:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc">
+          <from><interface-ref name="ReadTemperature" ref="0x40bb6d78" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40c23b68" scoped=""/></to>
+        </wire>
+        <wire loc="63:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc">
+          <from><interface-ref name="ReadCalibration" ref="0x40bb1eb8" scoped=""/></from>
+          <to><interface-ref name="ReadRef" ref="0x40c3cdc8" scoped=""/></to>
+        </wire>
+        <wire loc="52:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc">
+          <from><interface-ref name="Resource" ref="0x40baf010" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x40bd3bc8" scoped=""/></to>
+        </wire>
+        <wire loc="50:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc">
+          <from><interface-ref name="SetPrecision" ref="0x40baf860" scoped=""/></from>
+          <to><interface-ref name="SetPrecision" ref="0x40bd0228" scoped=""/></to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc">
+          <from><interface-ref name="ActualRead" ref="0x40c22800" scoped=""/></from>
+          <to><interface-ref name="ReadTemperature" ref="0x40bd24d8" scoped=""/></to>
+        </wire>
+        <wire loc="60:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc">
+          <from><interface-ref name="ActualRead" ref="0x40c1e2d8" scoped=""/></from>
+          <to><interface-ref name="ReadPressure" ref="0x40bad6e8" scoped=""/></to>
+        </wire>
+        <wire loc="64:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawArbiterP.nc">
+          <from><interface-ref name="ActualRead" ref="0x40c1ccb0" scoped=""/></from>
+          <to><interface-ref name="ReadCalibration" ref="0x40bd12a8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

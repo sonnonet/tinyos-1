@@ -1,0 +1,48 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/usr/src/tinyos/tos/lib/rfxlink/util/NeighborhoodFlagC.nc" nicename="tos.lib.rfxlink.util.NeighborhoodFlagC" qname="NeighborhoodFlagC">
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="45:/usr/src/tinyos/tos/lib/rfxlink/util/NeighborhoodFlagC.nc">
+          <from><interface-ref name="NeighborhoodFlag" ref="0x40a384a8" scoped=""/></from>
+          <to><interface-ref name="NeighborhoodFlag" ref="0x40a53010" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="37:/usr/src/tinyos/tos/lib/rfxlink/util/NeighborhoodFlagC.nc" name="NeighborhoodFlag" provided="1" ref="0x40a384a8">
+      <component-ref nicename="tos.lib.rfxlink.util.NeighborhoodFlagC" qname="NeighborhoodFlagC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="NeighborhoodFlag" ref="0x40a384a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.NeighborhoodFlag" qname="NeighborhoodFlag"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40a38680" scoped=""/>
+        <function-ref name="clearAll" ref="0x40a38760" scoped=""/>
+        <function-ref name="get" ref="0x40a38840" scoped=""/>
+        <function-ref name="set" ref="0x40a38920" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="43:/usr/src/tinyos/tos/lib/rfxlink/util/NeighborhoodP.nc" name="NeighborhoodFlag" provided="1" ref="0x40a53010">
+      <component-ref nicename="tos.lib.rfxlink.util.NeighborhoodP" qname="NeighborhoodP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="NeighborhoodFlag" ref="0x40a53010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.NeighborhoodFlag" qname="NeighborhoodFlag"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40a531e8" scoped=""/>
+        <function-ref name="clearAll" ref="0x40a532c8" scoped=""/>
+        <function-ref name="get" ref="0x40a533a8" scoped=""/>
+        <function-ref name="set" ref="0x40a53488" scoped=""/>
+      </interface-functions>
+    </interface><component loc="37:/usr/src/tinyos/tos/lib/rfxlink/util/NeighborhoodP.nc" nicename="tos.lib.rfxlink.util.NeighborhoodP" qname="NeighborhoodP">
+      <module/>
+    </component></referenced></component>

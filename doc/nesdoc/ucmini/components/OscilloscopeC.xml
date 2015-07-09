@@ -1,0 +1,107 @@
+<?xml version="1.0" ?><component loc="19:OscilloscopeC.nc" nicename="OscilloscopeC" qname="OscilloscopeC" safe="">
+      <module/>
+    <specification><interface loc="22:OscilloscopeC.nc" name="Boot" provided="0" ref="0x404252a0">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Boot" ref="0x404252a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40425478" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:OscilloscopeC.nc" name="AMSend" provided="0" ref="0x40457380">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMSend" ref="0x40457380" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40457558" scoped=""/>
+        <function-ref name="getPayload" ref="0x40457638" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40457718" scoped=""/>
+        <function-ref name="cancel" ref="0x404577f8" scoped=""/>
+        <function-ref name="sendDone" ref="0x404578d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:OscilloscopeC.nc" name="RadioControl" provided="0" ref="0x4042da30">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioControl" ref="0x4042da30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x4042dc08" scoped=""/>
+        <function-ref name="stopDone" ref="0x4042dce8" scoped=""/>
+        <function-ref name="start" ref="0x4042ddc8" scoped=""/>
+        <function-ref name="stop" ref="0x4042dea8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="27:OscilloscopeC.nc" name="Read" provided="0" ref="0x404638e0">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x404638e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40463f08" scoped=""/>
+        <function-ref name="readDone" ref="0x40465180" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:OscilloscopeC.nc" name="Receive" provided="0" ref="0x40460470">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x40460470" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40460648" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:OscilloscopeC.nc" name="Leds" provided="0" ref="0x40465488">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Leds" ref="0x40465488" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x40465660" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x40465740" scoped=""/>
+        <function-ref name="led1On" ref="0x40465820" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x40465900" scoped=""/>
+        <function-ref name="led3Off" ref="0x404659e0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x40465ac0" scoped=""/>
+        <function-ref name="get" ref="0x40465ba0" scoped=""/>
+        <function-ref name="led1Off" ref="0x40465c80" scoped=""/>
+        <function-ref name="led3Toggle" ref="0x40465d60" scoped=""/>
+        <function-ref name="led3On" ref="0x40465e40" scoped=""/>
+        <function-ref name="led0On" ref="0x40465f20" scoped=""/>
+        <function-ref name="led2Off" ref="0x40462018" scoped=""/>
+        <function-ref name="led2On" ref="0x404620f8" scoped=""/>
+        <function-ref name="set" ref="0x40462258" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:OscilloscopeC.nc" name="Timer" provided="0" ref="0x40467210">
+      <component-ref nicename="OscilloscopeC" qname="OscilloscopeC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x40467210" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421508"/>
+            <typename><typedef-ref name="TMilli" ref="0x404216d0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4042cd58" scoped=""/>
+        <function-ref name="fired" ref="0x4042c010" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4042c718" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4042c4c0" scoped=""/>
+        <function-ref name="getdt" ref="0x40466268" scoped=""/>
+        <function-ref name="gett0" ref="0x40466010" scoped=""/>
+        <function-ref name="isRunning" ref="0x4042c268" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40467838" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4042ca38" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40467ab8" scoped=""/>
+        <function-ref name="stop" ref="0x40467d38" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,14 @@
+digraph "tos.chips.bh1750fvi.Bh1750fviArbitratedC" {
+  n0x40a7b878 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "Bh1750fviArbitratedC.ArbitratedReadC" [fontsize=12, shape=box, style=dashed, label="ArbitratedReadC", URL="../chtml/tos.system.ArbitratedReadC.html"];
+  "Bh1750fviArbitratedC.ArbitratedReadC" [fontsize=12, shape=box, style=dashed, label="ArbitratedReadC", URL="../chtml/tos.system.ArbitratedReadC.html"];
+  "Bh1750fviArbitratedC.Arbiter" [fontsize=12, shape=box,peripheries=2, style=dashed, label="FcfsArbiterC\n(Arbiter)", URL="../chtml/tos.system.FcfsArbiterC.html"];
+  "Bh1750fviArbitratedC.ArbitratedReadC" [fontsize=12, shape=box, style=dashed, label="ArbitratedReadC", URL="../chtml/tos.system.ArbitratedReadC.html"];
+  "Bh1750fviArbitratedC.ReadClientP" [fontsize=12, shape=box, style=dashed, label="ReadClientP", URL="../chtml/tos.system.ReadClientP.html"];
+  "Bh1750fviArbitratedC.ReadClientP" [fontsize=12, shape=box, style=dashed, label="ReadClientP", URL="../chtml/tos.system.ReadClientP.html"];
+  "Bh1750fviC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.bh1750fvi.Bh1750fviC.html"];
+  "n0x40a7b878" -> "Bh1750fviArbitratedC.ArbitratedReadC" [label="Read<uint16_t>[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "Bh1750fviArbitratedC.ArbitratedReadC" -> "Bh1750fviArbitratedC.Arbiter" [label="Resource[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.Resource.html", fontsize=10];
+  "Bh1750fviArbitratedC.ArbitratedReadC" -> "Bh1750fviArbitratedC.ReadClientP" [label="Read<uint16_t>[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "Bh1750fviArbitratedC.ReadClientP" -> "Bh1750fviC" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+}

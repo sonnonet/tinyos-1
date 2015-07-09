@@ -1,0 +1,154 @@
+<?xml version="1.0" ?><component loc="1:./spi/ADE7763P.nc" nicename="..spi.ADE7763P" qname="ADE7763P">
+      <module/>
+    <specification><interface loc="17:./spi/ADE7763P.nc" name="BusyWait" provided="0" ref="0x4099fa60">
+      <component-ref nicename="..spi.ADE7763P" qname="ADE7763P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BusyWait" ref="0x4099fa60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.BusyWait" qname="BusyWait"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40844010"/>
+            <typename><typedef-ref name="TMicro" ref="0x408441d8"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401eb0c0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="wait" ref="0x4099e200" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:./spi/ADE7763P.nc" name="CSB" provided="0" ref="0x40981b88">
+      <component-ref nicename="..spi.ADE7763P" qname="ADE7763P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="CSB" ref="0x40981b88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40981d60" scoped=""/>
+        <function-ref name="isInput" ref="0x40981e40" scoped=""/>
+        <function-ref name="setResistor" ref="0x40981f20" scoped=""/>
+        <function-ref name="toggle" ref="0x409a0018" scoped=""/>
+        <function-ref name="isOutput" ref="0x409a00f8" scoped=""/>
+        <function-ref name="getResistor" ref="0x409a01d8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x409a02b8" scoped=""/>
+        <function-ref name="get" ref="0x409a0398" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x409a0478" scoped=""/>
+        <function-ref name="getRaw" ref="0x409a0558" scoped=""/>
+        <function-ref name="set" ref="0x409a0638" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x409a0718" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x409a07f8" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x409a0958" scoped=""/>
+        <function-ref name="clr" ref="0x409a0a38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:./spi/ADE7763P.nc" name="MISO" provided="0" ref="0x40983818">
+      <component-ref nicename="..spi.ADE7763P" qname="ADE7763P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MISO" ref="0x40983818" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x409839f0" scoped=""/>
+        <function-ref name="isInput" ref="0x40983ad0" scoped=""/>
+        <function-ref name="setResistor" ref="0x40983bb0" scoped=""/>
+        <function-ref name="toggle" ref="0x40983c90" scoped=""/>
+        <function-ref name="isOutput" ref="0x40983d70" scoped=""/>
+        <function-ref name="getResistor" ref="0x40983e50" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40982010" scoped=""/>
+        <function-ref name="get" ref="0x409820f0" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x409821d0" scoped=""/>
+        <function-ref name="getRaw" ref="0x409822b0" scoped=""/>
+        <function-ref name="set" ref="0x40982390" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x40982470" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x40982550" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x409826b0" scoped=""/>
+        <function-ref name="clr" ref="0x40982790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="3:./spi/ADE7763P.nc" name="ADE7763" provided="1" ref="0x409874c8">
+      <component-ref nicename="..spi.ADE7763P" qname="ADE7763P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ADE7763" ref="0x409874c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="Clk_set" ref="0x40984410" scoped=""/>
+        <function-ref name="cs_toggle" ref="0x40987780" scoped=""/>
+        <function-ref name="writeData" ref="0x40987860" scoped=""/>
+        <function-ref name="init" ref="0x40987940" scoped=""/>
+        <function-ref name="powerOn" ref="0x40987a20" scoped=""/>
+        <function-ref name="powerOff" ref="0x40987b00" scoped=""/>
+        <function-ref name="Clk_clr" ref="0x40987be0" scoped=""/>
+        <function-ref name="writeCommand" ref="0x40987cc0" scoped=""/>
+        <function-ref name="cs_low" ref="0x40987da0" scoped=""/>
+        <function-ref name="readData" ref="0x40987e80" scoped=""/>
+        <function-ref name="sck_toggle" ref="0x40984010" scoped=""/>
+        <function-ref name="setMode" ref="0x409840f0" scoped=""/>
+        <function-ref name="cs_high" ref="0x409841d0" scoped=""/>
+        <function-ref name="miso_toggle" ref="0x409876a0" scoped=""/>
+        <function-ref name="mosi_toggle" ref="0x40984330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:./spi/ADE7763P.nc" name="SCK" provided="0" ref="0x40984688">
+      <component-ref nicename="..spi.ADE7763P" qname="ADE7763P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SCK" ref="0x40984688" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40984860" scoped=""/>
+        <function-ref name="isInput" ref="0x40984940" scoped=""/>
+        <function-ref name="setResistor" ref="0x40984a20" scoped=""/>
+        <function-ref name="toggle" ref="0x40984b00" scoped=""/>
+        <function-ref name="isOutput" ref="0x40984be0" scoped=""/>
+        <function-ref name="getResistor" ref="0x40984cc0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40984da0" scoped=""/>
+        <function-ref name="get" ref="0x40984e80" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x40983010" scoped=""/>
+        <function-ref name="getRaw" ref="0x409830f0" scoped=""/>
+        <function-ref name="set" ref="0x409831d0" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x409832b0" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x40983390" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x409834f0" scoped=""/>
+        <function-ref name="clr" ref="0x409835d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="16:./spi/ADE7763P.nc" name="Leds" provided="0" ref="0x409a0bb8">
+      <component-ref nicename="..spi.ADE7763P" qname="ADE7763P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x409a0bb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x409a0d90" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x409a0e70" scoped=""/>
+        <function-ref name="led1On" ref="0x4099f010" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4099f0f0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4099f1d0" scoped=""/>
+        <function-ref name="get" ref="0x4099f2b0" scoped=""/>
+        <function-ref name="led1Off" ref="0x4099f390" scoped=""/>
+        <function-ref name="led2Off" ref="0x4099f710" scoped=""/>
+        <function-ref name="set" ref="0x4099f470" scoped=""/>
+        <function-ref name="led0On" ref="0x4099f550" scoped=""/>
+        <function-ref name="led2On" ref="0x4099f630" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:./spi/ADE7763P.nc" name="MOSI" provided="0" ref="0x409829d8">
+      <component-ref nicename="..spi.ADE7763P" qname="ADE7763P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="MOSI" ref="0x409829d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.pins.HplMsp430GeneralIO" qname="HplMsp430GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40982bb0" scoped=""/>
+        <function-ref name="isInput" ref="0x40982c90" scoped=""/>
+        <function-ref name="setResistor" ref="0x40982d70" scoped=""/>
+        <function-ref name="toggle" ref="0x40982e50" scoped=""/>
+        <function-ref name="isOutput" ref="0x40981010" scoped=""/>
+        <function-ref name="getResistor" ref="0x409810f0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x409811d0" scoped=""/>
+        <function-ref name="get" ref="0x409812b0" scoped=""/>
+        <function-ref name="selectIOFunc" ref="0x40981390" scoped=""/>
+        <function-ref name="getRaw" ref="0x40981470" scoped=""/>
+        <function-ref name="set" ref="0x40981550" scoped=""/>
+        <function-ref name="selectModuleFunc" ref="0x40981630" scoped=""/>
+        <function-ref name="isIOFunc" ref="0x40981710" scoped=""/>
+        <function-ref name="isModuleFunc" ref="0x40981870" scoped=""/>
+        <function-ref name="clr" ref="0x40981950" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

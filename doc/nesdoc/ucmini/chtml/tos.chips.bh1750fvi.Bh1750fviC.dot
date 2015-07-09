@@ -1,0 +1,20 @@
+digraph "tos.chips.bh1750fvi.Bh1750fviC" {
+  n0x40a789d8 [shape=ellipse, style=filled, label="Light", fontsize=12];
+  "Bh1750fviP" [fontsize=12, shape=box, URL="../chtml/tos.chips.bh1750fvi.Bh1750fviP.html"];
+  "Bh1750fviP" [fontsize=12, shape=box, URL="../chtml/tos.chips.bh1750fvi.Bh1750fviP.html"];
+  "Bh1750fviC.TimerMilliC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC", URL="../chtml/tos.system.TimerMilliC.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.MainC.html"];
+  "Bh1750fviP" [fontsize=12, shape=box, URL="../chtml/tos.chips.bh1750fvi.Bh1750fviP.html"];
+  "Bh1750fviP" [fontsize=12, shape=box, URL="../chtml/tos.chips.bh1750fvi.Bh1750fviP.html"];
+  "HplBh1750C" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.chips.bh1750fvi.HplBh1750C.html"];
+  "Bh1750fviP" [fontsize=12, shape=box, URL="../chtml/tos.chips.bh1750fvi.Bh1750fviP.html"];
+  "HplBh1750C" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.chips.bh1750fvi.HplBh1750C.html"];
+  "Bh1750fviP" [fontsize=12, shape=box, URL="../chtml/tos.chips.bh1750fvi.Bh1750fviP.html"];
+  "HplBh1750C" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.chips.bh1750fvi.HplBh1750C.html"];
+  "n0x40a789d8" -> "Bh1750fviP" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "Bh1750fviP" -> "Bh1750fviC.TimerMilliC" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "MainC" -> "Bh1750fviP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "Bh1750fviP" -> "HplBh1750C" [label="I2CPacket<TI2CBasicAddr>", URL="../ihtml/tos.interfaces.I2CPacket.html", fontsize=10];
+  "Bh1750fviP" -> "HplBh1750C" [label="Resource", URL="../ihtml/tos.interfaces.Resource.html", fontsize=10];
+  "Bh1750fviP" -> "HplBh1750C" [label="BusPowerManager", URL="../ihtml/tos.chips.atm128rfa1.BusPowerManager.html", fontsize=10];
+}

@@ -1,0 +1,4 @@
+COMPONENT=UserAppC
+CFLAGS += -DDEFAULT_BAUDRATE=9600		#Basic Sensor
+include $(MAKERULES)
+

@@ -1,0 +1,5 @@
+digraph "tos.platforms.ucmini.chips.sht21.HumidityC" {
+  n0x40c9c978 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "HumidityC.Sht21RawHumidityC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Sht21RawHumidityC", URL="../chtml/tos.chips.sht21.Sht21RawHumidityC.html"];
+  "n0x40c9c978" -> "HumidityC.Sht21RawHumidityC" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+}

@@ -1,0 +1,222 @@
+<?xml version="1.0" ?><component loc="35:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc" nicename="tos.platforms.ucmini.PlatformC" qname="PlatformC">
+      <configuration/>
+      <wiring>
+        <wire loc="49:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc">
+          <from><interface-ref name="Init" ref="0x4047bcc8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40480010" scoped=""/></to>
+        </wire>
+        <wire loc="52:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc">
+          <from><interface-ref name="Atm128Calibrate" ref="0x404825b8" scoped=""/></from>
+          <to><interface-ref name="Atm128Calibrate" ref="0x4049cad0" scoped=""/></to>
+        </wire>
+        <wire loc="50:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc">
+          <from><interface-ref name="LedsInit" ref="0x404807c0" scoped=""/></from>
+          <to><interface-ref name="LedsInit" ref="0x40482d38" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc">
+          <from><interface-ref name="McuInit" ref="0x40480400" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40484be0" scoped=""/></to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc">
+          <from><interface-ref name="Stm25pInit" ref="0x40480b90" scoped=""/></from>
+          <to><interface-ref name="Stm25pOff" ref="0x40488208" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="39:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc" name="Init" provided="1" ref="0x4047bcc8">
+      <component-ref nicename="tos.platforms.ucmini.PlatformC" qname="PlatformC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x4047bcc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4047bea0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc" name="Atm128Calibrate" provided="1" ref="0x404825b8">
+      <component-ref nicename="tos.platforms.ucmini.PlatformC" qname="PlatformC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128Calibrate" ref="0x404825b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.Atm128Calibrate" qname="Atm128Calibrate"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="baudrateRegister" ref="0x40482790" scoped=""/>
+        <function-ref name="cyclesPerJiffy" ref="0x40482870" scoped=""/>
+        <function-ref name="calibrateMicro" ref="0x40482950" scoped=""/>
+        <function-ref name="actualMicro" ref="0x40482a30" scoped=""/>
+        <function-ref name="adcPrescaler" ref="0x40482b10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc" name="LedsInit" provided="0" ref="0x40482d38">
+      <component-ref nicename="tos.platforms.ucmini.PlatformC" qname="PlatformC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LedsInit" ref="0x40482d38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40482f10" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="37:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc" name="Init" provided="1" ref="0x40484be0">
+      <component-ref nicename="tos.chips.atm128rfa1.McuInitC" qname="McuInitC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x40484be0" scoped=""/></type-interface>
+      <attribute-value>
+        <attribute-ref name="exactlyonce" ref="0x403287d0"/>
+        <value-structured>
+          <type-tag alignment="I:1" size="I:0"><attribute-ref name="exactlyonce" ref="0x403287d0"/></type-tag>
+        </value-structured>
+      </attribute-value>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40484db8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/Stm25pOffC.nc" name="Stm25pOff" provided="1" ref="0x40488208">
+      <component-ref nicename="tos.platforms.ucmini.chips.stm25p.Stm25pOffC" qname="Stm25pOffC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Stm25pOff" ref="0x40488208" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x404883e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/platforms/ucmini/PlatformP.nc" name="Init" provided="1" ref="0x40480010">
+      <component-ref nicename="tos.platforms.ucmini.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x40480010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x404801e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/platforms/ucmini/PlatformP.nc" name="McuInit" provided="0" ref="0x40480400">
+      <component-ref nicename="tos.platforms.ucmini.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuInit" ref="0x40480400" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x404805d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/usr/src/tinyos/tos/chips/atm128rfa1/timer/MeasureClockC.nc" name="Atm128Calibrate" provided="1" ref="0x4049cad0">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.MeasureClockC" qname="MeasureClockC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128Calibrate" ref="0x4049cad0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.Atm128Calibrate" qname="Atm128Calibrate"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="baudrateRegister" ref="0x4049cca8" scoped=""/>
+        <function-ref name="cyclesPerJiffy" ref="0x4049cd88" scoped=""/>
+        <function-ref name="calibrateMicro" ref="0x4049ce68" scoped=""/>
+        <function-ref name="actualMicro" ref="0x4049b010" scoped=""/>
+        <function-ref name="adcPrescaler" ref="0x4049b0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/platforms/ucmini/PlatformP.nc" name="Stm25pInit" provided="0" ref="0x40480b90">
+      <component-ref nicename="tos.platforms.ucmini.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Stm25pInit" ref="0x40480b90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40480d68" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/platforms/ucmini/PlatformP.nc" name="LedsInit" provided="0" ref="0x404807c0">
+      <component-ref nicename="tos.platforms.ucmini.PlatformP" qname="PlatformP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LedsInit" ref="0x404807c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40480998" scoped=""/>
+      </interface-functions>
+    </interface><component loc="55:/usr/src/tinyos/tos/chips/atm128rfa1/timer/MeasureClockC.nc" nicename="tos.chips.atm128rfa1.timer.MeasureClockC" qname="MeasureClockC">
+      <documentation loc="46:/usr/src/tinyos/tos/chips/atm128rfa1/timer/MeasureClockC.nc">
+        <short>
+ Measure cpu clock frequency at boot time.</short>
+        <long>
+ Measure cpu clock frequency at boot time. Provides an Atm128Calibrate
+ interface so that other components can adjust their calibration as
+ needed.
+
+ @author David Gay
+ @author Janos Sallai
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="37:/usr/src/tinyos/tos/platforms/ucmini/PlatformP.nc" nicename="tos.platforms.ucmini.PlatformP" qname="PlatformP" safe="">
+      <documentation loc="1:/usr/src/tinyos/tos/platforms/ucmini/hardware.h">
+        <short>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</short>
+        <long>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
+  downloading, copying, installing or using the software you agree to
+  this license.  If you do not agree to this license, do not download,
+  install, copy or use the software.
+
+  Copyright (c) 2004-2005 Crossbow Technology, Inc.
+  Copyright (c) 2002-2003 Intel Corporation.
+  Copyright (c) 2000-2003 The Regents of the University  of California.    
+  All rights reserved.
+
+  Permission to use, copy, modify, and distribute this software and its
+  documentation for any purpose, without fee, and without written
+  agreement is hereby granted, provided that the above copyright
+  notice, the (updated) modification history and the author appear in
+  all copies of this source code.
+
+  Permission is also granted to distribute this software under the
+  standard BSD license as contained in the TinyOS distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE INTEL OR ITS
+  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  @author Jason Hill, Philip Levis, Nelson Lee, David Gay
+  @author Alan Broad &lt;abroad@xbow.com&gt;
+  @author Matt Miller &lt;mmiller@xbow.com&gt;
+  @author Martin Turon &lt;mturon@xbow.com&gt;
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc" nicename="tos.chips.atm128rfa1.McuInitC" qname="McuInitC" safe="">
+      <configuration/>
+      <wiring>
+        <wire loc="50:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc">
+          <from><interface-ref name="Init" ref="0x40484be0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40487db0" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc">
+          <from><interface-ref name="TimerInit" ref="0x40490628" scoped=""/></from>
+          <to><interface-ref name="TimerInit" ref="0x40487010" scoped=""/></to>
+        </wire>
+        <wire loc="52:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc">
+          <from><interface-ref name="AdcInit" ref="0x404909d8" scoped=""/></from>
+          <to><interface-ref name="AdcInit" ref="0x404873c0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc">
+          <from><interface-ref name="RadioInit" ref="0x40490da0" scoped=""/></from>
+          <to><interface-ref name="RFA1RadioOff" ref="0x40491478" scoped=""/></to>
+        </wire>
+        <wire loc="55:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc">
+          <from><interface-ref name="MeasureClock" ref="0x40490260" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4049c720" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="35:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/Stm25pOffC.nc" nicename="tos.platforms.ucmini.chips.stm25p.Stm25pOffC" qname="Stm25pOffC">
+      <configuration/>
+      <wiring>
+        <wire loc="40:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/Stm25pOffC.nc">
+          <from><interface-ref name="Stm25pOff" ref="0x40488208" scoped=""/></from>
+          <to><interface-ref name="Stm25pOff" ref="0x40488a48" scoped=""/></to>
+        </wire>
+        <wire loc="43:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/Stm25pOffC.nc">
+          <from><interface-ref name="Toggle" ref="0x404aa010" scoped=""/></from>
+          <to><interface-ref name="Power" ref="0x404b0768" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

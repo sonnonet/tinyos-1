@@ -1,0 +1,35 @@
+digraph "ESP8266C" {
+  n0x405ec6f0 [shape=ellipse, style=filled, label="ESP8266", fontsize=12];
+  "ESP8266P" [fontsize=12, shape=box, URL="../chtml/ESP8266P.html"];
+  "ESP8266P" [fontsize=12, shape=box, URL="../chtml/ESP8266P.html"];
+  "ESP8266C.ESP_INIT" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(ESP_INIT)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "ESP8266P" [fontsize=12, shape=box, URL="../chtml/ESP8266P.html"];
+  "ESP8266C.ESP_RESET" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(ESP_RESET)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "ESP8266P" [fontsize=12, shape=box, URL="../chtml/ESP8266P.html"];
+  "ESP8266C.ESP_MODE_1" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(ESP_MODE_1)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "ESP8266P" [fontsize=12, shape=box, URL="../chtml/ESP8266P.html"];
+  "ESP8266C.ESP_CON_AP" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(ESP_CON_AP)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "ESP8266P" [fontsize=12, shape=box, URL="../chtml/ESP8266P.html"];
+  "ESP8266C.ESP_SERVER" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(ESP_SERVER)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "ESP8266P" [fontsize=12, shape=box, URL="../chtml/ESP8266P.html"];
+  "ESP8266C.ESP_SENDING" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(ESP_SENDING)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "ESP8266P" [fontsize=12, shape=box, URL="../chtml/ESP8266P.html"];
+  "ESP8266C.ESP_SEND_PRESENT" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(ESP_SEND_PRESENT)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "ESP8266P" [fontsize=12, shape=box, URL="../chtml/ESP8266P.html"];
+  "LedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.LedsC.html"];
+  "ESP8266P" [fontsize=12, shape=box, URL="../chtml/ESP8266P.html"];
+  "PlatformSerialC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.telosa.PlatformSerialC.html"];
+  "ESP8266P" [fontsize=12, shape=box, URL="../chtml/ESP8266P.html"];
+  "PlatformSerialC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.telosa.PlatformSerialC.html"];
+  "n0x405ec6f0" -> "ESP8266P" [label="ESP8266", URL="../ihtml/ESP8266.html", fontsize=10];
+  "ESP8266P" -> "ESP8266C.ESP_INIT" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "ESP8266P" -> "ESP8266C.ESP_RESET" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "ESP8266P" -> "ESP8266C.ESP_MODE_1" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "ESP8266P" -> "ESP8266C.ESP_CON_AP" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "ESP8266P" -> "ESP8266C.ESP_SERVER" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "ESP8266P" -> "ESP8266C.ESP_SENDING" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "ESP8266P" -> "ESP8266C.ESP_SEND_PRESENT" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "ESP8266P" -> "LedsC" [label="Leds", URL="../ihtml/tos.interfaces.Leds.html", fontsize=10];
+  "ESP8266P" -> "PlatformSerialC" [label="StdControl", URL="../ihtml/tos.interfaces.StdControl.html", fontsize=10];
+  "ESP8266P" -> "PlatformSerialC" [label="UartStream", URL="../ihtml/tos.interfaces.UartStream.html", fontsize=10];
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" ?><component abstract="" loc="24:/usr/src/tinyos/tos/chips/ms5607/ResourceReadRefC.nc" nicename="tos.chips.ms5607.ResourceReadRefC" qname="ResourceReadRefC" safe="">
+      <documentation loc="10:/usr/src/tinyos/tos/chips/ms5607/ResourceReadRefC.nc">
+        <short>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.</short>
+        <long>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.
+
+ Note that this code does not deal with unexpected events: it assumes
+ that all events it receives are in response to commands that it
+ made. See tos/chips/atm128/adc for an example of using ArbitratedReadC 
+ in a safe way.
+
+ @param width_t Width of the underlying Read interface.
+
+ @author David Gay
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="24:/usr/src/tinyos/tos/chips/ms5607/ResourceReadRefC.nc" name="width_t" ref="0x40c4d3f0">
+          <component-ref nicename="tos.chips.ms5607.ResourceReadRefC" qname="ResourceReadRefC"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="width_t" ref="0x40c4d3f0" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <module/>
+    <specification><interface loc="27:/usr/src/tinyos/tos/chips/ms5607/ResourceReadRefC.nc" name="Service" provided="0" ref="0x40c4c940">
+      <component-ref nicename="tos.chips.ms5607.ResourceReadRefC" qname="ResourceReadRefC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Service" ref="0x40c4c940" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="width_t" ref="0x40c4d3f0" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c4b010" scoped=""/>
+        <function-ref name="readDone" ref="0x40c4b3a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/usr/src/tinyos/tos/chips/ms5607/ResourceReadRefC.nc" name="ReadRef" provided="1" ref="0x40c4d960">
+      <component-ref nicename="tos.chips.ms5607.ResourceReadRefC" qname="ResourceReadRefC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadRef" ref="0x40c4d960" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="width_t" ref="0x40c4d3f0" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c4c010" scoped=""/>
+        <function-ref name="readDone" ref="0x40c4c3a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:/usr/src/tinyos/tos/chips/ms5607/ResourceReadRefC.nc" name="Resource" provided="0" ref="0x40c4b7e0">
+      <component-ref nicename="tos.chips.ms5607.ResourceReadRefC" qname="ResourceReadRefC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x40c4b7e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40c4b9b8" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40c4ba98" scoped=""/>
+        <function-ref name="request" ref="0x40c4bb78" scoped=""/>
+        <function-ref name="granted" ref="0x40c4bc58" scoped=""/>
+        <function-ref name="isOwner" ref="0x40c4bd38" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

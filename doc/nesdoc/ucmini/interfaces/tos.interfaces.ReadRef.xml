@@ -1,0 +1,97 @@
+<?xml version="1.0" ?><interfacedef loc="50:/usr/src/tinyos/tos/interfaces/ReadRef.nc" nicename="tos.interfaces.ReadRef" qname="ReadRef">
+      <documentation loc="33:/usr/src/tinyos/tos/interfaces/ReadRef.nc">
+        <short>
+ The ReadRef interface is intended for split-phase low-rate or
+ high-latency reading of large values.</short>
+        <long>
+ The ReadRef interface is intended for split-phase low-rate or
+ high-latency reading of large values. The type of the value is
+ given as a template argument. When a value is too large to be
+ comfortably passed on the stack, the caller should allocate space
+ for the value and pass the pointer to read(). When the readDone()
+ comes back, the space will be filled with the new value.
+
+ &lt;p&gt;
+ See TEP114 - SIDs: Source and Sink Independent Drivers for details.
+ 
+ @param val_t the type of the object that will be returned
+
+ @author Gilman Tolle &lt;gtolle@archrock.com&gt;
+ @version $Revision: 1.5 $ $Date: 2008-06-04 03:00:31 $
+</long>
+      </documentation>
+      <parameters>
+        <typedef loc="50:/usr/src/tinyos/tos/interfaces/ReadRef.nc" name="val_t" ref="0x40432998">
+          <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="val_t" ref="0x40432998" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <function command="" loc="58:/usr/src/tinyos/tos/interfaces/ReadRef.nc" name="read" provided="0" ref="0x4042f010">
+        <documentation loc="51:/usr/src/tinyos/tos/interfaces/ReadRef.nc">
+          <short>
+ Initiates a read of the value.</short>
+          <long>
+ Initiates a read of the value.
+ 
+ @param 'val_t* ONE val' a pointer to space that will be filled by the value
+
+ @return SUCCESS if a readDone() event will eventually come back.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x40334340"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-var alignment="U:" size="U:"><typedef-ref name="val_t" ref="0x40432998" scoped=""/></type-var>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="58:/usr/src/tinyos/tos/interfaces/ReadRef.nc" name="val" ref="0x40432e70">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-var alignment="U:" size="U:"><typedef-ref name="val_t" ref="0x40432998" scoped=""/></type-var>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="67:/usr/src/tinyos/tos/interfaces/ReadRef.nc" name="readDone" provided="0" ref="0x4042fb08">
+        <documentation loc="60:/usr/src/tinyos/tos/interfaces/ReadRef.nc">
+          <short>
+ Signals the completion of the read().</short>
+          <long>
+ Signals the completion of the read(). The returned pointer will
+ be the same as the original pointer passed to read().
+
+ @param result SUCCESS if the read() was successful
+ @param 'val_t* ONE val' a pointer to the value that has been read
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x40334340"/></typename>
+            </type-int>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-var alignment="U:" size="U:"><typedef-ref name="val_t" ref="0x40432998" scoped=""/></type-var>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="67:/usr/src/tinyos/tos/interfaces/ReadRef.nc" name="result" ref="0x4042f7b8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x40334340"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="67:/usr/src/tinyos/tos/interfaces/ReadRef.nc" name="val" ref="0x4042f9a8">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-var alignment="U:" size="U:"><typedef-ref name="val_t" ref="0x40432998" scoped=""/></type-var>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

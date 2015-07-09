@@ -1,0 +1,5 @@
+COMPONENT=ESPLUGAppC
+CFLAGS += -DDEFAULT_BAUDRATE=9600		#Basic Sensor
+CFLAGS += -I./spi
+CFLAGS += -I./esp8266
+include $(MAKERULES)

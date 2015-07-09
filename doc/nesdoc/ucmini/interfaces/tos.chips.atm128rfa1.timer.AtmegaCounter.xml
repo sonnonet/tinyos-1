@@ -1,0 +1,126 @@
+<?xml version="1.0" ?><interfacedef loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter">
+      <parameters>
+        <typedef loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="size_type" ref="0x4074ad18">
+          <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="size_type" ref="0x4074ad18" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <function command="" loc="72:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="setMode" provided="0" ref="0x40744490">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="72:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="mode" ref="0x40744338">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="53:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="test" provided="0" ref="0x40745010">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="40:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="get" provided="0" ref="0x40746230">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-var alignment="U:" size="U:"><typedef-ref name="size_type" ref="0x4074ad18" scoped=""/></type-var>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="56:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="reset" provided="0" ref="0x407453c8">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="75:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="getMode" provided="0" ref="0x407448a0">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="49:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="overflow" provided="0" ref="0x40746b58">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="67:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="isOn" provided="0" ref="0x40745f20">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="set" provided="0" ref="0x40746770">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-var alignment="U:" size="U:"><typedef-ref name="size_type" ref="0x4074ad18" scoped=""/></type-var>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="value" ref="0x40746618">
+            <type-var alignment="U:" size="U:"><typedef-ref name="size_type" ref="0x4074ad18" scoped=""/></type-var>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="61:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="start" provided="0" ref="0x40745790">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="64:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounter.nc" name="stop" provided="0" ref="0x40745b40">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

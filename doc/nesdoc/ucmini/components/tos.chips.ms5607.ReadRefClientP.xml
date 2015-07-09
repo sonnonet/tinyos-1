@@ -1,0 +1,40 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/usr/src/tinyos/tos/chips/ms5607/ReadRefClientP.nc" nicename="tos.chips.ms5607.ReadRefClientP" qname="ReadRefClientP">
+      <parameters>
+        <typedef loc="35:/usr/src/tinyos/tos/chips/ms5607/ReadRefClientP.nc" name="type" ref="0x40c1ddb0">
+          <component-ref nicename="tos.chips.ms5607.ReadRefClientP" qname="ReadRefClientP"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="type" ref="0x40c1ddb0" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <module/>
+    <specification><interface loc="36:/usr/src/tinyos/tos/chips/ms5607/ReadRefClientP.nc" name="ReadRef" provided="1" ref="0x40c1a428">
+      <component-ref nicename="tos.chips.ms5607.ReadRefClientP" qname="ReadRefClientP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadRef" ref="0x40c1a428" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="type" ref="0x40c1ddb0" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c1aa50" scoped=""/>
+        <function-ref name="readDone" ref="0x40c1ade0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/chips/ms5607/ReadRefClientP.nc" name="ActualRead" provided="0" ref="0x40c18398">
+      <component-ref nicename="tos.chips.ms5607.ReadRefClientP" qname="ReadRefClientP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ActualRead" ref="0x40c18398" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="type" ref="0x40c1ddb0" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c189c0" scoped=""/>
+        <function-ref name="readDone" ref="0x40c18d50" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,14 @@
+digraph "tos.chips.atm128rfa1.timer.Alarm62khz32C" {
+  n0x40c187a0 [shape=ellipse, style=filled, label="Alarm", fontsize=12];
+  "Alarm62khz32C.AtmegaCompareP" [fontsize=12, shape=box, style=dashed, label="AtmegaCompareP", URL="../chtml/tos.chips.atm128rfa1.timer.AtmegaCompareP.html"];
+  "McuInitC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.atm128rfa1.McuInitC.html"];
+  "Alarm62khz32C.AtmegaCompareP" [fontsize=12, shape=box, style=dashed, label="AtmegaCompareP", URL="../chtml/tos.chips.atm128rfa1.timer.AtmegaCompareP.html"];
+  "Alarm62khz32C.AtmegaCompareP" [fontsize=12, shape=box, style=dashed, label="AtmegaCompareP", URL="../chtml/tos.chips.atm128rfa1.timer.AtmegaCompareP.html"];
+  "HplAtmRfa1TimerMacC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacC.html"];
+  "Alarm62khz32C.AtmegaCompareP" [fontsize=12, shape=box, style=dashed, label="AtmegaCompareP", URL="../chtml/tos.chips.atm128rfa1.timer.AtmegaCompareP.html"];
+  "HplAtmRfa1TimerMacC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacC.html"];
+  "n0x40c187a0" -> "Alarm62khz32C.AtmegaCompareP" [label="Alarm<T62khz, uint32_t>", URL="../ihtml/tos.lib.timer.Alarm.html", fontsize=10];
+  "McuInitC" -> "Alarm62khz32C.AtmegaCompareP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "Alarm62khz32C.AtmegaCompareP" -> "HplAtmRfa1TimerMacC" [label="AtmegaCounter<uint32_t>", URL="../ihtml/tos.chips.atm128rfa1.timer.AtmegaCounter.html", fontsize=10];
+  "Alarm62khz32C.AtmegaCompareP" -> "HplAtmRfa1TimerMacC" [label="AtmegaCompare<uint32_t>", URL="../ihtml/tos.chips.atm128rfa1.timer.AtmegaCompare.html", fontsize=10];
+}

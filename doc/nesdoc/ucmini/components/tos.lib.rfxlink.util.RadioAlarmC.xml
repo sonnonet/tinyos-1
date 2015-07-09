@@ -1,0 +1,138 @@
+<?xml version="1.0" ?><component abstract="" loc="37:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarmC.nc" nicename="tos.lib.rfxlink.util.RadioAlarmC" qname="RadioAlarmC">
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="54:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarmC.nc">
+          <from><interface-ref name="RadioAlarm" ref="0x408b6a48" scoped=""/></from>
+          <to><interface-ref name="RadioAlarm" ref="0x408c8c10" scoped=""/></to>
+        </wire>
+        <wire loc="55:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarmC.nc">
+          <from><interface-ref name="Alarm" ref="0x408c7460" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x408c9800" scoped=""/></to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarmC.nc">
+          <from><interface-ref name="Tasklet" ref="0x408d3d90" scoped=""/></from>
+          <to><interface-ref name="Tasklet" ref="0x408d1e18" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="41:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarmC.nc" name="RadioAlarm" provided="1" ref="0x408b6a48">
+      <component-ref nicename="tos.lib.rfxlink.util.RadioAlarmC" qname="RadioAlarmC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioAlarm" ref="0x408b6a48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioAlarm" qname="RadioAlarm"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="fired" ref="0x408b6c20" scoped=""/>
+        <function-ref name="wait" ref="0x408b6d00" scoped=""/>
+        <function-ref name="cancel" ref="0x408b6de0" scoped=""/>
+        <function-ref name="isFree" ref="0x408b6ec0" scoped=""/>
+        <function-ref name="getNow" ref="0x408b3010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarmC.nc" name="Alarm" provided="0" ref="0x408c9800">
+      <component-ref nicename="tos.lib.rfxlink.util.RadioAlarmC" qname="RadioAlarmC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Alarm" ref="0x408c9800" scoped=""/></type-interface>
+      <attribute-value>
+        <attribute-ref name="exactlyonce" ref="0x403287d0"/>
+        <value-structured>
+          <type-tag alignment="I:1" size="I:0"><attribute-ref name="exactlyonce" ref="0x403287d0"/></type-tag>
+        </value-structured>
+      </attribute-value>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T62khz" ref="0x4043b6e0"/>
+            <typename><typedef-ref name="TRadio" ref="0x40439890"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="tradio_size" ref="0x40439b38"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x408b2d58" scoped=""/>
+        <function-ref name="fired" ref="0x408b2528" scoped=""/>
+        <function-ref name="startAt" ref="0x408b2a18" scoped=""/>
+        <function-ref name="isRunning" ref="0x408b27a0" scoped=""/>
+        <function-ref name="getAlarm" ref="0x408cd010" scoped=""/>
+        <function-ref name="start" ref="0x408b2010" scoped=""/>
+        <function-ref name="stop" ref="0x408b22b0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="49:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarmP.nc" name="Tasklet" provided="0" ref="0x408d3d90">
+      <component-ref nicename="tos.lib.rfxlink.util.RadioAlarmP" qname="RadioAlarmC.RadioAlarmP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Tasklet" ref="0x408d3d90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.Tasklet" qname="Tasklet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="schedule" ref="0x408d1010" scoped=""/>
+        <function-ref name="suspend" ref="0x408d10f0" scoped=""/>
+        <function-ref name="resume" ref="0x408d11d0" scoped=""/>
+        <function-ref name="run" ref="0x408d12b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarmP.nc" name="Alarm" provided="0" ref="0x408c7460">
+      <component-ref nicename="tos.lib.rfxlink.util.RadioAlarmP" qname="RadioAlarmC.RadioAlarmP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Alarm" ref="0x408c7460" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T62khz" ref="0x4043b6e0"/>
+            <typename><typedef-ref name="TRadio" ref="0x40439890"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="tradio_size" ref="0x40439b38"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x408d3908" scoped=""/>
+        <function-ref name="fired" ref="0x408d30d8" scoped=""/>
+        <function-ref name="startAt" ref="0x408d35c8" scoped=""/>
+        <function-ref name="isRunning" ref="0x408d3350" scoped=""/>
+        <function-ref name="getAlarm" ref="0x408d3b80" scoped=""/>
+        <function-ref name="start" ref="0x408c7bb0" scoped=""/>
+        <function-ref name="stop" ref="0x408c7e50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/lib/rfxlink/util/TaskletC.nc" name="Tasklet" provided="1" ref="0x408d1e18">
+      <component-ref nicename="tos.lib.rfxlink.util.TaskletC" qname="TaskletC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Tasklet" ref="0x408d1e18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.Tasklet" qname="Tasklet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="schedule" ref="0x408ce010" scoped=""/>
+        <function-ref name="suspend" ref="0x408ce0f0" scoped=""/>
+        <function-ref name="resume" ref="0x408ce1d0" scoped=""/>
+        <function-ref name="run" ref="0x408ce2b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarmP.nc" name="RadioAlarm" provided="1" ref="0x408c8c10">
+      <component-ref nicename="tos.lib.rfxlink.util.RadioAlarmP" qname="RadioAlarmC.RadioAlarmP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioAlarm" ref="0x408c8c10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioAlarm" qname="RadioAlarm"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="fired" ref="0x408c8df8" scoped=""/>
+        <function-ref name="wait" ref="0x408c8ed8" scoped=""/>
+        <function-ref name="cancel" ref="0x408c7010" scoped=""/>
+        <function-ref name="isFree" ref="0x408c70f0" scoped=""/>
+        <function-ref name="getNow" ref="0x408c71d0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="38:/usr/src/tinyos/tos/lib/rfxlink/util/TaskletC.nc" nicename="tos.lib.rfxlink.util.TaskletC" qname="TaskletC">
+      <module/>
+    </component><component abstract="" loc="39(RadioAlarmC.RadioAlarmP):/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarmP.nc" nicename="tos.lib.rfxlink.util.RadioAlarmP" qname="RadioAlarmC.RadioAlarmP">
+      <instance>
+        <component-ref nicename="tos.lib.rfxlink.util.RadioAlarmP" qname="RadioAlarmP"/>
+      </instance>
+      <module/>
+    </component></referenced></component>

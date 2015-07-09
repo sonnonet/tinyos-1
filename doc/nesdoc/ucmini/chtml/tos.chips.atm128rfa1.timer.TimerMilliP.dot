@@ -1,0 +1,11 @@
+digraph "tos.chips.atm128rfa1.timer.TimerMilliP" {
+  n0x40d098e8 [shape=ellipse, style=filled, label="TimerMilli", fontsize=12];
+  "TimerMilliP.VirtualizeTimerC" [fontsize=12, shape=box, style=dashed, label="VirtualizeTimerC", URL="../chtml/tos.lib.timer.VirtualizeTimerC.html"];
+  "TimerMilliP.AlarmToTimerC" [fontsize=12, shape=box, style=dashed, label="AlarmToTimerC", URL="../chtml/tos.lib.timer.AlarmToTimerC.html"];
+  "TimerMilliP.AlarmMilli32C" [fontsize=12, shape=box,peripheries=2, style=dashed, label="AlarmMilli32C", URL="../chtml/tos.chips.atm128rfa1.timer.AlarmMilli32C.html"];
+  "TimerMilliP.VirtualizeTimerC" [fontsize=12, shape=box, style=dashed, label="VirtualizeTimerC", URL="../chtml/tos.lib.timer.VirtualizeTimerC.html"];
+  "TimerMilliP.AlarmToTimerC" [fontsize=12, shape=box, style=dashed, label="AlarmToTimerC", URL="../chtml/tos.lib.timer.AlarmToTimerC.html"];
+  "n0x40d098e8" -> "TimerMilliP.VirtualizeTimerC" [label="Timer<TMilli>[uint8_t]", style=bold, URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "TimerMilliP.AlarmToTimerC" -> "TimerMilliP.AlarmMilli32C" [label="Alarm<TMilli, uint32_t>", URL="../ihtml/tos.lib.timer.Alarm.html", fontsize=10];
+  "TimerMilliP.VirtualizeTimerC" -> "TimerMilliP.AlarmToTimerC" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+}

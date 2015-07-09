@@ -1,0 +1,7 @@
+COMPONENT=TH20SensorC
+
+PFLAGS += -DCC2420_DEF_RFPOWER=31
+
+CFLAGS=-Wno-unused-but-set-variable
+
+include $(MAKERULES)

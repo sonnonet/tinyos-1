@@ -1,0 +1,78 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/PressureC.nc" nicename="tos.platforms.ucmini.chips.ms5607.PressureC" qname="PressureC">
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="46:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/PressureC.nc">
+          <from><interface-ref name="Read" ref="0x40b99010" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40bbd3b8" scoped=""/></to>
+        </wire>
+        <wire loc="44:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/PressureC.nc">
+          <from><interface-ref name="SetPrecision" ref="0x40bbe948" scoped=""/></from>
+          <to><interface-ref name="SetPrecision" ref="0x40c92010" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="37:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/PressureC.nc" name="Read" provided="1" ref="0x40b99010">
+      <component-ref nicename="tos.platforms.ucmini.chips.ms5607.PressureC" qname="PressureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40b99010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40b99638" scoped=""/>
+        <function-ref name="readDone" ref="0x40b99890" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/PressureC.nc" name="SetPrecision" provided="1" ref="0x40bbe948">
+      <component-ref nicename="tos.platforms.ucmini.chips.ms5607.PressureC" qname="PressureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SetPrecision" ref="0x40bbe948" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Set" qname="Set"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="set" ref="0x40bc0010" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="38:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc" name="SetPrecision" provided="1" ref="0x40c92010">
+      <component-ref nicename="tos.chips.ms5607.Ms5607PressureC" qname="PressureC.Ms5607PressureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SetPrecision" ref="0x40c92010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Set" qname="Set"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="set" ref="0x40c92638" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc" name="Read" provided="1" ref="0x40bbd3b8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607PressureC" qname="PressureC.Ms5607PressureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40bbd3b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40bbd9e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40bbdc38" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="35(PressureC.Ms5607PressureC):/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc" nicename="tos.chips.ms5607.Ms5607PressureC" qname="PressureC.Ms5607PressureC">
+      <instance>
+        <component-ref nicename="tos.chips.ms5607.Ms5607PressureC" qname="Ms5607PressureC"/>
+      </instance>
+      <configuration/>
+    </component></referenced></component>

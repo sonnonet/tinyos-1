@@ -1,0 +1,5 @@
+digraph "tos.platforms.ucmini.DemoSensorC" {
+  n0x40da7648 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "Sht21C" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.sht21.Sht21C.html"];
+  "n0x40da7648" -> "Sht21C" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+}

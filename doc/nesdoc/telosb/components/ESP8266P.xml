@@ -1,0 +1,243 @@
+<?xml version="1.0" ?><component loc="9:ESP8266P.nc" nicename="ESP8266P" qname="ESP8266P" safe="">
+      <documentation loc="1:ESP8266P.nc">
+        <short>
+ Implementation for ESP8266P Driver.</short>
+        <long>
+ Implementation for ESP8266P Driver.
+ Create by TJ, TaeHaun
+ Date 2015. 02. 06
+*</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="16:ESP8266P.nc" name="ESP_CON_AP" provided="0" ref="0x40710110">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ESP_CON_AP" ref="0x40710110" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406ed668"/>
+            <typename><typedef-ref name="TMilli" ref="0x406ed830"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4070fc00" scoped=""/>
+        <function-ref name="fired" ref="0x40710e90" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4070f5c0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4070f368" scoped=""/>
+        <function-ref name="getdt" ref="0x4070e0f0" scoped=""/>
+        <function-ref name="gett0" ref="0x4070fe58" scoped=""/>
+        <function-ref name="isRunning" ref="0x4070f110" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40710738" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4070f8e0" scoped=""/>
+        <function-ref name="startOneShot" ref="0x407109b8" scoped=""/>
+        <function-ref name="stop" ref="0x40710c38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:ESP8266P.nc" name="SerialControl" provided="0" ref="0x40718ad0">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SerialControl" ref="0x40718ad0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x40718ca8" scoped=""/>
+        <function-ref name="stop" ref="0x40718d88" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="14:ESP8266P.nc" name="ESP_RESET" provided="0" ref="0x407019b8">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ESP_RESET" ref="0x407019b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406ed668"/>
+            <typename><typedef-ref name="TMilli" ref="0x406ed830"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x407144c8" scoped=""/>
+        <function-ref name="fired" ref="0x40716768" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40716e70" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40716c18" scoped=""/>
+        <function-ref name="getdt" ref="0x40714978" scoped=""/>
+        <function-ref name="gett0" ref="0x40714720" scoped=""/>
+        <function-ref name="isRunning" ref="0x407169c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40716010" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x407141a8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40716290" scoped=""/>
+        <function-ref name="stop" ref="0x40716510" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="15:ESP8266P.nc" name="ESP_MODE_1" provided="0" ref="0x40714d18">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ESP_MODE_1" ref="0x40714d18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406ed668"/>
+            <typename><typedef-ref name="TMilli" ref="0x406ed830"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x407128a8" scoped=""/>
+        <function-ref name="fired" ref="0x40713aa8" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40712268" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40712010" scoped=""/>
+        <function-ref name="getdt" ref="0x40712d58" scoped=""/>
+        <function-ref name="gett0" ref="0x40712b00" scoped=""/>
+        <function-ref name="isRunning" ref="0x40713d00" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40713350" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40712588" scoped=""/>
+        <function-ref name="startOneShot" ref="0x407135d0" scoped=""/>
+        <function-ref name="stop" ref="0x40713850" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:ESP8266P.nc" name="ESP_SENDING" provided="0" ref="0x40721868">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ESP_SENDING" ref="0x40721868" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406ed668"/>
+            <typename><typedef-ref name="TMilli" ref="0x406ed830"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4071f368" scoped=""/>
+        <function-ref name="fired" ref="0x40720608" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40720d10" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40720ab8" scoped=""/>
+        <function-ref name="getdt" ref="0x4071f818" scoped=""/>
+        <function-ref name="gett0" ref="0x4071f5c0" scoped=""/>
+        <function-ref name="isRunning" ref="0x40720860" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40721e90" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4071f048" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40720130" scoped=""/>
+        <function-ref name="stop" ref="0x407203b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:ESP8266P.nc" name="ESP_SERVER" provided="0" ref="0x4070e490">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ESP_SERVER" ref="0x4070e490" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406ed668"/>
+            <typename><typedef-ref name="TMilli" ref="0x406ed830"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40721010" scoped=""/>
+        <function-ref name="fired" ref="0x4070d268" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4070d970" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4070d718" scoped=""/>
+        <function-ref name="getdt" ref="0x407214c0" scoped=""/>
+        <function-ref name="gett0" ref="0x40721268" scoped=""/>
+        <function-ref name="isRunning" ref="0x4070d4c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4070eab8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4070dc90" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4070ed38" scoped=""/>
+        <function-ref name="stop" ref="0x4070d010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:ESP8266P.nc" name="UartStream" provided="0" ref="0x407278b0">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UartStream" ref="0x407278b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.UartStream" qname="UartStream"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40727a88" scoped=""/>
+        <function-ref name="receivedByte" ref="0x40727b68" scoped=""/>
+        <function-ref name="receive" ref="0x40727c48" scoped=""/>
+        <function-ref name="enableReceiveInterrupt" ref="0x40727d28" scoped=""/>
+        <function-ref name="receiveDone" ref="0x40727e08" scoped=""/>
+        <function-ref name="disableReceiveInterrupt" ref="0x40727ee8" scoped=""/>
+        <function-ref name="sendDone" ref="0x40719010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:ESP8266P.nc" name="Leds" provided="0" ref="0x4071ce20">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x4071ce20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4071b010" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4071b0f0" scoped=""/>
+        <function-ref name="led1On" ref="0x4071b1d0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4071b2b0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4071b390" scoped=""/>
+        <function-ref name="get" ref="0x4071b470" scoped=""/>
+        <function-ref name="led1Off" ref="0x4071b550" scoped=""/>
+        <function-ref name="led2Off" ref="0x4071b8d0" scoped=""/>
+        <function-ref name="set" ref="0x4071b630" scoped=""/>
+        <function-ref name="led0On" ref="0x4071b710" scoped=""/>
+        <function-ref name="led2On" ref="0x4071b7f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="82:ESP8266P.nc" name="AT_REV_COMP" provided="0" ref="0x407366d0">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="AT_REV_COMP" ref="0x407366d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x407368a8" scoped=""/>
+        <function-ref name="runTask" ref="0x40736988" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:ESP8266P.nc" name="ESP8266" provided="1" ref="0x40703180">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ESP8266" ref="0x40703180" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ESP8266" qname="ESP8266"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40703358" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:ESP8266P.nc" name="ESP_SEND_PRESENT" provided="0" ref="0x4071fbf8">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ESP_SEND_PRESENT" ref="0x4071fbf8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406ed668"/>
+            <typename><typedef-ref name="TMilli" ref="0x406ed830"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4071c730" scoped=""/>
+        <function-ref name="fired" ref="0x4071d9b0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4071c0f0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4071de60" scoped=""/>
+        <function-ref name="getdt" ref="0x4071cbe0" scoped=""/>
+        <function-ref name="gett0" ref="0x4071c988" scoped=""/>
+        <function-ref name="isRunning" ref="0x4071dc08" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4071d258" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4071c410" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4071d4d8" scoped=""/>
+        <function-ref name="stop" ref="0x4071d758" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="13:ESP8266P.nc" name="ESP_INIT" provided="0" ref="0x40703648">
+      <component-ref nicename="ESP8266P" qname="ESP8266P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ESP_INIT" ref="0x40703648" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406ed668"/>
+            <typename><typedef-ref name="TMilli" ref="0x406ed830"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40701170" scoped=""/>
+        <function-ref name="fired" ref="0x407023f8" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40702b00" scoped=""/>
+        <function-ref name="isOneShot" ref="0x407028a8" scoped=""/>
+        <function-ref name="getdt" ref="0x40701620" scoped=""/>
+        <function-ref name="gett0" ref="0x407013c8" scoped=""/>
+        <function-ref name="isRunning" ref="0x40702650" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40703c70" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40702e20" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40703ef0" scoped=""/>
+        <function-ref name="stop" ref="0x407021a0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,529 @@
+<?xml version="1.0" ?><component loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc" nicename="tos.chips.atm128rfa1.adc.Atm128AdcC" qname="Atm128AdcC">
+      <documentation loc="44:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+        <short>
+ HAL for the Atmega128 A/D conversion susbsystem.</short>
+        <long>
+ HAL for the Atmega128 A/D conversion susbsystem.
+
+ @author Hu Siquan &lt;husq@xbow.com&gt;
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="69:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="Atm128AdcMultiple" ref="0x4096f870" scoped=""/></from>
+          <to><interface-ref name="Atm128AdcMultiple" ref="0x40969c30" scoped=""/></to>
+        </wire>
+        <wire loc="68:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="Atm128AdcSingle" ref="0x409724e0" scoped=""/></from>
+          <to><interface-ref name="Atm128AdcSingle" ref="0x409696a8" scoped=""/></to>
+        </wire>
+        <wire loc="66:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="Resource" ref="0x4095db68" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x409b6a20" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="ResourceConfigure" ref="0x40a14208" scoped=""/></from>
+          <to><interface-ref name="ResourceConfigure" ref="0x40956100" scoped=""/></to>
+        </wire>
+        <wire loc="71:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="AdcInit" ref="0x404ae7c8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40956d98" scoped=""/></to>
+        </wire>
+        <wire loc="73:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="HplAtm128Adc" ref="0x4097f958" scoped=""/></from>
+          <to><interface-ref name="HplAtm128Adc" ref="0x409a2268" scoped=""/></to>
+        </wire>
+        <wire loc="74:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="Atm128Calibrate" ref="0x409681e8" scoped=""/></from>
+          <to><interface-ref name="Atm128Calibrate" ref="0x404a9830" scoped=""/></to>
+        </wire>
+        <wire loc="76:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="AsyncStdControl" ref="0x40a129f0" scoped=""/></from>
+          <to><interface-ref name="AsyncStdControl" ref="0x40969218" scoped=""/></to>
+        </wire>
+        <wire loc="77:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x40a11150" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x40a155f0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="58:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc" name="ResourceConfigure" provided="0" ref="0x40956100">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcC" qname="Atm128AdcC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceConfigure" ref="0x40956100" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x409562d8" scoped=""/>
+        <function-ref name="configure" ref="0x409563b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc" name="Atm128AdcMultiple" provided="1" ref="0x4096f870">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcC" qname="Atm128AdcC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcMultiple" ref="0x4096f870" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcMultiple" qname="Atm128AdcMultiple"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getData" ref="0x4096fa48" scoped=""/>
+        <function-ref name="dataReady" ref="0x4096fb28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc" name="Atm128AdcSingle" provided="1" ref="0x409724e0">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcC" qname="Atm128AdcC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcSingle" ref="0x409724e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcSingle" qname="Atm128AdcSingle"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getData" ref="0x409726b8" scoped=""/>
+        <function-ref name="cancel" ref="0x40972798" scoped=""/>
+        <function-ref name="dataReady" ref="0x40972878" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc" name="Resource" provided="1" ref="0x4095db68">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcC" qname="Atm128AdcC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x4095db68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x4095dd40" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x4095de20" scoped=""/>
+        <function-ref name="request" ref="0x4095df00" scoped=""/>
+        <function-ref name="granted" ref="0x40958010" scoped=""/>
+        <function-ref name="isOwner" ref="0x409580f0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="91:/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc" name="Resource" provided="1" ref="0x409b6a20">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="Atm128AdcC.AdcArbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x409b6a20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x409b6c08" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x409b6ce8" scoped=""/>
+        <function-ref name="request" ref="0x409b6dc8" scoped=""/>
+        <function-ref name="granted" ref="0x409b6ea8" scoped=""/>
+        <function-ref name="isOwner" ref="0x40a15010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="96:/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc" name="ResourceConfigure" provided="0" ref="0x40a14208">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="Atm128AdcC.AdcArbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceConfigure" ref="0x40a14208" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x40a143f0" scoped=""/>
+        <function-ref name="configure" ref="0x40a144d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="88:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="AsyncStdControl" provided="1" ref="0x40969218">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AsyncStdControl" ref="0x40969218" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AsyncStdControl" qname="AsyncStdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x409693f0" scoped=""/>
+        <function-ref name="stop" ref="0x409694d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="94:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="Atm128Calibrate" provided="0" ref="0x409681e8">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128Calibrate" ref="0x409681e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.Atm128Calibrate" qname="Atm128Calibrate"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="baudrateRegister" ref="0x409683c0" scoped=""/>
+        <function-ref name="cyclesPerJiffy" ref="0x409684a0" scoped=""/>
+        <function-ref name="calibrateMicro" ref="0x40968580" scoped=""/>
+        <function-ref name="actualMicro" ref="0x40968660" scoped=""/>
+        <function-ref name="adcPrescaler" ref="0x40968740" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc" name="Atm128Calibrate" provided="1" ref="0x404a9830">
+      <component-ref nicename="tos.platforms.ucmini.PlatformC" qname="PlatformC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128Calibrate" ref="0x404a9830" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.Atm128Calibrate" qname="Atm128Calibrate"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="baudrateRegister" ref="0x404a9a08" scoped=""/>
+        <function-ref name="cyclesPerJiffy" ref="0x404a9ae8" scoped=""/>
+        <function-ref name="calibrateMicro" ref="0x404a9bc8" scoped=""/>
+        <function-ref name="actualMicro" ref="0x404a9ca8" scoped=""/>
+        <function-ref name="adcPrescaler" ref="0x404a9d88" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="93:/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc" name="ResourceDefaultOwner" provided="1" ref="0x40a155f0">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="Atm128AdcC.AdcArbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x40a155f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40a157c8" scoped=""/>
+        <function-ref name="requested" ref="0x40a158a8" scoped=""/>
+        <function-ref name="granted" ref="0x40a15988" scoped=""/>
+        <function-ref name="isOwner" ref="0x40a15a68" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x40a15b48" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="73:/usr/src/tinyos/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="ResourceDefaultOwner" provided="0" ref="0x40a11150">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="Atm128AdcC.PM"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x40a11150" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40a11328" scoped=""/>
+        <function-ref name="requested" ref="0x40a11408" scoped=""/>
+        <function-ref name="granted" ref="0x40a114e8" scoped=""/>
+        <function-ref name="isOwner" ref="0x40a115c8" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x40a116a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc" name="AdcInit" provided="0" ref="0x404ae7c8">
+      <component-ref nicename="tos.chips.atm128rfa1.McuInitC" qname="McuInitC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AdcInit" ref="0x404ae7c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x404ae9a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="89:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="Atm128AdcSingle" provided="1" ref="0x409696a8">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcSingle" ref="0x409696a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcSingle" qname="Atm128AdcSingle"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getData" ref="0x40969880" scoped=""/>
+        <function-ref name="cancel" ref="0x40969960" scoped=""/>
+        <function-ref name="dataReady" ref="0x40969a40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="93:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="HplAtm128Adc" provided="0" ref="0x4097f958">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAtm128Adc" ref="0x4097f958" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setSingle" ref="0x4097fb30" scoped=""/>
+        <function-ref name="isAdlarOn" ref="0x4097fc10" scoped=""/>
+        <function-ref name="setPrescaler" ref="0x4097fcf0" scoped=""/>
+        <function-ref name="isEnabled" ref="0x4097fdd0" scoped=""/>
+        <function-ref name="setChannel" ref="0x4097feb0" scoped=""/>
+        <function-ref name="enableAdc" ref="0x4096a010" scoped=""/>
+        <function-ref name="setAdlar" ref="0x4096a0f0" scoped=""/>
+        <function-ref name="enableInterruption" ref="0x4096a1d0" scoped=""/>
+        <function-ref name="isComplete" ref="0x4096a2b0" scoped=""/>
+        <function-ref name="cancel" ref="0x4096a390" scoped=""/>
+        <function-ref name="disableAdc" ref="0x4096a470" scoped=""/>
+        <function-ref name="getRef" ref="0x4096a550" scoped=""/>
+        <function-ref name="disableInterruption" ref="0x4096a630" scoped=""/>
+        <function-ref name="resetInterrupt" ref="0x4096a790" scoped=""/>
+        <function-ref name="startConversion" ref="0x4096a870" scoped=""/>
+        <function-ref name="isStarted" ref="0x4096a950" scoped=""/>
+        <function-ref name="getChannel" ref="0x4096aa30" scoped=""/>
+        <function-ref name="setAdcsra" ref="0x4096ab10" scoped=""/>
+        <function-ref name="setRef" ref="0x4096abf0" scoped=""/>
+        <function-ref name="getAdcsra" ref="0x4096acd0" scoped=""/>
+        <function-ref name="setContinuous" ref="0x4096adb0" scoped=""/>
+        <function-ref name="getValue" ref="0x4096ae90" scoped=""/>
+        <function-ref name="dataReady" ref="0x40968010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128AdcC.nc" name="HplAtm128Adc" provided="1" ref="0x409a2268">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128AdcC" qname="HplAtm128AdcC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAtm128Adc" ref="0x409a2268" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setSingle" ref="0x409a2440" scoped=""/>
+        <function-ref name="isAdlarOn" ref="0x409a2520" scoped=""/>
+        <function-ref name="setPrescaler" ref="0x409a2600" scoped=""/>
+        <function-ref name="isEnabled" ref="0x409a26e0" scoped=""/>
+        <function-ref name="setChannel" ref="0x409a27c0" scoped=""/>
+        <function-ref name="enableAdc" ref="0x409a28a0" scoped=""/>
+        <function-ref name="setAdlar" ref="0x409a2980" scoped=""/>
+        <function-ref name="enableInterruption" ref="0x409a2a60" scoped=""/>
+        <function-ref name="isComplete" ref="0x409a2b40" scoped=""/>
+        <function-ref name="cancel" ref="0x409a2c20" scoped=""/>
+        <function-ref name="disableAdc" ref="0x409a2d00" scoped=""/>
+        <function-ref name="getRef" ref="0x409a2de0" scoped=""/>
+        <function-ref name="disableInterruption" ref="0x409a2ec0" scoped=""/>
+        <function-ref name="resetInterrupt" ref="0x409a1090" scoped=""/>
+        <function-ref name="startConversion" ref="0x409a1170" scoped=""/>
+        <function-ref name="isStarted" ref="0x409a1250" scoped=""/>
+        <function-ref name="getChannel" ref="0x409a1330" scoped=""/>
+        <function-ref name="setAdcsra" ref="0x409a1410" scoped=""/>
+        <function-ref name="setRef" ref="0x409a14f0" scoped=""/>
+        <function-ref name="getAdcsra" ref="0x409a15d0" scoped=""/>
+        <function-ref name="setContinuous" ref="0x409a16b0" scoped=""/>
+        <function-ref name="getValue" ref="0x409a1790" scoped=""/>
+        <function-ref name="dataReady" ref="0x409a1870" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="70:/usr/src/tinyos/tos/lib/power/AsyncStdControlPowerManagerC.nc" name="AsyncStdControl" provided="0" ref="0x40a129f0">
+      <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="Atm128AdcC.PM"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AsyncStdControl" ref="0x40a129f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AsyncStdControl" qname="AsyncStdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x40a12bc8" scoped=""/>
+        <function-ref name="stop" ref="0x40a12ca8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="90:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="Atm128AdcMultiple" provided="1" ref="0x40969c30">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcMultiple" ref="0x40969c30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcMultiple" qname="Atm128AdcMultiple"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getData" ref="0x40969e08" scoped=""/>
+        <function-ref name="dataReady" ref="0x40969ee8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="87:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="Init" provided="1" ref="0x40956d98">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x40956d98" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4096c010" scoped=""/>
+      </interface-functions>
+    </interface><component loc="35:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc" nicename="tos.platforms.ucmini.PlatformC" qname="PlatformC">
+      <configuration/>
+      <wiring>
+        <wire loc="49:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc">
+          <from><interface-ref name="Init" ref="0x404a1010" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x404a7250" scoped=""/></to>
+        </wire>
+        <wire loc="52:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc">
+          <from><interface-ref name="Atm128Calibrate" ref="0x404a9830" scoped=""/></from>
+          <to><interface-ref name="Atm128Calibrate" ref="0x404b7d20" scoped=""/></to>
+        </wire>
+        <wire loc="50:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc">
+          <from><interface-ref name="LedsInit" ref="0x404a7a00" scoped=""/></from>
+          <to><interface-ref name="LedsInit" ref="0x404a0010" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc">
+          <from><interface-ref name="McuInit" ref="0x404a7640" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x404ae010" scoped=""/></to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/platforms/ucmini/PlatformC.nc">
+          <from><interface-ref name="Stm25pInit" ref="0x404a7dd0" scoped=""/></from>
+          <to><interface-ref name="Stm25pOff" ref="0x404cb360" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="89(Atm128AdcC.AdcArbiter):/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc" nicename="tos.system.RoundRobinArbiterC" qname="Atm128AdcC.AdcArbiter">
+      <documentation loc="69:/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc">
+        <short>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.</short>
+        <long>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.  It provides arbitration to a shared resource in
+ a Round Robin fashion.  An array is used to keep track of which users have 
+ put in requests for the resource.  Upon the release of the resource by one
+ of these users, the array is checked and the next user (in Round Robin order)
+ that has a pending request will ge granted control of the resource.  If
+ there are no pending requests, then the resource is granted to the default 
+ user.  If a new request is made, the default user will release the resource, 
+ and it will be granted to the requesting cleint.
+
+ @param &lt;b&gt;resourceName&lt;/b&gt; -- The name of the Resource being shared
+ 
+ @author Kevin Klues (klues@tkn.tu-berlin.de)
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.RoundRobinArbiterC" qname="RoundRobinArbiterC"/>
+        <arguments>
+          <value cst="S:atm128adc.resource">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-int alignment="I:1" cname="char" size="I:1"/>
+            </type-pointer>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="106:/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="ResourceRequested" ref="0x40a151e8" scoped=""/></from>
+          <to><interface-ref name="ResourceRequested" ref="0x40e65ee0" scoped=""/></to>
+        </wire>
+        <wire loc="107:/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x40a155f0" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x40e63300" scoped=""/></to>
+        </wire>
+        <wire loc="105:/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="Resource" ref="0x409b6a20" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x40e657a0" scoped=""/></to>
+        </wire>
+        <wire loc="108:/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x40a15c88" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x40e63998" scoped=""/></to>
+        </wire>
+        <wire loc="103:/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x404987a0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40e662d0" scoped=""/></to>
+        </wire>
+        <wire loc="109:/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="ResourceConfigure" ref="0x40e63e58" scoped=""/></from>
+          <to><interface-ref name="ResourceConfigure" ref="0x40a14208" scoped=""/></to>
+        </wire>
+        <wire loc="111:/usr/src/tinyos/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="Queue" ref="0x40e62290" scoped=""/></from>
+          <to><interface-ref name="RoundRobinQueue" ref="0x40e66608" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="67(Atm128AdcC.PM):/usr/src/tinyos/tos/lib/power/AsyncStdControlPowerManagerC.nc" nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="Atm128AdcC.PM">
+      <documentation loc="41:/usr/src/tinyos/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+        <short>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.</short>
+        <long>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This is the internal implementation of the standard power management
+ policy for managing the power states of non-virtualized devices.
+ Non-virtualized devices are shared using a parameterized Resource
+ interface, and are powered down according to some policy whenever there
+ are no more pending requests to that Resource.  The policy implemented
+ by this component is to power down a device as soon as it becomes free.
+ Such a policy is useful whenever a device has a negligible wake-up
+ latency.  There is no cost associated with waiting for the device to
+ power up, so it can be powered on and off as often as possible.&lt;br&gt;&lt;br&gt;
+
+ Powerdown of the device is done through the &lt;code&gt;AsyncStdControl&lt;/code&gt;
+ interface, so this component can only be used with those devices that
+ provide that interface.&lt;br&gt;&lt;br&gt;
+
+ For devices providing either the &lt;code&gt;StdControl&lt;/code&gt; or
+ &lt;code&gt;SplitControl&lt;/code&gt; interfaces, please use either the
+ &lt;code&gt;StdControlPowerManagerC&lt;/code&gt; component or the
+ &lt;code&gt;SplitControlPowerManagerC&lt;/code&gt; component respectively.
+ 
+ @author Kevin Klues (klueska@cs.wustl.edu)
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.lib.power.AsyncStdControlPowerManagerC" qname="AsyncStdControlPowerManagerC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="80:/usr/src/tinyos/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="AsyncStdControl" ref="0x40e7c450" scoped=""/></from>
+          <to><interface-ref name="AsyncStdControl" ref="0x40a129f0" scoped=""/></to>
+        </wire>
+        <wire loc="82:/usr/src/tinyos/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="PowerDownCleanup" ref="0x40e7c848" scoped=""/></from>
+          <to><interface-ref name="PowerDownCleanup" ref="0x40a12de8" scoped=""/></to>
+        </wire>
+        <wire loc="84:/usr/src/tinyos/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x40e7cb60" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x40a11150" scoped=""/></to>
+        </wire>
+        <wire loc="85:/usr/src/tinyos/tos/lib/power/AsyncStdControlPowerManagerC.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x40e7b230" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x40a117e8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="84:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP" safe="">
+      <documentation loc="72:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc">
+        <short>
+ Internal component of the Atmega128 A/D HAL.</short>
+        <long>
+ Internal component of the Atmega128 A/D HAL.
+
+ @author Jason Hill
+ @author David Gay
+ @author Philip Levis
+ @author Phil Buonadonna
+ @author Hu Siquan &lt;husq@xbow.com&gt;
+ @author Janos Sallai &lt;janos.sallai@vanderbilt.edu&gt;
+ @author Andras Biro &lt;bbandi86@gmail.com&gt;
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc" nicename="tos.chips.atm128rfa1.McuInitC" qname="McuInitC" safe="">
+      <configuration/>
+      <wiring>
+        <wire loc="50:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc">
+          <from><interface-ref name="Init" ref="0x404ae010" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x404ab1d8" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc">
+          <from><interface-ref name="TimerInit" ref="0x404ab9c8" scoped=""/></from>
+          <to><interface-ref name="TimerInit" ref="0x404ae418" scoped=""/></to>
+        </wire>
+        <wire loc="52:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc">
+          <from><interface-ref name="AdcInit" ref="0x404abd78" scoped=""/></from>
+          <to><interface-ref name="AdcInit" ref="0x404ae7c8" scoped=""/></to>
+        </wire>
+        <wire loc="54:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc">
+          <from><interface-ref name="RadioInit" ref="0x404aa200" scoped=""/></from>
+          <to><interface-ref name="RFA1RadioOff" ref="0x404ad568" scoped=""/></to>
+        </wire>
+        <wire loc="55:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitC.nc">
+          <from><interface-ref name="MeasureClock" ref="0x404ab600" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x404b7970" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="44:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128AdcC.nc" nicename="tos.chips.atm128rfa1.adc.HplAtm128AdcC" qname="HplAtm128AdcC">
+      <documentation loc="36:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128AdcC.nc">
+        <short>
+ HPL for the Atmega128 A/D conversion susbsystem.</short>
+        <long>
+ HPL for the Atmega128 A/D conversion susbsystem.
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+ @author Hu Siquan &lt;husq@xbow.com&gt;
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="50:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128AdcC.nc">
+          <from><interface-ref name="HplAtm128Adc" ref="0x409a2268" scoped=""/></from>
+          <to><interface-ref name="HplAtm128Adc" ref="0x4099e2b8" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128AdcC.nc">
+          <from><interface-ref name="McuPowerState" ref="0x4099de38" scoped=""/></from>
+          <to><interface-ref name="McuPowerState" ref="0x4040c1a8" scoped=""/></to>
+        </wire>
+        <wire loc="52:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128AdcC.nc">
+          <from><interface-ref name="McuPowerOverride" ref="0x4040be50" scoped=""/></from>
+          <to><interface-ref name="McuPowerOverride" ref="0x4099da78" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

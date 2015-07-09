@@ -1,0 +1,497 @@
+<?xml version="1.0" ?><interfacedef loc="48:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc">
+      <documentation loc="36:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+        <short>
+ HPL interface to the Atmega128 A/D conversion subsystem.</short>
+        <long>
+ HPL interface to the Atmega128 A/D conversion subsystem. Please see the
+ Atmega128 manual for full details on the functioning of this subsystem.
+ &lt;p&gt;
+ A word of warning: the Atmega128 SLEEP instruction initiates an A/D
+ conversion when the ADC and ADC interrupt are enabled.
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+ @author Hu Siquan &lt;husq@xbow.com&gt;
+ @author David Gay
+</long>
+      </documentation>
+      <function command="" loc="140:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="setSingle" provided="0" ref="0x40982698">
+        <documentation loc="137:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Disable continuous sampling
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="72:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="isAdlarOn" provided="0" ref="0x409678d0">
+        <documentation loc="68:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Returns ADLAR (ADC left adjust result) status
+ </short>
+          <long>
+ Returns ADLAR (ADC left adjust result) status
+ @returns TRUE if ADLAR is on.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="166:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="setPrescaler" provided="0" ref="0x40981b60">
+        <documentation loc="161:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Set ADC prescaler selection bits
+ </short>
+          <long>
+ Set ADC prescaler selection bits
+ @param scale New ADC prescaler. Must be one of the ATM128_ADC_PRESCALE_xxx
+   values from Atm128Adc.h
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="166:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="scale" ref="0x40981a08">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="148:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="isEnabled" provided="0" ref="0x40982ad8">
+        <documentation loc="144:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Is ADC enabled?
+ </short>
+          <long>
+ Is ADC enabled?
+ @return TRUE if the ADC is enabled, FALSE otherwise
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="54:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="setChannel" provided="0" ref="0x4096b9c8">
+        <documentation loc="50:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Sets the ADC channel
+ </short>
+          <long>
+ Sets the ADC channel
+ @param mux New channel
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="54:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="mux" ref="0x4096b870">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="108:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="enableAdc" provided="0" ref="0x40964760">
+        <documentation loc="105:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Enable ADC sampling
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="66:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="setAdlar" provided="0" ref="0x40967428">
+        <documentation loc="62:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Turns ADLAR (ADC left adjust result) on/off
+ </short>
+          <long>
+ Turns ADLAR (ADC left adjust result) on/off
+ @param adlarOn TRUE turns on ADLAR, FALSE turns it off
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="66:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="adlarOn" ref="0x409672d0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="117:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="enableInterruption" provided="0" ref="0x40963010">
+        <documentation loc="114:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Enable ADC interrupt
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="159:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="isComplete" provided="0" ref="0x409814b8">
+        <documentation loc="154:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Is A/D conversion complete? Note that this flag is automatically
+ cleared when an A/D interrupt occurs.</short>
+          <long>
+ Is A/D conversion complete? Note that this flag is automatically
+ cleared when an A/D interrupt occurs.
+ @return TRUE if the A/D conversion is complete, FALSE otherwise
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="176:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="cancel" provided="0" ref="0x4097f038">
+        <documentation loc="168:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Cancel A/D conversion and any pending A/D interrupt.</short>
+          <long>
+ Cancel A/D conversion and any pending A/D interrupt. Also disables the
+ ADC interruption (otherwise a sample might start at the next sleep
+ instruction). This command can assume that the A/D converter is enabled. 
+ @return TRUE if an A/D conversion was in progress or an A/D interrupt
+   was pending, FALSE otherwise. In single conversion mode, a return
+   of TRUE implies that the dataReady event will not be signaled.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="112:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="disableAdc" provided="0" ref="0x40964b60">
+        <documentation loc="109:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Disable ADC sampling
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="84:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="getRef" provided="0" ref="0x40966308">
+        <documentation loc="80:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Returns the current reference voltage
+ </short>
+          <long>
+ Returns the current reference voltage
+ @returns the current reference voltage
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="121:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="disableInterruption" provided="0" ref="0x40963468">
+        <documentation loc="118:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Disable ADC interrupt
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="125:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="resetInterrupt" provided="0" ref="0x40963918">
+        <documentation loc="122:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Clear the ADC interrupt flag
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="132:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="startConversion" provided="0" ref="0x40963d50">
+        <documentation loc="127:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Start ADC conversion.</short>
+          <long>
+ Start ADC conversion. If ADC interrupts are enabled, the dataReady event
+ will be signaled once (in non-continuous mode) or repeatedly (in
+ continuous mode).
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="153:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="isStarted" provided="0" ref="0x40981010">
+        <documentation loc="149:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Is A/D conversion in progress?
+ </short>
+          <long>
+ Is A/D conversion in progress?
+ @return TRUE if the A/D conversion is in progress, FALSE otherwise
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="60:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="getChannel" provided="0" ref="0x4096be48">
+        <documentation loc="56:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Returns the current ADC channel
+ </short>
+          <long>
+ Returns the current ADC channel
+ @return Current channel
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="95:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="setAdcsra" provided="0" ref="0x40966e30">
+        <documentation loc="91:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Set the ADCSRA (ADC control) register
+ </short>
+          <long>
+ Set the ADCSRA (ADC control) register
+ @param adcsra New ADCSRA value
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-tag alignment="I:1" size="I:1"><struct-ref ref="0x403fb658"/>
+              <typename><typedef-ref name="Atm128Adcsra_t" ref="0x403fba00"/></typename>
+            </type-tag>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="95:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="adcsra" ref="0x40966cd8">
+            <type-tag alignment="I:1" size="I:1"><struct-ref ref="0x403fb658"/>
+              <typename><typedef-ref name="Atm128Adcsra_t" ref="0x403fba00"/></typename>
+            </type-tag>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="78:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="setRef" provided="0" ref="0x40967e88">
+        <documentation loc="74:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Sets the reference voltage
+ </short>
+          <long>
+ Sets the reference voltage
+ @param ref New reference voltage
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="78:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="ref" ref="0x40967d30">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="90:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="getAdcsra" provided="0" ref="0x40966800">
+        <documentation loc="86:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Read the ADCSRA (ADC control) register
+ </short>
+          <long>
+ Read the ADCSRA (ADC control) register
+ @return Current ADCSRA value
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-tag alignment="I:1" size="I:1"><struct-ref ref="0x403fb658"/>
+            <typename><typedef-ref name="Atm128Adcsra_t" ref="0x403fba00"/></typename>
+          </type-tag>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="136:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="setContinuous" provided="0" ref="0x40982298">
+        <documentation loc="133:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Enable continuous sampling
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="101:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="getValue" provided="0" ref="0x40964300">
+        <documentation loc="97:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ Read the latest A/D conversion result
+ </short>
+          <long>
+ Read the latest A/D conversion result
+ @return A/D value
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="182:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="dataReady" provided="0" ref="0x4097f788">
+        <documentation loc="178:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc">
+          <short>
+ A/D interrupt occured
+ </short>
+          <long>
+ A/D interrupt occured
+ @param data Latest A/D conversion result
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="182:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128Adc.nc" name="data" ref="0x4097f630">
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

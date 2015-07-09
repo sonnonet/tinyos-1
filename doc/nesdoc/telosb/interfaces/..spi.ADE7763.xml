@@ -1,0 +1,212 @@
+<?xml version="1.0" ?><interfacedef loc="1:./spi/ADE7763.nc" nicename="..spi.ADE7763" qname="ADE7763">
+      <function command="" loc="18:./spi/ADE7763.nc" name="miso_toggle" provided="0" ref="0x40954938">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="16:./spi/ADE7763.nc" name="cs_toggle" provided="0" ref="0x40954138">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="7:./spi/ADE7763.nc" name="writeData" provided="0" ref="0x40957798">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x401eae68"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x401eae68"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="7:./spi/ADE7763.nc" name="data" ref="0x40957438">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x401eae68"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="7:./spi/ADE7763.nc" name="rx_len" ref="0x40957638">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x401eae68"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="2:./spi/ADE7763.nc" name="init" provided="0" ref="0x4095bbd0">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="3:./spi/ADE7763.nc" name="powerOn" provided="0" ref="0x40958010">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="4:./spi/ADE7763.nc" name="powerOff" provided="0" ref="0x409583b8">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="12:./spi/ADE7763.nc" name="Clk_clr" provided="0" ref="0x409559d8">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="5:./spi/ADE7763.nc" name="writeCommand" provided="0" ref="0x40958908">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x401eae68"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="5:./spi/ADE7763.nc" name="data" ref="0x409587b0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x401eae68"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="9:./spi/ADE7763.nc" name="cs_low" provided="0" ref="0x40957ec0">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="11:./spi/ADE7763.nc" name="readData" provided="0" ref="0x40955640">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" network="nx_uint8_t" size="I:1" unsigned="">
+                <typename><typedef-ref name="nx_uint8_t" ref="0x402c9a38"/></typename>
+              </type-int>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x401eae68"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="11:./spi/ADE7763.nc" name="rx_buf" ref="0x40955300">
+            <type-pointer alignment="I:2" size="I:2">
+              <type-int alignment="I:1" cname="unsigned char" network="nx_uint8_t" size="I:1" unsigned="">
+                <typename><typedef-ref name="nx_uint8_t" ref="0x402c9a38"/></typename>
+              </type-int>
+            </type-pointer>
+          </variable>
+          <variable loc="11:./spi/ADE7763.nc" name="len" ref="0x409554e0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x401eae68"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="19:./spi/ADE7763.nc" name="sck_toggle" provided="0" ref="0x40954cf0">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="6:./spi/ADE7763.nc" name="setMode" provided="0" ref="0x40957060">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x401eae68"/></typename>
+            </type-int>
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401eb0c0"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="6:./spi/ADE7763.nc" name="addr" ref="0x40958cc8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x401eae68"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="6:./spi/ADE7763.nc" name="data" ref="0x40958ec8">
+            <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401eb0c0"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="8:./spi/ADE7763.nc" name="cs_high" provided="0" ref="0x40957b30">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="17:./spi/ADE7763.nc" name="mosi_toggle" provided="0" ref="0x409544f8">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="13:./spi/ADE7763.nc" name="Clk_set" provided="0" ref="0x40955d70">
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

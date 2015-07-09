@@ -1,0 +1,14 @@
+digraph "tos.chips.atm128rfa1.BusPowerManagerC" {
+  n0x40ec1b60 [shape=ellipse, style=filled, label="BusPowerManager", fontsize=12];
+  "BusPowerManagerC.BusPowerManagerP" [fontsize=12, shape=box, style=dashed, label="BusPowerManagerP", URL="../chtml/tos.chips.atm128rfa1.BusPowerManagerP.html"];
+  "BusPowerManagerC.BusPowerManagerP" [fontsize=12, shape=box, style=dashed, label="BusPowerManagerP", URL="../chtml/tos.chips.atm128rfa1.BusPowerManagerP.html"];
+  n0x40ebe2b0 [shape=ellipse, style=filled, label="GeneralIO", fontsize=12];
+  "BusPowerManagerC.BusPowerManagerP" [fontsize=12, shape=box, style=dashed, label="BusPowerManagerP", URL="../chtml/tos.chips.atm128rfa1.BusPowerManagerP.html"];
+  "BusPowerManagerC.TimerMilliC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC", URL="../chtml/tos.system.TimerMilliC.html"];
+  "RealMainP" [fontsize=12, shape=box, URL="../chtml/tos.system.RealMainP.html"];
+  "BusPowerManagerC.BusPowerManagerP" [fontsize=12, shape=box, style=dashed, label="BusPowerManagerP", URL="../chtml/tos.chips.atm128rfa1.BusPowerManagerP.html"];
+  "n0x40ec1b60" -> "BusPowerManagerC.BusPowerManagerP" [label="BusPowerManager", URL="../ihtml/tos.chips.atm128rfa1.BusPowerManager.html", fontsize=10];
+  "BusPowerManagerC.BusPowerManagerP" -> "n0x40ebe2b0" [label="GeneralIO", URL="../ihtml/tos.interfaces.GeneralIO.html", fontsize=10];
+  "BusPowerManagerC.BusPowerManagerP" -> "BusPowerManagerC.TimerMilliC" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "RealMainP" -> "BusPowerManagerC.BusPowerManagerP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+}

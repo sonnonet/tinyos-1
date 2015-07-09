@@ -1,0 +1,265 @@
+<?xml version="1.0" ?><component loc="41:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc" nicename="tos.platforms.ucmini.LedsC" qname="LedsC">
+      <documentation loc="35:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+        <short>
+ </short>
+        <long>
+ @author Joe Polastre
+ @author Jan Beutel
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="47:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x407c7a20" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x407e2470" scoped=""/></to>
+        </wire>
+        <wire loc="49:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x407fe450" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x407e2128" scoped=""/></to>
+        </wire>
+        <wire loc="50:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x407e1480" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x407e4c20" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x407e1e68" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x40800660" scoped=""/></to>
+        </wire>
+        <wire loc="52:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x407e0860" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x407ff060" scoped=""/></to>
+        </wire>
+        <wire loc="53:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc">
+          <from><interface-ref name="Led3" ref="0x407df2e0" scoped=""/></from>
+          <to><interface-ref name="Led3" ref="0x407ffa48" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="42:/usr/src/tinyos/tos/platforms/ucmini/LedsC.nc" name="Leds" provided="1" ref="0x407c7a20">
+      <component-ref nicename="tos.platforms.ucmini.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Leds" ref="0x407c7a20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x407c7bf8" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x407c7cd8" scoped=""/>
+        <function-ref name="led1On" ref="0x407c7db8" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x407c7e98" scoped=""/>
+        <function-ref name="led3Off" ref="0x407e5010" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x407e50f0" scoped=""/>
+        <function-ref name="get" ref="0x407e51d0" scoped=""/>
+        <function-ref name="led1Off" ref="0x407e52b0" scoped=""/>
+        <function-ref name="led3Toggle" ref="0x407e5390" scoped=""/>
+        <function-ref name="led3On" ref="0x407e5470" scoped=""/>
+        <function-ref name="led0On" ref="0x407e5550" scoped=""/>
+        <function-ref name="led2Off" ref="0x407e5630" scoped=""/>
+        <function-ref name="led2On" ref="0x407e5710" scoped=""/>
+        <function-ref name="set" ref="0x407e5870" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="53:/usr/src/tinyos/tos/platforms/ucmini/LedsP.nc" name="Led3" provided="0" ref="0x407df2e0">
+      <component-ref nicename="tos.platforms.ucmini.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Led3" ref="0x407df2e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x407df4b8" scoped=""/>
+        <function-ref name="isInput" ref="0x407df598" scoped=""/>
+        <function-ref name="toggle" ref="0x407df678" scoped=""/>
+        <function-ref name="isOutput" ref="0x407df758" scoped=""/>
+        <function-ref name="get" ref="0x407df838" scoped=""/>
+        <function-ref name="makeOutput" ref="0x407df918" scoped=""/>
+        <function-ref name="set" ref="0x407df9f8" scoped=""/>
+        <function-ref name="clr" ref="0x407dfad8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/platforms/ucmini/PlatformLedsC.nc" name="Led0" provided="1" ref="0x407e4c20">
+      <component-ref nicename="tos.platforms.ucmini.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Led0" ref="0x407e4c20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x407e4df8" scoped=""/>
+        <function-ref name="isInput" ref="0x407e4ed8" scoped=""/>
+        <function-ref name="toggle" ref="0x40800010" scoped=""/>
+        <function-ref name="isOutput" ref="0x408000f0" scoped=""/>
+        <function-ref name="get" ref="0x408001d0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x408002b0" scoped=""/>
+        <function-ref name="set" ref="0x40800390" scoped=""/>
+        <function-ref name="clr" ref="0x40800470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/platforms/ucmini/PlatformLedsC.nc" name="Led3" provided="1" ref="0x407ffa48">
+      <component-ref nicename="tos.platforms.ucmini.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Led3" ref="0x407ffa48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x407ffc20" scoped=""/>
+        <function-ref name="isInput" ref="0x407ffd00" scoped=""/>
+        <function-ref name="toggle" ref="0x407ffde0" scoped=""/>
+        <function-ref name="isOutput" ref="0x407ffec0" scoped=""/>
+        <function-ref name="get" ref="0x407fe010" scoped=""/>
+        <function-ref name="makeOutput" ref="0x407fe0f0" scoped=""/>
+        <function-ref name="set" ref="0x407fe1d0" scoped=""/>
+        <function-ref name="clr" ref="0x407fe2b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/usr/src/tinyos/tos/platforms/ucmini/LedsP.nc" name="Led0" provided="0" ref="0x407e1480">
+      <component-ref nicename="tos.platforms.ucmini.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Led0" ref="0x407e1480" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x407e1658" scoped=""/>
+        <function-ref name="isInput" ref="0x407e1738" scoped=""/>
+        <function-ref name="toggle" ref="0x407e1818" scoped=""/>
+        <function-ref name="isOutput" ref="0x407e18f8" scoped=""/>
+        <function-ref name="get" ref="0x407e19d8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x407e1ab8" scoped=""/>
+        <function-ref name="set" ref="0x407e1b98" scoped=""/>
+        <function-ref name="clr" ref="0x407e1c78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/platforms/ucmini/LedsP.nc" name="Init" provided="1" ref="0x407e2128">
+      <component-ref nicename="tos.platforms.ucmini.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x407e2128" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x407e2300" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/usr/src/tinyos/tos/platforms/ucmini/LedsP.nc" name="Led2" provided="0" ref="0x407e0860">
+      <component-ref nicename="tos.platforms.ucmini.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Led2" ref="0x407e0860" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x407e0a38" scoped=""/>
+        <function-ref name="isInput" ref="0x407e0b18" scoped=""/>
+        <function-ref name="toggle" ref="0x407e0bf8" scoped=""/>
+        <function-ref name="isOutput" ref="0x407e0cd8" scoped=""/>
+        <function-ref name="get" ref="0x407e0db8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x407e0e98" scoped=""/>
+        <function-ref name="set" ref="0x407df010" scoped=""/>
+        <function-ref name="clr" ref="0x407df0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/usr/src/tinyos/tos/platforms/ucmini/LedsP.nc" name="Leds" provided="1" ref="0x407e2470">
+      <component-ref nicename="tos.platforms.ucmini.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Leds" ref="0x407e2470" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x407e2648" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x407e2728" scoped=""/>
+        <function-ref name="led1On" ref="0x407e2808" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x407e28e8" scoped=""/>
+        <function-ref name="led3Off" ref="0x407e29c8" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x407e2aa8" scoped=""/>
+        <function-ref name="get" ref="0x407e2b88" scoped=""/>
+        <function-ref name="led1Off" ref="0x407e2c68" scoped=""/>
+        <function-ref name="led3Toggle" ref="0x407e2d48" scoped=""/>
+        <function-ref name="led3On" ref="0x407e2e28" scoped=""/>
+        <function-ref name="led0On" ref="0x407e2f08" scoped=""/>
+        <function-ref name="led2Off" ref="0x407e1010" scoped=""/>
+        <function-ref name="led2On" ref="0x407e10f0" scoped=""/>
+        <function-ref name="set" ref="0x407e1250" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/platforms/ucmini/PlatformLedsC.nc" name="Led2" provided="1" ref="0x407ff060">
+      <component-ref nicename="tos.platforms.ucmini.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Led2" ref="0x407ff060" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x407ff238" scoped=""/>
+        <function-ref name="isInput" ref="0x407ff318" scoped=""/>
+        <function-ref name="toggle" ref="0x407ff3f8" scoped=""/>
+        <function-ref name="isOutput" ref="0x407ff4d8" scoped=""/>
+        <function-ref name="get" ref="0x407ff5b8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x407ff698" scoped=""/>
+        <function-ref name="set" ref="0x407ff778" scoped=""/>
+        <function-ref name="clr" ref="0x407ff858" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/platforms/ucmini/PlatformLedsC.nc" name="Init" provided="0" ref="0x407fe450">
+      <component-ref nicename="tos.platforms.ucmini.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x407fe450" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x407fe628" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/usr/src/tinyos/tos/platforms/ucmini/LedsP.nc" name="Led1" provided="0" ref="0x407e1e68">
+      <component-ref nicename="tos.platforms.ucmini.LedsP" qname="LedsP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Led1" ref="0x407e1e68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x407e0050" scoped=""/>
+        <function-ref name="isInput" ref="0x407e0130" scoped=""/>
+        <function-ref name="toggle" ref="0x407e0210" scoped=""/>
+        <function-ref name="isOutput" ref="0x407e02f0" scoped=""/>
+        <function-ref name="get" ref="0x407e03d0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x407e04b0" scoped=""/>
+        <function-ref name="set" ref="0x407e0590" scoped=""/>
+        <function-ref name="clr" ref="0x407e0670" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/platforms/ucmini/PlatformLedsC.nc" name="Led1" provided="1" ref="0x40800660">
+      <component-ref nicename="tos.platforms.ucmini.PlatformLedsC" qname="PlatformLedsC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Led1" ref="0x40800660" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40800838" scoped=""/>
+        <function-ref name="isInput" ref="0x40800918" scoped=""/>
+        <function-ref name="toggle" ref="0x408009f8" scoped=""/>
+        <function-ref name="isOutput" ref="0x40800ad8" scoped=""/>
+        <function-ref name="get" ref="0x40800bb8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40800c98" scoped=""/>
+        <function-ref name="set" ref="0x40800d78" scoped=""/>
+        <function-ref name="clr" ref="0x40800e58" scoped=""/>
+      </interface-functions>
+    </interface><component loc="35:/usr/src/tinyos/tos/platforms/ucmini/PlatformLedsC.nc" nicename="tos.platforms.ucmini.PlatformLedsC" qname="PlatformLedsC">
+      <configuration/>
+      <wiring>
+        <wire loc="61:/usr/src/tinyos/tos/platforms/ucmini/PlatformLedsC.nc">
+          <from><interface-ref name="Led0" ref="0x407e4c20" scoped=""/></from>
+          <to><interface-ref name="PortB6" ref="0x404bc750" scoped=""/></to>
+        </wire>
+        <wire loc="64:/usr/src/tinyos/tos/platforms/ucmini/PlatformLedsC.nc">
+          <from><interface-ref name="Led3" ref="0x407ffa48" scoped=""/></from>
+          <to><interface-ref name="PortB7" ref="0x404c7210" scoped=""/></to>
+        </wire>
+        <wire loc="62:/usr/src/tinyos/tos/platforms/ucmini/PlatformLedsC.nc">
+          <from><interface-ref name="Led1" ref="0x40800660" scoped=""/></from>
+          <to><interface-ref name="PortB7" ref="0x404c7210" scoped=""/></to>
+        </wire>
+        <wire loc="63:/usr/src/tinyos/tos/platforms/ucmini/PlatformLedsC.nc">
+          <from><interface-ref name="Led2" ref="0x407ff060" scoped=""/></from>
+          <to><interface-ref name="PortB6" ref="0x404bc750" scoped=""/></to>
+        </wire>
+        <wire loc="53:/usr/src/tinyos/tos/platforms/ucmini/PlatformLedsC.nc">
+          <from><interface-ref name="LedsInit" ref="0x40482d38" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x407fe450" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="44:/usr/src/tinyos/tos/platforms/ucmini/LedsP.nc" nicename="tos.platforms.ucmini.LedsP" qname="LedsP" safe="">
+      <documentation loc="35:/usr/src/tinyos/tos/platforms/ucmini/LedsP.nc">
+        <short>
+ The implementation of the standard 3 LED mote abstraction.</short>
+        <long>
+ The implementation of the standard 3 LED mote abstraction.
+
+ @author Joe Polastre
+ @author Philip Levis
+
+ @date   March 21, 2005
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

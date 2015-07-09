@@ -1,0 +1,683 @@
+<?xml version="1.0" ?><component loc="40:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc" nicename="tos.platforms.ucmini.chips.stm25p.HplStm25pPinsC" qname="HplStm25pPinsC">
+      <documentation loc="32:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc">
+        <short>
+ HPL implementation of general-purpose I/O for a ST M25P chip
+ connected to a TI MSP430.</short>
+        <long>
+ HPL implementation of general-purpose I/O for a ST M25P chip
+ connected to a TI MSP430.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.1 $ $Date: 2010-11-18 23:16:35 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="56:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc">
+          <from><interface-ref name="CSN" ref="0x404b12f0" scoped=""/></from>
+          <to><interface-ref name="PortB0" ref="0x404c08e0" scoped=""/></to>
+        </wire>
+        <wire loc="61:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc">
+          <from><interface-ref name="Hold" ref="0x404b1cf8" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x40523438" scoped=""/></to>
+        </wire>
+        <wire loc="59:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc">
+          <from><interface-ref name="Power" ref="0x404b0768" scoped=""/></from>
+          <to><interface-ref name="PortD6" ref="0x404cac08" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="42:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc" name="CSN" provided="1" ref="0x404b12f0">
+      <component-ref nicename="tos.platforms.ucmini.chips.stm25p.HplStm25pPinsC" qname="HplStm25pPinsC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="CSN" ref="0x404b12f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x404b14c8" scoped=""/>
+        <function-ref name="isInput" ref="0x404b15a8" scoped=""/>
+        <function-ref name="toggle" ref="0x404b1688" scoped=""/>
+        <function-ref name="isOutput" ref="0x404b1768" scoped=""/>
+        <function-ref name="get" ref="0x404b1848" scoped=""/>
+        <function-ref name="makeOutput" ref="0x404b1928" scoped=""/>
+        <function-ref name="set" ref="0x404b1a08" scoped=""/>
+        <function-ref name="clr" ref="0x404b1ae8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc" name="Hold" provided="1" ref="0x404b1cf8">
+      <component-ref nicename="tos.platforms.ucmini.chips.stm25p.HplStm25pPinsC" qname="HplStm25pPinsC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Hold" ref="0x404b1cf8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x404b1ed0" scoped=""/>
+        <function-ref name="isInput" ref="0x404b0010" scoped=""/>
+        <function-ref name="toggle" ref="0x404b00f0" scoped=""/>
+        <function-ref name="isOutput" ref="0x404b01d0" scoped=""/>
+        <function-ref name="get" ref="0x404b02b0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x404b0390" scoped=""/>
+        <function-ref name="set" ref="0x404b0470" scoped=""/>
+        <function-ref name="clr" ref="0x404b0550" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc" name="Power" provided="1" ref="0x404b0768">
+      <component-ref nicename="tos.platforms.ucmini.chips.stm25p.HplStm25pPinsC" qname="HplStm25pPinsC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Power" ref="0x404b0768" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x404b0940" scoped=""/>
+        <function-ref name="isInput" ref="0x404b0a20" scoped=""/>
+        <function-ref name="toggle" ref="0x404b0b00" scoped=""/>
+        <function-ref name="isOutput" ref="0x404b0be0" scoped=""/>
+        <function-ref name="get" ref="0x404b0cc0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x404b0da0" scoped=""/>
+        <function-ref name="set" ref="0x404b0e80" scoped=""/>
+        <function-ref name="clr" ref="0x404bb010" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="72:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc" name="PortD6" provided="1" ref="0x404cac08">
+      <component-ref nicename="tos.chips.atm128rfa1.pins.AtmegaGeneralIOC" qname="AtmegaGeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortD6" ref="0x404cac08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x404cade0" scoped=""/>
+        <function-ref name="isInput" ref="0x404caec0" scoped=""/>
+        <function-ref name="toggle" ref="0x404c9010" scoped=""/>
+        <function-ref name="isOutput" ref="0x404c90f0" scoped=""/>
+        <function-ref name="get" ref="0x404c91d0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x404c92b0" scoped=""/>
+        <function-ref name="set" ref="0x404c9390" scoped=""/>
+        <function-ref name="clr" ref="0x404c9470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc" name="PortB0" provided="1" ref="0x404c08e0">
+      <component-ref nicename="tos.chips.atm128rfa1.pins.AtmegaGeneralIOC" qname="AtmegaGeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortB0" ref="0x404c08e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x404c0ab8" scoped=""/>
+        <function-ref name="isInput" ref="0x404c0b98" scoped=""/>
+        <function-ref name="toggle" ref="0x404c0c78" scoped=""/>
+        <function-ref name="isOutput" ref="0x404c0d58" scoped=""/>
+        <function-ref name="get" ref="0x404c0e38" scoped=""/>
+        <function-ref name="makeOutput" ref="0x404c0f18" scoped=""/>
+        <function-ref name="set" ref="0x404bf010" scoped=""/>
+        <function-ref name="clr" ref="0x404bf0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:/usr/src/tinyos/tos/system/NoPinC.nc" name="GeneralIO" provided="1" ref="0x40523438">
+      <component-ref nicename="tos.system.NoPinC" qname="HplStm25pPinsC.NoPinC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="GeneralIO" ref="0x40523438" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40523610" scoped=""/>
+        <function-ref name="isInput" ref="0x405236f0" scoped=""/>
+        <function-ref name="toggle" ref="0x405237d0" scoped=""/>
+        <function-ref name="isOutput" ref="0x405238b0" scoped=""/>
+        <function-ref name="get" ref="0x40523990" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40523a70" scoped=""/>
+        <function-ref name="set" ref="0x40523b50" scoped=""/>
+        <function-ref name="clr" ref="0x40523c30" scoped=""/>
+      </interface-functions>
+    </interface><component loc="16(HplStm25pPinsC.NoPinC):/usr/src/tinyos/tos/system/NoPinC.nc" nicename="tos.system.NoPinC" qname="HplStm25pPinsC.NoPinC">
+      <documentation loc="10:/usr/src/tinyos/tos/system/NoPinC.nc">
+        <short>
+ Dummy pin component.</short>
+        <long>
+ Dummy pin component.
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.system.NoPinC" qname="NoPinC"/>
+      </instance>
+      <module/>
+    </component><component loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc" nicename="tos.chips.atm128rfa1.pins.AtmegaGeneralIOC" qname="AtmegaGeneralIOC">
+      <configuration/>
+      <wiring>
+        <wire loc="172:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortG0" ref="0x404d52f0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x4050a5c8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="140:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortD1" ref="0x404cd830" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404fbaf8" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="153:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortE3" ref="0x404d3ea8" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f6440" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="164:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortF3" ref="0x404d80a0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x40501c68" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="177:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortG5" ref="0x404df830" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x4050a5c8" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="112:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortA6" ref="0x404c14b0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404dc190" scoped=""/>
+          <arguments>
+            <value cst="I:6">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="162:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortF1" ref="0x404cec08" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x40501c68" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="117:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortB0" ref="0x404c08e0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f4a70" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="130:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortC2" ref="0x404c50a0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f02b8" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="143:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortD4" ref="0x404cb750" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404fbaf8" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="156:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortE6" ref="0x404d0ce8" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f6440" scoped=""/>
+          <arguments>
+            <value cst="I:6">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="107:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortA1" ref="0x404b8210" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404dc190" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="120:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortB3" ref="0x404be750" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f4a70" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="133:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortC5" ref="0x404c4ea8" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f02b8" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="146:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortD7" ref="0x404c9670" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404fbaf8" scoped=""/>
+          <arguments>
+            <value cst="I:7">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="167:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortF6" ref="0x404d7ea8" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x40501c68" scoped=""/>
+          <arguments>
+            <value cst="I:6">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="175:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortG3" ref="0x404e03d0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x4050a5c8" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="151:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortE1" ref="0x404c8a98" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f6440" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="110:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortA4" ref="0x404b60a0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404dc190" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="123:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortB6" ref="0x404bc750" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f4a70" scoped=""/>
+          <arguments>
+            <value cst="I:6">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="173:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortG1" ref="0x404d5ee8" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x4050a5c8" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="128:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortC0" ref="0x404c7c08" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f02b8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="141:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortD2" ref="0x404cc2f0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404fbaf8" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="154:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortE4" ref="0x404d18e0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f6440" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="165:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortF4" ref="0x404d8a98" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x40501c68" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="113:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortA7" ref="0x404c1ea8" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404dc190" scoped=""/>
+          <arguments>
+            <value cst="I:7">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="118:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortB1" ref="0x404bf2f0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f4a70" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="131:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortC3" ref="0x404c5a98" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f02b8" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="144:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortD5" ref="0x404ca210" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404fbaf8" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="157:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortE7" ref="0x404cf750" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f6440" scoped=""/>
+          <arguments>
+            <value cst="I:7">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="108:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortA2" ref="0x404b8c08" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404dc190" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="121:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortB4" ref="0x404bd210" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f4a70" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="134:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortC6" ref="0x404c38e0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f02b8" scoped=""/>
+          <arguments>
+            <value cst="I:6">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="168:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortF7" ref="0x404d68e0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x40501c68" scoped=""/>
+          <arguments>
+            <value cst="I:7">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="139:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortD0" ref="0x404c2ce8" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404fbaf8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="152:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortE2" ref="0x404d34b0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f6440" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="163:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortF2" ref="0x404d9670" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x40501c68" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="176:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortG4" ref="0x404e0dc8" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x4050a5c8" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="111:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortA5" ref="0x404b6a98" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404dc190" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="124:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortB7" ref="0x404c7210" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f4a70" scoped=""/>
+          <arguments>
+            <value cst="I:7">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="161:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortF0" ref="0x404ce210" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x40501c68" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="129:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortC1" ref="0x404c6670" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f02b8" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="142:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortD3" ref="0x404ccce8" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404fbaf8" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="155:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortE5" ref="0x404d02f0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f6440" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="166:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortF5" ref="0x404d74b0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x40501c68" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="106:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortA0" ref="0x404bb770" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404dc190" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="119:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortB2" ref="0x404bfce8" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f4a70" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="132:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortC4" ref="0x404c44b0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f02b8" scoped=""/>
+          <arguments>
+            <value cst="I:4">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="145:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortD6" ref="0x404cac08" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404fbaf8" scoped=""/>
+          <arguments>
+            <value cst="I:6">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="174:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortG2" ref="0x404d4900" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x4050a5c8" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="150:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortE0" ref="0x404c80a0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f6440" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="135:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortC7" ref="0x404c22f0" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f02b8" scoped=""/>
+          <arguments>
+            <value cst="I:7">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="109:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortA3" ref="0x404b7670" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404dc190" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="122:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaGeneralIOC.nc">
+          <from><interface-ref name="PortB5" ref="0x404bdc88" scoped=""/></from>
+          <to><interface-ref name="Pin" ref="0x404f4a70" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

@@ -1,0 +1,292 @@
+<?xml version="1.0" ?><component loc="1:UerAppC.nc" nicename="UerAppC" qname="UerAppC">
+      <configuration/>
+      <wiring>
+        <wire loc="7:UerAppC.nc">
+          <from><interface-ref name="Boot" ref="0x405e9ec0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x405e8188" scoped=""/></to>
+        </wire>
+        <wire loc="9:UerAppC.nc">
+          <from><interface-ref name="ESP8266" ref="0x40707418" scoped=""/></from>
+          <to><interface-ref name="ESP8266" ref="0x405ec6f0" scoped=""/></to>
+        </wire>
+        <wire loc="11:UerAppC.nc">
+          <from><interface-ref name="Leds" ref="0x406fc298" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4076a820" scoped=""/></to>
+        </wire>
+        <wire loc="12:UerAppC.nc">
+          <from><interface-ref name="Timer" ref="0x4070bc00" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x40b41268" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="57:/usr/src/tinyos/tos/system/MainC.nc" name="Boot" provided="1" ref="0x405e8188">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x405e8188" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x405e8360" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:ESP8266C.nc" name="ESP8266" provided="1" ref="0x405ec6f0">
+      <component-ref nicename="ESP8266C" qname="ESP8266C"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ESP8266" ref="0x405ec6f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ESP8266" qname="ESP8266"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x405ec8c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="3:UerC.nc" name="Boot" provided="0" ref="0x405e9ec0">
+      <component-ref nicename="UerC" qname="UerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x405e9ec0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x405e70c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/system/LedsC.nc" name="Leds" provided="1" ref="0x4076a820">
+      <component-ref nicename="tos.system.LedsC" qname="LedsC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x4076a820" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4076a9f8" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4076aad8" scoped=""/>
+        <function-ref name="led1On" ref="0x4076abb8" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4076ac98" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4076ad78" scoped=""/>
+        <function-ref name="get" ref="0x4076ae58" scoped=""/>
+        <function-ref name="led1Off" ref="0x40766010" scoped=""/>
+        <function-ref name="led2Off" ref="0x40766390" scoped=""/>
+        <function-ref name="set" ref="0x407660f0" scoped=""/>
+        <function-ref name="led0On" ref="0x407661d0" scoped=""/>
+        <function-ref name="led2On" ref="0x407662b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="4:UerC.nc" name="Leds" provided="0" ref="0x406fc298">
+      <component-ref nicename="UerC" qname="UerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x406fc298" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x406fc470" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x406fc550" scoped=""/>
+        <function-ref name="led1On" ref="0x406fc630" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x406fc710" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x406fc7f0" scoped=""/>
+        <function-ref name="get" ref="0x406fc8d0" scoped=""/>
+        <function-ref name="led1Off" ref="0x406fc9b0" scoped=""/>
+        <function-ref name="led2Off" ref="0x406fcd30" scoped=""/>
+        <function-ref name="set" ref="0x406fca90" scoped=""/>
+        <function-ref name="led0On" ref="0x406fcb70" scoped=""/>
+        <function-ref name="led2On" ref="0x406fcc50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:UerC.nc" name="ESP8266" provided="0" ref="0x40707418">
+      <component-ref nicename="UerC" qname="UerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ESP8266" ref="0x40707418" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ESP8266" qname="ESP8266"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x407075f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:UerC.nc" name="Timer" provided="0" ref="0x4070bc00">
+      <component-ref nicename="UerC" qname="UerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x4070bc00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406ed668"/>
+            <typename><typedef-ref name="TMilli" ref="0x406ed830"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4070a730" scoped=""/>
+        <function-ref name="fired" ref="0x406ec9b0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4070a0f0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x406ece60" scoped=""/>
+        <function-ref name="getdt" ref="0x4070abe0" scoped=""/>
+        <function-ref name="gett0" ref="0x4070a988" scoped=""/>
+        <function-ref name="isRunning" ref="0x406ecc08" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x406ec258" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4070a410" scoped=""/>
+        <function-ref name="startOneShot" ref="0x406ec4d8" scoped=""/>
+        <function-ref name="stop" ref="0x406ec758" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x40b41268">
+      <component-ref nicename="tos.system.TimerMilliC" qname="UerAppC.T1"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x40b41268" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406ed668"/>
+            <typename><typedef-ref name="TMilli" ref="0x406ed830"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40b40d58" scoped=""/>
+        <function-ref name="fired" ref="0x40b40010" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40b40718" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40b404c0" scoped=""/>
+        <function-ref name="getdt" ref="0x40b3e268" scoped=""/>
+        <function-ref name="gett0" ref="0x40b3e010" scoped=""/>
+        <function-ref name="isRunning" ref="0x40b40268" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40b41890" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40b40a38" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40b41b10" scoped=""/>
+        <function-ref name="stop" ref="0x40b41d90" scoped=""/>
+      </interface-functions>
+    </interface><component loc="2:UerC.nc" nicename="UerC" qname="UerC">
+      <module/>
+    </component><component loc="45:/usr/src/tinyos/tos/system/LedsC.nc" nicename="tos.system.LedsC" qname="LedsC">
+      <documentation loc="34:/usr/src/tinyos/tos/system/LedsC.nc">
+        <short>
+
+ The basic TinyOS LEDs abstraction.</short>
+        <long>
+
+ The basic TinyOS LEDs abstraction.
+
+ @author Phil Buonadonna
+ @author David Gay
+ @author Philip Levis
+ @author Joe Polastre
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="51:/usr/src/tinyos/tos/system/LedsC.nc">
+          <from><interface-ref name="Leds" ref="0x4076a820" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4077b010" scoped=""/></to>
+        </wire>
+        <wire loc="53:/usr/src/tinyos/tos/system/LedsC.nc">
+          <from><interface-ref name="Init" ref="0x4077ea38" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40766c10" scoped=""/></to>
+        </wire>
+        <wire loc="54:/usr/src/tinyos/tos/system/LedsC.nc">
+          <from><interface-ref name="Led0" ref="0x40777e10" scoped=""/></from>
+          <to><interface-ref name="Led0" ref="0x40765c30" scoped=""/></to>
+        </wire>
+        <wire loc="55:/usr/src/tinyos/tos/system/LedsC.nc">
+          <from><interface-ref name="Led1" ref="0x4077a820" scoped=""/></from>
+          <to><interface-ref name="Led1" ref="0x4077f680" scoped=""/></to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/system/LedsC.nc">
+          <from><interface-ref name="Led2" ref="0x407792e0" scoped=""/></from>
+          <to><interface-ref name="Led2" ref="0x4077e0b0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="3:ESP8266C.nc" nicename="ESP8266C" qname="ESP8266C">
+      <configuration/>
+      <wiring>
+        <wire loc="21:ESP8266C.nc">
+          <from><interface-ref name="ESP8266" ref="0x405ec6f0" scoped=""/></from>
+          <to><interface-ref name="ESP8266" ref="0x40703180" scoped=""/></to>
+        </wire>
+        <wire loc="22:ESP8266C.nc">
+          <from><interface-ref name="ESP_INIT" ref="0x40703648" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x40767cd8" scoped=""/></to>
+        </wire>
+        <wire loc="23:ESP8266C.nc">
+          <from><interface-ref name="ESP_RESET" ref="0x407019b8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x409a4bf0" scoped=""/></to>
+        </wire>
+        <wire loc="24:ESP8266C.nc">
+          <from><interface-ref name="ESP_MODE_1" ref="0x40714d18" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x409a1ab0" scoped=""/></to>
+        </wire>
+        <wire loc="25:ESP8266C.nc">
+          <from><interface-ref name="ESP_CON_AP" ref="0x40710110" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x409bd8f0" scoped=""/></to>
+        </wire>
+        <wire loc="26:ESP8266C.nc">
+          <from><interface-ref name="ESP_SERVER" ref="0x4070e490" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x409b96f0" scoped=""/></to>
+        </wire>
+        <wire loc="27:ESP8266C.nc">
+          <from><interface-ref name="ESP_SENDING" ref="0x40721868" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x409b65a8" scoped=""/></to>
+        </wire>
+        <wire loc="28:ESP8266C.nc">
+          <from><interface-ref name="ESP_SEND_PRESENT" ref="0x4071fbf8" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x409b23b8" scoped=""/></to>
+        </wire>
+        <wire loc="29:ESP8266C.nc">
+          <from><interface-ref name="Leds" ref="0x4071ce20" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4076a820" scoped=""/></to>
+        </wire>
+        <wire loc="32:ESP8266C.nc">
+          <from><interface-ref name="SerialControl" ref="0x40718ad0" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x409ce468" scoped=""/></to>
+        </wire>
+        <wire loc="33:ESP8266C.nc">
+          <from><interface-ref name="UartStream" ref="0x407278b0" scoped=""/></from>
+          <to><interface-ref name="UartStream" ref="0x409ce8e8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/usr/src/tinyos/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="45:/usr/src/tinyos/tos/system/MainC.nc">
+        <short>
+ MainC is the system interface the TinyOS boot sequence.</short>
+        <long>
+ MainC is the system interface the TinyOS boot sequence. It wires the
+ boot sequence implementation to the scheduler and hardware resources.
+
+ @author Philip Levis
+ @date   August 6 2005
+ @see    TEP 107: Boot Sequence
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x405e8188" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x40609408" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x406097a0" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x4035f5f0" scoped=""/></to>
+        </wire>
+        <wire loc="68:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x40609d68" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x405ea6f8" scoped=""/></to>
+        </wire>
+        <wire loc="71:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40607240" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x405e8da8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="44(UerAppC.T1):/usr/src/tinyos/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="UerAppC.T1">
+      <documentation loc="33:/usr/src/tinyos/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance number="7">
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="52:/usr/src/tinyos/tos/system/TimerMilliC.nc">
+          <from><interface-ref name="Timer" ref="0x40b41268" scoped=""/></from>
+          <to><interface-ref name="TimerMilli" ref="0x408c41b0" scoped=""/>
+          <arguments>
+            <value cst="I:7">
+              <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

@@ -1,0 +1,66 @@
+<?xml version="1.0" ?><component loc="1:ESPLUGC.nc" nicename="ESPLUGC" qname="ESPLUGC">
+      <module/>
+    <specification><interface loc="5:ESPLUGC.nc" name="Timer0" provided="0" ref="0x40859c08">
+      <component-ref nicename="ESPLUGC" qname="ESPLUGC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer0" ref="0x40859c08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40847720"/>
+            <typename><typedef-ref name="TMilli" ref="0x408478e8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40858730" scoped=""/>
+        <function-ref name="fired" ref="0x408469b0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x408580f0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40846e60" scoped=""/>
+        <function-ref name="getdt" ref="0x40858be0" scoped=""/>
+        <function-ref name="gett0" ref="0x40858988" scoped=""/>
+        <function-ref name="isRunning" ref="0x40846c08" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40846258" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40858410" scoped=""/>
+        <function-ref name="startOneShot" ref="0x408464d8" scoped=""/>
+        <function-ref name="stop" ref="0x40846758" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="3:ESPLUGC.nc" name="Boot" provided="0" ref="0x40848010">
+      <component-ref nicename="ESPLUGC" qname="ESPLUGC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x40848010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x408481e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:ESPLUGC.nc" name="SPlug2" provided="0" ref="0x40855ca0">
+      <component-ref nicename="ESPLUGC" qname="ESPLUGC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SPlug2" ref="0x40855ca0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SPlug2" qname="SPlug2"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40855e78" scoped=""/>
+        <function-ref name="readWattDone" ref="0x40857010" scoped=""/>
+        <function-ref name="readWatt" ref="0x408570f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="4:ESPLUGC.nc" name="Leds" provided="0" ref="0x40848358">
+      <component-ref nicename="ESPLUGC" qname="ESPLUGC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x40848358" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x40848530" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x40848610" scoped=""/>
+        <function-ref name="led1On" ref="0x408486f0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x408487d0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x408488b0" scoped=""/>
+        <function-ref name="get" ref="0x40848990" scoped=""/>
+        <function-ref name="led1Off" ref="0x40848a70" scoped=""/>
+        <function-ref name="led2Off" ref="0x40848df0" scoped=""/>
+        <function-ref name="set" ref="0x40848b50" scoped=""/>
+        <function-ref name="led0On" ref="0x40848c30" scoped=""/>
+        <function-ref name="led2On" ref="0x40848d10" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

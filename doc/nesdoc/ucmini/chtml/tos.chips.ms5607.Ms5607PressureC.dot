@@ -1,0 +1,23 @@
+digraph "tos.chips.ms5607.Ms5607PressureC" {
+  n0x40bc0938 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "Ms5607PressureC.Ms5607ConversionPressP" [fontsize=12, shape=box, style=dashed, label="Ms5607ConversionPressP", URL="../chtml/tos.chips.ms5607.Ms5607ConversionPressP.html"];
+  n0x40bbb708 [shape=ellipse, style=filled, label="SetPrecision", fontsize=12];
+  "Ms5607PressureC.Ms5607RawPressureC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Ms5607RawPressureC", URL="../chtml/tos.chips.ms5607.Ms5607RawPressureC.html"];
+  "Ms5607PressureC.Ms5607ConversionPressP" [fontsize=12, shape=box, style=dashed, label="Ms5607ConversionPressP", URL="../chtml/tos.chips.ms5607.Ms5607ConversionPressP.html"];
+  "Ms5607PressureC.Ms5607ConversionDtP" [fontsize=12, shape=box, style=dashed, label="Ms5607ConversionDtP", URL="../chtml/tos.chips.ms5607.Ms5607ConversionDtP.html"];
+  "Ms5607PressureC.Ms5607ConversionPressP" [fontsize=12, shape=box, style=dashed, label="Ms5607ConversionPressP", URL="../chtml/tos.chips.ms5607.Ms5607ConversionPressP.html"];
+  "Ms5607PressureC.Ms5607ConversionDtP" [fontsize=12, shape=box, style=dashed, label="Ms5607ConversionDtP", URL="../chtml/tos.chips.ms5607.Ms5607ConversionDtP.html"];
+  "Ms5607PressureC.Ms5607ConversionPressP" [fontsize=12, shape=box, style=dashed, label="Ms5607ConversionPressP", URL="../chtml/tos.chips.ms5607.Ms5607ConversionPressP.html"];
+  "Ms5607PressureC.Ms5607RawPressureC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Ms5607RawPressureC", URL="../chtml/tos.chips.ms5607.Ms5607RawPressureC.html"];
+  "Ms5607PressureC.Ms5607ConversionDtP" [fontsize=12, shape=box, style=dashed, label="Ms5607ConversionDtP", URL="../chtml/tos.chips.ms5607.Ms5607ConversionDtP.html"];
+  "Ms5607PressureC.Ms5607RawTemperatureC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Ms5607RawTemperatureC", URL="../chtml/tos.chips.ms5607.Ms5607RawTemperatureC.html"];
+  "Ms5607PressureC.Ms5607ConversionDtP" [fontsize=12, shape=box, style=dashed, label="Ms5607ConversionDtP", URL="../chtml/tos.chips.ms5607.Ms5607ConversionDtP.html"];
+  "Ms5607PressureC.Ms5607CalibrationC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Ms5607CalibrationC", URL="../chtml/tos.chips.ms5607.Ms5607CalibrationC.html"];
+  "n0x40bc0938" -> "Ms5607PressureC.Ms5607ConversionPressP" [label="Read<uint32_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "n0x40bbb708" -> "Ms5607PressureC.Ms5607RawPressureC" [label="Set<uint8_t>", URL="../ihtml/tos.interfaces.Set.html", fontsize=10];
+  "Ms5607PressureC.Ms5607ConversionPressP" -> "Ms5607PressureC.Ms5607ConversionDtP" [label="Get<uint16_t>[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.Get.html", fontsize=10];
+  "Ms5607PressureC.Ms5607ConversionPressP" -> "Ms5607PressureC.Ms5607ConversionDtP" [label="Read<int32_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "Ms5607PressureC.Ms5607ConversionPressP" -> "Ms5607PressureC.Ms5607RawPressureC" [label="Read<uint32_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "Ms5607PressureC.Ms5607ConversionDtP" -> "Ms5607PressureC.Ms5607RawTemperatureC" [label="Read<uint32_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "Ms5607PressureC.Ms5607ConversionDtP" -> "Ms5607PressureC.Ms5607CalibrationC" [label="ReadRef<calibration_t>", URL="../ihtml/tos.interfaces.ReadRef.html", fontsize=10];
+}

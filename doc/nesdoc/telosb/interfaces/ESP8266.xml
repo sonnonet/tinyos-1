@@ -1,0 +1,12 @@
+<?xml version="1.0" ?><interfacedef loc="1:ESP8266.nc" nicename="ESP8266" qname="ESP8266">
+      <function command="" loc="2:ESP8266.nc" name="init" provided="0" ref="0x407072b0">
+        <interfacedef-ref nicename="ESP8266" qname="ESP8266"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

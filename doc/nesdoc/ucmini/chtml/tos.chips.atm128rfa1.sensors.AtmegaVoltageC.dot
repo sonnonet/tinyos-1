@@ -1,0 +1,8 @@
+digraph "tos.chips.atm128rfa1.sensors.AtmegaVoltageC" {
+  n0x40a64010 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "AtmegaVoltageC.AdcReadClientC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="AdcReadClientC", URL="../chtml/tos.chips.atm128.adc.AdcReadClientC.html"];
+  "AtmegaVoltageC.AdcReadClientC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="AdcReadClientC", URL="../chtml/tos.chips.atm128.adc.AdcReadClientC.html"];
+  "AtmegaVoltageP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.sensors.AtmegaVoltageP.html"];
+  "n0x40a64010" -> "AtmegaVoltageC.AdcReadClientC" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "AtmegaVoltageC.AdcReadClientC" -> "AtmegaVoltageP" [label="Atm128AdcConfig", URL="../ihtml/tos.chips.atm128.adc.Atm128AdcConfig.html", fontsize=10];
+}

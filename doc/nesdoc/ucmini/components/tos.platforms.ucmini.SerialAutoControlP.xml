@@ -1,0 +1,108 @@
+<?xml version="1.0" ?><component loc="33:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP">
+      <documentation loc="1:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc">
+        <short> Copyright (c) 2011, University of Szeged
+ All rights reserved.</short>
+        <long> Copyright (c) 2011, University of Szeged
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+
+ - Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above
+ copyright notice, this list of conditions and the following
+ disclaimer in the documentation and/or other materials provided
+ with the distribution.
+ - Neither the name of University of Szeged nor the names of its
+ contributors may be used to endorse or promote products derived
+ from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ Author: Andras Biro
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="34:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" name="SplitControl" provided="0" ref="0x405289c0">
+      <component-ref nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SplitControl" ref="0x405289c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40528b98" scoped=""/>
+        <function-ref name="stopDone" ref="0x40528c78" scoped=""/>
+        <function-ref name="start" ref="0x40528d58" scoped=""/>
+        <function-ref name="stop" ref="0x40528e38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" name="SoftwareInit" provided="1" ref="0x40532860">
+      <component-ref nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SoftwareInit" ref="0x40532860" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40532a38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" name="turnOff" provided="0" ref="0x4052fab0">
+      <component-ref nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="turnOff" ref="0x4052fab0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x4052fc88" scoped=""/>
+        <function-ref name="runTask" ref="0x4052fd68" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" name="turnOn" provided="0" ref="0x40531388">
+      <component-ref nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="turnOn" ref="0x40531388" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x40531560" scoped=""/>
+        <function-ref name="runTask" ref="0x40531640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" name="ControlInt" provided="0" ref="0x40530708">
+      <component-ref nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ControlInt" ref="0x40530708" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x405308e0" scoped=""/>
+        <function-ref name="disable" ref="0x405309c0" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x40530aa0" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x40530b80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" name="ControlPin" provided="0" ref="0x40530dc8">
+      <component-ref nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ControlPin" ref="0x40530dc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40532010" scoped=""/>
+        <function-ref name="isInput" ref="0x405320f0" scoped=""/>
+        <function-ref name="toggle" ref="0x405321d0" scoped=""/>
+        <function-ref name="isOutput" ref="0x405322b0" scoped=""/>
+        <function-ref name="get" ref="0x40532390" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40532470" scoped=""/>
+        <function-ref name="set" ref="0x40532550" scoped=""/>
+        <function-ref name="clr" ref="0x40532630" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,276 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc" nicename="tos.chips.ms5607.Ms5607PressureC" qname="Ms5607PressureC">
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="44:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc">
+          <from><interface-ref name="Read" ref="0x40bc0938" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40c7be88" scoped=""/></to>
+        </wire>
+        <wire loc="45:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc">
+          <from><interface-ref name="SetPrecision" ref="0x40bbb708" scoped=""/></from>
+          <to><interface-ref name="SetPrecision" ref="0x40c66df0" scoped=""/></to>
+        </wire>
+        <wire loc="46:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc">
+          <from><interface-ref name="Get" ref="0x40c794a8" scoped=""/></from>
+          <to><interface-ref name="Get" ref="0x40c6aec0" scoped=""/></to>
+        </wire>
+        <wire loc="47:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc">
+          <from><interface-ref name="ReadDt" ref="0x40c5dad8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40c6a220" scoped=""/></to>
+        </wire>
+        <wire loc="48:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc">
+          <from><interface-ref name="ReadRawPress" ref="0x40c5c7e0" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40c661c8" scoped=""/></to>
+        </wire>
+        <wire loc="50:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc">
+          <from><interface-ref name="ReadRawTemp" ref="0x40c776c0" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40bb9ba8" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc">
+          <from><interface-ref name="ReadCalib" ref="0x40c763b8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40c2a790" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="36:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc" name="Read" provided="1" ref="0x40bc0938">
+      <component-ref nicename="tos.chips.ms5607.Ms5607PressureC" qname="Ms5607PressureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40bc0938" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40bbb010" scoped=""/>
+        <function-ref name="readDone" ref="0x40bbb268" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/usr/src/tinyos/tos/chips/ms5607/Ms5607PressureC.nc" name="SetPrecision" provided="1" ref="0x40bbb708">
+      <component-ref nicename="tos.chips.ms5607.Ms5607PressureC" qname="Ms5607PressureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SetPrecision" ref="0x40bbb708" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Set" qname="Set"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="set" ref="0x40bbbd30" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="37:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionPressP.nc" name="ReadDt" provided="0" ref="0x40c5dad8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionPressP" qname="Ms5607PressureC.Ms5607ConversionPressP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadDt" ref="0x40c5dad8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="long" size="I:4">
+            <typename><typedef-ref name="int32_t" ref="0x401ea500"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c5c1e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40c5c438" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawTemperatureC.nc" name="Read" provided="1" ref="0x40bb9ba8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607RawTemperatureC" qname="Ms5607PressureC.Ms5607RawTemperatureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40bb9ba8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40bb81f0" scoped=""/>
+        <function-ref name="readDone" ref="0x40bb8448" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionDtP.nc" name="Read" provided="1" ref="0x40c6a220">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionDtP" qname="Ms5607PressureC.Ms5607ConversionDtP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40c6a220" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="long" size="I:4">
+            <typename><typedef-ref name="int32_t" ref="0x401ea500"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c6a848" scoped=""/>
+        <function-ref name="readDone" ref="0x40c6aaa0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawPressureC.nc" name="Read" provided="1" ref="0x40c661c8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607RawPressureC" qname="Ms5607PressureC.Ms5607RawPressureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40c661c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c667f0" scoped=""/>
+        <function-ref name="readDone" ref="0x40c66a48" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionPressP.nc" name="Read" provided="1" ref="0x40c7be88">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionPressP" qname="Ms5607PressureC.Ms5607ConversionPressP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40c7be88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c5d4d8" scoped=""/>
+        <function-ref name="readDone" ref="0x40c5d730" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionPressP.nc" name="Get" provided="0" ref="0x40c794a8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionPressP" qname="Ms5607PressureC.Ms5607ConversionPressP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Get" ref="0x40c794a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Get" qname="Get"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="get" ref="0x40c79ae0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/chips/ms5607/Ms5607RawPressureC.nc" name="SetPrecision" provided="1" ref="0x40c66df0">
+      <component-ref nicename="tos.chips.ms5607.Ms5607RawPressureC" qname="Ms5607PressureC.Ms5607RawPressureC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SetPrecision" ref="0x40c66df0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Set" qname="Set"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="set" ref="0x40c5e448" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionDtP.nc" name="ReadRawTemp" provided="0" ref="0x40c776c0">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionDtP" qname="Ms5607PressureC.Ms5607ConversionDtP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadRawTemp" ref="0x40c776c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c77ce8" scoped=""/>
+        <function-ref name="readDone" ref="0x40c76010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc" name="Read" provided="1" ref="0x40c2a790">
+      <component-ref nicename="tos.chips.ms5607.Ms5607CalibrationC" qname="Ms5607PressureC.Ms5607CalibrationC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40c2a790" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c2adb8" scoped=""/>
+        <function-ref name="readDone" ref="0x40c29178" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionDtP.nc" name="ReadCalib" provided="0" ref="0x40c763b8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionDtP" qname="Ms5607PressureC.Ms5607ConversionDtP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadCalib" ref="0x40c763b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c769e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40c76d70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionDtP.nc" name="Get" provided="1" ref="0x40c6aec0">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionDtP" qname="Ms5607PressureC.Ms5607ConversionDtP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Get" ref="0x40c6aec0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Get" qname="Get"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="get" ref="0x40c69558" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionPressP.nc" name="ReadRawPress" provided="0" ref="0x40c5c7e0">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionPressP" qname="Ms5607PressureC.Ms5607ConversionPressP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadRawPress" ref="0x40c5c7e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c5ce08" scoped=""/>
+        <function-ref name="readDone" ref="0x40c79088" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="37(Ms5607PressureC.Ms5607RawPressureC):/usr/src/tinyos/tos/chips/ms5607/Ms5607RawPressureC.nc" nicename="tos.chips.ms5607.Ms5607RawPressureC" qname="Ms5607PressureC.Ms5607RawPressureC">
+      <instance>
+        <component-ref nicename="tos.chips.ms5607.Ms5607RawPressureC" qname="Ms5607RawPressureC"/>
+      </instance>
+      <configuration/>
+    </component><component abstract="" loc="35(Ms5607PressureC.Ms5607ConversionPressP):/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionPressP.nc" nicename="tos.chips.ms5607.Ms5607ConversionPressP" qname="Ms5607PressureC.Ms5607ConversionPressP">
+      <instance>
+        <component-ref nicename="tos.chips.ms5607.Ms5607ConversionPressP" qname="Ms5607ConversionPressP"/>
+      </instance>
+      <module/>
+    </component><component abstract="" loc="37(Ms5607PressureC.Ms5607RawTemperatureC):/usr/src/tinyos/tos/chips/ms5607/Ms5607RawTemperatureC.nc" nicename="tos.chips.ms5607.Ms5607RawTemperatureC" qname="Ms5607PressureC.Ms5607RawTemperatureC">
+      <instance>
+        <component-ref nicename="tos.chips.ms5607.Ms5607RawTemperatureC" qname="Ms5607RawTemperatureC"/>
+      </instance>
+      <configuration/>
+    </component><component abstract="" loc="37(Ms5607PressureC.Ms5607ConversionDtP):/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionDtP.nc" nicename="tos.chips.ms5607.Ms5607ConversionDtP" qname="Ms5607PressureC.Ms5607ConversionDtP">
+      <instance>
+        <component-ref nicename="tos.chips.ms5607.Ms5607ConversionDtP" qname="Ms5607ConversionDtP"/>
+      </instance>
+      <module/>
+    </component><component abstract="" loc="37(Ms5607PressureC.Ms5607CalibrationC):/usr/src/tinyos/tos/chips/ms5607/Ms5607CalibrationC.nc" nicename="tos.chips.ms5607.Ms5607CalibrationC" qname="Ms5607PressureC.Ms5607CalibrationC">
+      <instance>
+        <component-ref nicename="tos.chips.ms5607.Ms5607CalibrationC" qname="Ms5607CalibrationC"/>
+      </instance>
+      <configuration/>
+    </component></referenced></component>

@@ -1,0 +1,322 @@
+<?xml version="1.0" ?><interfacedef loc="47:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus">
+      <documentation loc="37:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc">
+        <short>
+ This driver implements direct I2C register access and a blocking master
+ controller for the ATmega128 via a Hardware Platform Layer (HPL) to its  
+ two-wire-interface (TWI) hardware subsystem.</short>
+        <long>
+ This driver implements direct I2C register access and a blocking master
+ controller for the ATmega128 via a Hardware Platform Layer (HPL) to its  
+ two-wire-interface (TWI) hardware subsystem.
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+ @author Philip Levis
+
+ @version  $Id: HplAtm128I2CBus.nc,v 1.5 2010-06-29 22:07:43 scipio Exp $
+</long>
+      </documentation>
+      <function command="" loc="54:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="readCurrent" provided="0" ref="0x40e673f0">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="55:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="sendCommand" provided="0" ref="0x40e677d0">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="60:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="setStart" provided="0" ref="0x40e66168">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="60:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="on" ref="0x40e66010">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="52:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="status" provided="0" ref="0x40e67010">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="65:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="hasAcks" provided="0" ref="0x40e657d0">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="84:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="isEnabled" provided="0" ref="0x40e62ac0">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="67:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="enableInterrupt" provided="0" ref="0x40e65d50">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="67:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="enable" ref="0x40e65bf8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="89:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="read" provided="0" ref="0x40e61850">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="49:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="init" provided="0" ref="0x40e6a820">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="49:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="hasExternalPulldown" ref="0x40e6a6c8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="64:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="enableAck" provided="0" ref="0x40e653e8">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="64:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="enable" ref="0x40e65290">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="68:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="isInterruptEnabled" provided="0" ref="0x40e632c8">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="61:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="hasStart" provided="0" ref="0x40e66560">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="75:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="isInterruptPending" provided="0" ref="0x40e63bd0">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="56:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="commandComplete" provided="0" ref="0x40e67bd8">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="83:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="enable" provided="0" ref="0x40e626c0">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="83:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="on" ref="0x40e62568">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="88:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="write" provided="0" ref="0x40e61468">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="88:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="data" ref="0x40e61310">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="72:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="isRealInterruptPending" provided="0" ref="0x40e63768">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="50:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="off" provided="0" ref="0x40e6abb0">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="62:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="setStop" provided="0" ref="0x40e66a68">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="62:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="on" ref="0x40e66910">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="81:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="setInterruptPending" provided="0" ref="0x40e621c0">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="81:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="on" ref="0x40e62068">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="85:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="hasWriteCollided" provided="0" ref="0x40e62f08">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="63:/usr/src/tinyos/tos/chips/atm128/i2c/HplAtm128I2CBus.nc" name="hasStop" provided="0" ref="0x40e66e50">
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

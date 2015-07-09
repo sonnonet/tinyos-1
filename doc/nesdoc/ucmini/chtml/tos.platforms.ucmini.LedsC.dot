@@ -1,0 +1,20 @@
+digraph "tos.platforms.ucmini.LedsC" {
+  n0x407c7a20 [shape=ellipse, style=filled, label="Leds", fontsize=12];
+  "LedsP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.ucmini.LedsP.html"];
+  "PlatformLedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.PlatformLedsC.html"];
+  "LedsP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.ucmini.LedsP.html"];
+  "LedsP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.ucmini.LedsP.html"];
+  "PlatformLedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.PlatformLedsC.html"];
+  "LedsP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.ucmini.LedsP.html"];
+  "PlatformLedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.PlatformLedsC.html"];
+  "LedsP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.ucmini.LedsP.html"];
+  "PlatformLedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.PlatformLedsC.html"];
+  "LedsP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.ucmini.LedsP.html"];
+  "PlatformLedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.PlatformLedsC.html"];
+  "n0x407c7a20" -> "LedsP" [label="Leds", URL="../ihtml/tos.platforms.ucmini.Leds.html", fontsize=10];
+  "PlatformLedsC" -> "LedsP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "LedsP" -> "PlatformLedsC" [label="GeneralIO", URL="../ihtml/tos.interfaces.GeneralIO.html", fontsize=10];
+  "LedsP" -> "PlatformLedsC" [label="GeneralIO", URL="../ihtml/tos.interfaces.GeneralIO.html", fontsize=10];
+  "LedsP" -> "PlatformLedsC" [label="GeneralIO", URL="../ihtml/tos.interfaces.GeneralIO.html", fontsize=10];
+  "LedsP" -> "PlatformLedsC" [label="GeneralIO", URL="../ihtml/tos.interfaces.GeneralIO.html", fontsize=10];
+}

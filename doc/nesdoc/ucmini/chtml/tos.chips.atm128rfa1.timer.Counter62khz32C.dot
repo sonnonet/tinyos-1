@@ -1,0 +1,11 @@
+digraph "tos.chips.atm128rfa1.timer.Counter62khz32C" {
+  n0x40b65128 [shape=ellipse, style=filled, label="Counter", fontsize=12];
+  "Counter62khz32C.AtmegaCounterP" [fontsize=12, shape=box, style=dashed, label="AtmegaCounterP", URL="../chtml/tos.chips.atm128rfa1.timer.AtmegaCounterP.html"];
+  "McuInitC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.atm128rfa1.McuInitC.html"];
+  "Counter62khz32C.AtmegaCounterP" [fontsize=12, shape=box, style=dashed, label="AtmegaCounterP", URL="../chtml/tos.chips.atm128rfa1.timer.AtmegaCounterP.html"];
+  "Counter62khz32C.AtmegaCounterP" [fontsize=12, shape=box, style=dashed, label="AtmegaCounterP", URL="../chtml/tos.chips.atm128rfa1.timer.AtmegaCounterP.html"];
+  "HplAtmRfa1TimerMacC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacC.html"];
+  "n0x40b65128" -> "Counter62khz32C.AtmegaCounterP" [label="Counter<T62khz, uint32_t>", URL="../ihtml/tos.lib.timer.Counter.html", fontsize=10];
+  "McuInitC" -> "Counter62khz32C.AtmegaCounterP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "Counter62khz32C.AtmegaCounterP" -> "HplAtmRfa1TimerMacC" [label="AtmegaCounter<uint32_t>", URL="../ihtml/tos.chips.atm128rfa1.timer.AtmegaCounter.html", fontsize=10];
+}

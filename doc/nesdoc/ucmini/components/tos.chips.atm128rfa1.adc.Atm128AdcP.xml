@@ -1,0 +1,102 @@
+<?xml version="1.0" ?><component loc="84:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP" safe="">
+      <documentation loc="72:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc">
+        <short>
+ Internal component of the Atmega128 A/D HAL.</short>
+        <long>
+ Internal component of the Atmega128 A/D HAL.
+
+ @author Jason Hill
+ @author David Gay
+ @author Philip Levis
+ @author Phil Buonadonna
+ @author Hu Siquan &lt;husq@xbow.com&gt;
+ @author Janos Sallai &lt;janos.sallai@vanderbilt.edu&gt;
+ @author Andras Biro &lt;bbandi86@gmail.com&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="87:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="Init" provided="1" ref="0x40956d98">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x40956d98" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4096c010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="90:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="Atm128AdcMultiple" provided="1" ref="0x40969c30">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcMultiple" ref="0x40969c30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcMultiple" qname="Atm128AdcMultiple"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getData" ref="0x40969e08" scoped=""/>
+        <function-ref name="dataReady" ref="0x40969ee8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="89:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="Atm128AdcSingle" provided="1" ref="0x409696a8">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcSingle" ref="0x409696a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcSingle" qname="Atm128AdcSingle"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getData" ref="0x40969880" scoped=""/>
+        <function-ref name="cancel" ref="0x40969960" scoped=""/>
+        <function-ref name="dataReady" ref="0x40969a40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="93:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="HplAtm128Adc" provided="0" ref="0x4097f958">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAtm128Adc" ref="0x4097f958" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setSingle" ref="0x4097fb30" scoped=""/>
+        <function-ref name="isAdlarOn" ref="0x4097fc10" scoped=""/>
+        <function-ref name="setPrescaler" ref="0x4097fcf0" scoped=""/>
+        <function-ref name="isEnabled" ref="0x4097fdd0" scoped=""/>
+        <function-ref name="setChannel" ref="0x4097feb0" scoped=""/>
+        <function-ref name="enableAdc" ref="0x4096a010" scoped=""/>
+        <function-ref name="setAdlar" ref="0x4096a0f0" scoped=""/>
+        <function-ref name="enableInterruption" ref="0x4096a1d0" scoped=""/>
+        <function-ref name="isComplete" ref="0x4096a2b0" scoped=""/>
+        <function-ref name="cancel" ref="0x4096a390" scoped=""/>
+        <function-ref name="disableAdc" ref="0x4096a470" scoped=""/>
+        <function-ref name="getRef" ref="0x4096a550" scoped=""/>
+        <function-ref name="disableInterruption" ref="0x4096a630" scoped=""/>
+        <function-ref name="resetInterrupt" ref="0x4096a790" scoped=""/>
+        <function-ref name="startConversion" ref="0x4096a870" scoped=""/>
+        <function-ref name="isStarted" ref="0x4096a950" scoped=""/>
+        <function-ref name="getChannel" ref="0x4096aa30" scoped=""/>
+        <function-ref name="setAdcsra" ref="0x4096ab10" scoped=""/>
+        <function-ref name="setRef" ref="0x4096abf0" scoped=""/>
+        <function-ref name="getAdcsra" ref="0x4096acd0" scoped=""/>
+        <function-ref name="setContinuous" ref="0x4096adb0" scoped=""/>
+        <function-ref name="getValue" ref="0x4096ae90" scoped=""/>
+        <function-ref name="dataReady" ref="0x40968010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="88:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="AsyncStdControl" provided="1" ref="0x40969218">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AsyncStdControl" ref="0x40969218" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AsyncStdControl" qname="AsyncStdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x409693f0" scoped=""/>
+        <function-ref name="stop" ref="0x409694d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="94:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcP.nc" name="Atm128Calibrate" provided="0" ref="0x409681e8">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcP" qname="Atm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128Calibrate" ref="0x409681e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.Atm128Calibrate" qname="Atm128Calibrate"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="baudrateRegister" ref="0x409683c0" scoped=""/>
+        <function-ref name="cyclesPerJiffy" ref="0x409684a0" scoped=""/>
+        <function-ref name="calibrateMicro" ref="0x40968580" scoped=""/>
+        <function-ref name="actualMicro" ref="0x40968660" scoped=""/>
+        <function-ref name="adcPrescaler" ref="0x40968740" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

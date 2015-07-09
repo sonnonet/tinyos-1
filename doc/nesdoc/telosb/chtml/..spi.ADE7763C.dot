@@ -1,0 +1,23 @@
+digraph "..spi.ADE7763C" {
+  n0x40988060 [shape=ellipse, style=filled, label="ADE7763", fontsize=12];
+  "ADE7763P" [fontsize=12, shape=box, URL="../chtml/..spi.ADE7763P.html"];
+  "ADE7763P" [fontsize=12, shape=box, URL="../chtml/..spi.ADE7763P.html"];
+  "LedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.LedsC.html"];
+  "ADE7763P" [fontsize=12, shape=box, URL="../chtml/..spi.ADE7763P.html"];
+  "HplMsp430GeneralIOC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.msp430.pins.HplMsp430GeneralIOC.html"];
+  "ADE7763P" [fontsize=12, shape=box, URL="../chtml/..spi.ADE7763P.html"];
+  "HplMsp430GeneralIOC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.msp430.pins.HplMsp430GeneralIOC.html"];
+  "ADE7763P" [fontsize=12, shape=box, URL="../chtml/..spi.ADE7763P.html"];
+  "HplMsp430GeneralIOC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.msp430.pins.HplMsp430GeneralIOC.html"];
+  "ADE7763P" [fontsize=12, shape=box, URL="../chtml/..spi.ADE7763P.html"];
+  "HplMsp430GeneralIOC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.msp430.pins.HplMsp430GeneralIOC.html"];
+  "ADE7763P" [fontsize=12, shape=box, URL="../chtml/..spi.ADE7763P.html"];
+  "BusyWaitMicroC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.msp430.timer.BusyWaitMicroC.html"];
+  "n0x40988060" -> "ADE7763P" [label="ADE7763", URL="../ihtml/..spi.ADE7763.html", fontsize=10];
+  "ADE7763P" -> "LedsC" [label="Leds", URL="../ihtml/tos.interfaces.Leds.html", fontsize=10];
+  "ADE7763P" -> "HplMsp430GeneralIOC" [label="HplMsp430GeneralIO", URL="../ihtml/tos.chips.msp430.pins.HplMsp430GeneralIO.html", fontsize=10];
+  "ADE7763P" -> "HplMsp430GeneralIOC" [label="HplMsp430GeneralIO", URL="../ihtml/tos.chips.msp430.pins.HplMsp430GeneralIO.html", fontsize=10];
+  "ADE7763P" -> "HplMsp430GeneralIOC" [label="HplMsp430GeneralIO", URL="../ihtml/tos.chips.msp430.pins.HplMsp430GeneralIO.html", fontsize=10];
+  "ADE7763P" -> "HplMsp430GeneralIOC" [label="HplMsp430GeneralIO", URL="../ihtml/tos.chips.msp430.pins.HplMsp430GeneralIO.html", fontsize=10];
+  "ADE7763P" -> "BusyWaitMicroC" [label="BusyWait<TMicro, uint16_t>", URL="../ihtml/tos.lib.timer.BusyWait.html", fontsize=10];
+}

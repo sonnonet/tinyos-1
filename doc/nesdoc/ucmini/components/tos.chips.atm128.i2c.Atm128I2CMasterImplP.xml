@@ -1,0 +1,123 @@
+<?xml version="1.0" ?><component abstract="" loc="40:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterImplP.nc" nicename="tos.chips.atm128.i2c.Atm128I2CMasterImplP" qname="Atm128I2CMasterImplP">
+      <documentation loc="32:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterImplP.nc">
+        <short>
+ The configuration that takes the underlying I2C driver on the 
+ Atmega128 and turns it into a shared abstraction.</short>
+        <long>
+ The configuration that takes the underlying I2C driver on the 
+ Atmega128 and turns it into a shared abstraction.
+
+ @date May 28 2006
+ @author Philip Levis
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <module/>
+    <specification><interface loc="45:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterImplP.nc" name="Atm128I2C" provided="0" ref="0x40e2abf0">
+      <component-ref nicename="tos.chips.atm128.i2c.Atm128I2CMasterImplP" qname="Atm128I2CMasterImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128I2C" ref="0x40e2abf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.Atm128I2C" qname="Atm128I2C"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="stop" ref="0x40e2adc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterImplP.nc" name="SubPacket" provided="0" ref="0x40e2d528">
+      <component-ref nicename="tos.chips.atm128.i2c.Atm128I2CMasterImplP" qname="Atm128I2CMasterImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubPacket" ref="0x40e2d528" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.I2CPacket" qname="I2CPacket"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref ref="0x40d982d0"/>
+            <typename><typedef-ref name="TI2CBasicAddr" ref="0x40d98438"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40e2db70" scoped=""/>
+        <function-ref name="writeDone" ref="0x40e2ce20" scoped=""/>
+        <function-ref name="write" ref="0x40e2c1e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40e2c800" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterImplP.nc" name="Leds" provided="0" ref="0x40e29010">
+      <component-ref nicename="tos.chips.atm128.i2c.Atm128I2CMasterImplP" qname="Atm128I2CMasterImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Leds" ref="0x40e29010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x40e291e8" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x40e292c8" scoped=""/>
+        <function-ref name="led1On" ref="0x40e293a8" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x40e29488" scoped=""/>
+        <function-ref name="led3Off" ref="0x40e29568" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x40e29648" scoped=""/>
+        <function-ref name="get" ref="0x40e29728" scoped=""/>
+        <function-ref name="led1Off" ref="0x40e29808" scoped=""/>
+        <function-ref name="led3Toggle" ref="0x40e298e8" scoped=""/>
+        <function-ref name="led3On" ref="0x40e299c8" scoped=""/>
+        <function-ref name="led0On" ref="0x40e29aa8" scoped=""/>
+        <function-ref name="led2Off" ref="0x40e29b88" scoped=""/>
+        <function-ref name="led2On" ref="0x40e29c68" scoped=""/>
+        <function-ref name="set" ref="0x40e29dc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterImplP.nc" name="Resource" provided="1" ref="0x40e0ae58">
+      <component-ref nicename="tos.chips.atm128.i2c.Atm128I2CMasterImplP" qname="Atm128I2CMasterImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x40e0ae58" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x40e31050" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40e31130" scoped=""/>
+        <function-ref name="request" ref="0x40e31210" scoped=""/>
+        <function-ref name="granted" ref="0x40e312f0" scoped=""/>
+        <function-ref name="isOwner" ref="0x40e313d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterImplP.nc" name="I2CPacket" provided="1" ref="0x40e319b0">
+      <component-ref nicename="tos.chips.atm128.i2c.Atm128I2CMasterImplP" qname="Atm128I2CMasterImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2CPacket" ref="0x40e319b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.I2CPacket" qname="I2CPacket"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref ref="0x40d982d0"/>
+            <typename><typedef-ref name="TI2CBasicAddr" ref="0x40d98438"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40e30010" scoped=""/>
+        <function-ref name="writeDone" ref="0x40e2e288" scoped=""/>
+        <function-ref name="write" ref="0x40e30630" scoped=""/>
+        <function-ref name="readDone" ref="0x40e30c50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterImplP.nc" name="SubResource" provided="0" ref="0x40e2ebf0">
+      <component-ref nicename="tos.chips.atm128.i2c.Atm128I2CMasterImplP" qname="Atm128I2CMasterImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubResource" ref="0x40e2ebf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x40e2edc8" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40e2eea8" scoped=""/>
+        <function-ref name="request" ref="0x40e2d010" scoped=""/>
+        <function-ref name="granted" ref="0x40e2d0f0" scoped=""/>
+        <function-ref name="isOwner" ref="0x40e2d1d0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

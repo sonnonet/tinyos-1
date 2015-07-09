@@ -1,0 +1,20 @@
+
+// Command Type
+enum {
+	LED_TOGGLE = 1,
+	REBOOT,
+	GPIO_CONTROL,
+	PING,
+	RSSI,
+	NET_INFO
+};
+
+/*
+// action
+enum {
+ GPIO_CLR = 0x0000,
+ GPID_SET = 0x0001,
+ RSSI_STOP = 0x0000,
+ RSSI_START = 0x0001
+};
+*/

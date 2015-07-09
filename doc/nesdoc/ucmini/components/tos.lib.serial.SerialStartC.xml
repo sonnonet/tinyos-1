@@ -1,0 +1,212 @@
+<?xml version="1.0" ?><component loc="40:/usr/src/tinyos/tos/lib/serial/SerialStartC.nc" nicename="tos.lib.serial.SerialStartC" qname="SerialStartC">
+      <documentation loc="33:/usr/src/tinyos/tos/lib/serial/SerialStartC.nc">
+        <short>
+ Including this configuration will start the Serial port at boot time.</short>
+        <long>
+ Including this configuration will start the Serial port at boot time. This
+ is very useful if you use the serial port for debug only.
+
+ @author Thomas Schmid
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="44:/usr/src/tinyos/tos/lib/serial/SerialStartC.nc">
+          <from><interface-ref name="Boot" ref="0x40cf1f08" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x40421b60" scoped=""/></to>
+        </wire>
+        <wire loc="47:/usr/src/tinyos/tos/lib/serial/SerialStartC.nc">
+          <from><interface-ref name="SerialControl" ref="0x40d16358" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x405810e0" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="40:/usr/src/tinyos/tos/lib/serial/SerialStartP.nc" name="SerialControl" provided="0" ref="0x40d16358">
+      <component-ref nicename="tos.lib.serial.SerialStartP" qname="SerialStartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SerialControl" ref="0x40d16358" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40d16530" scoped=""/>
+        <function-ref name="stopDone" ref="0x40d16610" scoped=""/>
+        <function-ref name="start" ref="0x40d166f0" scoped=""/>
+        <function-ref name="stop" ref="0x40d167d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/usr/src/tinyos/tos/system/MainC.nc" name="Boot" provided="1" ref="0x40421b60">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Boot" ref="0x40421b60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40421d38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/lib/serial/SerialStartP.nc" name="Boot" provided="0" ref="0x40cf1f08">
+      <component-ref nicename="tos.lib.serial.SerialStartP" qname="SerialStartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Boot" ref="0x40cf1f08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40d160f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc" name="SplitControl" provided="1" ref="0x405810e0">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SplitControl" ref="0x405810e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x405812b8" scoped=""/>
+        <function-ref name="stopDone" ref="0x40581398" scoped=""/>
+        <function-ref name="start" ref="0x40581478" scoped=""/>
+        <function-ref name="stop" ref="0x40581558" scoped=""/>
+      </interface-functions>
+    </interface><component loc="44:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc" nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC">
+      <documentation loc="71:/usr/src/tinyos/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="61:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x405810e0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x405c68e8" scoped=""/></to>
+        </wire>
+        <wire loc="63:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x405819b8" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x4058f700" scoped=""/></to>
+        </wire>
+        <wire loc="65:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x405806f0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x4058ed68" scoped=""/></to>
+        </wire>
+        <wire loc="64:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x40580398" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x4058fe40" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x40591798" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x405c84d0" scoped=""/></to>
+        </wire>
+        <wire loc="66:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40592628" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x4058e190" scoped=""/></to>
+        </wire>
+        <wire loc="59:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x404987a0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x405c6550" scoped=""/></to>
+        </wire>
+        <wire loc="60:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Leds" ref="0x405d13f0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40591cd0" scoped=""/></to>
+        </wire>
+        <wire loc="69:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubSend" ref="0x405c89f8" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x405d37e0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="70:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubReceive" ref="0x405c7170" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x405d31d8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="72:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SerialPacketInfo" ref="0x405ceea8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Info" ref="0x40752b80" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/usr/src/tinyos/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="1:/usr/src/tinyos/tos/platforms/ucmini/hardware.h">
+        <short>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</short>
+        <long>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
+  downloading, copying, installing or using the software you agree to
+  this license.  If you do not agree to this license, do not download,
+  install, copy or use the software.
+
+  Copyright (c) 2004-2005 Crossbow Technology, Inc.
+  Copyright (c) 2002-2003 Intel Corporation.
+  Copyright (c) 2000-2003 The Regents of the University  of California.    
+  All rights reserved.
+
+  Permission to use, copy, modify, and distribute this software and its
+  documentation for any purpose, without fee, and without written
+  agreement is hereby granted, provided that the above copyright
+  notice, the (updated) modification history and the author appear in
+  all copies of this source code.
+
+  Permission is also granted to distribute this software under the
+  standard BSD license as contained in the TinyOS distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE INTEL OR ITS
+  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  @author Jason Hill, Philip Levis, Nelson Lee, David Gay
+  @author Alan Broad &lt;abroad@xbow.com&gt;
+  @author Matt Miller &lt;mmiller@xbow.com&gt;
+  @author Martin Turon &lt;mturon@xbow.com&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x40421b60" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x404a3778" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x404a3b10" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x4032fb58" scoped=""/></to>
+        </wire>
+        <wire loc="68:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x40828100" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x404a1010" scoped=""/></to>
+        </wire>
+        <wire loc="71:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x40828508" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x404987a0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="37:/usr/src/tinyos/tos/lib/serial/SerialStartP.nc" nicename="tos.lib.serial.SerialStartP" qname="SerialStartP">
+      <documentation loc="33:/usr/src/tinyos/tos/lib/serial/SerialStartP.nc">
+        <short>
+ </short>
+        <long>
+ @author Thomas Schmid
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

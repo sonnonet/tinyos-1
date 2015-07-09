@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><component loc="46:/usr/src/tinyos/tos/chips/atm1281/adc/AdcP.nc" nicename="tos.chips.atm1281.adc.AdcP" qname="AdcP" safe="">
+      <documentation loc="39:/usr/src/tinyos/tos/chips/atm1281/adc/AdcP.nc">
+        <short>
+ Convert ATmega128 HAL A/D interface to the HIL interfaces.</short>
+        <long>
+ Convert ATmega128 HAL A/D interface to the HIL interfaces.
+ @author David Gay
+ @author Jan Hauer &lt;hauer@tkn.tu-berlin.de&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="54:/usr/src/tinyos/tos/chips/atm1281/adc/AdcP.nc" name="BusyWait" provided="0" ref="0x40a1d088">
+      <component-ref nicename="tos.chips.atm1281.adc.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusyWait" ref="0x40a1d088" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.BusyWait" qname="BusyWait"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40452288"/>
+            <typename><typedef-ref name="TMicro" ref="0x40452450"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="wait" ref="0x40a1d7d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/usr/src/tinyos/tos/chips/atm1281/adc/AdcP.nc" name="Read" provided="1" ref="0x40a213d8">
+      <component-ref nicename="tos.chips.atm1281.adc.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40a213d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40a21a00" scoped=""/>
+        <function-ref name="readDone" ref="0x40a21c58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/usr/src/tinyos/tos/chips/atm1281/adc/AdcP.nc" name="ReadNow" provided="1" ref="0x40a20390">
+      <component-ref nicename="tos.chips.atm1281.adc.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadNow" ref="0x40a20390" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadNow" qname="ReadNow"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40a209d8" scoped=""/>
+        <function-ref name="readDone" ref="0x40a20c50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/usr/src/tinyos/tos/chips/atm1281/adc/AdcP.nc" name="Atm128AdcConfig" provided="0" ref="0x40a1f8b8">
+      <component-ref nicename="tos.chips.atm1281.adc.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcConfig" ref="0x40a1f8b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x40a1fa90" scoped=""/>
+        <function-ref name="getChannel" ref="0x40a1fb70" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x40a1fc50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/usr/src/tinyos/tos/chips/atm1281/adc/AdcP.nc" name="Atm128AdcSingle" provided="0" ref="0x40a1f040">
+      <component-ref nicename="tos.chips.atm1281.adc.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcSingle" ref="0x40a1f040" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcSingle" qname="Atm128AdcSingle"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getData" ref="0x40a1f218" scoped=""/>
+        <function-ref name="cancel" ref="0x40a1f2f8" scoped=""/>
+        <function-ref name="dataReady" ref="0x40a1f3d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="104:/usr/src/tinyos/tos/chips/atm1281/adc/AdcP.nc" name="acquiredData" provided="0" ref="0x40a35c70">
+      <component-ref nicename="tos.chips.atm1281.adc.AdcP" qname="AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="acquiredData" ref="0x40a35c70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x40a35e48" scoped=""/>
+        <function-ref name="runTask" ref="0x40a35f28" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

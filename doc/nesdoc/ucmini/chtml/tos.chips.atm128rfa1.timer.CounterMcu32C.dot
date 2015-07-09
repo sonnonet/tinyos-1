@@ -1,0 +1,8 @@
+digraph "tos.chips.atm128rfa1.timer.CounterMcu32C" {
+  n0x4072d328 [shape=ellipse, style=filled, label="Counter", fontsize=12];
+  "CounterMcu32C.TransformCounterC" [fontsize=12, shape=box, style=dashed, label="TransformCounterC", URL="../chtml/tos.lib.timer.TransformCounterC.html"];
+  "CounterMcu32C.TransformCounterC" [fontsize=12, shape=box, style=dashed, label="TransformCounterC", URL="../chtml/tos.lib.timer.TransformCounterC.html"];
+  "CounterMcu16C" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.atm128rfa1.timer.CounterMcu16C.html"];
+  "n0x4072d328" -> "CounterMcu32C.TransformCounterC" [label="Counter<TMcu, uint32_t>", URL="../ihtml/tos.lib.timer.Counter.html", fontsize=10];
+  "CounterMcu32C.TransformCounterC" -> "CounterMcu16C" [label="Counter<TMcu, uint16_t>", URL="../ihtml/tos.lib.timer.Counter.html", fontsize=10];
+}

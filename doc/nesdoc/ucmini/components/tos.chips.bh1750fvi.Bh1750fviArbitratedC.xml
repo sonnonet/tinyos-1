@@ -1,0 +1,303 @@
+<?xml version="1.0" ?><component loc="36:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviArbitratedC.nc" nicename="tos.chips.bh1750fvi.Bh1750fviArbitratedC" qname="Bh1750fviArbitratedC">
+      <configuration/>
+      <wiring>
+        <wire loc="48:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviArbitratedC.nc">
+          <from><interface-ref name="Read" ref="0x40a7b878" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40a75e18" scoped=""/></to>
+        </wire>
+        <wire loc="50:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviArbitratedC.nc">
+          <from><interface-ref name="Resource" ref="0x40baa7c8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x40ba9eb8" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviArbitratedC.nc">
+          <from><interface-ref name="Service" ref="0x40ab1b30" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40ba4010" scoped=""/></to>
+        </wire>
+        <wire loc="53:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviArbitratedC.nc">
+          <from><interface-ref name="ActualRead" ref="0x40ba4c68" scoped=""/></from>
+          <to><interface-ref name="Light" ref="0x40a789d8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="38:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviArbitratedC.nc" name="Read" provided="1" ref="0x40a7b878">
+      <component-ref nicename="tos.chips.bh1750fvi.Bh1750fviArbitratedC" qname="Bh1750fviArbitratedC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40a7b878" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40a7bea0" scoped=""/>
+        <function-ref name="readDone" ref="0x40a78110" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="37:/usr/src/tinyos/tos/system/ReadClientP.nc" name="ActualRead" provided="0" ref="0x40ba4c68">
+      <component-ref nicename="tos.system.ReadClientP" qname="Bh1750fviArbitratedC.ReadClientP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ActualRead" ref="0x40ba4c68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40ba32c8" scoped=""/>
+        <function-ref name="readDone" ref="0x40ba3520" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="91:/usr/src/tinyos/tos/system/FcfsArbiterC.nc" name="Resource" provided="1" ref="0x40ba9eb8">
+      <component-ref nicename="tos.system.FcfsArbiterC" qname="Bh1750fviArbitratedC.Arbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x40ba9eb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x40ba70c0" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40ba71a0" scoped=""/>
+        <function-ref name="request" ref="0x40ba7280" scoped=""/>
+        <function-ref name="granted" ref="0x40ba7360" scoped=""/>
+        <function-ref name="isOwner" ref="0x40ba7440" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/usr/src/tinyos/tos/system/ArbitratedReadC.nc" name="Read" provided="1" ref="0x40a75e18">
+      <component-ref nicename="tos.system.ArbitratedReadC" qname="Bh1750fviArbitratedC.ArbitratedReadC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40a75e18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40ab1468" scoped=""/>
+        <function-ref name="readDone" ref="0x40ab16d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="27:/usr/src/tinyos/tos/system/ArbitratedReadC.nc" name="Resource" provided="0" ref="0x40baa7c8">
+      <component-ref nicename="tos.system.ArbitratedReadC" qname="Bh1750fviArbitratedC.ArbitratedReadC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x40baa7c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x40baa9b0" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40baaa90" scoped=""/>
+        <function-ref name="request" ref="0x40baab70" scoped=""/>
+        <function-ref name="granted" ref="0x40baac50" scoped=""/>
+        <function-ref name="isOwner" ref="0x40baad30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviC.nc" name="Light" provided="1" ref="0x40a789d8">
+      <component-ref nicename="tos.chips.bh1750fvi.Bh1750fviC" qname="Bh1750fviC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Light" ref="0x40a789d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40a74010" scoped=""/>
+        <function-ref name="readDone" ref="0x40a74268" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/usr/src/tinyos/tos/system/ArbitratedReadC.nc" name="Service" provided="0" ref="0x40ab1b30">
+      <component-ref nicename="tos.system.ArbitratedReadC" qname="Bh1750fviArbitratedC.ArbitratedReadC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Service" ref="0x40ab1b30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40baa1e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40baa448" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/system/ReadClientP.nc" name="Read" provided="1" ref="0x40ba4010">
+      <component-ref nicename="tos.system.ReadClientP" qname="Bh1750fviArbitratedC.ReadClientP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40ba4010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40ba4648" scoped=""/>
+        <function-ref name="readDone" ref="0x40ba48b0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="23(Bh1750fviArbitratedC.ArbitratedReadC):/usr/src/tinyos/tos/system/ArbitratedReadC.nc" nicename="tos.system.ArbitratedReadC" qname="Bh1750fviArbitratedC.ArbitratedReadC">
+      <documentation loc="10:/usr/src/tinyos/tos/system/ArbitratedReadC.nc">
+        <short>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.</short>
+        <long>
+ Implement arbitrated access to a Read interface, based on an
+ underlying arbitrated Resource interface.
+
+ Note that this code does not deal with unexpected events: it assumes
+ that all events it receives are in response to commands that it
+ made. See tos/chips/atm128/adc for an example of using ArbitratedReadC 
+ in a safe way.
+
+ @param width_t Width of the underlying Read interface.
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.system.ArbitratedReadC" qname="ArbitratedReadC"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="35(Bh1750fviArbitratedC.ReadClientP):/usr/src/tinyos/tos/system/ReadClientP.nc" nicename="tos.system.ReadClientP" qname="Bh1750fviArbitratedC.ReadClientP">
+      <instance number="0">
+        <component-ref nicename="tos.system.ReadClientP" qname="ReadClientP"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="35:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviC.nc" nicename="tos.chips.bh1750fvi.Bh1750fviC" qname="Bh1750fviC">
+      <configuration/>
+      <wiring>
+        <wire loc="42:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviC.nc">
+          <from><interface-ref name="Light" ref="0x40a789d8" scoped=""/></from>
+          <to><interface-ref name="Light" ref="0x40a74b20" scoped=""/></to>
+        </wire>
+        <wire loc="43:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviC.nc">
+          <from><interface-ref name="Timer" ref="0x40a6f520" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x40a924c8" scoped=""/></to>
+        </wire>
+        <wire loc="46:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x404987a0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40a86520" scoped=""/></to>
+        </wire>
+        <wire loc="47:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviC.nc">
+          <from><interface-ref name="I2CPacket" ref="0x40a8b528" scoped=""/></from>
+          <to><interface-ref name="I2CPacket" ref="0x40ab34e8" scoped=""/></to>
+        </wire>
+        <wire loc="48:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviC.nc">
+          <from><interface-ref name="I2CResource" ref="0x40a89810" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x40aae410" scoped=""/></to>
+        </wire>
+        <wire loc="49:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviC.nc">
+          <from><interface-ref name="BusPowerManager" ref="0x40a84e08" scoped=""/></from>
+          <to><interface-ref name="BusPowerManager" ref="0x40aaeb60" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="89(Bh1750fviArbitratedC.Arbiter):/usr/src/tinyos/tos/system/FcfsArbiterC.nc" nicename="tos.system.FcfsArbiterC" qname="Bh1750fviArbitratedC.Arbiter">
+      <documentation loc="69:/usr/src/tinyos/tos/system/FcfsArbiterC.nc">
+        <short>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.</short>
+        <long>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.  It provides arbitration to a shared resource in
+ an FCFS fashion.  An array is used to keep track of which users have put
+ in requests for the resource.  Upon the release of the resource by one
+ of these users, the array is checked and the next user (in FCFS order)
+ that has a pending request will ge granted control of the resource.  If
+ there are no pending requests, then the resource is granted to the default 
+ user.  If a new request is made, the default user will release the resource, 
+ and it will be granted to the requesting cleint.
+
+ @param &lt;b&gt;resourceName&lt;/b&gt; -- The name of the Resource being shared
+ 
+ @author Kevin Klues (klues@tkn.tu-berlin.de)
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.system.FcfsArbiterC" qname="FcfsArbiterC"/>
+        <arguments>
+          <value cst="S:Bh1750fviPressure.ReadResource">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-int alignment="I:1" cname="char" size="I:1"/>
+            </type-pointer>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="106:/usr/src/tinyos/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="ResourceRequested" ref="0x40ba7618" scoped=""/></from>
+          <to><interface-ref name="ResourceRequested" ref="0x40f2dac8" scoped=""/></to>
+        </wire>
+        <wire loc="107:/usr/src/tinyos/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x40ba7a20" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x40f2ded0" scoped=""/></to>
+        </wire>
+        <wire loc="105:/usr/src/tinyos/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="Resource" ref="0x40ba9eb8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x40f2d388" scoped=""/></to>
+        </wire>
+        <wire loc="108:/usr/src/tinyos/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x40ba6150" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x40f2c580" scoped=""/></to>
+        </wire>
+        <wire loc="103:/usr/src/tinyos/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x404987a0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40f31eb8" scoped=""/></to>
+        </wire>
+        <wire loc="109:/usr/src/tinyos/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="ResourceConfigure" ref="0x40f2ca40" scoped=""/></from>
+          <to><interface-ref name="ResourceConfigure" ref="0x40ba6600" scoped=""/></to>
+        </wire>
+        <wire loc="111:/usr/src/tinyos/tos/system/FcfsArbiterC.nc">
+          <from><interface-ref name="Queue" ref="0x40f2ce68" scoped=""/></from>
+          <to><interface-ref name="FcfsQueue" ref="0x40f2e220" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

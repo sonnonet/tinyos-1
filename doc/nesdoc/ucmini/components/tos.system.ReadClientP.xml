@@ -1,0 +1,40 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/usr/src/tinyos/tos/system/ReadClientP.nc" nicename="tos.system.ReadClientP" qname="ReadClientP">
+      <parameters>
+        <typedef loc="35:/usr/src/tinyos/tos/system/ReadClientP.nc" name="type" ref="0x40ba55e0">
+          <component-ref nicename="tos.system.ReadClientP" qname="ReadClientP"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="type" ref="0x40ba55e0" scoped=""/></type-var>
+        </typedef>
+      </parameters>
+      <module/>
+    <specification><interface loc="36:/usr/src/tinyos/tos/system/ReadClientP.nc" name="Read" provided="1" ref="0x40ba5c10">
+      <component-ref nicename="tos.system.ReadClientP" qname="ReadClientP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40ba5c10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="type" ref="0x40ba55e0" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40ba2258" scoped=""/>
+        <function-ref name="readDone" ref="0x40ba24b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/system/ReadClientP.nc" name="ActualRead" provided="0" ref="0x40ba2920">
+      <component-ref nicename="tos.system.ReadClientP" qname="ReadClientP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ActualRead" ref="0x40ba2920" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="type" ref="0x40ba55e0" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40ba1010" scoped=""/>
+        <function-ref name="readDone" ref="0x40ba1268" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

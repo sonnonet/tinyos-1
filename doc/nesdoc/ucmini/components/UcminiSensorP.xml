@@ -1,0 +1,263 @@
+<?xml version="1.0" ?><component loc="37:UcminiSensorP.nc" nicename="UcminiSensorP" qname="UcminiSensorP">
+      <module/>
+    <specification><interface loc="53:UcminiSensorP.nc" name="Timer" provided="0" ref="0x40481ea8">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x40481ea8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40453928"/>
+            <typename><typedef-ref name="TMilli" ref="0x40453af0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4047a9a8" scoped=""/>
+        <function-ref name="fired" ref="0x4047fc40" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4047a368" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4047a110" scoped=""/>
+        <function-ref name="getdt" ref="0x4047ae58" scoped=""/>
+        <function-ref name="gett0" ref="0x4047ac00" scoped=""/>
+        <function-ref name="isRunning" ref="0x4047fe98" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4047f4e8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4047a688" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4047f768" scoped=""/>
+        <function-ref name="stop" ref="0x4047f9e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:UcminiSensorP.nc" name="CalibSend" provided="0" ref="0x40475410">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="CalibSend" ref="0x40475410" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x404755e8" scoped=""/>
+        <function-ref name="getPayload" ref="0x404756c8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x404757a8" scoped=""/>
+        <function-ref name="cancel" ref="0x40475888" scoped=""/>
+        <function-ref name="sendDone" ref="0x40475968" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:UcminiSensorP.nc" name="Boot" provided="0" ref="0x404251c0">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Boot" ref="0x404251c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x40425398" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:UcminiSensorP.nc" name="Packet" provided="0" ref="0x4047be50">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Packet" ref="0x4047be50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40476050" scoped=""/>
+        <function-ref name="payloadLength" ref="0x40476130" scoped=""/>
+        <function-ref name="getPayload" ref="0x40476210" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x404762f0" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x404763d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:UcminiSensorP.nc" name="VoltageRead" provided="0" ref="0x404298b8">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="VoltageRead" ref="0x404298b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40429ee0" scoped=""/>
+        <function-ref name="readDone" ref="0x40432150" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:UcminiSensorP.nc" name="HumiRead" provided="0" ref="0x40427748">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HumiRead" ref="0x40427748" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40427d70" scoped=""/>
+        <function-ref name="readDone" ref="0x40426010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:UcminiSensorP.nc" name="PressRead" provided="0" ref="0x4042c1a8">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PressRead" ref="0x4042c1a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x4042c7d0" scoped=""/>
+        <function-ref name="readDone" ref="0x4042ca28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:UcminiSensorP.nc" name="Receive" provided="0" ref="0x40474d50">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x40474d50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40443010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:UcminiSensorP.nc" name="TempRead" provided="0" ref="0x4042da40">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TempRead" ref="0x4042da40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40427088" scoped=""/>
+        <function-ref name="readDone" ref="0x404272e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:UcminiSensorP.nc" name="Leds" provided="0" ref="0x4048b0d8">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Leds" ref="0x4048b0d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4048b2b0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4048b390" scoped=""/>
+        <function-ref name="led1On" ref="0x4048b470" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4048b550" scoped=""/>
+        <function-ref name="led3Off" ref="0x4048b630" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4048b710" scoped=""/>
+        <function-ref name="get" ref="0x4048b7f0" scoped=""/>
+        <function-ref name="led1Off" ref="0x4048b8d0" scoped=""/>
+        <function-ref name="led3Toggle" ref="0x4048b9b0" scoped=""/>
+        <function-ref name="led3On" ref="0x4048ba90" scoped=""/>
+        <function-ref name="led0On" ref="0x4048bb70" scoped=""/>
+        <function-ref name="led2Off" ref="0x4048bc50" scoped=""/>
+        <function-ref name="led2On" ref="0x4048bd30" scoped=""/>
+        <function-ref name="set" ref="0x4048be90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:UcminiSensorP.nc" name="ReadRef" provided="0" ref="0x404371c0">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadRef" ref="0x404371c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x404377e8" scoped=""/>
+        <function-ref name="readDone" ref="0x40437b78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:UcminiSensorP.nc" name="DiagMsg" provided="0" ref="0x40446ab8">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="DiagMsg" ref="0x40446ab8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="int32s" ref="0x40446c90" scoped=""/>
+        <function-ref name="str" ref="0x40446d70" scoped=""/>
+        <function-ref name="send" ref="0x40446e50" scoped=""/>
+        <function-ref name="int16" ref="0x40430010" scoped=""/>
+        <function-ref name="hex32" ref="0x404300f0" scoped=""/>
+        <function-ref name="int32" ref="0x404301d0" scoped=""/>
+        <function-ref name="chr" ref="0x404302b0" scoped=""/>
+        <function-ref name="uint32s" ref="0x40430390" scoped=""/>
+        <function-ref name="real" ref="0x40430470" scoped=""/>
+        <function-ref name="hex8" ref="0x40430550" scoped=""/>
+        <function-ref name="uint16" ref="0x40430630" scoped=""/>
+        <function-ref name="uint64s" ref="0x40430710" scoped=""/>
+        <function-ref name="uint32" ref="0x404307f0" scoped=""/>
+        <function-ref name="uint8" ref="0x40430950" scoped=""/>
+        <function-ref name="hex8s" ref="0x40430a30" scoped=""/>
+        <function-ref name="record" ref="0x40430b10" scoped=""/>
+        <function-ref name="uint8s" ref="0x40430bf0" scoped=""/>
+        <function-ref name="reals" ref="0x40430cd0" scoped=""/>
+        <function-ref name="int64" ref="0x40430db0" scoped=""/>
+        <function-ref name="uint16s" ref="0x40430e90" scoped=""/>
+        <function-ref name="int64s" ref="0x40436010" scoped=""/>
+        <function-ref name="hex16" ref="0x404360f0" scoped=""/>
+        <function-ref name="uint64" ref="0x404361d0" scoped=""/>
+        <function-ref name="int16s" ref="0x404362b0" scoped=""/>
+        <function-ref name="int8" ref="0x40436390" scoped=""/>
+        <function-ref name="hex16s" ref="0x40436570" scoped=""/>
+        <function-ref name="hex32s" ref="0x40436650" scoped=""/>
+        <function-ref name="chrs" ref="0x40436730" scoped=""/>
+        <function-ref name="int8s" ref="0x40436810" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:UcminiSensorP.nc" name="MeasSend" provided="0" ref="0x40475b60">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="MeasSend" ref="0x40475b60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40475d38" scoped=""/>
+        <function-ref name="getPayload" ref="0x40475e18" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40475ef8" scoped=""/>
+        <function-ref name="cancel" ref="0x40444010" scoped=""/>
+        <function-ref name="sendDone" ref="0x404440f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:UcminiSensorP.nc" name="Temp2Read" provided="0" ref="0x4042ce88">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Temp2Read" ref="0x4042ce88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="short" size="I:2">
+            <typename><typedef-ref name="int16_t" ref="0x40039e90"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x4042a4d8" scoped=""/>
+        <function-ref name="readDone" ref="0x4042a730" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:UcminiSensorP.nc" name="Temp3Read" provided="0" ref="0x4042aba0">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Temp3Read" ref="0x4042aba0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x404291e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40429438" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:UcminiSensorP.nc" name="LightRead" provided="0" ref="0x40426480">
+      <component-ref nicename="UcminiSensorP" qname="UcminiSensorP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LightRead" ref="0x40426480" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40426aa8" scoped=""/>
+        <function-ref name="readDone" ref="0x40426d00" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

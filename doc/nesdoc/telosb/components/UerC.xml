@@ -1,0 +1,64 @@
+<?xml version="1.0" ?><component loc="2:UerC.nc" nicename="UerC" qname="UerC">
+      <module/>
+    <specification><interface loc="3:UerC.nc" name="Boot" provided="0" ref="0x405e9ec0">
+      <component-ref nicename="UerC" qname="UerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x405e9ec0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x405e70c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="4:UerC.nc" name="Leds" provided="0" ref="0x406fc298">
+      <component-ref nicename="UerC" qname="UerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x406fc298" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x406fc470" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x406fc550" scoped=""/>
+        <function-ref name="led1On" ref="0x406fc630" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x406fc710" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x406fc7f0" scoped=""/>
+        <function-ref name="get" ref="0x406fc8d0" scoped=""/>
+        <function-ref name="led1Off" ref="0x406fc9b0" scoped=""/>
+        <function-ref name="led2Off" ref="0x406fcd30" scoped=""/>
+        <function-ref name="set" ref="0x406fca90" scoped=""/>
+        <function-ref name="led0On" ref="0x406fcb70" scoped=""/>
+        <function-ref name="led2On" ref="0x406fcc50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:UerC.nc" name="ESP8266" provided="0" ref="0x40707418">
+      <component-ref nicename="UerC" qname="UerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="ESP8266" ref="0x40707418" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="ESP8266" qname="ESP8266"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x407075f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:UerC.nc" name="Timer" provided="0" ref="0x4070bc00">
+      <component-ref nicename="UerC" qname="UerC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x4070bc00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x406ed668"/>
+            <typename><typedef-ref name="TMilli" ref="0x406ed830"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4070a730" scoped=""/>
+        <function-ref name="fired" ref="0x406ec9b0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4070a0f0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x406ece60" scoped=""/>
+        <function-ref name="getdt" ref="0x4070abe0" scoped=""/>
+        <function-ref name="gett0" ref="0x4070a988" scoped=""/>
+        <function-ref name="isRunning" ref="0x406ecc08" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x406ec258" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4070a410" scoped=""/>
+        <function-ref name="startOneShot" ref="0x406ec4d8" scoped=""/>
+        <function-ref name="stop" ref="0x406ec758" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

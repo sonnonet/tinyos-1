@@ -1,0 +1,39 @@
+<?xml version="1.0" ?><component abstract="" loc="50:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaPinChangeP.nc" nicename="tos.chips.atm128rfa1.pins.AtmegaPinChangeP" qname="AtmegaPinChangeP">
+      <parameters>
+      </parameters>
+      <module/>
+    <specification><interface loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaPinChangeP.nc" name="HplAtmegaPinChange" provided="0" ref="0x4053bb10">
+      <component-ref nicename="tos.chips.atm128rfa1.pins.AtmegaPinChangeP" qname="AtmegaPinChangeP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAtmegaPinChange" ref="0x4053bb10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="test" ref="0x4053bce8" scoped=""/>
+        <function-ref name="fired" ref="0x4053bdc8" scoped=""/>
+        <function-ref name="disable" ref="0x4053bea8" scoped=""/>
+        <function-ref name="isEnabled" ref="0x40552010" scoped=""/>
+        <function-ref name="reset" ref="0x405520f0" scoped=""/>
+        <function-ref name="setMask" ref="0x405521d0" scoped=""/>
+        <function-ref name="enable" ref="0x405522b0" scoped=""/>
+        <function-ref name="getPins" ref="0x40552390" scoped=""/>
+        <function-ref name="getMask" ref="0x40552470" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/usr/src/tinyos/tos/chips/atm128rfa1/pins/AtmegaPinChangeP.nc" name="GpioInterrupt" provided="1" ref="0x40552940">
+      <component-ref nicename="tos.chips.atm128rfa1.pins.AtmegaPinChangeP" qname="AtmegaPinChangeP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="GpioInterrupt" ref="0x40552940" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="fired" ref="0x40552b18" scoped=""/>
+        <function-ref name="disable" ref="0x40552bf8" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x40552cd8" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x40552db8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

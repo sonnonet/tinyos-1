@@ -1,0 +1,183 @@
+<?xml version="1.0" ?><component abstract="" loc="43:/usr/src/tinyos/tos/system/AMReceiverC.nc" nicename="tos.system.AMReceiverC" qname="AMReceiverC">
+      <documentation loc="33:/usr/src/tinyos/tos/system/AMReceiverC.nc">
+        <short>
+ The virtualized AM reception abstraction.</short>
+        <long>
+ The virtualized AM reception abstraction.
+
+ @author Philip Levis
+ @date   Jan 16 2006
+ @see    TEP 116: Packet Protocols
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="43:/usr/src/tinyos/tos/system/AMReceiverC.nc" name="amId" ref="0x40f2a010">
+          <component-ref nicename="tos.system.AMReceiverC" qname="AMReceiverC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x404446a0"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="55:/usr/src/tinyos/tos/system/AMReceiverC.nc">
+          <from><interface-ref name="Packet" ref="0x40f2a5f8" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x408080a0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/usr/src/tinyos/tos/system/AMReceiverC.nc">
+          <from><interface-ref name="Receive" ref="0x40f2a2a0" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x4080bf10" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="am_id_t" ref="0x404446a0"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/system/AMReceiverC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40f2ace8" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x40808790" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="46:/usr/src/tinyos/tos/system/AMReceiverC.nc" name="Packet" provided="1" ref="0x40f2a5f8">
+      <component-ref nicename="tos.system.AMReceiverC" qname="AMReceiverC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Packet" ref="0x40f2a5f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40f2a7d0" scoped=""/>
+        <function-ref name="payloadLength" ref="0x40f2a8b0" scoped=""/>
+        <function-ref name="getPayload" ref="0x40f2a990" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40f2aa70" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x40f2ab50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/system/AMReceiverC.nc" name="Receive" provided="1" ref="0x40f2a2a0">
+      <component-ref nicename="tos.system.AMReceiverC" qname="AMReceiverC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x40f2a2a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40f2a478" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/usr/src/tinyos/tos/system/AMReceiverC.nc" name="AMPacket" provided="1" ref="0x40f2ace8">
+      <component-ref nicename="tos.system.AMReceiverC" qname="AMReceiverC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMPacket" ref="0x40f2ace8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x40f2aec0" scoped=""/>
+        <function-ref name="source" ref="0x40f29010" scoped=""/>
+        <function-ref name="address" ref="0x40f290f0" scoped=""/>
+        <function-ref name="destination" ref="0x40f291d0" scoped=""/>
+        <function-ref name="setSource" ref="0x40f292b0" scoped=""/>
+        <function-ref name="setDestination" ref="0x40f29390" scoped=""/>
+        <function-ref name="type" ref="0x40f29470" scoped=""/>
+        <function-ref name="setType" ref="0x40f29550" scoped=""/>
+        <function-ref name="isForMe" ref="0x40f29630" scoped=""/>
+        <function-ref name="setGroup" ref="0x40f29710" scoped=""/>
+        <function-ref name="localGroup" ref="0x40f297f0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="38:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="AMPacket" provided="1" ref="0x40808790">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMPacket" ref="0x40808790" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x40808968" scoped=""/>
+        <function-ref name="source" ref="0x40808a48" scoped=""/>
+        <function-ref name="address" ref="0x40808b28" scoped=""/>
+        <function-ref name="destination" ref="0x40808c08" scoped=""/>
+        <function-ref name="setSource" ref="0x40808ce8" scoped=""/>
+        <function-ref name="setDestination" ref="0x40808dc8" scoped=""/>
+        <function-ref name="type" ref="0x40808ea8" scoped=""/>
+        <function-ref name="setType" ref="0x40806010" scoped=""/>
+        <function-ref name="isForMe" ref="0x408060f0" scoped=""/>
+        <function-ref name="setGroup" ref="0x408061d0" scoped=""/>
+        <function-ref name="localGroup" ref="0x408062b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="Packet" provided="1" ref="0x408080a0">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Packet" ref="0x408080a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40808278" scoped=""/>
+        <function-ref name="payloadLength" ref="0x40808358" scoped=""/>
+        <function-ref name="getPayload" ref="0x40808438" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40808518" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x408085f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="33:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" name="Receive" provided="1" ref="0x4080bf10">
+      <component-ref nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x4080bf10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x4080a108" scoped=""/>
+      </interface-functions>
+    </interface><component loc="26:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc" nicename="tos.platforms.ucmini.ActiveMessageC" qname="ActiveMessageC">
+      <configuration/>
+      <wiring>
+        <wire loc="53:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x40422bb0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x40810e88" scoped=""/></to>
+        </wire>
+        <wire loc="58:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="SendNotifier" ref="0x40807d20" scoped=""/></from>
+          <to><interface-ref name="SendNotifier" ref="0x40825e68" scoped=""/></to>
+        </wire>
+        <wire loc="55:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x4080b550" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x40826770" scoped=""/></to>
+        </wire>
+        <wire loc="57:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="Snoop" ref="0x4080a5c8" scoped=""/></from>
+          <to><interface-ref name="Snoop" ref="0x408257f0" scoped=""/></to>
+        </wire>
+        <wire loc="60:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x408080a0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x40823010" scoped=""/></to>
+        </wire>
+        <wire loc="64:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="LowPowerListening" ref="0x4081a130" scoped=""/></from>
+          <to><interface-ref name="LowPowerListening" ref="0x40822978" scoped=""/></to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x4080bf10" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x40825158" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStampRadio" ref="0x408137c0" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampRadio" ref="0x40830750" scoped=""/></to>
+        </wire>
+        <wire loc="63:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x408064d0" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x408223f0" scoped=""/></to>
+        </wire>
+        <wire loc="65:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="PacketLink" ref="0x40816a40" scoped=""/></from>
+          <to><interface-ref name="PacketLink" ref="0x40821010" scoped=""/></to>
+        </wire>
+        <wire loc="61:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40808790" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x40823700" scoped=""/></to>
+        </wire>
+        <wire loc="68:/usr/src/tinyos/tos/platforms/ucmini/ActiveMessageC.nc">
+          <from><interface-ref name="PacketTimeStampMilli" ref="0x408111a0" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampMilli" ref="0x4082b130" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

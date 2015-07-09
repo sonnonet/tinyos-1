@@ -1,0 +1,293 @@
+<?xml version="1.0" ?><component loc="37:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc" nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacC" qname="HplAtmRfa1TimerMacC">
+      <configuration/>
+      <wiring>
+        <wire loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="Counter" ref="0x40b5e828" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x40b7b8b0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="SfdCapture" ref="0x40b7d010" scoped=""/></from>
+          <to><interface-ref name="SfdCapture" ref="0x40b955a8" scoped=""/></to>
+        </wire>
+        <wire loc="52:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="Compare" ref="0x40b81c28" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareA" ref="0x40b769c8" scoped=""/></to>
+        </wire>
+        <wire loc="53:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="Compare" ref="0x40b81c28" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB" ref="0x40b73e10" scoped=""/></to>
+        </wire>
+        <wire loc="54:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="Compare" ref="0x40b81c28" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareC" ref="0x40b971a0" scoped=""/></to>
+        </wire>
+        <wire loc="58:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="McuPowerState" ref="0x40b92958" scoped=""/></from>
+          <to><interface-ref name="McuPowerState" ref="0x4040c1a8" scoped=""/></to>
+        </wire>
+        <wire loc="59:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="McuPowerOverride" ref="0x4040be50" scoped=""/></from>
+          <to><interface-ref name="McuPowerOverride" ref="0x40b92568" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="41:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc" name="Counter" provided="1" ref="0x40b5e828">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacC" qname="HplAtmRfa1TimerMacC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Counter" ref="0x40b5e828" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="setMode" ref="0x40b812c0" scoped=""/>
+        <function-ref name="test" ref="0x40b83628" scoped=""/>
+        <function-ref name="get" ref="0x40b5ee70" scoped=""/>
+        <function-ref name="reset" ref="0x40b838a0" scoped=""/>
+        <function-ref name="getMode" ref="0x40b81560" scoped=""/>
+        <function-ref name="overflow" ref="0x40b833b0" scoped=""/>
+        <function-ref name="isOn" ref="0x40b81048" scoped=""/>
+        <function-ref name="set" ref="0x40b83110" scoped=""/>
+        <function-ref name="start" ref="0x40b83b18" scoped=""/>
+        <function-ref name="stop" ref="0x40b83d90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc" name="SfdCapture" provided="1" ref="0x40b7d010">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacC" qname="HplAtmRfa1TimerMacC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SfdCapture" ref="0x40b7d010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="setMode" ref="0x40b7ca68" scoped=""/>
+        <function-ref name="test" ref="0x40b7dde8" scoped=""/>
+        <function-ref name="fired" ref="0x40b7db70" scoped=""/>
+        <function-ref name="get" ref="0x40b7d658" scoped=""/>
+        <function-ref name="reset" ref="0x40b7c088" scoped=""/>
+        <function-ref name="getMode" ref="0x40b7cd08" scoped=""/>
+        <function-ref name="isOn" ref="0x40b7c7f0" scoped=""/>
+        <function-ref name="set" ref="0x40b7d8d0" scoped=""/>
+        <function-ref name="start" ref="0x40b7c300" scoped=""/>
+        <function-ref name="stop" ref="0x40b7c578" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc" name="Compare" provided="1" ref="0x40b81c28">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacC" qname="HplAtmRfa1TimerMacC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Compare" ref="0x40b81c28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCompare" qname="AtmegaCompare"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="setMode" ref="0x40b7f698" scoped=""/>
+        <function-ref name="test" ref="0x40b80a28" scoped=""/>
+        <function-ref name="fired" ref="0x40b807b0" scoped=""/>
+        <function-ref name="force" ref="0x40b7fbb0" scoped=""/>
+        <function-ref name="get" ref="0x40b80298" scoped=""/>
+        <function-ref name="reset" ref="0x40b80ca0" scoped=""/>
+        <function-ref name="getMode" ref="0x40b7f938" scoped=""/>
+        <function-ref name="isOn" ref="0x40b7f420" scoped=""/>
+        <function-ref name="set" ref="0x40b80510" scoped=""/>
+        <function-ref name="start" ref="0x40b80f18" scoped=""/>
+        <function-ref name="stop" ref="0x40b7f1a8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="42:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacP.nc" name="CompareA" provided="1" ref="0x40b769c8">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacP" qname="HplAtmRfa1TimerMacP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="CompareA" ref="0x40b769c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCompare" qname="AtmegaCompare"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="setMode" ref="0x40b73500" scoped=""/>
+        <function-ref name="test" ref="0x40b757d8" scoped=""/>
+        <function-ref name="fired" ref="0x40b75560" scoped=""/>
+        <function-ref name="force" ref="0x40b73a18" scoped=""/>
+        <function-ref name="get" ref="0x40b75048" scoped=""/>
+        <function-ref name="reset" ref="0x40b75a50" scoped=""/>
+        <function-ref name="getMode" ref="0x40b737a0" scoped=""/>
+        <function-ref name="isOn" ref="0x40b73288" scoped=""/>
+        <function-ref name="set" ref="0x40b752c0" scoped=""/>
+        <function-ref name="start" ref="0x40b75cc8" scoped=""/>
+        <function-ref name="stop" ref="0x40b73010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc" name="McuPowerOverride" provided="0" ref="0x4040be50">
+      <component-ref nicename="tos.chips.atm128rfa1.McuSleepC" qname="McuSleepC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerOverride" ref="0x4040be50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x4040e050" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacP.nc" name="Counter" provided="1" ref="0x40b7b8b0">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacP" qname="HplAtmRfa1TimerMacP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Counter" ref="0x40b7b8b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="setMode" ref="0x40b76330" scoped=""/>
+        <function-ref name="test" ref="0x40b776b8" scoped=""/>
+        <function-ref name="get" ref="0x40b7bef8" scoped=""/>
+        <function-ref name="reset" ref="0x40b77930" scoped=""/>
+        <function-ref name="getMode" ref="0x40b765d0" scoped=""/>
+        <function-ref name="overflow" ref="0x40b77440" scoped=""/>
+        <function-ref name="isOn" ref="0x40b760b8" scoped=""/>
+        <function-ref name="set" ref="0x40b771a0" scoped=""/>
+        <function-ref name="start" ref="0x40b77ba8" scoped=""/>
+        <function-ref name="stop" ref="0x40b77e20" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc" name="McuPowerState" provided="1" ref="0x4040c1a8">
+      <component-ref nicename="tos.chips.atm128rfa1.McuSleepC" qname="McuSleepC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerState" ref="0x4040c1a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerState" qname="McuPowerState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="update" ref="0x4040c380" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacP.nc" name="CompareB" provided="1" ref="0x40b73e10">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacP" qname="HplAtmRfa1TimerMacP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="CompareB" ref="0x40b73e10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCompare" qname="AtmegaCompare"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="setMode" ref="0x40b71878" scoped=""/>
+        <function-ref name="test" ref="0x40b72bf8" scoped=""/>
+        <function-ref name="fired" ref="0x40b72980" scoped=""/>
+        <function-ref name="force" ref="0x40b71d90" scoped=""/>
+        <function-ref name="get" ref="0x40b72468" scoped=""/>
+        <function-ref name="reset" ref="0x40b72e70" scoped=""/>
+        <function-ref name="getMode" ref="0x40b71b18" scoped=""/>
+        <function-ref name="isOn" ref="0x40b71600" scoped=""/>
+        <function-ref name="set" ref="0x40b726e0" scoped=""/>
+        <function-ref name="start" ref="0x40b71110" scoped=""/>
+        <function-ref name="stop" ref="0x40b71388" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacP.nc" name="McuPowerState" provided="0" ref="0x40b92958">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacP" qname="HplAtmRfa1TimerMacP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerState" ref="0x40b92958" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerState" qname="McuPowerState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="update" ref="0x40b92b30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacP.nc" name="SfdCapture" provided="1" ref="0x40b955a8">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacP" qname="HplAtmRfa1TimerMacP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SfdCapture" ref="0x40b955a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="setMode" ref="0x40b92010" scoped=""/>
+        <function-ref name="test" ref="0x40b943a8" scoped=""/>
+        <function-ref name="fired" ref="0x40b94130" scoped=""/>
+        <function-ref name="get" ref="0x40b95bf0" scoped=""/>
+        <function-ref name="reset" ref="0x40b94620" scoped=""/>
+        <function-ref name="getMode" ref="0x40b922b0" scoped=""/>
+        <function-ref name="isOn" ref="0x40b94d88" scoped=""/>
+        <function-ref name="set" ref="0x40b95e68" scoped=""/>
+        <function-ref name="start" ref="0x40b94898" scoped=""/>
+        <function-ref name="stop" ref="0x40b94b10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacP.nc" name="CompareC" provided="1" ref="0x40b971a0">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacP" qname="HplAtmRfa1TimerMacP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="CompareC" ref="0x40b971a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCompare" qname="AtmegaCompare"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="setMode" ref="0x40b96c68" scoped=""/>
+        <function-ref name="test" ref="0x40b96010" scoped=""/>
+        <function-ref name="fired" ref="0x40b97d00" scoped=""/>
+        <function-ref name="force" ref="0x40b951a0" scoped=""/>
+        <function-ref name="get" ref="0x40b977e8" scoped=""/>
+        <function-ref name="reset" ref="0x40b96288" scoped=""/>
+        <function-ref name="getMode" ref="0x40b96f08" scoped=""/>
+        <function-ref name="isOn" ref="0x40b969f0" scoped=""/>
+        <function-ref name="set" ref="0x40b97a60" scoped=""/>
+        <function-ref name="start" ref="0x40b96500" scoped=""/>
+        <function-ref name="stop" ref="0x40b96778" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacP.nc" name="McuPowerOverride" provided="1" ref="0x40b92568">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacP" qname="HplAtmRfa1TimerMacP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerOverride" ref="0x40b92568" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x40b92740" scoped=""/>
+      </interface-functions>
+    </interface><component loc="40:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc" nicename="tos.chips.atm128rfa1.McuSleepC" qname="McuSleepC" safe="">
+      <documentation loc="34:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc">
+        <short>
+ </short>
+        <long>
+ @author Philip Levis
+ @author Robert Szewczyk
+ @author Janos Sallai &lt;janos.sallai@vanderbilt.edu&gt;
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="37:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacP.nc" nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacP" qname="HplAtmRfa1TimerMacP" safe="">
+      <module/>
+    </component></referenced></component>

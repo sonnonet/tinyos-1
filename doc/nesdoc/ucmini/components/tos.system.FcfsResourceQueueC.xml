@@ -1,0 +1,32 @@
+<?xml version="1.0" ?><component abstract="" loc="42:/usr/src/tinyos/tos/system/FcfsResourceQueueC.nc" nicename="tos.system.FcfsResourceQueueC" qname="FcfsResourceQueueC" safe="">
+      <parameters>
+        <constant loc="42:/usr/src/tinyos/tos/system/FcfsResourceQueueC.nc" name="size" ref="0x40954228">
+          <component-ref nicename="tos.system.FcfsResourceQueueC" qname="FcfsResourceQueueC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="44:/usr/src/tinyos/tos/system/FcfsResourceQueueC.nc" name="Init" provided="1" ref="0x409546b8">
+      <component-ref nicename="tos.system.FcfsResourceQueueC" qname="FcfsResourceQueueC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x409546b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40954890" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/system/FcfsResourceQueueC.nc" name="FcfsQueue" provided="1" ref="0x4096f7a0">
+      <component-ref nicename="tos.system.FcfsResourceQueueC" qname="FcfsResourceQueueC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="FcfsQueue" ref="0x4096f7a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceQueue" qname="ResourceQueue"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="enqueue" ref="0x4096f978" scoped=""/>
+        <function-ref name="isEmpty" ref="0x4096fa58" scoped=""/>
+        <function-ref name="isEnqueued" ref="0x4096fb38" scoped=""/>
+        <function-ref name="dequeue" ref="0x4096fc18" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

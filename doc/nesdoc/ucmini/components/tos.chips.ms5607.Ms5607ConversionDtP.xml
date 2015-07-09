@@ -1,0 +1,69 @@
+<?xml version="1.0" ?><component abstract="" loc="37:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionDtP.nc" nicename="tos.chips.ms5607.Ms5607ConversionDtP" qname="Ms5607ConversionDtP">
+      <parameters>
+      </parameters>
+      <module/>
+    <specification><interface loc="39:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionDtP.nc" name="ReadCalib" provided="0" ref="0x40c75628">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionDtP" qname="Ms5607ConversionDtP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadCalib" ref="0x40c75628" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c75c50" scoped=""/>
+        <function-ref name="readDone" ref="0x40c74010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionDtP.nc" name="Read" provided="1" ref="0x40c74520">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionDtP" qname="Ms5607ConversionDtP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40c74520" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="long" size="I:4">
+            <typename><typedef-ref name="int32_t" ref="0x401ea500"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c74b48" scoped=""/>
+        <function-ref name="readDone" ref="0x40c74da0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionDtP.nc" name="ReadRawTemp" provided="0" ref="0x40c788a0">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionDtP" qname="Ms5607ConversionDtP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadRawTemp" ref="0x40c788a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c78ec8" scoped=""/>
+        <function-ref name="readDone" ref="0x40c75150" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/chips/ms5607/Ms5607ConversionDtP.nc" name="Get" provided="1" ref="0x40c724b8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607ConversionDtP" qname="Ms5607ConversionDtP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Get" ref="0x40c724b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Get" qname="Get"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="get" ref="0x40c72ae0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

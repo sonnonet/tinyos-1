@@ -1,0 +1,11 @@
+digraph "tos.platforms.ucmini.chips.sht21.HplSht21C" {
+  n0x40dc1b80 [shape=ellipse, style=filled, label="BusPowerManager", fontsize=12];
+  "I2CBusPowerManagerC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.I2CBusPowerManagerC.html"];
+  n0x40dc1430 [shape=ellipse, style=filled, label="Resource", fontsize=12];
+  "HplSht21C.I2CBus" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Atm128I2CMasterC\n(I2CBus)", URL="../chtml/tos.chips.atm128.i2c.Atm128I2CMasterC.html"];
+  n0x40dc5500 [shape=ellipse, style=filled, label="I2CPacket", fontsize=12];
+  "HplSht21C.I2CBus" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Atm128I2CMasterC\n(I2CBus)", URL="../chtml/tos.chips.atm128.i2c.Atm128I2CMasterC.html"];
+  "n0x40dc1b80" -> "I2CBusPowerManagerC" [label="BusPowerManager", URL="../ihtml/tos.chips.atm128rfa1.BusPowerManager.html", fontsize=10];
+  "n0x40dc1430" -> "HplSht21C.I2CBus" [label="Resource", URL="../ihtml/tos.interfaces.Resource.html", fontsize=10];
+  "n0x40dc5500" -> "HplSht21C.I2CBus" [label="I2CPacket<TI2CBasicAddr>", URL="../ihtml/tos.interfaces.I2CPacket.html", fontsize=10];
+}

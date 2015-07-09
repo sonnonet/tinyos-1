@@ -1,0 +1,12 @@
+<?xml version="1.0" ?><component loc="34:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1RadioOffP.nc" nicename="tos.chips.atm128rfa1.radio.RFA1RadioOffP" qname="RFA1RadioOffP">
+      <module/>
+    <specification><interface loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1RadioOffP.nc" name="RFA1RadioOff" provided="1" ref="0x40491478">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1RadioOffP" qname="RFA1RadioOffP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RFA1RadioOff" ref="0x40491478" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40491650" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

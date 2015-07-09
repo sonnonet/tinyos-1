@@ -1,0 +1,5 @@
+digraph "tos.chips.bh1750fvi.Bh1750fviRawLightC" {
+  n0x40a7c368 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "Bh1750fviArbitratedC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.bh1750fvi.Bh1750fviArbitratedC.html"];
+  "n0x40a7c368" -> "Bh1750fviArbitratedC" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+}

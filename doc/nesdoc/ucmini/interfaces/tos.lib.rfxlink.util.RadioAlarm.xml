@@ -1,0 +1,98 @@
+<?xml version="1.0" ?><interfacedef loc="38:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc" nicename="tos.lib.rfxlink.util.RadioAlarm" qname="RadioAlarm">
+      <function event="" loc="60:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc" name="fired" provided="0" ref="0x40894010">
+        <documentation loc="57:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc">
+          <short>
+ This event is fired when the specified timeout period expires.</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioAlarm" qname="RadioAlarm"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="50:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc" name="wait" provided="0" ref="0x40895758">
+        <documentation loc="47:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc">
+          <short>
+ Waits till the specified timeout period expires.</short>
+          <long>
+ Waits till the specified timeout period expires. The alarm must be free.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioAlarm" qname="RadioAlarm"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="tradio_size" ref="0x40439b38"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="50:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc" name="timeout" ref="0x40895600">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="tradio_size" ref="0x40439b38"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="55:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc" name="cancel" provided="0" ref="0x40895ba0">
+        <documentation loc="52:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc">
+          <short>
+ Cancels the running alarm.</short>
+          <long>
+ Cancels the running alarm. The alarm must be pending.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioAlarm" qname="RadioAlarm"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="45:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc" name="isFree" provided="0" ref="0x408950c8">
+        <documentation loc="40:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc">
+          <short>
+ Returns TRUE if the alarm is free and ready to be used.</short>
+          <long>
+ Returns TRUE if the alarm is free and ready to be used. Once the alarm
+ is free, it cannot become nonfree in the same tasklet block. Note,
+ if the alarm is currently set (even if for ourselves) then it is not free.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioAlarm" qname="RadioAlarm"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="65:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc" name="getNow" provided="0" ref="0x40894488">
+        <documentation loc="62:/usr/src/tinyos/tos/lib/rfxlink/util/RadioAlarm.nc">
+          <short>
+ Returns the current time as measured by the radio stack.</short>
+          <long>
+ Returns the current time as measured by the radio stack.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioAlarm" qname="RadioAlarm"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="tradio_size" ref="0x40439b38"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

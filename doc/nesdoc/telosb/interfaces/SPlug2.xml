@@ -1,0 +1,40 @@
+<?xml version="1.0" ?><interfacedef loc="1:SPlug2.nc" nicename="SPlug2" qname="SPlug2">
+      <function command="" loc="2:SPlug2.nc" name="init" provided="0" ref="0x40855280">
+        <interfacedef-ref nicename="SPlug2" qname="SPlug2"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="4:SPlug2.nc" name="readWattDone" provided="0" ref="0x40855b38">
+        <interfacedef-ref nicename="SPlug2" qname="SPlug2"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="uint32_t" ref="0x401eb300"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="4:SPlug2.nc" ref="0x408559e0">
+            <type-int alignment="I:2" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="uint32_t" ref="0x401eb300"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="3:SPlug2.nc" name="readWatt" provided="0" ref="0x40855628">
+        <interfacedef-ref nicename="SPlug2" qname="SPlug2"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

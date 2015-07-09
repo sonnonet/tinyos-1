@@ -1,0 +1,11 @@
+digraph "tos.chips.atm128rfa1.timer.BusyWaitMicroC" {
+  n0x40cbd340 [shape=ellipse, style=filled, label="BusyWait", fontsize=12];
+  "BusyWaitMicroC.BusyWaitCounterC" [fontsize=12, shape=box, style=dashed, label="BusyWaitCounterC", URL="../chtml/tos.lib.timer.BusyWaitCounterC.html"];
+  "BusyWaitMicroC.BusyWaitCounterC" [fontsize=12, shape=box, style=dashed, label="BusyWaitCounterC", URL="../chtml/tos.lib.timer.BusyWaitCounterC.html"];
+  "BusyWaitMicroC.CounterMicro16C" [fontsize=12, shape=box, style=dashed, label="TransformCounterC\n(CounterMicro16C)", URL="../chtml/tos.lib.timer.TransformCounterC.html"];
+  "BusyWaitMicroC.CounterMicro16C" [fontsize=12, shape=box, style=dashed, label="TransformCounterC\n(CounterMicro16C)", URL="../chtml/tos.lib.timer.TransformCounterC.html"];
+  "CounterMcu16C" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.atm128rfa1.timer.CounterMcu16C.html"];
+  "n0x40cbd340" -> "BusyWaitMicroC.BusyWaitCounterC" [label="BusyWait<TMicro, uint16_t>", URL="../ihtml/tos.lib.timer.BusyWait.html", fontsize=10];
+  "BusyWaitMicroC.BusyWaitCounterC" -> "BusyWaitMicroC.CounterMicro16C" [label="Counter<TMicro, uint16_t>", URL="../ihtml/tos.lib.timer.Counter.html", fontsize=10];
+  "BusyWaitMicroC.CounterMicro16C" -> "CounterMcu16C" [label="Counter<TMcu, uint16_t>", URL="../ihtml/tos.lib.timer.Counter.html", fontsize=10];
+}

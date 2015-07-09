@@ -1,0 +1,208 @@
+<?xml version="1.0" ?><component abstract="" loc="43:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc" nicename="tos.lib.serial.SerialAMReceiverC" qname="SerialAMReceiverC">
+      <documentation loc="33:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc">
+        <short>
+ The virtualized AM reception abstraction.</short>
+        <long>
+ The virtualized AM reception abstraction.
+
+ @author Philip Levis
+ @date   Jan 16 2006
+ @see    TEP 116: Packet Protocols
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="43:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc" name="amId" ref="0x40d55680">
+          <component-ref nicename="tos.lib.serial.SerialAMReceiverC" qname="SerialAMReceiverC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="am_id_t" ref="0x4045c6a0"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="55:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc">
+          <from><interface-ref name="Packet" ref="0x40d55c68" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x405806f0" scoped=""/></to>
+        </wire>
+        <wire loc="54:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc">
+          <from><interface-ref name="Receive" ref="0x40d55910" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x40580398" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="am_id_t" ref="0x4045c6a0"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40d52370" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x40592628" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="46:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc" name="Packet" provided="1" ref="0x40d55c68">
+      <component-ref nicename="tos.lib.serial.SerialAMReceiverC" qname="SerialAMReceiverC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Packet" ref="0x40d55c68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40d55e40" scoped=""/>
+        <function-ref name="payloadLength" ref="0x40d55f20" scoped=""/>
+        <function-ref name="getPayload" ref="0x40d52018" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40d520f8" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x40d521d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc" name="Receive" provided="1" ref="0x40d55910">
+      <component-ref nicename="tos.lib.serial.SerialAMReceiverC" qname="SerialAMReceiverC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x40d55910" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40d55ae8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/usr/src/tinyos/tos/lib/serial/SerialAMReceiverC.nc" name="AMPacket" provided="1" ref="0x40d52370">
+      <component-ref nicename="tos.lib.serial.SerialAMReceiverC" qname="SerialAMReceiverC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMPacket" ref="0x40d52370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x40d52548" scoped=""/>
+        <function-ref name="source" ref="0x40d52628" scoped=""/>
+        <function-ref name="address" ref="0x40d52708" scoped=""/>
+        <function-ref name="destination" ref="0x40d527e8" scoped=""/>
+        <function-ref name="setSource" ref="0x40d528c8" scoped=""/>
+        <function-ref name="setDestination" ref="0x40d529a8" scoped=""/>
+        <function-ref name="type" ref="0x40d52a88" scoped=""/>
+        <function-ref name="setType" ref="0x40d52b68" scoped=""/>
+        <function-ref name="isForMe" ref="0x40d52c48" scoped=""/>
+        <function-ref name="setGroup" ref="0x40d52d28" scoped=""/>
+        <function-ref name="localGroup" ref="0x40d52e08" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="49:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc" name="Packet" provided="1" ref="0x405806f0">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Packet" ref="0x405806f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Packet" qname="Packet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x405808c8" scoped=""/>
+        <function-ref name="payloadLength" ref="0x405809a8" scoped=""/>
+        <function-ref name="getPayload" ref="0x40580a88" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40580b68" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x40580c48" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc" name="AMPacket" provided="1" ref="0x40592628">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMPacket" ref="0x40592628" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMPacket" qname="AMPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="group" ref="0x40592800" scoped=""/>
+        <function-ref name="source" ref="0x405928e0" scoped=""/>
+        <function-ref name="address" ref="0x405929c0" scoped=""/>
+        <function-ref name="destination" ref="0x40592aa0" scoped=""/>
+        <function-ref name="setSource" ref="0x40592b80" scoped=""/>
+        <function-ref name="setDestination" ref="0x40592c60" scoped=""/>
+        <function-ref name="type" ref="0x40592d40" scoped=""/>
+        <function-ref name="setType" ref="0x40592e20" scoped=""/>
+        <function-ref name="isForMe" ref="0x40592f00" scoped=""/>
+        <function-ref name="setGroup" ref="0x4057f010" scoped=""/>
+        <function-ref name="localGroup" ref="0x4057f0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc" name="Receive" provided="1" ref="0x40580398">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x40580398" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="am_id_t" ref="0x4045c6a0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40580570" scoped=""/>
+      </interface-functions>
+    </interface><component loc="44:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc" nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC">
+      <documentation loc="71:/usr/src/tinyos/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="61:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x405810e0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x405c68e8" scoped=""/></to>
+        </wire>
+        <wire loc="63:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x405819b8" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x4058f700" scoped=""/></to>
+        </wire>
+        <wire loc="65:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x405806f0" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x4058ed68" scoped=""/></to>
+        </wire>
+        <wire loc="64:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x40580398" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x4058fe40" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x40591798" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x405c84d0" scoped=""/></to>
+        </wire>
+        <wire loc="66:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40592628" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x4058e190" scoped=""/></to>
+        </wire>
+        <wire loc="59:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x404987a0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x405c6550" scoped=""/></to>
+        </wire>
+        <wire loc="60:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Leds" ref="0x405d13f0" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x40591cd0" scoped=""/></to>
+        </wire>
+        <wire loc="69:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubSend" ref="0x405c89f8" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x405d37e0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="70:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubReceive" ref="0x405c7170" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x405d31d8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="72:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SerialPacketInfo" ref="0x405ceea8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Info" ref="0x40752b80" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

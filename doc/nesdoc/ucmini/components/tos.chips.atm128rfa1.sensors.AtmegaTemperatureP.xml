@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><component loc="37:/usr/src/tinyos/tos/chips/atm128rfa1/sensors/AtmegaTemperatureP.nc" nicename="tos.chips.atm128rfa1.sensors.AtmegaTemperatureP" qname="AtmegaTemperatureP">
+      <module/>
+    <specification><interface loc="39:/usr/src/tinyos/tos/chips/atm128rfa1/sensors/AtmegaTemperatureP.nc" name="Atm128AdcConfig" provided="1" ref="0x40a6bef8">
+      <component-ref nicename="tos.chips.atm128rfa1.sensors.AtmegaTemperatureP" qname="AtmegaTemperatureP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcConfig" ref="0x40a6bef8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x40a680e0" scoped=""/>
+        <function-ref name="getChannel" ref="0x40a681c0" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x40a682a0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

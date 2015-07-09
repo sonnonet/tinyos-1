@@ -1,0 +1,108 @@
+<?xml version="1.0" ?><interfacedef loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange.nc" nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange">
+      <function command="" loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange.nc" name="test" provided="0" ref="0x40544538">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="40:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange.nc" name="fired" provided="0" ref="0x40544158">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="54:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange.nc" name="disable" provided="0" ref="0x405430c8">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="57:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange.nc" name="isEnabled" provided="0" ref="0x405434d8">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="46:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange.nc" name="reset" provided="0" ref="0x405448f0">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="65:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange.nc" name="setMask" provided="0" ref="0x40543e48">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="65:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange.nc" name="value" ref="0x40543cf0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange.nc" name="enable" provided="0" ref="0x40544cc0">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="70:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange.nc" name="getPins" provided="0" ref="0x405412c0">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="62:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange.nc" name="getMask" provided="0" ref="0x405438f8">
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

@@ -1,0 +1,103 @@
+<?xml version="1.0" ?><component loc="50:BlinkC.nc" nicename="BlinkC" qname="BlinkC" safe="">
+      <module/>
+    <specification><interface loc="52:BlinkC.nc" name="Timer0" provided="0" ref="0x406fcd30">
+      <component-ref nicename="BlinkC" qname="BlinkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer0" ref="0x406fcd30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x405e74d0"/>
+            <typename><typedef-ref name="TMilli" ref="0x405e7698"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x407008a8" scoped=""/>
+        <function-ref name="fired" ref="0x406ebac8" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40700268" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40700010" scoped=""/>
+        <function-ref name="getdt" ref="0x40700d58" scoped=""/>
+        <function-ref name="gett0" ref="0x40700b00" scoped=""/>
+        <function-ref name="isRunning" ref="0x406ebd20" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x406eb370" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40700588" scoped=""/>
+        <function-ref name="startOneShot" ref="0x406eb5f0" scoped=""/>
+        <function-ref name="stop" ref="0x406eb870" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:BlinkC.nc" name="Boot" provided="0" ref="0x4070a360">
+      <component-ref nicename="BlinkC" qname="BlinkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Boot" ref="0x4070a360" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Boot" qname="Boot"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="booted" ref="0x4070a538" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:BlinkC.nc" name="Timer1" provided="0" ref="0x406fa110">
+      <component-ref nicename="BlinkC" qname="BlinkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer1" ref="0x406fa110" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x405e74d0"/>
+            <typename><typedef-ref name="TMilli" ref="0x405e7698"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x406f9c00" scoped=""/>
+        <function-ref name="fired" ref="0x406fae90" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x406f95c0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x406f9368" scoped=""/>
+        <function-ref name="getdt" ref="0x406f70f0" scoped=""/>
+        <function-ref name="gett0" ref="0x406f9e58" scoped=""/>
+        <function-ref name="isRunning" ref="0x406f9110" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x406fa738" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x406f98e0" scoped=""/>
+        <function-ref name="startOneShot" ref="0x406fa9b8" scoped=""/>
+        <function-ref name="stop" ref="0x406fac38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:BlinkC.nc" name="Leds" provided="0" ref="0x407036d8">
+      <component-ref nicename="BlinkC" qname="BlinkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x407036d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x407038b0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x40703990" scoped=""/>
+        <function-ref name="led1On" ref="0x40703a70" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x40703b50" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x40703c30" scoped=""/>
+        <function-ref name="get" ref="0x40703d10" scoped=""/>
+        <function-ref name="led1Off" ref="0x40703df0" scoped=""/>
+        <function-ref name="led2Off" ref="0x4070a1d0" scoped=""/>
+        <function-ref name="set" ref="0x40703ed0" scoped=""/>
+        <function-ref name="led0On" ref="0x4070a010" scoped=""/>
+        <function-ref name="led2On" ref="0x4070a0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:BlinkC.nc" name="Timer2" provided="0" ref="0x406f7488">
+      <component-ref nicename="BlinkC" qname="BlinkC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer2" ref="0x406f7488" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x405e74d0"/>
+            <typename><typedef-ref name="TMilli" ref="0x405e7698"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4070b010" scoped=""/>
+        <function-ref name="fired" ref="0x406f6268" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x406f6970" scoped=""/>
+        <function-ref name="isOneShot" ref="0x406f6718" scoped=""/>
+        <function-ref name="getdt" ref="0x4070b4c0" scoped=""/>
+        <function-ref name="gett0" ref="0x4070b268" scoped=""/>
+        <function-ref name="isRunning" ref="0x406f64c0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x406f7ab0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x406f6c90" scoped=""/>
+        <function-ref name="startOneShot" ref="0x406f7d30" scoped=""/>
+        <function-ref name="stop" ref="0x406f6010" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

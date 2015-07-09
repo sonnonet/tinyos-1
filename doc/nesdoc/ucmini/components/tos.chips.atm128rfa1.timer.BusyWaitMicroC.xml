@@ -1,0 +1,227 @@
+<?xml version="1.0" ?><component loc="37:/usr/src/tinyos/tos/chips/atm128rfa1/timer/BusyWaitMicroC.nc" nicename="tos.chips.atm128rfa1.timer.BusyWaitMicroC" qname="BusyWaitMicroC">
+      <configuration/>
+      <wiring>
+        <wire loc="45:/usr/src/tinyos/tos/chips/atm128rfa1/timer/BusyWaitMicroC.nc">
+          <from><interface-ref name="BusyWait" ref="0x40cbd340" scoped=""/></from>
+          <to><interface-ref name="BusyWait" ref="0x40cbb950" scoped=""/></to>
+        </wire>
+        <wire loc="46:/usr/src/tinyos/tos/chips/atm128rfa1/timer/BusyWaitMicroC.nc">
+          <from><interface-ref name="Counter" ref="0x40cba430" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x40cb0320" scoped=""/></to>
+        </wire>
+        <wire loc="53:/usr/src/tinyos/tos/chips/atm128rfa1/timer/BusyWaitMicroC.nc">
+          <from><interface-ref name="CounterFrom" ref="0x40cae5f8" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x4073cb68" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="39:/usr/src/tinyos/tos/chips/atm128rfa1/timer/BusyWaitMicroC.nc" name="BusyWait" provided="1" ref="0x40cbd340">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.BusyWaitMicroC" qname="BusyWaitMicroC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusyWait" ref="0x40cbd340" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.BusyWait" qname="BusyWait"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421d88"/>
+            <typename><typedef-ref name="TMicro" ref="0x40420010"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="wait" ref="0x40cbda90" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="62:/usr/src/tinyos/tos/lib/timer/TransformCounterC.nc" name="Counter" provided="1" ref="0x40cb0320">
+      <component-ref nicename="tos.lib.timer.TransformCounterC" qname="BusyWaitMicroC.CounterMicro16C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Counter" ref="0x40cb0320" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Counter" qname="Counter"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421d88"/>
+            <typename><typedef-ref name="TMicro" ref="0x40420010"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40cb0a70" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x40cae010" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x40cb0ce8" scoped=""/>
+        <function-ref name="overflow" ref="0x40cae288" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/usr/src/tinyos/tos/lib/timer/BusyWaitCounterC.nc" name="BusyWait" provided="1" ref="0x40cbb950">
+      <component-ref nicename="tos.lib.timer.BusyWaitCounterC" qname="BusyWaitMicroC.BusyWaitCounterC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusyWait" ref="0x40cbb950" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.BusyWait" qname="BusyWait"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421d88"/>
+            <typename><typedef-ref name="TMicro" ref="0x40420010"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="wait" ref="0x40cba0b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/usr/src/tinyos/tos/lib/timer/BusyWaitCounterC.nc" name="Counter" provided="0" ref="0x40cba430">
+      <component-ref nicename="tos.lib.timer.BusyWaitCounterC" qname="BusyWaitMicroC.BusyWaitCounterC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Counter" ref="0x40cba430" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Counter" qname="Counter"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421d88"/>
+            <typename><typedef-ref name="TMicro" ref="0x40420010"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40cbab80" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x40cb2088" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x40cbadf8" scoped=""/>
+        <function-ref name="overflow" ref="0x40cb2300" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="63:/usr/src/tinyos/tos/lib/timer/TransformCounterC.nc" name="CounterFrom" provided="0" ref="0x40cae5f8">
+      <component-ref nicename="tos.lib.timer.TransformCounterC" qname="BusyWaitMicroC.CounterMicro16C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="CounterFrom" ref="0x40cae5f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Counter" qname="Counter"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T2mhz" ref="0x40433f18"/>
+            <typename><typedef-ref name="TMcu" ref="0x4043b2d8"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40caed48" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x40cad288" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x40cad010" scoped=""/>
+        <function-ref name="overflow" ref="0x40cad500" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/chips/atm128rfa1/timer/CounterMcu16C.nc" name="Counter" provided="1" ref="0x4073cb68">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.CounterMcu16C" qname="CounterMcu16C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Counter" ref="0x4073cb68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Counter" qname="Counter"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T2mhz" ref="0x40433f18"/>
+            <typename><typedef-ref name="TMcu" ref="0x4043b2d8"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40739308" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x407397f8" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x40739580" scoped=""/>
+        <function-ref name="overflow" ref="0x40739a70" scoped=""/>
+      </interface-functions>
+    </interface><component loc="37:/usr/src/tinyos/tos/chips/atm128rfa1/timer/CounterMcu16C.nc" nicename="tos.chips.atm128rfa1.timer.CounterMcu16C" qname="CounterMcu16C">
+      <configuration/>
+      <wiring>
+        <wire loc="45:/usr/src/tinyos/tos/chips/atm128rfa1/timer/CounterMcu16C.nc">
+          <from><interface-ref name="Counter" ref="0x4073cb68" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x4074c448" scoped=""/></to>
+        </wire>
+        <wire loc="48:/usr/src/tinyos/tos/chips/atm128rfa1/timer/CounterMcu16C.nc">
+          <from><interface-ref name="TimerInit" ref="0x40487010" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4074c010" scoped=""/></to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/chips/atm128rfa1/timer/CounterMcu16C.nc">
+          <from><interface-ref name="AtmegaCounter" ref="0x407525f0" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x4074e878" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="54(BusyWaitMicroC.CounterMicro16C):/usr/src/tinyos/tos/lib/timer/TransformCounterC.nc" nicename="tos.lib.timer.TransformCounterC" qname="BusyWaitMicroC.CounterMicro16C">
+      <documentation loc="34:/usr/src/tinyos/tos/lib/timer/TransformCounterC.nc">
+        <short>
+ TransformCounterC decreases precision and/or widens an Counter.</short>
+        <long>
+ TransformCounterC decreases precision and/or widens an Counter.
+
+ &lt;p&gt;See TEP102 for more details.
+
+ @param to_precision_tag A type indicating the precision of the transformed
+   Counter.
+ @param to_size_type The type for the width of the transformed Counter.
+ @param from_precision_tag A type indicating the precision of the original
+   Counter.
+ @param from_size_type The type for the width of the original Counter.
+ @param bit_shift_right Original time units will be 2 to the power 
+   &lt;code&gt;bit_shift_right&lt;/code&gt; larger than transformed time units.
+ @param upper_count_type A type large enough to store the upper bits --
+   those needed above from_size_type after its shift right to fill
+   to_size_type.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="3">
+        <component-ref nicename="tos.lib.timer.TransformCounterC" qname="TransformCounterC"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421d88"/>
+            <typename><typedef-ref name="TMicro" ref="0x40420010"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T2mhz" ref="0x40433f18"/>
+            <typename><typedef-ref name="TMcu" ref="0x4043b2d8"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+          <value cst="I:1">
+            <type-int alignment="I:1" cname="int" size="I:2"/>
+          </value>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="51(BusyWaitMicroC.BusyWaitCounterC):/usr/src/tinyos/tos/lib/timer/BusyWaitCounterC.nc" nicename="tos.lib.timer.BusyWaitCounterC" qname="BusyWaitMicroC.BusyWaitCounterC">
+      <documentation loc="36:/usr/src/tinyos/tos/lib/timer/BusyWaitCounterC.nc">
+        <short>
+ BusyWaitCounterC uses a Counter to implement the BusyWait interface
+ (block until a specified amount of time elapses).</short>
+        <long>
+ BusyWaitCounterC uses a Counter to implement the BusyWait interface
+ (block until a specified amount of time elapses). See TEP102 for more
+ details.
+
+ &lt;p&gt;See TEP102 for more details.
+
+ @param precision_tag A type indicating the precision of the BusyWait
+   interface.
+ @param size_type An integer type representing time values for the
+   BusyWait interface.
+
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.lib.timer.BusyWaitCounterC" qname="BusyWaitCounterC"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421d88"/>
+            <typename><typedef-ref name="TMicro" ref="0x40420010"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <module/>
+    </component></referenced></component>

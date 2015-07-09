@@ -1,0 +1,129 @@
+<?xml version="1.0" ?><component loc="36:/usr/src/tinyos/tos/chips/sht21/Sht21P.nc" nicename="tos.chips.sht21.Sht21P" qname="Sht21P">
+      <module/>
+    <specification><interface loc="153:/usr/src/tinyos/tos/chips/sht21/Sht21P.nc" name="signalReadDone" provided="0" ref="0x40daa918">
+      <component-ref nicename="tos.chips.sht21.Sht21P" qname="Sht21P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="signalReadDone" ref="0x40daa918" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x40daaaf0" scoped=""/>
+        <function-ref name="runTask" ref="0x40daabd0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="192:/usr/src/tinyos/tos/chips/sht21/Sht21P.nc" name="startTimer" provided="0" ref="0x40dd3e80">
+      <component-ref nicename="tos.chips.sht21.Sht21P" qname="Sht21P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="startTimer" ref="0x40dd3e80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x40dd2070" scoped=""/>
+        <function-ref name="runTask" ref="0x40dd2150" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/chips/sht21/Sht21P.nc" name="BusPowerManager" provided="0" ref="0x40db95f8">
+      <component-ref nicename="tos.chips.sht21.Sht21P" qname="Sht21P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusPowerManager" ref="0x40db95f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="powerOn" ref="0x40db97d0" scoped=""/>
+        <function-ref name="requestPower" ref="0x40db98b0" scoped=""/>
+        <function-ref name="powerOff" ref="0x40db9990" scoped=""/>
+        <function-ref name="configure" ref="0x40db9a70" scoped=""/>
+        <function-ref name="releasePower" ref="0x40db9b50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/usr/src/tinyos/tos/chips/sht21/Sht21P.nc" name="Humidity" provided="1" ref="0x40d9b0b8">
+      <component-ref nicename="tos.chips.sht21.Sht21P" qname="Sht21P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Humidity" ref="0x40d9b0b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40d9b6e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40d9b938" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/chips/sht21/Sht21P.nc" name="Init" provided="1" ref="0x40db9ce0">
+      <component-ref nicename="tos.chips.sht21.Sht21P" qname="Sht21P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x40db9ce0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40db9eb8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/chips/sht21/Sht21P.nc" name="I2CResource" provided="0" ref="0x40dbfef8">
+      <component-ref nicename="tos.chips.sht21.Sht21P" qname="Sht21P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2CResource" ref="0x40dbfef8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40dbe0e0" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40dbe1c0" scoped=""/>
+        <function-ref name="request" ref="0x40dbe2a0" scoped=""/>
+        <function-ref name="granted" ref="0x40dbe380" scoped=""/>
+        <function-ref name="isOwner" ref="0x40dbe460" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/chips/sht21/Sht21P.nc" name="Temperature" provided="1" ref="0x40d9d388">
+      <component-ref nicename="tos.chips.sht21.Sht21P" qname="Sht21P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Temperature" ref="0x40d9d388" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40d9d9b0" scoped=""/>
+        <function-ref name="readDone" ref="0x40d9dc08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/chips/sht21/Sht21P.nc" name="I2CPacket" provided="0" ref="0x40d92c70">
+      <component-ref nicename="tos.chips.sht21.Sht21P" qname="Sht21P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2CPacket" ref="0x40d92c70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.I2CPacket" qname="I2CPacket"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref ref="0x40d982d0"/>
+            <typename><typedef-ref name="TI2CBasicAddr" ref="0x40d98438"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40d9a2e8" scoped=""/>
+        <function-ref name="writeDone" ref="0x40d99558" scoped=""/>
+        <function-ref name="write" ref="0x40d9a908" scoped=""/>
+        <function-ref name="readDone" ref="0x40d9af28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/chips/sht21/Sht21P.nc" name="Timer" provided="0" ref="0x40d99c38">
+      <component-ref nicename="tos.chips.sht21.Sht21P" qname="Sht21P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x40d99c38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421508"/>
+            <typename><typedef-ref name="TMilli" ref="0x404216d0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40dbf730" scoped=""/>
+        <function-ref name="fired" ref="0x40d909d0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40dbf0f0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40d90e80" scoped=""/>
+        <function-ref name="getdt" ref="0x40dbfbe0" scoped=""/>
+        <function-ref name="gett0" ref="0x40dbf988" scoped=""/>
+        <function-ref name="isRunning" ref="0x40d90c28" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40d90278" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40dbf410" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40d904f8" scoped=""/>
+        <function-ref name="stop" ref="0x40d90778" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

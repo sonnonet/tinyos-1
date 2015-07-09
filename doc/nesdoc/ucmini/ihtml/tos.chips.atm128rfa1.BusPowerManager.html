@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.chips.atm128rfa1.BusPowerManager</title>
+  </head>
+  <body>
+    <h2>Interface: tos.chips.atm128rfa1.BusPowerManager</h2>
+    <b>interface BusPowerManager</b><p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command void <a href="#configure">configure</a>(uint16_t startup, uint16_t keepalive)
+      </span><menu>
+ Sets the startup and keepalive timeout values in milliseconds.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#releasePower">releasePower</a>()
+      </span><menu>
+ Releases the power up request.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#requestPower">requestPower</a>()
+      </span><menu>
+ Requests to power up this bus.
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#powerOff">powerOff</a>()
+      </span><menu>
+ This event is called when there are no outstanding power requests
+ and the keepalive timeout value has expired.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#powerOn">powerOn</a>()
+      </span><menu>
+ This event is called when the bus is powered on and the maximum 
+ specified startup time has elapsed.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="configure"></a>
+    <h4>configure
+    </h4>
+    <span id=funcnameshort>command void <b>configure</b>(uint16_t startup, uint16_t keepalive)
+    </span>
+    <p>
+    <menu>
+      
+ Sets the startup and keepalive timeout values in milliseconds.
+ Only the largest numbers are remembered, as the bus might not
+ be operational if one of the chips on it is not operational.
+
+    </menu>
+    <hr>
+    <a name="releasePower"></a>
+    <h4>releasePower
+    </h4>
+    <span id=funcnameshort>command void <b>releasePower</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Releases the power up request. You must call this command exactly
+ the same number of times as you have called requestPower. If other
+ chips still want to keep the power (e.g. a measurement is in
+ progress), then powerOff will not be called.
+
+    </menu>
+    <hr>
+    <a name="requestPower"></a>
+    <h4>requestPower
+    </h4>
+    <span id=funcnameshort>command void <b>requestPower</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Requests to power up this bus. The bus might be already powered
+ up, in which case the powerOn event will not come.
+
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="powerOff"></a>
+    <h4>powerOff
+    </h4>
+    <span id=funcnameshort>event void <b>powerOff</b>()
+    </span>
+    <p>
+    <menu>
+      
+ This event is called when there are no outstanding power requests
+ and the keepalive timeout value has expired.
+
+    </menu>
+    <hr>
+    <a name="powerOn"></a>
+    <h4>powerOn
+    </h4>
+    <span id=funcnameshort>event void <b>powerOn</b>()
+    </span>
+    <p>
+    <menu>
+      
+ This event is called when the bus is powered on and the maximum 
+ specified startup time has elapsed. Implementations should
+ initialize the chip or go into power down mode.
+
+    </menu>
+  </body>
+</html>

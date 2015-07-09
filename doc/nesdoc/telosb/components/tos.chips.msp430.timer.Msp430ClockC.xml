@@ -1,0 +1,116 @@
+<?xml version="1.0" ?><component loc="37:/opt/tinyos/tos/chips/msp430/timer/Msp430ClockC.nc" nicename="tos.chips.msp430.timer.Msp430ClockC" qname="Msp430ClockC">
+      <documentation loc="33:/opt/tinyos/tos/chips/msp430/timer/Msp430ClockC.nc">
+        <short>
+ </short>
+        <long>
+ @author Cory Sharp &lt;cssharp@eecs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="47:/opt/tinyos/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="Msp430ClockInit" ref="0x40613330" scoped=""/></from>
+          <to><interface-ref name="Msp430ClockInit" ref="0x4061c4c8" scoped=""/></to>
+        </wire>
+        <wire loc="46:/opt/tinyos/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="Init" ref="0x405f7c30" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4061c0f8" scoped=""/></to>
+        </wire>
+        <wire loc="48:/opt/tinyos/tos/chips/msp430/timer/Msp430ClockC.nc">
+          <from><interface-ref name="McuPowerOverride" ref="0x405e5218" scoped=""/></from>
+          <to><interface-ref name="McuPowerOverride" ref="0x4061cec8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="40:/opt/tinyos/tos/chips/msp430/timer/Msp430ClockC.nc" name="Msp430ClockInit" provided="1" ref="0x40613330">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockC" qname="Msp430ClockC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430ClockInit" ref="0x40613330" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430ClockInit" qname="Msp430ClockInit"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="defaultInitClocks" ref="0x40613b28" scoped=""/>
+        <function-ref name="initTimerB" ref="0x406135e8" scoped=""/>
+        <function-ref name="defaultInitTimerA" ref="0x406136c8" scoped=""/>
+        <function-ref name="initTimerA" ref="0x406137a8" scoped=""/>
+        <function-ref name="defaultInitTimerB" ref="0x40613508" scoped=""/>
+        <function-ref name="defaultSetupDcoCalibrate" ref="0x40613888" scoped=""/>
+        <function-ref name="setupDcoCalibrate" ref="0x40613968" scoped=""/>
+        <function-ref name="initClocks" ref="0x40613a48" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/opt/tinyos/tos/chips/msp430/timer/Msp430ClockC.nc" name="Init" provided="1" ref="0x405f7c30">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockC" qname="Msp430ClockC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x405f7c30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x405f7e08" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="47:/opt/tinyos/tos/chips/msp430/timer/Msp430ClockP.nc" name="McuPowerOverride" provided="1" ref="0x4061cec8">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockP" qname="Msp430ClockP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="McuPowerOverride" ref="0x4061cec8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x4061b0c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos/tos/chips/msp430/timer/Msp430ClockP.nc" name="Msp430ClockInit" provided="1" ref="0x4061c4c8">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockP" qname="Msp430ClockP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430ClockInit" ref="0x4061c4c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.timer.Msp430ClockInit" qname="Msp430ClockInit"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="defaultInitClocks" ref="0x4061ccc0" scoped=""/>
+        <function-ref name="initTimerB" ref="0x4061c780" scoped=""/>
+        <function-ref name="defaultInitTimerA" ref="0x4061c860" scoped=""/>
+        <function-ref name="initTimerA" ref="0x4061c940" scoped=""/>
+        <function-ref name="defaultInitTimerB" ref="0x4061c6a0" scoped=""/>
+        <function-ref name="defaultSetupDcoCalibrate" ref="0x4061ca20" scoped=""/>
+        <function-ref name="setupDcoCalibrate" ref="0x4061cb00" scoped=""/>
+        <function-ref name="initClocks" ref="0x4061cbe0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos/tos/chips/msp430/timer/Msp430ClockP.nc" name="Init" provided="1" ref="0x4061c0f8">
+      <component-ref nicename="tos.chips.msp430.timer.Msp430ClockP" qname="Msp430ClockP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Init" ref="0x4061c0f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4061c2d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos/tos/chips/msp430/McuSleepC.nc" name="McuPowerOverride" provided="0" ref="0x405e5218">
+      <component-ref nicename="tos.chips.msp430.McuSleepC" qname="McuSleepC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="McuPowerOverride" ref="0x405e5218" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x405e53f0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="43:/opt/tinyos/tos/chips/msp430/timer/Msp430ClockP.nc" nicename="tos.chips.msp430.timer.Msp430ClockP" qname="Msp430ClockP" safe="">
+      <module/>
+    </component><component loc="49:/opt/tinyos/tos/chips/msp430/McuSleepC.nc" nicename="tos.chips.msp430.McuSleepC" qname="McuSleepC" safe="">
+      <documentation loc="33:/opt/tinyos/tos/chips/msp430/McuSleepC.nc">
+        <short>
+ Implementation of TEP 112 (Microcontroller Power Management) for
+ the MSP430.</short>
+        <long>
+ Implementation of TEP 112 (Microcontroller Power Management) for
+ the MSP430. Code for low power calculation copied from older
+ msp430hardware.h by Vlado Handziski, Joe Polastre, and Cory Sharp.
+
+
+ @author Philip Levis
+ @author Vlado Handziski
+ @author Joe Polastre
+ @author Cory Sharp
+ @date   October 26, 2005
+ @see  Please refer to TEP 112 for more information about this component and its
+          intended use.
+
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

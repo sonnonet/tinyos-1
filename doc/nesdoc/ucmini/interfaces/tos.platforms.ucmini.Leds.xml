@@ -1,0 +1,282 @@
+<?xml version="1.0" ?><interfacedef loc="53:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" nicename="tos.platforms.ucmini.Leds" qname="Leds">
+      <documentation loc="33:/usr/src/tinyos/tos/types/Leds.h">
+        <short>
+ Constants for manipulating LEDs.</short>
+        <long>
+ Constants for manipulating LEDs.
+
+ @author Philip Levis
+ @date   March 21, 2005
+</long>
+      </documentation>
+      <function command="" loc="63:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led0Off" provided="0" ref="0x40412438">
+        <documentation loc="60:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Turn off LED 0.</short>
+          <long>
+ Turn off LED 0. The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="69:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led0Toggle" provided="0" ref="0x40412880">
+        <documentation loc="65:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Toggle LED 0; if it was off, turn it on, if was on, turn it off.</short>
+          <long>
+ Toggle LED 0; if it was off, turn it on, if was on, turn it off.
+ The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="74:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led1On" provided="0" ref="0x40412d00">
+        <documentation loc="71:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Turn on LED 1.</short>
+          <long>
+ Turn on LED 1. The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="85:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led1Toggle" provided="0" ref="0x40411580">
+        <documentation loc="81:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Toggle LED 1; if it was off, turn it on, if was on, turn it off.</short>
+          <long>
+ Toggle LED 1; if it was off, turn it on, if was on, turn it off.
+ The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="113:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led3Off" provided="0" ref="0x40419b40">
+        <documentation loc="110:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Turn off LED 3.</short>
+          <long>
+ Turn off LED 3. The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="102:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led2Toggle" provided="0" ref="0x40419298">
+        <documentation loc="98:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Toggle LED 2; if it was off, turn it on, if was on, turn it off.</short>
+          <long>
+ Toggle LED 2; if it was off, turn it on, if was on, turn it off.
+ The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="134:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="get" provided="0" ref="0x404184b8">
+        <documentation loc="122:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Get the current LED settings as a bitmask.</short>
+          <long>
+ Get the current LED settings as a bitmask. Each bit corresponds to
+ whether an LED is on; bit 0 is LED 0, bit 1 is LED 1, etc. You can
+ also use the enums LED_LED0, LED_LED1. For example, this expression
+ will determine whether LED 2 is on:
+
+ &lt;pre&gt; (call Leds.get() &amp; LEDS_LED2) &lt;/pre&gt;
+
+ This command supports up to 8 LEDs; if a platform has fewer, then
+ those LEDs should always be off (their bit is zero). Also see
+ &lt;tt&gt;set()&lt;/tt&gt;.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="79:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led1Off" provided="0" ref="0x40411138">
+        <documentation loc="76:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Turn off LED 1.</short>
+          <long>
+ Turn off LED 1. The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="119:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led3Toggle" provided="0" ref="0x40418010">
+        <documentation loc="115:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Toggle LED 3; if it was off, turn it on, if was on, turn it off.</short>
+          <long>
+ Toggle LED 3; if it was off, turn it on, if was on, turn it off.
+ The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="108:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led3On" provided="0" ref="0x40419718">
+        <documentation loc="105:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Turn on LED 3.</short>
+          <long>
+ Turn on LED 3. The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="58:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led0On" provided="0" ref="0x40412010">
+        <documentation loc="55:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Turn on LED 0.</short>
+          <long>
+ Turn on LED 0. The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="96:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led2Off" provided="0" ref="0x40411e28">
+        <documentation loc="93:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Turn off LED 2.</short>
+          <long>
+ Turn off LED 2. The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="91:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="led2On" provided="0" ref="0x40411a00">
+        <documentation loc="88:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Turn on LED 2.</short>
+          <long>
+ Turn on LED 2. The color of this LED depends on the platform.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="149:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="set" provided="0" ref="0x40418c30">
+        <documentation loc="137:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc">
+          <short>
+ Set the current LED configuration using a bitmask.</short>
+          <long>
+ Set the current LED configuration using a bitmask.  Each bit
+ corresponds to whether an LED is on; bit 0 is LED 0, bit 1 is LED
+ 1, etc. You can also use the enums LEDS_LED0, LEDS_LED1. For example,
+ this statement will configure the LEDs so LED 0 and LED 2 are on:
+
+ &lt;pre&gt; call Leds.set(LEDS_LED0 | LEDS_LED2); &lt;/pre&gt;
+
+ This statement will turn LED 1 on if it was not already:
+
+ &lt;pre&gt;call Leds.set(call Leds.get() | LEDS_LED1);&lt;/pre&gt;
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="149:/usr/src/tinyos/tos/platforms/ucmini/Leds.nc" name="val" ref="0x40418ad8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

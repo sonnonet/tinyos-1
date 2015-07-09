@@ -1,0 +1,8 @@
+digraph "tos.platforms.ucmini.chips.ms5607.PressureC" {
+  n0x40b99010 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "PressureC.Ms5607PressureC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Ms5607PressureC", URL="../chtml/tos.chips.ms5607.Ms5607PressureC.html"];
+  n0x40bbe948 [shape=ellipse, style=filled, label="SetPrecision", fontsize=12];
+  "PressureC.Ms5607PressureC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Ms5607PressureC", URL="../chtml/tos.chips.ms5607.Ms5607PressureC.html"];
+  "n0x40b99010" -> "PressureC.Ms5607PressureC" [label="Read<uint32_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "n0x40bbe948" -> "PressureC.Ms5607PressureC" [label="Set<uint8_t>", URL="../ihtml/tos.interfaces.Set.html", fontsize=10];
+}

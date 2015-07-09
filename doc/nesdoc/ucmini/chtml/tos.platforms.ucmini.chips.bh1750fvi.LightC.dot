@@ -1,0 +1,5 @@
+digraph "tos.platforms.ucmini.chips.bh1750fvi.LightC" {
+  n0x40a5b040 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "LightC.Bh1750fviRawLightC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Bh1750fviRawLightC", URL="../chtml/tos.chips.bh1750fvi.Bh1750fviRawLightC.html"];
+  "n0x40a5b040" -> "LightC.Bh1750fviRawLightC" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+}

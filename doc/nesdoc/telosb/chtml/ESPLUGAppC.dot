@@ -1,0 +1,14 @@
+digraph "ESPLUGAppC" {
+  "ESPLUGC" [fontsize=12, shape=box, URL="../chtml/ESPLUGC.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.MainC.html"];
+  "ESPLUGC" [fontsize=12, shape=box, URL="../chtml/ESPLUGC.html"];
+  "LedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.LedsC.html"];
+  "ESPLUGC" [fontsize=12, shape=box, URL="../chtml/ESPLUGC.html"];
+  "ESPLUGAppC.Timer0" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(Timer0)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "ESPLUGC" [fontsize=12, shape=box, URL="../chtml/ESPLUGC.html"];
+  "SPlug2C" [fontsize=12, shape=box,peripheries=2, URL="../chtml/SPlug2C.html"];
+  "ESPLUGC" -> "MainC" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "ESPLUGC" -> "LedsC" [label="Leds", URL="../ihtml/tos.interfaces.Leds.html", fontsize=10];
+  "ESPLUGC" -> "ESPLUGAppC.Timer0" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "ESPLUGC" -> "SPlug2C" [label="SPlug2", URL="../ihtml/SPlug2.html", fontsize=10];
+}

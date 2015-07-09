@@ -1,0 +1,35 @@
+<?xml version="1.0" ?><component loc="5:TelosSerialP.nc" nicename="TelosSerialP" qname="TelosSerialP">
+      <module/>
+    <specification><interface loc="7:TelosSerialP.nc" name="Msp430UartConfigure" provided="1" ref="0x40b25a28">
+      <component-ref nicename="TelosSerialP" qname="TelosSerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430UartConfigure" ref="0x40b25a28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.Msp430UartConfigure" qname="Msp430UartConfigure"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfig" ref="0x40b25c00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:TelosSerialP.nc" name="Resource" provided="0" ref="0x40b25db8">
+      <component-ref nicename="TelosSerialP" qname="TelosSerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x40b25db8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40b22010" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40b220f0" scoped=""/>
+        <function-ref name="request" ref="0x40b221d0" scoped=""/>
+        <function-ref name="granted" ref="0x40b222b0" scoped=""/>
+        <function-ref name="isOwner" ref="0x40b22390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:TelosSerialP.nc" name="StdControl" provided="1" ref="0x40b25550">
+      <component-ref nicename="TelosSerialP" qname="TelosSerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StdControl" ref="0x40b25550" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x40b25728" scoped=""/>
+        <function-ref name="stop" ref="0x40b25808" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,360 @@
+<?xml version="1.0" ?><component loc="37:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlC.nc" nicename="tos.platforms.ucmini.SerialAutoControlC" qname="SerialAutoControlC">
+      <documentation loc="71:/usr/src/tinyos/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="41:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlC.nc">
+          <from><interface-ref name="ControlInt" ref="0x40530708" scoped=""/></from>
+          <to><interface-ref name="GpioInterrupt" ref="0x40540758" scoped=""/></to>
+        </wire>
+        <wire loc="42:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlC.nc">
+          <from><interface-ref name="ControlPin" ref="0x40530dc8" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x40540d90" scoped=""/></to>
+        </wire>
+        <wire loc="43:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlC.nc">
+          <from><interface-ref name="SplitControl" ref="0x405289c0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x405640e0" scoped=""/></to>
+        </wire>
+        <wire loc="44:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x4047b4f0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x40532860" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification/><referenced><interface loc="46:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc" name="SplitControl" provided="1" ref="0x405640e0">
+      <component-ref nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SplitControl" ref="0x405640e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x405642b8" scoped=""/>
+        <function-ref name="stopDone" ref="0x40564398" scoped=""/>
+        <function-ref name="start" ref="0x40564478" scoped=""/>
+        <function-ref name="stop" ref="0x40564558" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="34:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" name="SplitControl" provided="0" ref="0x405289c0">
+      <component-ref nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SplitControl" ref="0x405289c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40528b98" scoped=""/>
+        <function-ref name="stopDone" ref="0x40528c78" scoped=""/>
+        <function-ref name="start" ref="0x40528d58" scoped=""/>
+        <function-ref name="stop" ref="0x40528e38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" name="ControlInt" provided="0" ref="0x40530708">
+      <component-ref nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ControlInt" ref="0x40530708" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x405308e0" scoped=""/>
+        <function-ref name="disable" ref="0x405309c0" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x40530aa0" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x40530b80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/usr/src/tinyos/tos/platforms/ucmini/HplSerialAutoControlC.nc" name="GpioInterrupt" provided="1" ref="0x40540758">
+      <component-ref nicename="tos.platforms.ucmini.HplSerialAutoControlC" qname="HplSerialAutoControlC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="GpioInterrupt" ref="0x40540758" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x40540930" scoped=""/>
+        <function-ref name="disable" ref="0x40540a10" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x40540af0" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x40540bd0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" name="SoftwareInit" provided="1" ref="0x40532860">
+      <component-ref nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SoftwareInit" ref="0x40532860" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40532a38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" name="ControlPin" provided="0" ref="0x40530dc8">
+      <component-ref nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ControlPin" ref="0x40530dc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40532010" scoped=""/>
+        <function-ref name="isInput" ref="0x405320f0" scoped=""/>
+        <function-ref name="toggle" ref="0x405321d0" scoped=""/>
+        <function-ref name="isOutput" ref="0x405322b0" scoped=""/>
+        <function-ref name="get" ref="0x40532390" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40532470" scoped=""/>
+        <function-ref name="set" ref="0x40532550" scoped=""/>
+        <function-ref name="clr" ref="0x40532630" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/platforms/ucmini/HplSerialAutoControlC.nc" name="GeneralIO" provided="1" ref="0x40540d90">
+      <component-ref nicename="tos.platforms.ucmini.HplSerialAutoControlC" qname="HplSerialAutoControlC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="GeneralIO" ref="0x40540d90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x4053f010" scoped=""/>
+        <function-ref name="isInput" ref="0x4053f0f0" scoped=""/>
+        <function-ref name="toggle" ref="0x4053f1d0" scoped=""/>
+        <function-ref name="isOutput" ref="0x4053f2b0" scoped=""/>
+        <function-ref name="get" ref="0x4053f390" scoped=""/>
+        <function-ref name="makeOutput" ref="0x4053f470" scoped=""/>
+        <function-ref name="set" ref="0x4053f550" scoped=""/>
+        <function-ref name="clr" ref="0x4053f630" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/usr/src/tinyos/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x4047b4f0">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SoftwareInit" ref="0x4047b4f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4047b6c8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="44:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc" nicename="tos.lib.serial.SerialActiveMessageC" qname="SerialActiveMessageC">
+      <documentation loc="71:/usr/src/tinyos/tos/lib/serial/Serial.h">
+        <short>
+ </short>
+        <long>
+ @author Phil Buonadonna
+ @author Lewis Girod
+ @author Ben Greenstein
+ @author Philip Levis
+ @date   August 7 2005
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="61:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SplitControl" ref="0x405640e0" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x405b5ef0" scoped=""/></to>
+        </wire>
+        <wire loc="63:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMSend" ref="0x405649b8" scoped=""/></from>
+          <to><interface-ref name="AMSend" ref="0x40561dc8" scoped=""/></to>
+        </wire>
+        <wire loc="65:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Packet" ref="0x4056b388" scoped=""/></from>
+          <to><interface-ref name="Packet" ref="0x405a74d0" scoped=""/></to>
+        </wire>
+        <wire loc="64:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Receive" ref="0x40563398" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x4056e568" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="PacketAcknowledgements" ref="0x4057d308" scoped=""/></from>
+          <to><interface-ref name="PacketAcknowledgements" ref="0x405a7b68" scoped=""/></to>
+        </wire>
+        <wire loc="66:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="AMPacket" ref="0x40572140" scoped=""/></from>
+          <to><interface-ref name="AMPacket" ref="0x4056e890" scoped=""/></to>
+        </wire>
+        <wire loc="59:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x4047b4f0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x405b5b58" scoped=""/></to>
+        </wire>
+        <wire loc="60:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="Leds" ref="0x405bcc50" scoped=""/></from>
+          <to><interface-ref name="Leds" ref="0x4057d840" scoped=""/></to>
+        </wire>
+        <wire loc="69:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubSend" ref="0x405a60c0" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x405b2dd0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="70:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SubReceive" ref="0x405a6778" scoped=""/></from>
+          <to><interface-ref name="Receive" ref="0x405b27c8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="72:/usr/src/tinyos/tos/lib/serial/SerialActiveMessageC.nc">
+          <from><interface-ref name="SerialPacketInfo" ref="0x405bc748" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Info" ref="0x4072eb80" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/usr/src/tinyos/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="1:/usr/src/tinyos/tos/platforms/ucmini/hardware.h">
+        <short>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</short>
+        <long>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
+  downloading, copying, installing or using the software you agree to
+  this license.  If you do not agree to this license, do not download,
+  install, copy or use the software.
+
+  Copyright (c) 2004-2005 Crossbow Technology, Inc.
+  Copyright (c) 2002-2003 Intel Corporation.
+  Copyright (c) 2000-2003 The Regents of the University  of California.    
+  All rights reserved.
+
+  Permission to use, copy, modify, and distribute this software and its
+  documentation for any purpose, without fee, and without written
+  agreement is hereby granted, provided that the above copyright
+  notice, the (updated) modification history and the author appear in
+  all copies of this source code.
+
+  Permission is also granted to distribute this software under the
+  standard BSD license as contained in the TinyOS distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE INTEL OR ITS
+  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  @author Jason Hill, Philip Levis, Nelson Lee, David Gay
+  @author Alan Broad &lt;abroad@xbow.com&gt;
+  @author Matt Miller &lt;mmiller@xbow.com&gt;
+  @author Martin Turon &lt;mturon@xbow.com&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x4047e8b0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4047d778" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x4047db10" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x4032fb58" scoped=""/></to>
+        </wire>
+        <wire loc="68:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x407fa100" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4047bcc8" scoped=""/></to>
+        </wire>
+        <wire loc="71:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x407fa508" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x4047b4f0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="34:/usr/src/tinyos/tos/platforms/ucmini/HplSerialAutoControlC.nc" nicename="tos.platforms.ucmini.HplSerialAutoControlC" qname="HplSerialAutoControlC">
+      <documentation loc="1:/usr/src/tinyos/tos/platforms/ucmini/HplSerialAutoControlC.nc">
+        <short> Copyright (c) 2011, University of Szeged
+ All rights reserved.</short>
+        <long> Copyright (c) 2011, University of Szeged
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+
+ - Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above
+ copyright notice, this list of conditions and the following
+ disclaimer in the documentation and/or other materials provided
+ with the distribution.
+ - Neither the name of University of Szeged nor the names of its
+ contributors may be used to endorse or promote products derived
+ from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ Author: Andras Biro
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="44:/usr/src/tinyos/tos/platforms/ucmini/HplSerialAutoControlC.nc">
+          <from><interface-ref name="GpioInterrupt" ref="0x40540758" scoped=""/></from>
+          <to><interface-ref name="GpioInterrupt" ref="0x4053c010" scoped=""/>
+          <arguments>
+            <value cst="I:5">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="45:/usr/src/tinyos/tos/platforms/ucmini/HplSerialAutoControlC.nc">
+          <from><interface-ref name="GeneralIO" ref="0x40540d90" scoped=""/></from>
+          <to><interface-ref name="PortB5" ref="0x404bdc88" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="33:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc" nicename="tos.platforms.ucmini.SerialAutoControlP" qname="SerialAutoControlP">
+      <documentation loc="1:/usr/src/tinyos/tos/platforms/ucmini/SerialAutoControlP.nc">
+        <short> Copyright (c) 2011, University of Szeged
+ All rights reserved.</short>
+        <long> Copyright (c) 2011, University of Szeged
+ All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+
+ - Redistributions of source code must retain the above copyright
+ notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above
+ copyright notice, this list of conditions and the following
+ disclaimer in the documentation and/or other materials provided
+ with the distribution.
+ - Neither the name of University of Szeged nor the names of its
+ contributors may be used to endorse or promote products derived
+ from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+ COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ Author: Andras Biro
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

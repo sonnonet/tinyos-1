@@ -1,0 +1,5 @@
+digraph "tos.platforms.ucmini.chips.sht21.TemperatureC" {
+  n0x40ca2d20 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "TemperatureC.Sht21RawTemperatureC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="Sht21RawTemperatureC", URL="../chtml/tos.chips.sht21.Sht21RawTemperatureC.html"];
+  "n0x40ca2d20" -> "TemperatureC.Sht21RawTemperatureC" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+}

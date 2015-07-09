@@ -1,0 +1,23 @@
+digraph "OscilloscopeAppC" {
+  "OscilloscopeC" [fontsize=12, shape=box, URL="../chtml/OscilloscopeC.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.MainC.html"];
+  "OscilloscopeC" [fontsize=12, shape=box, URL="../chtml/OscilloscopeC.html"];
+  "ActiveMessageC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.ActiveMessageC.html"];
+  "OscilloscopeC" [fontsize=12, shape=box, URL="../chtml/OscilloscopeC.html"];
+  "OscilloscopeAppC.AMSenderC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="AMSenderC", URL="../chtml/tos.system.AMSenderC.html"];
+  "OscilloscopeC" [fontsize=12, shape=box, URL="../chtml/OscilloscopeC.html"];
+  "OscilloscopeAppC.AMReceiverC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="AMReceiverC", URL="../chtml/tos.system.AMReceiverC.html"];
+  "OscilloscopeC" [fontsize=12, shape=box, URL="../chtml/OscilloscopeC.html"];
+  "OscilloscopeAppC.TimerMilliC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC", URL="../chtml/tos.system.TimerMilliC.html"];
+  "OscilloscopeC" [fontsize=12, shape=box, URL="../chtml/OscilloscopeC.html"];
+  "OscilloscopeAppC.Sensor" [fontsize=12, shape=box,peripheries=2, style=dashed, label="DemoSensorC\n(Sensor)", URL="../chtml/tos.platforms.ucmini.DemoSensorC.html"];
+  "OscilloscopeC" [fontsize=12, shape=box, URL="../chtml/OscilloscopeC.html"];
+  "LedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.LedsC.html"];
+  "OscilloscopeC" -> "MainC" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "OscilloscopeC" -> "ActiveMessageC" [label="SplitControl", URL="../ihtml/tos.interfaces.SplitControl.html", fontsize=10];
+  "OscilloscopeC" -> "OscilloscopeAppC.AMSenderC" [label="AMSend", URL="../ihtml/tos.interfaces.AMSend.html", fontsize=10];
+  "OscilloscopeC" -> "OscilloscopeAppC.AMReceiverC" [label="Receive", URL="../ihtml/tos.interfaces.Receive.html", fontsize=10];
+  "OscilloscopeC" -> "OscilloscopeAppC.TimerMilliC" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+  "OscilloscopeC" -> "OscilloscopeAppC.Sensor" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "OscilloscopeC" -> "LedsC" [label="Leds", URL="../ihtml/tos.platforms.ucmini.Leds.html", fontsize=10];
+}

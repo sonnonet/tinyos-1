@@ -1,0 +1,17 @@
+digraph "tos.chips.atm128rfa1.i2c.HplAtm128I2CBusC" {
+  n0x40e967d8 [shape=ellipse, style=filled, label="I2C", fontsize=12];
+  "HplAtm128I2CBusP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.i2c.HplAtm128I2CBusP.html"];
+  "HplAtm128I2CBusP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.i2c.HplAtm128I2CBusP.html"];
+  "AtmegaGeneralIOC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.atm128rfa1.pins.AtmegaGeneralIOC.html"];
+  "HplAtm128I2CBusP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.i2c.HplAtm128I2CBusP.html"];
+  "AtmegaGeneralIOC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.atm128rfa1.pins.AtmegaGeneralIOC.html"];
+  "HplAtm128I2CBusP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.i2c.HplAtm128I2CBusP.html"];
+  "McuSleepC" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.McuSleepC.html"];
+  "McuSleepC" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.McuSleepC.html"];
+  "HplAtm128I2CBusP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.i2c.HplAtm128I2CBusP.html"];
+  "n0x40e967d8" -> "HplAtm128I2CBusP" [label="HplAtm128I2CBus", URL="../ihtml/tos.chips.atm128.i2c.HplAtm128I2CBus.html", fontsize=10];
+  "HplAtm128I2CBusP" -> "AtmegaGeneralIOC" [label="GeneralIO", URL="../ihtml/tos.interfaces.GeneralIO.html", fontsize=10];
+  "HplAtm128I2CBusP" -> "AtmegaGeneralIOC" [label="GeneralIO", URL="../ihtml/tos.interfaces.GeneralIO.html", fontsize=10];
+  "HplAtm128I2CBusP" -> "McuSleepC" [label="McuPowerState", URL="../ihtml/tos.interfaces.McuPowerState.html", fontsize=10];
+  "McuSleepC" -> "HplAtm128I2CBusP" [label="McuPowerOverride", URL="../ihtml/tos.interfaces.McuPowerOverride.html", fontsize=10];
+}

@@ -1,0 +1,298 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc" nicename="tos.lib.rfxlink.layers.UniqueLayerC" qname="UniqueLayerC">
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="60:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc">
+          <from><interface-ref name="Send" ref="0x40a310b0" scoped=""/></from>
+          <to><interface-ref name="Send" ref="0x40a2de70" scoped=""/></to>
+        </wire>
+        <wire loc="63:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc">
+          <from><interface-ref name="RadioReceive" ref="0x40a2e780" scoped=""/></from>
+          <to><interface-ref name="RadioReceive" ref="0x40a2c370" scoped=""/></to>
+        </wire>
+        <wire loc="56:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x4047b4f0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40a2c768" scoped=""/></to>
+        </wire>
+        <wire loc="57:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc">
+          <from><interface-ref name="Neighborhood" ref="0x40a3b9c0" scoped=""/></from>
+          <to><interface-ref name="Neighborhood" ref="0x40a39540" scoped=""/></to>
+        </wire>
+        <wire loc="58:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc">
+          <from><interface-ref name="NeighborhoodFlag" ref="0x40a3a070" scoped=""/></from>
+          <to><interface-ref name="NeighborhoodFlag" ref="0x40a59010" scoped=""/></to>
+        </wire>
+        <wire loc="61:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc">
+          <from><interface-ref name="SubSend" ref="0x40a2cad0" scoped=""/></from>
+          <to><interface-ref name="SubSend" ref="0x40a2ec88" scoped=""/></to>
+        </wire>
+        <wire loc="64:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc">
+          <from><interface-ref name="SubReceive" ref="0x40a3b010" scoped=""/></from>
+          <to><interface-ref name="SubReceive" ref="0x40a30338" scoped=""/></to>
+        </wire>
+        <wire loc="65:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc">
+          <from><interface-ref name="UniqueConfig" ref="0x40a3b408" scoped=""/></from>
+          <to><interface-ref name="Config" ref="0x40a30810" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="45:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc" name="SubSend" provided="0" ref="0x40a2ec88">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerC" qname="UniqueLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubSend" ref="0x40a2ec88" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareSend" qname="BareSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40a2ee60" scoped=""/>
+        <function-ref name="cancel" ref="0x40a30010" scoped=""/>
+        <function-ref name="sendDone" ref="0x40a300f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc" name="SubReceive" provided="0" ref="0x40a30338">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerC" qname="UniqueLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubReceive" ref="0x40a30338" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioReceive" qname="RadioReceive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40a30510" scoped=""/>
+        <function-ref name="header" ref="0x40a305f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc" name="Send" provided="1" ref="0x40a310b0">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerC" qname="UniqueLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Send" ref="0x40a310b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareSend" qname="BareSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40a31288" scoped=""/>
+        <function-ref name="cancel" ref="0x40a31368" scoped=""/>
+        <function-ref name="sendDone" ref="0x40a31448" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc" name="Config" provided="0" ref="0x40a30810">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerC" qname="UniqueLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Config" ref="0x40a30810" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.layers.UniqueConfig" qname="UniqueConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setSequenceNumber" ref="0x40a309e8" scoped=""/>
+        <function-ref name="reportChannelError" ref="0x40a30ac8" scoped=""/>
+        <function-ref name="getSequenceNumber" ref="0x40a30ba8" scoped=""/>
+        <function-ref name="getSender" ref="0x40a30c88" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerC.nc" name="RadioReceive" provided="1" ref="0x40a2e780">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerC" qname="UniqueLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioReceive" ref="0x40a2e780" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioReceive" qname="RadioReceive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40a2e958" scoped=""/>
+        <function-ref name="header" ref="0x40a2ea38" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="37:/usr/src/tinyos/tos/lib/rfxlink/util/NeighborhoodC.nc" name="Neighborhood" provided="1" ref="0x40a39540">
+      <component-ref nicename="tos.lib.rfxlink.util.NeighborhoodC" qname="NeighborhoodC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Neighborhood" ref="0x40a39540" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.Neighborhood" qname="Neighborhood"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getAge" ref="0x40a39718" scoped=""/>
+        <function-ref name="insertNode" ref="0x40a397f8" scoped=""/>
+        <function-ref name="getNode" ref="0x40a398d8" scoped=""/>
+        <function-ref name="evicted" ref="0x40a399b8" scoped=""/>
+        <function-ref name="getIndex" ref="0x40a39a98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerP.nc" name="SubReceive" provided="0" ref="0x40a3b010">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerP" qname="UniqueLayerC.UniqueLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubReceive" ref="0x40a3b010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioReceive" qname="RadioReceive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40a3b1e8" scoped=""/>
+        <function-ref name="header" ref="0x40a3b2c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerP.nc" name="NeighborhoodFlag" provided="0" ref="0x40a3a070">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerP" qname="UniqueLayerC.UniqueLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="NeighborhoodFlag" ref="0x40a3a070" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.NeighborhoodFlag" qname="NeighborhoodFlag"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40a3a248" scoped=""/>
+        <function-ref name="clearAll" ref="0x40a3a328" scoped=""/>
+        <function-ref name="get" ref="0x40a3a408" scoped=""/>
+        <function-ref name="set" ref="0x40a3a4e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerP.nc" name="Send" provided="1" ref="0x40a2de70">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerP" qname="UniqueLayerC.UniqueLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Send" ref="0x40a2de70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareSend" qname="BareSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40a2c070" scoped=""/>
+        <function-ref name="cancel" ref="0x40a2c150" scoped=""/>
+        <function-ref name="sendDone" ref="0x40a2c230" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerP.nc" name="UniqueConfig" provided="0" ref="0x40a3b408">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerP" qname="UniqueLayerC.UniqueLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="UniqueConfig" ref="0x40a3b408" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.layers.UniqueConfig" qname="UniqueConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setSequenceNumber" ref="0x40a3b5e0" scoped=""/>
+        <function-ref name="reportChannelError" ref="0x40a3b6c0" scoped=""/>
+        <function-ref name="getSequenceNumber" ref="0x40a3b7a0" scoped=""/>
+        <function-ref name="getSender" ref="0x40a3b880" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerP.nc" name="Neighborhood" provided="0" ref="0x40a3b9c0">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerP" qname="UniqueLayerC.UniqueLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Neighborhood" ref="0x40a3b9c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.Neighborhood" qname="Neighborhood"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getAge" ref="0x40a3bb98" scoped=""/>
+        <function-ref name="insertNode" ref="0x40a3bc78" scoped=""/>
+        <function-ref name="getNode" ref="0x40a3bd58" scoped=""/>
+        <function-ref name="evicted" ref="0x40a3be38" scoped=""/>
+        <function-ref name="getIndex" ref="0x40a3bf18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerP.nc" name="RadioReceive" provided="1" ref="0x40a2c370">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerP" qname="UniqueLayerC.UniqueLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioReceive" ref="0x40a2c370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioReceive" qname="RadioReceive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40a2c548" scoped=""/>
+        <function-ref name="header" ref="0x40a2c628" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/lib/rfxlink/util/NeighborhoodFlagC.nc" name="NeighborhoodFlag" provided="1" ref="0x40a59010">
+      <component-ref nicename="tos.lib.rfxlink.util.NeighborhoodFlagC" qname="UniqueLayerC.NeighborhoodFlagC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="NeighborhoodFlag" ref="0x40a59010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.NeighborhoodFlag" qname="NeighborhoodFlag"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40a591e8" scoped=""/>
+        <function-ref name="clearAll" ref="0x40a592c8" scoped=""/>
+        <function-ref name="get" ref="0x40a593a8" scoped=""/>
+        <function-ref name="set" ref="0x40a59488" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerP.nc" name="SubSend" provided="0" ref="0x40a2cad0">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerP" qname="UniqueLayerC.UniqueLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubSend" ref="0x40a2cad0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareSend" qname="BareSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40a2cca8" scoped=""/>
+        <function-ref name="cancel" ref="0x40a2cd88" scoped=""/>
+        <function-ref name="sendDone" ref="0x40a2ce68" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/usr/src/tinyos/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x4047b4f0">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SoftwareInit" ref="0x4047b4f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4047b6c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerP.nc" name="Init" provided="1" ref="0x40a2c768">
+      <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerP" qname="UniqueLayerC.UniqueLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x40a2c768" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40a2c940" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="38(UniqueLayerC.UniqueLayerP):/usr/src/tinyos/tos/lib/rfxlink/layers/UniqueLayerP.nc" nicename="tos.lib.rfxlink.layers.UniqueLayerP" qname="UniqueLayerC.UniqueLayerP">
+      <instance>
+        <component-ref nicename="tos.lib.rfxlink.layers.UniqueLayerP" qname="UniqueLayerP"/>
+      </instance>
+      <module/>
+    </component><component loc="56:/usr/src/tinyos/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="1:/usr/src/tinyos/tos/platforms/ucmini/hardware.h">
+        <short>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</short>
+        <long>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
+  downloading, copying, installing or using the software you agree to
+  this license.  If you do not agree to this license, do not download,
+  install, copy or use the software.
+
+  Copyright (c) 2004-2005 Crossbow Technology, Inc.
+  Copyright (c) 2002-2003 Intel Corporation.
+  Copyright (c) 2000-2003 The Regents of the University  of California.    
+  All rights reserved.
+
+  Permission to use, copy, modify, and distribute this software and its
+  documentation for any purpose, without fee, and without written
+  agreement is hereby granted, provided that the above copyright
+  notice, the (updated) modification history and the author appear in
+  all copies of this source code.
+
+  Permission is also granted to distribute this software under the
+  standard BSD license as contained in the TinyOS distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE INTEL OR ITS
+  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  @author Jason Hill, Philip Levis, Nelson Lee, David Gay
+  @author Alan Broad &lt;abroad@xbow.com&gt;
+  @author Matt Miller &lt;mmiller@xbow.com&gt;
+  @author Martin Turon &lt;mturon@xbow.com&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x4047e8b0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4047d778" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x4047db10" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x4032fb58" scoped=""/></to>
+        </wire>
+        <wire loc="68:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x407fa100" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4047bcc8" scoped=""/></to>
+        </wire>
+        <wire loc="71:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x407fa508" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x4047b4f0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component abstract="" loc="35(UniqueLayerC.NeighborhoodFlagC):/usr/src/tinyos/tos/lib/rfxlink/util/NeighborhoodFlagC.nc" nicename="tos.lib.rfxlink.util.NeighborhoodFlagC" qname="UniqueLayerC.NeighborhoodFlagC">
+      <instance>
+        <component-ref nicename="tos.lib.rfxlink.util.NeighborhoodFlagC" qname="NeighborhoodFlagC"/>
+      </instance>
+      <configuration/>
+    </component><component loc="35:/usr/src/tinyos/tos/lib/rfxlink/util/NeighborhoodC.nc" nicename="tos.lib.rfxlink.util.NeighborhoodC" qname="NeighborhoodC">
+      <configuration/>
+      <wiring>
+        <wire loc="44:/usr/src/tinyos/tos/lib/rfxlink/util/NeighborhoodC.nc">
+          <from><interface-ref name="Neighborhood" ref="0x40a39540" scoped=""/></from>
+          <to><interface-ref name="Neighborhood" ref="0x40a55510" scoped=""/></to>
+        </wire>
+        <wire loc="45:/usr/src/tinyos/tos/lib/rfxlink/util/NeighborhoodC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x4047b4f0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40a55178" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

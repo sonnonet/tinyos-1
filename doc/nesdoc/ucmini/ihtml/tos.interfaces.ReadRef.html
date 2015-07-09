@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.interfaces.ReadRef</title>
+  </head>
+  <body>
+    <h2>Interface: tos.interfaces.ReadRef</h2>
+    <b>interface ReadRef&lt;typedef val_t&gt;</b><p>
+ The ReadRef interface is intended for split-phase low-rate or
+ high-latency reading of large values. The type of the value is
+ given as a template argument. When a value is too large to be
+ comfortably passed on the stack, the caller should allocate space
+ for the value and pass the pointer to read(). When the readDone()
+ comes back, the space will be filled with the new value.
+
+ <p>
+ See TEP114 - SIDs: Source and Sink Independent Drivers for details.
+ 
+ 
+    <p>
+    <dl>
+      <dt><b>Parameters:</b>
+      <dd>
+        <code>val_t</code> -  the type of the object that will be returned
+
+ 
+      </dd>
+      <dt><b>Author:</b>
+      <dd>
+        Gilman Tolle &lt;gtolle@archrock.com&gt;
+ 
+      </dd>
+      <dt><b>Version:</b>
+      <dd>
+        $Revision: 1.5 $ $Date: 2008-06-04 03:00:31 $
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#read">read</a>(val_t *val)
+      </span><menu>
+ Initiates a read of the value.
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#readDone">readDone</a>(error_t result, val_t *val)
+      </span><menu>
+ Signals the completion of the read().
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="read"></a>
+    <h4>read
+    </h4>
+    <span id=funcnameshort>command error_t <b>read</b>(val_t *val)
+    </span>
+    <p>
+    <menu>
+      
+ Initiates a read of the value.
+ 
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          'val_t* ONE val' a pointer to space that will be filled by the value
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          SUCCESS if a readDone() event will eventually come back.
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="readDone"></a>
+    <h4>readDone
+    </h4>
+    <span id=funcnameshort>event void <b>readDone</b>(error_t result, val_t *val)
+    </span>
+    <p>
+    <menu>
+      
+ Signals the completion of the read(). The returned pointer will
+ be the same as the original pointer passed to read().
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>result</code> -  SUCCESS if the read() was successful
+ 
+        </dd>
+        <dd>
+          'val_t* ONE val' a pointer to the value that has been read
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" ?><component loc="38:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange0C.nc" nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange0C" qname="HplAtmegaPinChange0C">
+      <module/>
+    <specification><interface loc="40:/usr/src/tinyos/tos/chips/atm128rfa1/pins/HplAtmegaPinChange0C.nc" name="HplAtmegaPinChange" provided="1" ref="0x40541428">
+      <component-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange0C" qname="HplAtmegaPinChange0C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAtmegaPinChange" ref="0x40541428" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.pins.HplAtmegaPinChange" qname="HplAtmegaPinChange"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="test" ref="0x40541600" scoped=""/>
+        <function-ref name="fired" ref="0x405416e0" scoped=""/>
+        <function-ref name="disable" ref="0x405417c0" scoped=""/>
+        <function-ref name="isEnabled" ref="0x405418a0" scoped=""/>
+        <function-ref name="reset" ref="0x40541980" scoped=""/>
+        <function-ref name="setMask" ref="0x40541a60" scoped=""/>
+        <function-ref name="enable" ref="0x40541b40" scoped=""/>
+        <function-ref name="getPins" ref="0x40541c20" scoped=""/>
+        <function-ref name="getMask" ref="0x40541d00" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

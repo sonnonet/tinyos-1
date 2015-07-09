@@ -1,0 +1,14 @@
+digraph "tos.platforms.ucmini.SerialResetC" {
+  "SerialResetP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.ucmini.SerialResetP.html"];
+  "LedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.ucmini.LedsC.html"];
+  "SerialResetP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.ucmini.SerialResetP.html"];
+  "SerialDispatcherC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.serial.SerialDispatcherC.html"];
+  "SerialResetP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.ucmini.SerialResetP.html"];
+  "SerialDispatcherC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.serial.SerialDispatcherC.html"];
+  "SerialDispatcherC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.serial.SerialDispatcherC.html"];
+  "SerialResetP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.ucmini.SerialResetP.html"];
+  "SerialResetP" -> "LedsC" [label="Leds", URL="../ihtml/tos.platforms.ucmini.Leds.html", fontsize=10];
+  "SerialResetP" -> "SerialDispatcherC" [label="Send", URL="../ihtml/tos.interfaces.Send.html", fontsize=10];
+  "SerialResetP" -> "SerialDispatcherC" [label="Receive", URL="../ihtml/tos.interfaces.Receive.html", fontsize=10];
+  "SerialDispatcherC" -> "SerialResetP" [label="SerialPacketInfo[uart_id_t]", style=bold, URL="../ihtml/tos.lib.serial.SerialPacketInfo.html", fontsize=10];
+}

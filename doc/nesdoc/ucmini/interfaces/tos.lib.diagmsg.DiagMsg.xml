@@ -1,0 +1,733 @@
+<?xml version="1.0" ?><interfacedef loc="43:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg">
+      <documentation loc="35:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc">
+        <short>
+ The DiagMsg interface allows messages to be sent back to the base station
+ containing several values and their type information, like in 
+ &lt;code&gt;printf(...)&lt;/code&gt;.</short>
+        <long>
+ The DiagMsg interface allows messages to be sent back to the base station
+ containing several values and their type information, like in 
+ &lt;code&gt;printf(...)&lt;/code&gt;. The base station must be connected to a PC using 
+ a serial cable. On the PC a Java application (net.tinyos.util.DiagMsg) 
+ decodes the message and displays its content using the correct type 
+ information. See the implementation for the format of the message.
+</long>
+      </documentation>
+      <function command="" loc="81:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="int32s" provided="0" ref="0x40440270">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="int32_t" ref="0x401ea500"/></typename>
+                <type-int alignment="I:1" cname="long" size="I:4"/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="81:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x40441f00">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="int32_t" ref="0x401ea500"/></typename>
+                <type-int alignment="I:1" cname="long" size="I:4"/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="81:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x40440110">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="92:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="str" provided="0" ref="0x40446530">
+        <documentation loc="89:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc">
+          <short>
+ This is a shorthand method for &lt;code&gt;chrs&lt;/code&gt;
+</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                <type-int alignment="I:1" cname="char" size="I:1"/>
+              </type-qualified>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="92:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x404463d8">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                <type-int alignment="I:1" cname="char" size="I:1"/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="97:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="send" provided="0" ref="0x40446918">
+        <documentation loc="94:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc">
+          <short>
+ Initiates the sending of the recorded message.</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="58:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="int16" provided="0" ref="0x40435d38">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="short" size="I:2">
+              <typename><typedef-ref name="int16_t" ref="0x40039e90"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="58:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x40435be0">
+            <type-int alignment="I:1" cname="short" size="I:2">
+              <typename><typedef-ref name="int16_t" ref="0x40039e90"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="65:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="hex32" provided="0" ref="0x4043b2d0">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="65:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043b178">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="61:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="int32" provided="0" ref="0x40434d40">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="long" size="I:4">
+              <typename><typedef-ref name="int32_t" ref="0x401ea500"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="61:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x40434be8">
+            <type-int alignment="I:1" cname="long" size="I:4">
+              <typename><typedef-ref name="int32_t" ref="0x401ea500"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="67:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="chr" provided="0" ref="0x4043bd00">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="char" size="I:1"/>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="67:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043bba8">
+            <type-int alignment="I:1" cname="char" size="I:1"/>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="82:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="uint32s" provided="0" ref="0x404409e8">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+                <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="82:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x404406a8">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+                <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="82:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x40440888">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="66:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="real" provided="0" ref="0x4043b7b0">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-float alignment="I:1" cname="float" size="I:4"/>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="66:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043b658">
+            <type-float alignment="I:1" cname="float" size="I:4"/>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="57:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="hex8" provided="0" ref="0x40435808">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="57:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x404356b0">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="59:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="uint16" provided="0" ref="0x404342d0">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="59:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x40434178">
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="85:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="uint64s" provided="0" ref="0x4043d060">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint64_t" ref="0x401eaea8"/></typename>
+                <type-int alignment="I:1" cname="unsigned long long" size="I:8" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="85:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043ed08">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint64_t" ref="0x401eaea8"/></typename>
+                <type-int alignment="I:1" cname="unsigned long long" size="I:8" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="85:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x4043eee8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="64:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="uint32" provided="0" ref="0x4043cd50">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="64:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043cbf8">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="56:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="uint8" provided="0" ref="0x404352e0">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="56:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x40435188">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="77:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="hex8s" provided="0" ref="0x40438488">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="77:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x40438148">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="77:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x40438328">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="49:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="record" provided="0" ref="0x40431708">
+        <documentation loc="45:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc">
+          <short>
+ Initiates the recording of a new DiagMsg.</short>
+          <long>
+ Initiates the recording of a new DiagMsg. It returns FALSE if
+ the component is busy recording or sending another message.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="76:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="uint8s" provided="0" ref="0x4043acd8">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="76:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043a998">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+                <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="76:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x4043ab78">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="86:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="reals" provided="0" ref="0x4043d870">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                <type-float alignment="I:1" cname="float" size="I:4"/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="86:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043d530">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                <type-float alignment="I:1" cname="float" size="I:4"/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="86:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x4043d710">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="62:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="int64" provided="0" ref="0x4043c2c0">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="long long" size="I:8">
+              <typename><typedef-ref name="int64_t" ref="0x401eab60"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="62:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043c168">
+            <type-int alignment="I:1" cname="long long" size="I:8">
+              <typename><typedef-ref name="int64_t" ref="0x401eab60"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="79:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="uint16s" provided="0" ref="0x40441370">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+                <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="79:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x40441030">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+                <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="79:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x40441210">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="84:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="int64s" provided="0" ref="0x4043e8d0">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="int64_t" ref="0x401eab60"/></typename>
+                <type-int alignment="I:1" cname="long long" size="I:8"/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="84:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043e590">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="int64_t" ref="0x401eab60"/></typename>
+                <type-int alignment="I:1" cname="long long" size="I:8"/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="84:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x4043e770">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="60:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="hex16" provided="0" ref="0x40434810">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="60:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x404346b8">
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="63:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="uint64" provided="0" ref="0x4043c808">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned long long" size="I:8" unsigned="">
+              <typename><typedef-ref name="uint64_t" ref="0x401eaea8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="63:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043c6b0">
+            <type-int alignment="I:1" cname="unsigned long long" size="I:8" unsigned="">
+              <typename><typedef-ref name="uint64_t" ref="0x401eaea8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="78:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="int16s" provided="0" ref="0x40438be8">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="int16_t" ref="0x40039e90"/></typename>
+                <type-int alignment="I:1" cname="short" size="I:2"/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="78:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x404388a8">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="int16_t" ref="0x40039e90"/></typename>
+                <type-int alignment="I:1" cname="short" size="I:2"/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="78:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x40438a88">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="55:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="int8" provided="0" ref="0x40431ce8">
+        <documentation loc="51:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc">
+          <short>
+ Adds a new value to the end of the message.</short>
+          <long>
+ Adds a new value to the end of the message. If the message 
+ cannot hold more information, then the new value is simply dropped.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="signed char" size="I:1">
+              <typename><typedef-ref name="int8_t" ref="0x40039640"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="55:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x40431b90">
+            <type-int alignment="I:1" cname="signed char" size="I:1">
+              <typename><typedef-ref name="int8_t" ref="0x40039640"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="80:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="hex16s" provided="0" ref="0x40441ae0">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+                <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="80:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x404417a0">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+                <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="80:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x40441980">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="83:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="hex32s" provided="0" ref="0x4043e170">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+                <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="83:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x40440e18">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+                <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned=""/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="83:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x4043e010">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="87:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="chrs" provided="0" ref="0x40446010">
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                <type-int alignment="I:1" cname="char" size="I:1"/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="87:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043dc38">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                <type-int alignment="I:1" cname="char" size="I:1"/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="87:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x4043de18">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="75:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="int8s" provided="0" ref="0x4043a480">
+        <documentation loc="69:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc">
+          <short>
+ Adds an array of values to the end of the message.</short>
+          <long>
+ Adds an array of values to the end of the message. 
+ The maximum length of the array is &lt;code&gt;15&lt;/code&gt;.
+ If the message cannot hold all elements of the array,
+ then no value is stored.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.diagmsg.DiagMsg" qname="DiagMsg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="int8_t" ref="0x40039640"/></typename>
+                <type-int alignment="I:1" cname="signed char" size="I:1"/>
+              </type-qualified>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="75:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="value" ref="0x4043a140">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-qualified const="">
+                  <typename><typedef-ref name="int8_t" ref="0x40039640"/></typename>
+                <type-int alignment="I:1" cname="signed char" size="I:1"/>
+              </type-qualified>
+            </type-pointer>
+          </variable>
+          <variable loc="75:/usr/src/tinyos/tos/lib/diagmsg/DiagMsg.nc" name="len" ref="0x4043a320">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

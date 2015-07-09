@@ -1,0 +1,222 @@
+<?xml version="1.0" ?><component loc="2:/usr/src/tinyos/tos/platforms/telosa/PlatformSerialC.nc" nicename="tos.platforms.telosa.PlatformSerialC" qname="PlatformSerialC">
+      <configuration/>
+      <wiring>
+        <wire loc="14:/usr/src/tinyos/tos/platforms/telosa/PlatformSerialC.nc">
+          <from><interface-ref name="UartByte" ref="0x409c76e8" scoped=""/></from>
+          <to><interface-ref name="UartByte" ref="0x40b26010" scoped=""/></to>
+        </wire>
+        <wire loc="13:/usr/src/tinyos/tos/platforms/telosa/PlatformSerialC.nc">
+          <from><interface-ref name="UartStream" ref="0x409ce8e8" scoped=""/></from>
+          <to><interface-ref name="UartStream" ref="0x40b27748" scoped=""/></to>
+        </wire>
+        <wire loc="17:/usr/src/tinyos/tos/platforms/telosa/PlatformSerialC.nc">
+          <from><interface-ref name="StdControl" ref="0x409ce468" scoped=""/></from>
+          <to><interface-ref name="StdControl" ref="0x40b25550" scoped=""/></to>
+        </wire>
+        <wire loc="18:/usr/src/tinyos/tos/platforms/telosa/PlatformSerialC.nc">
+          <from><interface-ref name="Msp430UartConfigure" ref="0x40b26428" scoped=""/></from>
+          <to><interface-ref name="Msp430UartConfigure" ref="0x40b25a28" scoped=""/></to>
+        </wire>
+        <wire loc="19:/usr/src/tinyos/tos/platforms/telosa/PlatformSerialC.nc">
+          <from><interface-ref name="Resource" ref="0x40b25db8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x409c9c10" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="6:/usr/src/tinyos/tos/platforms/telosa/PlatformSerialC.nc" name="UartByte" provided="1" ref="0x409c76e8">
+      <component-ref nicename="tos.platforms.telosa.PlatformSerialC" qname="PlatformSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UartByte" ref="0x409c76e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.UartByte" qname="UartByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x409c78c0" scoped=""/>
+        <function-ref name="receive" ref="0x409c79a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="5:/usr/src/tinyos/tos/platforms/telosa/PlatformSerialC.nc" name="UartStream" provided="1" ref="0x409ce8e8">
+      <component-ref nicename="tos.platforms.telosa.PlatformSerialC" qname="PlatformSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UartStream" ref="0x409ce8e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.UartStream" qname="UartStream"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x409ceac0" scoped=""/>
+        <function-ref name="receivedByte" ref="0x409ceba0" scoped=""/>
+        <function-ref name="receive" ref="0x409cec80" scoped=""/>
+        <function-ref name="enableReceiveInterrupt" ref="0x409ced60" scoped=""/>
+        <function-ref name="receiveDone" ref="0x409cee40" scoped=""/>
+        <function-ref name="disableReceiveInterrupt" ref="0x409cef20" scoped=""/>
+        <function-ref name="sendDone" ref="0x409cb018" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="4:/usr/src/tinyos/tos/platforms/telosa/PlatformSerialC.nc" name="StdControl" provided="1" ref="0x409ce468">
+      <component-ref nicename="tos.platforms.telosa.PlatformSerialC" qname="PlatformSerialC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StdControl" ref="0x409ce468" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x409ce640" scoped=""/>
+        <function-ref name="stop" ref="0x409ce720" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="8:TelosSerialP.nc" name="Resource" provided="0" ref="0x40b25db8">
+      <component-ref nicename="TelosSerialP" qname="TelosSerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x40b25db8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40b22010" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40b220f0" scoped=""/>
+        <function-ref name="request" ref="0x40b221d0" scoped=""/>
+        <function-ref name="granted" ref="0x40b222b0" scoped=""/>
+        <function-ref name="isOwner" ref="0x40b22390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc" name="UartByte" provided="1" ref="0x40b26010">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430Uart1C" qname="PlatformSerialC.UartC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UartByte" ref="0x40b26010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.UartByte" qname="UartByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40b261e8" scoped=""/>
+        <function-ref name="receive" ref="0x40b262c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc" name="Msp430UartConfigure" provided="0" ref="0x40b26428">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430Uart1C" qname="PlatformSerialC.UartC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430UartConfigure" ref="0x40b26428" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.Msp430UartConfigure" qname="Msp430UartConfigure"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfig" ref="0x40b26600" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="7:TelosSerialP.nc" name="Msp430UartConfigure" provided="1" ref="0x40b25a28">
+      <component-ref nicename="TelosSerialP" qname="TelosSerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Msp430UartConfigure" ref="0x40b25a28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.msp430.usart.Msp430UartConfigure" qname="Msp430UartConfigure"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getConfig" ref="0x40b25c00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="6:TelosSerialP.nc" name="StdControl" provided="1" ref="0x40b25550">
+      <component-ref nicename="TelosSerialP" qname="TelosSerialP"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="StdControl" ref="0x40b25550" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x40b25728" scoped=""/>
+        <function-ref name="stop" ref="0x40b25808" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc" name="UartStream" provided="1" ref="0x40b27748">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430Uart1C" qname="PlatformSerialC.UartC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="UartStream" ref="0x40b27748" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.UartStream" qname="UartStream"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40b27920" scoped=""/>
+        <function-ref name="receivedByte" ref="0x40b27a00" scoped=""/>
+        <function-ref name="receive" ref="0x40b27ae0" scoped=""/>
+        <function-ref name="enableReceiveInterrupt" ref="0x40b27bc0" scoped=""/>
+        <function-ref name="receiveDone" ref="0x40b27ca0" scoped=""/>
+        <function-ref name="disableReceiveInterrupt" ref="0x40b27d80" scoped=""/>
+        <function-ref name="sendDone" ref="0x40b27e60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc" name="Resource" provided="1" ref="0x409c9c10">
+      <component-ref nicename="tos.chips.msp430.usart.Msp430Uart1C" qname="PlatformSerialC.UartC"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Resource" ref="0x409c9c10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x409c9de8" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x409c9ec8" scoped=""/>
+        <function-ref name="request" ref="0x40b27010" scoped=""/>
+        <function-ref name="granted" ref="0x40b270f0" scoped=""/>
+        <function-ref name="isOwner" ref="0x40b271d0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="42(PlatformSerialC.UartC):/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc" nicename="tos.chips.msp430.usart.Msp430Uart1C" qname="PlatformSerialC.UartC">
+      <instance number="0">
+        <component-ref nicename="tos.chips.msp430.usart.Msp430Uart1C" qname="Msp430Uart1C"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="65:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc">
+          <from><interface-ref name="ResourceRequested" ref="0x40b27330" scoped=""/></from>
+          <to><interface-ref name="ResourceRequested" ref="0x40e1df08" scoped=""/></to>
+        </wire>
+        <wire loc="61:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc">
+          <from><interface-ref name="UartByte" ref="0x40b26010" scoped=""/></from>
+          <to><interface-ref name="UartByte" ref="0x40a124a8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="60:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc">
+          <from><interface-ref name="UartStream" ref="0x40b27748" scoped=""/></from>
+          <to><interface-ref name="UartStream" ref="0x409f18b8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="59:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc">
+          <from><interface-ref name="Resource" ref="0x409c9c10" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x409fb780" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="62:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc">
+          <from><interface-ref name="Msp430UartConfigure" ref="0x40a107b0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Msp430UartConfigure" ref="0x40b26428" scoped=""/></to>
+        </wire>
+        <wire loc="66:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc">
+          <from><interface-ref name="ResourceConfigure" ref="0x40e4a428" scoped=""/></from>
+          <to><interface-ref name="ResourceConfigure" ref="0x409f1158" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc">
+          <from><interface-ref name="UsartResource" ref="0x40a12ca0" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x40e1d850" scoped=""/></to>
+        </wire>
+        <wire loc="68:/usr/src/tinyos/tos/chips/msp430/usart/Msp430Uart1C.nc">
+          <from><interface-ref name="UsartInterrupts" ref="0x40a0dd50" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:2" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="HplMsp430UsartInterrupts" ref="0x40e4a010" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="5:TelosSerialP.nc" nicename="TelosSerialP" qname="TelosSerialP">
+      <module/>
+    </component></referenced></component>

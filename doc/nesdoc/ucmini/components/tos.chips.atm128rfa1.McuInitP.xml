@@ -1,0 +1,48 @@
+<?xml version="1.0" ?><component loc="36:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitP.nc" nicename="tos.chips.atm128rfa1.McuInitP" qname="McuInitP" safe="">
+      <module/>
+    <specification><interface loc="45:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitP.nc" name="RadioInit" provided="0" ref="0x40490da0">
+      <component-ref nicename="tos.chips.atm128rfa1.McuInitP" qname="McuInitP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioInit" ref="0x40490da0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4048e010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitP.nc" name="Init" provided="1" ref="0x40487db0">
+      <component-ref nicename="tos.chips.atm128rfa1.McuInitP" qname="McuInitP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x40487db0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40490010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitP.nc" name="AdcInit" provided="0" ref="0x404909d8">
+      <component-ref nicename="tos.chips.atm128rfa1.McuInitP" qname="McuInitP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AdcInit" ref="0x404909d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40490bb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitP.nc" name="MeasureClock" provided="0" ref="0x40490260">
+      <component-ref nicename="tos.chips.atm128rfa1.McuInitP" qname="McuInitP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="MeasureClock" ref="0x40490260" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40490438" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/McuInitP.nc" name="TimerInit" provided="0" ref="0x40490628">
+      <component-ref nicename="tos.chips.atm128rfa1.McuInitP" qname="McuInitP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TimerInit" ref="0x40490628" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40490800" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,67 @@
+<?xml version="1.0" ?><component loc="40:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc" nicename="tos.chips.atm128rfa1.McuSleepC" qname="McuSleepC" safe="">
+      <documentation loc="34:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc">
+        <short>
+ </short>
+        <long>
+ @author Philip Levis
+ @author Robert Szewczyk
+ @author Janos Sallai &lt;janos.sallai@vanderbilt.edu&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="47:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc" name="McuPowerOverride" provided="0" ref="0x4040be50">
+      <component-ref nicename="tos.chips.atm128rfa1.McuSleepC" qname="McuSleepC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerOverride" ref="0x4040be50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x4040e050" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc" name="Leds" provided="0" ref="0x4040d218">
+      <component-ref nicename="tos.chips.atm128rfa1.McuSleepC" qname="McuSleepC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Leds" ref="0x4040d218" scoped=""/></type-interface>
+      <attribute-value>
+        <attribute-ref name="atmostonce" ref="0x403283d0"/>
+        <value-structured>
+          <type-tag alignment="I:1" size="I:0"><attribute-ref name="atmostonce" ref="0x403283d0"/></type-tag>
+        </value-structured>
+      </attribute-value>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.ucmini.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4040d3f0" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4040d4d0" scoped=""/>
+        <function-ref name="led1On" ref="0x4040d5b0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4040d690" scoped=""/>
+        <function-ref name="led3Off" ref="0x4040d770" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4040d850" scoped=""/>
+        <function-ref name="get" ref="0x4040d930" scoped=""/>
+        <function-ref name="led1Off" ref="0x4040da10" scoped=""/>
+        <function-ref name="led3Toggle" ref="0x4040daf0" scoped=""/>
+        <function-ref name="led3On" ref="0x4040dbd0" scoped=""/>
+        <function-ref name="led0On" ref="0x4040dcb0" scoped=""/>
+        <function-ref name="led2Off" ref="0x4040dd90" scoped=""/>
+        <function-ref name="led2On" ref="0x4040de70" scoped=""/>
+        <function-ref name="set" ref="0x40414010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc" name="McuSleep" provided="1" ref="0x403324a0">
+      <component-ref nicename="tos.chips.atm128rfa1.McuSleepC" qname="McuSleepC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuSleep" ref="0x403324a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuSleep" qname="McuSleep"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="sleep" ref="0x40332678" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc" name="McuPowerState" provided="1" ref="0x4040c1a8">
+      <component-ref nicename="tos.chips.atm128rfa1.McuSleepC" qname="McuSleepC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerState" ref="0x4040c1a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerState" qname="McuPowerState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="update" ref="0x4040c380" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

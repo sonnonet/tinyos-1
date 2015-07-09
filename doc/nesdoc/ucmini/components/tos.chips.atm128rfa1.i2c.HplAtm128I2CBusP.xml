@@ -1,0 +1,97 @@
+<?xml version="1.0" ?><component loc="55:/usr/src/tinyos/tos/chips/atm128rfa1/i2c/HplAtm128I2CBusP.nc" nicename="tos.chips.atm128rfa1.i2c.HplAtm128I2CBusP" qname="HplAtm128I2CBusP">
+      <documentation loc="47:/usr/src/tinyos/tos/chips/atm128rfa1/i2c/HplAtm128I2CBusP.nc">
+        <short>
+ This driver implements direct I2C register access and a blocking master
+ controller for the ATmega128 via a Hardware Platform Layer (HPL) to its  
+ two-wire-interface (TWI) hardware subsystem.</short>
+        <long>
+ This driver implements direct I2C register access and a blocking master
+ controller for the ATmega128 via a Hardware Platform Layer (HPL) to its  
+ two-wire-interface (TWI) hardware subsystem.
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+ @author Philip Levis
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="56:/usr/src/tinyos/tos/chips/atm128rfa1/i2c/HplAtm128I2CBusP.nc" name="I2C" provided="1" ref="0x40e92858">
+      <component-ref nicename="tos.chips.atm128rfa1.i2c.HplAtm128I2CBusP" qname="HplAtm128I2CBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2C" ref="0x40e92858" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.i2c.HplAtm128I2CBus" qname="HplAtm128I2CBus"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="readCurrent" ref="0x40e92a30" scoped=""/>
+        <function-ref name="sendCommand" ref="0x40e92b10" scoped=""/>
+        <function-ref name="setStart" ref="0x40e92bf0" scoped=""/>
+        <function-ref name="status" ref="0x40e92cd0" scoped=""/>
+        <function-ref name="hasAcks" ref="0x40e92db0" scoped=""/>
+        <function-ref name="isEnabled" ref="0x40e92e90" scoped=""/>
+        <function-ref name="enableInterrupt" ref="0x40e8f010" scoped=""/>
+        <function-ref name="read" ref="0x40e8f0f0" scoped=""/>
+        <function-ref name="init" ref="0x40e8f1d0" scoped=""/>
+        <function-ref name="enableAck" ref="0x40e8f2b0" scoped=""/>
+        <function-ref name="isInterruptEnabled" ref="0x40e8f390" scoped=""/>
+        <function-ref name="hasStart" ref="0x40e8f470" scoped=""/>
+        <function-ref name="isInterruptPending" ref="0x40e8f550" scoped=""/>
+        <function-ref name="commandComplete" ref="0x40e8f6b0" scoped=""/>
+        <function-ref name="enable" ref="0x40e8f790" scoped=""/>
+        <function-ref name="write" ref="0x40e8f870" scoped=""/>
+        <function-ref name="isRealInterruptPending" ref="0x40e8f950" scoped=""/>
+        <function-ref name="off" ref="0x40e8fa30" scoped=""/>
+        <function-ref name="setStop" ref="0x40e8fb10" scoped=""/>
+        <function-ref name="setInterruptPending" ref="0x40e8fbf0" scoped=""/>
+        <function-ref name="hasWriteCollided" ref="0x40e8fcd0" scoped=""/>
+        <function-ref name="hasStop" ref="0x40e8fdb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/usr/src/tinyos/tos/chips/atm128rfa1/i2c/HplAtm128I2CBusP.nc" name="McuPowerOverride" provided="1" ref="0x40e8e010">
+      <component-ref nicename="tos.chips.atm128rfa1.i2c.HplAtm128I2CBusP" qname="HplAtm128I2CBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerOverride" ref="0x40e8e010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x40e8e1e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/usr/src/tinyos/tos/chips/atm128rfa1/i2c/HplAtm128I2CBusP.nc" name="I2CClk" provided="0" ref="0x40e8e418">
+      <component-ref nicename="tos.chips.atm128rfa1.i2c.HplAtm128I2CBusP" qname="HplAtm128I2CBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2CClk" ref="0x40e8e418" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40e8e5f0" scoped=""/>
+        <function-ref name="isInput" ref="0x40e8e6d0" scoped=""/>
+        <function-ref name="toggle" ref="0x40e8e7b0" scoped=""/>
+        <function-ref name="isOutput" ref="0x40e8e890" scoped=""/>
+        <function-ref name="get" ref="0x40e8e970" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40e8ea50" scoped=""/>
+        <function-ref name="set" ref="0x40e8eb30" scoped=""/>
+        <function-ref name="clr" ref="0x40e8ec10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/usr/src/tinyos/tos/chips/atm128rfa1/i2c/HplAtm128I2CBusP.nc" name="McuPowerState" provided="0" ref="0x40e8c7f8">
+      <component-ref nicename="tos.chips.atm128rfa1.i2c.HplAtm128I2CBusP" qname="HplAtm128I2CBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerState" ref="0x40e8c7f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerState" qname="McuPowerState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="update" ref="0x40e8c9d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/usr/src/tinyos/tos/chips/atm128rfa1/i2c/HplAtm128I2CBusP.nc" name="I2CData" provided="0" ref="0x40e8ee18">
+      <component-ref nicename="tos.chips.atm128rfa1.i2c.HplAtm128I2CBusP" qname="HplAtm128I2CBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2CData" ref="0x40e8ee18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40e8c010" scoped=""/>
+        <function-ref name="isInput" ref="0x40e8c0f0" scoped=""/>
+        <function-ref name="toggle" ref="0x40e8c1d0" scoped=""/>
+        <function-ref name="isOutput" ref="0x40e8c2b0" scoped=""/>
+        <function-ref name="get" ref="0x40e8c390" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40e8c470" scoped=""/>
+        <function-ref name="set" ref="0x40e8c550" scoped=""/>
+        <function-ref name="clr" ref="0x40e8c630" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

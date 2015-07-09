@@ -1,0 +1,17 @@
+digraph "tos.chips.atm128rfa1.McuInitC" {
+  n0x40484be0 [shape=ellipse, style=filled, label="Init", fontsize=12];
+  "McuInitP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.McuInitP.html"];
+  "McuInitP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.McuInitP.html"];
+  n0x40487010 [shape=ellipse, style=filled, label="TimerInit", fontsize=12];
+  "McuInitP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.McuInitP.html"];
+  n0x404873c0 [shape=ellipse, style=filled, label="AdcInit", fontsize=12];
+  "McuInitP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.McuInitP.html"];
+  "RFA1RadioOffP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.radio.RFA1RadioOffP.html"];
+  "McuInitP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.McuInitP.html"];
+  "MeasureClockC" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm128rfa1.timer.MeasureClockC.html"];
+  "n0x40484be0" -> "McuInitP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "McuInitP" -> "n0x40487010" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "McuInitP" -> "n0x404873c0" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "McuInitP" -> "RFA1RadioOffP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "McuInitP" -> "MeasureClockC" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+}

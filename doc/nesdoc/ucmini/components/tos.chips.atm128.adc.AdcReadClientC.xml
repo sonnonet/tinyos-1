@@ -1,0 +1,281 @@
+<?xml version="1.0" ?><component abstract="" loc="21:/usr/src/tinyos/tos/chips/atm128/adc/AdcReadClientC.nc" nicename="tos.chips.atm128.adc.AdcReadClientC" qname="AdcReadClientC">
+      <documentation loc="10:/usr/src/tinyos/tos/chips/atm128/adc/AdcReadClientC.nc">
+        <short>
+ Provide, as per TEP101, arbitrated access via a Read interface to the
+ Atmega128 ADC.</short>
+        <long>
+ Provide, as per TEP101, arbitrated access via a Read interface to the
+ Atmega128 ADC.  Users of this component must link it to an
+ implementation of Atm128AdcConfig which provides the ADC parameters
+ (channel, etc).
+ 
+ @author David Gay
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="36:/usr/src/tinyos/tos/chips/atm128/adc/AdcReadClientC.nc">
+          <from><interface-ref name="Read" ref="0x4094fa90" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40949c48" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="37:/usr/src/tinyos/tos/chips/atm128/adc/AdcReadClientC.nc">
+          <from><interface-ref name="Atm128AdcConfig" ref="0x4095e100" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Atm128AdcConfig" ref="0x40947a00" scoped=""/></to>
+        </wire>
+        <wire loc="38:/usr/src/tinyos/tos/chips/atm128/adc/AdcReadClientC.nc">
+          <from><interface-ref name="Resource" ref="0x4095ab68" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x4095db68" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="39:/usr/src/tinyos/tos/chips/atm128/adc/AdcReadClientC.nc">
+          <from><interface-ref name="ResourceConfigure" ref="0x40956100" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="ResourceConfigure" ref="0x4094beb8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="25:/usr/src/tinyos/tos/chips/atm128/adc/AdcReadClientC.nc" name="ResourceConfigure" provided="0" ref="0x4094beb8">
+      <component-ref nicename="tos.chips.atm128.adc.AdcReadClientC" qname="AdcReadClientC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceConfigure" ref="0x4094beb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x409490c0" scoped=""/>
+        <function-ref name="configure" ref="0x409491a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:/usr/src/tinyos/tos/chips/atm128/adc/AdcReadClientC.nc" name="Read" provided="1" ref="0x4094fa90">
+      <component-ref nicename="tos.chips.atm128.adc.AdcReadClientC" qname="AdcReadClientC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x4094fa90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x4094c0d8" scoped=""/>
+        <function-ref name="readDone" ref="0x4094c330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/usr/src/tinyos/tos/chips/atm128/adc/AdcReadClientC.nc" name="Atm128AdcConfig" provided="0" ref="0x40947a00">
+      <component-ref nicename="tos.chips.atm128.adc.AdcReadClientC" qname="AdcReadClientC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcConfig" ref="0x40947a00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x40947bd8" scoped=""/>
+        <function-ref name="getChannel" ref="0x40947cb8" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x40947d98" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="23:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc" name="Atm128AdcConfig" provided="0" ref="0x4095e100">
+      <component-ref nicename="tos.chips.atm1281.adc.WireAdcP" qname="WireAdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcConfig" ref="0x4095e100" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x4095e2d8" scoped=""/>
+        <function-ref name="getChannel" ref="0x4095e3b8" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x4095e498" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc" name="Resource" provided="0" ref="0x4095ab68">
+      <component-ref nicename="tos.chips.atm1281.adc.WireAdcP" qname="WireAdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x4095ab68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x4095ad40" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x4095ae20" scoped=""/>
+        <function-ref name="request" ref="0x4095af00" scoped=""/>
+        <function-ref name="granted" ref="0x4095d010" scoped=""/>
+        <function-ref name="isOwner" ref="0x4095d0f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc" name="Resource" provided="1" ref="0x4095db68">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcC" qname="Atm128AdcC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x4095db68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x4095dd40" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x4095de20" scoped=""/>
+        <function-ref name="request" ref="0x4095df00" scoped=""/>
+        <function-ref name="granted" ref="0x40958010" scoped=""/>
+        <function-ref name="isOwner" ref="0x409580f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc" name="Read" provided="1" ref="0x40949c48">
+      <component-ref nicename="tos.chips.atm1281.adc.WireAdcP" qname="WireAdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x40949c48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x40962288" scoped=""/>
+        <function-ref name="readDone" ref="0x409624e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc" name="ResourceConfigure" provided="0" ref="0x40956100">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.Atm128AdcC" qname="Atm128AdcC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceConfigure" ref="0x40956100" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x409562d8" scoped=""/>
+        <function-ref name="configure" ref="0x409563b8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="17:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc" nicename="tos.chips.atm1281.adc.WireAdcP" qname="WireAdcP">
+      <documentation loc="10:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc">
+        <short>
+ Support component for AdcReadClientC and AdcReadNowClientC.</short>
+        <long>
+ Support component for AdcReadClientC and AdcReadNowClientC.
+
+ @author David Gay
+ @author Janos Sallai &lt;janos.sallai@vanderbilt.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="31:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc">
+          <from><interface-ref name="Read" ref="0x40949c48" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40a39af0" scoped=""/></to>
+        </wire>
+        <wire loc="32:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc">
+          <from><interface-ref name="ReadNow" ref="0x40961100" scoped=""/></from>
+          <to><interface-ref name="ReadNow" ref="0x40a20390" scoped=""/></to>
+        </wire>
+        <wire loc="33:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc">
+          <from><interface-ref name="Resource" ref="0x40a4c500" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x4095ab68" scoped=""/></to>
+        </wire>
+        <wire loc="34:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc">
+          <from><interface-ref name="Atm128AdcConfig" ref="0x40a1f8b8" scoped=""/></from>
+          <to><interface-ref name="Atm128AdcConfig" ref="0x4095e100" scoped=""/></to>
+        </wire>
+        <wire loc="36:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc">
+          <from><interface-ref name="Service" ref="0x40a388a8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x40a213d8" scoped=""/></to>
+        </wire>
+        <wire loc="37:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc">
+          <from><interface-ref name="Atm128AdcSingle" ref="0x40a1f040" scoped=""/></from>
+          <to><interface-ref name="Atm128AdcSingle" ref="0x409724e0" scoped=""/></to>
+        </wire>
+        <wire loc="38:/usr/src/tinyos/tos/chips/atm1281/adc/WireAdcP.nc">
+          <from><interface-ref name="BusyWait" ref="0x40a1d088" scoped=""/></from>
+          <to><interface-ref name="BusyWait" ref="0x40a24e30" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc" nicename="tos.chips.atm128rfa1.adc.Atm128AdcC" qname="Atm128AdcC">
+      <documentation loc="44:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+        <short>
+ HAL for the Atmega128 A/D conversion susbsystem.</short>
+        <long>
+ HAL for the Atmega128 A/D conversion susbsystem.
+
+ @author Hu Siquan &lt;husq@xbow.com&gt;
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="69:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="Atm128AdcMultiple" ref="0x4096f870" scoped=""/></from>
+          <to><interface-ref name="Atm128AdcMultiple" ref="0x40969c30" scoped=""/></to>
+        </wire>
+        <wire loc="68:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="Atm128AdcSingle" ref="0x409724e0" scoped=""/></from>
+          <to><interface-ref name="Atm128AdcSingle" ref="0x409696a8" scoped=""/></to>
+        </wire>
+        <wire loc="66:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="Resource" ref="0x4095db68" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x409b6a20" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="ResourceConfigure" ref="0x40a14208" scoped=""/></from>
+          <to><interface-ref name="ResourceConfigure" ref="0x40956100" scoped=""/></to>
+        </wire>
+        <wire loc="71:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="AdcInit" ref="0x404ae7c8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x40956d98" scoped=""/></to>
+        </wire>
+        <wire loc="73:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="HplAtm128Adc" ref="0x4097f958" scoped=""/></from>
+          <to><interface-ref name="HplAtm128Adc" ref="0x409a2268" scoped=""/></to>
+        </wire>
+        <wire loc="74:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="Atm128Calibrate" ref="0x409681e8" scoped=""/></from>
+          <to><interface-ref name="Atm128Calibrate" ref="0x404a9830" scoped=""/></to>
+        </wire>
+        <wire loc="76:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="AsyncStdControl" ref="0x40a129f0" scoped=""/></from>
+          <to><interface-ref name="AsyncStdControl" ref="0x40969218" scoped=""/></to>
+        </wire>
+        <wire loc="77:/usr/src/tinyos/tos/chips/atm128rfa1/adc/Atm128AdcC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x40a11150" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x40a155f0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

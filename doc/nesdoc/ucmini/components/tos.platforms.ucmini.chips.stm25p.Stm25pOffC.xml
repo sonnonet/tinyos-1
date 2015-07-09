@@ -1,0 +1,93 @@
+<?xml version="1.0" ?><component loc="35:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/Stm25pOffC.nc" nicename="tos.platforms.ucmini.chips.stm25p.Stm25pOffC" qname="Stm25pOffC">
+      <configuration/>
+      <wiring>
+        <wire loc="40:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/Stm25pOffC.nc">
+          <from><interface-ref name="Stm25pOff" ref="0x40488208" scoped=""/></from>
+          <to><interface-ref name="Stm25pOff" ref="0x40488a48" scoped=""/></to>
+        </wire>
+        <wire loc="43:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/Stm25pOffC.nc">
+          <from><interface-ref name="Toggle" ref="0x404aa010" scoped=""/></from>
+          <to><interface-ref name="Power" ref="0x404b0768" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="36:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/Stm25pOffC.nc" name="Stm25pOff" provided="1" ref="0x40488208">
+      <component-ref nicename="tos.platforms.ucmini.chips.stm25p.Stm25pOffC" qname="Stm25pOffC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Stm25pOff" ref="0x40488208" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x404883e0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="45:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc" name="Power" provided="1" ref="0x404b0768">
+      <component-ref nicename="tos.platforms.ucmini.chips.stm25p.HplStm25pPinsC" qname="HplStm25pPinsC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Power" ref="0x404b0768" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x404b0940" scoped=""/>
+        <function-ref name="isInput" ref="0x404b0a20" scoped=""/>
+        <function-ref name="toggle" ref="0x404b0b00" scoped=""/>
+        <function-ref name="isOutput" ref="0x404b0be0" scoped=""/>
+        <function-ref name="get" ref="0x404b0cc0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x404b0da0" scoped=""/>
+        <function-ref name="set" ref="0x404b0e80" scoped=""/>
+        <function-ref name="clr" ref="0x404bb010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/Stm25pOffP.nc" name="Toggle" provided="0" ref="0x404aa010">
+      <component-ref nicename="tos.platforms.ucmini.chips.stm25p.Stm25pOffP" qname="Stm25pOffP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Toggle" ref="0x404aa010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x404aa1e8" scoped=""/>
+        <function-ref name="isInput" ref="0x404aa2c8" scoped=""/>
+        <function-ref name="toggle" ref="0x404aa3a8" scoped=""/>
+        <function-ref name="isOutput" ref="0x404aa488" scoped=""/>
+        <function-ref name="get" ref="0x404aa568" scoped=""/>
+        <function-ref name="makeOutput" ref="0x404aa648" scoped=""/>
+        <function-ref name="set" ref="0x404aa728" scoped=""/>
+        <function-ref name="clr" ref="0x404aa808" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/Stm25pOffP.nc" name="Stm25pOff" provided="1" ref="0x40488a48">
+      <component-ref nicename="tos.platforms.ucmini.chips.stm25p.Stm25pOffP" qname="Stm25pOffP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Stm25pOff" ref="0x40488a48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40488c20" scoped=""/>
+      </interface-functions>
+    </interface><component loc="40:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc" nicename="tos.platforms.ucmini.chips.stm25p.HplStm25pPinsC" qname="HplStm25pPinsC">
+      <documentation loc="32:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc">
+        <short>
+ HPL implementation of general-purpose I/O for a ST M25P chip
+ connected to a TI MSP430.</short>
+        <long>
+ HPL implementation of general-purpose I/O for a ST M25P chip
+ connected to a TI MSP430.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.1 $ $Date: 2010-11-18 23:16:35 $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="56:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc">
+          <from><interface-ref name="CSN" ref="0x404b12f0" scoped=""/></from>
+          <to><interface-ref name="PortB0" ref="0x404c08e0" scoped=""/></to>
+        </wire>
+        <wire loc="61:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc">
+          <from><interface-ref name="Hold" ref="0x404b1cf8" scoped=""/></from>
+          <to><interface-ref name="GeneralIO" ref="0x40523438" scoped=""/></to>
+        </wire>
+        <wire loc="59:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/HplStm25pPinsC.nc">
+          <from><interface-ref name="Power" ref="0x404b0768" scoped=""/></from>
+          <to><interface-ref name="PortD6" ref="0x404cac08" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="35:/usr/src/tinyos/tos/platforms/ucmini/chips/stm25p/Stm25pOffP.nc" nicename="tos.platforms.ucmini.chips.stm25p.Stm25pOffP" qname="Stm25pOffP">
+      <module/>
+    </component></referenced></component>

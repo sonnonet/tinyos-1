@@ -1,0 +1,14 @@
+digraph "UerAppC" {
+  "UerC" [fontsize=12, shape=box, URL="../chtml/UerC.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.MainC.html"];
+  "UerC" [fontsize=12, shape=box, URL="../chtml/UerC.html"];
+  "ESP8266C" [fontsize=12, shape=box,peripheries=2, URL="../chtml/ESP8266C.html"];
+  "UerC" [fontsize=12, shape=box, URL="../chtml/UerC.html"];
+  "LedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.LedsC.html"];
+  "UerC" [fontsize=12, shape=box, URL="../chtml/UerC.html"];
+  "UerAppC.T1" [fontsize=12, shape=box,peripheries=2, style=dashed, label="TimerMilliC\n(T1)", URL="../chtml/tos.system.TimerMilliC.html"];
+  "UerC" -> "MainC" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "UerC" -> "ESP8266C" [label="ESP8266", URL="../ihtml/ESP8266.html", fontsize=10];
+  "UerC" -> "LedsC" [label="Leds", URL="../ihtml/tos.interfaces.Leds.html", fontsize=10];
+  "UerC" -> "UerAppC.T1" [label="Timer<TMilli>", URL="../ihtml/tos.lib.timer.Timer.html", fontsize=10];
+}

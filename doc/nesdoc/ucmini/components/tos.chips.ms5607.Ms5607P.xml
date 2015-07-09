@@ -1,0 +1,158 @@
+<?xml version="1.0" ?><component loc="39:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P">
+      <module/>
+    <specification><interface loc="104:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" name="signalReadDone" provided="0" ref="0x40be3778">
+      <component-ref nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="signalReadDone" ref="0x40be3778" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x40be3950" scoped=""/>
+        <function-ref name="runTask" ref="0x40be3a30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" name="ReadPressure" provided="1" ref="0x40bccdf8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadPressure" ref="0x40bccdf8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40bcb448" scoped=""/>
+        <function-ref name="readDone" ref="0x40bcb6a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="210:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" name="startTimer" provided="0" ref="0x40bf9320">
+      <component-ref nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="startTimer" ref="0x40bf9320" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x40bf94f8" scoped=""/>
+        <function-ref name="runTask" ref="0x40bf95d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" name="BusPowerManager" provided="0" ref="0x40bc23c8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusPowerManager" ref="0x40bc23c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="powerOn" ref="0x40bc25a0" scoped=""/>
+        <function-ref name="requestPower" ref="0x40bc2680" scoped=""/>
+        <function-ref name="powerOff" ref="0x40bc2760" scoped=""/>
+        <function-ref name="configure" ref="0x40bc2840" scoped=""/>
+        <function-ref name="releasePower" ref="0x40bc2920" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" name="Init" provided="1" ref="0x40bc9468">
+      <component-ref nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x40bc9468" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40bc9640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" name="I2CResource" provided="0" ref="0x40bc4bb8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2CResource" ref="0x40bc4bb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40bc4d90" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40bc4e70" scoped=""/>
+        <function-ref name="request" ref="0x40bc2010" scoped=""/>
+        <function-ref name="granted" ref="0x40bc20f0" scoped=""/>
+        <function-ref name="isOwner" ref="0x40bc21d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" name="ReadTemperature" provided="1" ref="0x40bcc0c8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadTemperature" ref="0x40bcc0c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40bcc6f0" scoped=""/>
+        <function-ref name="readDone" ref="0x40bcc948" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" name="ReadCalibration" provided="1" ref="0x40bcbbb0">
+      <component-ref nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadCalibration" ref="0x40bcbbb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadRef" qname="ReadRef"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:12"><struct-ref ref="0x404202c8"/>
+            <typename><typedef-ref name="calibration_t" ref="0x40420490"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40bca1f0" scoped=""/>
+        <function-ref name="readDone" ref="0x40bca580" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" name="SetPrecision" provided="1" ref="0x40bcab20">
+      <component-ref nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SetPrecision" ref="0x40bcab20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Set" qname="Set"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="set" ref="0x40bc91e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" name="I2CPacket" provided="0" ref="0x40bc6c00">
+      <component-ref nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2CPacket" ref="0x40bc6c00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.I2CPacket" qname="I2CPacket"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref ref="0x40a71da8"/>
+            <typename><typedef-ref name="TI2CBasicAddr" ref="0x40a71f10"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40bc5278" scoped=""/>
+        <function-ref name="writeDone" ref="0x40bc44f8" scoped=""/>
+        <function-ref name="write" ref="0x40bc5898" scoped=""/>
+        <function-ref name="readDone" ref="0x40bc5eb8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/chips/ms5607/Ms5607P.nc" name="Timer" provided="0" ref="0x40bc98a8">
+      <component-ref nicename="tos.chips.ms5607.Ms5607P" qname="Ms5607P"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x40bc98a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40453928"/>
+            <typename><typedef-ref name="TMilli" ref="0x40453af0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40bc63a8" scoped=""/>
+        <function-ref name="fired" ref="0x40bc7648" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40bc7d50" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40bc7af8" scoped=""/>
+        <function-ref name="getdt" ref="0x40bc6858" scoped=""/>
+        <function-ref name="gett0" ref="0x40bc6600" scoped=""/>
+        <function-ref name="isRunning" ref="0x40bc78a0" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40bc9ed0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40bc6088" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40bc7170" scoped=""/>
+        <function-ref name="stop" ref="0x40bc73f0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

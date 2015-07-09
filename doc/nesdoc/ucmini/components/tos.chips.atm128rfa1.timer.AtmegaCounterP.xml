@@ -1,0 +1,71 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounterP.nc" nicename="tos.chips.atm128rfa1.timer.AtmegaCounterP" qname="AtmegaCounterP">
+      <parameters>
+        <typedef loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounterP.nc" name="precision_tag" ref="0x407386f8">
+          <component-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounterP" qname="AtmegaCounterP"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="precision_tag" ref="0x407386f8" scoped=""/></type-var>
+        </typedef>
+        <typedef loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounterP.nc" name="size_type" ref="0x40738b28">
+          <component-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounterP" qname="AtmegaCounterP"/>
+          <type-var alignment="U:" size="U:"><typedef-ref name="size_type" ref="0x40738b28" scoped=""/></type-var>
+        </typedef>
+        <constant loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounterP.nc" name="mode" ref="0x40738d18">
+          <component-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounterP" qname="AtmegaCounterP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="39:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounterP.nc" name="Init" provided="1" ref="0x4074b288">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounterP" qname="AtmegaCounterP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x4074b288" scoped=""/></type-interface>
+      <attribute-value>
+        <attribute-ref name="exactlyonce" ref="0x403287d0"/>
+        <value-structured>
+          <type-tag alignment="I:1" size="I:0"><attribute-ref name="exactlyonce" ref="0x403287d0"/></type-tag>
+        </value-structured>
+      </attribute-value>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4074b460" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounterP.nc" name="Counter" provided="1" ref="0x4074b7f0">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounterP" qname="AtmegaCounterP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Counter" ref="0x4074b7f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Counter" qname="Counter"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="precision_tag" ref="0x407386f8" scoped=""/></type-var>
+          <type-var alignment="U:" size="U:"><typedef-ref name="size_type" ref="0x40738b28" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x4074a010" scoped=""/>
+        <function-ref name="clearOverflow" ref="0x4074a500" scoped=""/>
+        <function-ref name="isOverflowPending" ref="0x4074a288" scoped=""/>
+        <function-ref name="overflow" ref="0x4074a778" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/chips/atm128rfa1/timer/AtmegaCounterP.nc" name="AtmegaCounter" provided="0" ref="0x40744b08">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounterP" qname="AtmegaCounterP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AtmegaCounter" ref="0x40744b08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCounter" qname="AtmegaCounter"/>
+        <arguments>
+          <type-var alignment="U:" size="U:"><typedef-ref name="size_type" ref="0x40738b28" scoped=""/></type-var>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="setMode" ref="0x40743600" scoped=""/>
+        <function-ref name="test" ref="0x40748990" scoped=""/>
+        <function-ref name="get" ref="0x40748200" scoped=""/>
+        <function-ref name="reset" ref="0x40748c08" scoped=""/>
+        <function-ref name="getMode" ref="0x407438a0" scoped=""/>
+        <function-ref name="overflow" ref="0x40748718" scoped=""/>
+        <function-ref name="isOn" ref="0x40743388" scoped=""/>
+        <function-ref name="set" ref="0x40748478" scoped=""/>
+        <function-ref name="start" ref="0x40748e80" scoped=""/>
+        <function-ref name="stop" ref="0x40743110" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

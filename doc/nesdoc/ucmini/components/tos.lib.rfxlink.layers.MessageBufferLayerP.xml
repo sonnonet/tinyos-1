@@ -1,0 +1,134 @@
+<?xml version="1.0" ?><component abstract="" loc="39:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP">
+      <parameters>
+      </parameters>
+      <module/>
+    <specification><interface loc="43:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="SplitControl" provided="1" ref="0x40a826f8">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SplitControl" ref="0x40a826f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x40a828d0" scoped=""/>
+        <function-ref name="stopDone" ref="0x40a829b0" scoped=""/>
+        <function-ref name="start" ref="0x40a82a90" scoped=""/>
+        <function-ref name="stop" ref="0x40a82b70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="SoftwareInit" provided="1" ref="0x40a82d80">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SoftwareInit" ref="0x40a82d80" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40a9f010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="RadioState" provided="0" ref="0x40a9e0e8">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioState" ref="0x40a9e0e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioState" qname="RadioState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="turnOff" ref="0x40a9e2c0" scoped=""/>
+        <function-ref name="turnOn" ref="0x40a9e3a0" scoped=""/>
+        <function-ref name="setChannel" ref="0x40a9e480" scoped=""/>
+        <function-ref name="done" ref="0x40a9e560" scoped=""/>
+        <function-ref name="standby" ref="0x40a9e640" scoped=""/>
+        <function-ref name="getChannel" ref="0x40a9e720" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="Send" provided="1" ref="0x40a9f1f8">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Send" ref="0x40a9f1f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareSend" qname="BareSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40a9f3d0" scoped=""/>
+        <function-ref name="cancel" ref="0x40a9f4b0" scoped=""/>
+        <function-ref name="sendDone" ref="0x40a9f590" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="144:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="stateDoneTask" provided="0" ref="0x40a93010">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="stateDoneTask" ref="0x40a93010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x40a931e8" scoped=""/>
+        <function-ref name="runTask" ref="0x40a932c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="RadioReceive" provided="0" ref="0x40a9d440">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioReceive" ref="0x40a9d440" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioReceive" qname="RadioReceive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40a9d618" scoped=""/>
+        <function-ref name="header" ref="0x40a9d6f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="189:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="sendTask" provided="0" ref="0x40ab12a0">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="sendTask" ref="0x40ab12a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x40ab1478" scoped=""/>
+        <function-ref name="runTask" ref="0x40ab1558" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="Receive" provided="1" ref="0x40a9f7a8">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x40a9f7a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareReceive" qname="BareReceive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40a9f980" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="322:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="deliverTask" provided="0" ref="0x40ac5db8">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="deliverTask" ref="0x40ac5db8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x40ac4010" scoped=""/>
+        <function-ref name="runTask" ref="0x40ac40f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="RadioSend" provided="0" ref="0x40a9eec0">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioSend" ref="0x40a9eec0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioSend" qname="RadioSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40a9d0c0" scoped=""/>
+        <function-ref name="ready" ref="0x40a9d1a0" scoped=""/>
+        <function-ref name="sendDone" ref="0x40a9d280" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="RadioChannel" provided="1" ref="0x40a9fb40">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioChannel" ref="0x40a9fb40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioChannel" qname="RadioChannel"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setChannelDone" ref="0x40a9fd18" scoped=""/>
+        <function-ref name="setChannel" ref="0x40a9fdf8" scoped=""/>
+        <function-ref name="getChannel" ref="0x40a9fed8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/usr/src/tinyos/tos/lib/rfxlink/layers/MessageBufferLayerP.nc" name="Tasklet" provided="0" ref="0x40a9e8a8">
+      <component-ref nicename="tos.lib.rfxlink.layers.MessageBufferLayerP" qname="MessageBufferLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Tasklet" ref="0x40a9e8a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.Tasklet" qname="Tasklet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="schedule" ref="0x40a9ea80" scoped=""/>
+        <function-ref name="suspend" ref="0x40a9eb60" scoped=""/>
+        <function-ref name="resume" ref="0x40a9ec40" scoped=""/>
+        <function-ref name="run" ref="0x40a9ed20" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

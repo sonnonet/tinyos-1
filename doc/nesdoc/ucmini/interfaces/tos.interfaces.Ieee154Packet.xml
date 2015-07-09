@@ -1,0 +1,212 @@
+<?xml version="1.0" ?><interfacedef loc="35:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" nicename="tos.interfaces.Ieee154Packet" qname="Ieee154Packet">
+      <function command="" loc="41:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="source" provided="0" ref="0x4084a658">
+        <interfacedef-ref nicename="tos.interfaces.Ieee154Packet" qname="Ieee154Packet"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="ieee154_saddr_t" ref="0x40441178"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="41:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="msg" ref="0x4084a500">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="37:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="address" provided="0" ref="0x4083aa58">
+        <interfacedef-ref nicename="tos.interfaces.Ieee154Packet" qname="Ieee154Packet"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="ieee154_saddr_t" ref="0x40441178"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="39:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="destination" provided="0" ref="0x4084a088">
+        <interfacedef-ref nicename="tos.interfaces.Ieee154Packet" qname="Ieee154Packet"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="ieee154_saddr_t" ref="0x40441178"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="39:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="msg" ref="0x4083af00">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="45:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="setSource" provided="0" ref="0x408495e0">
+        <interfacedef-ref nicename="tos.interfaces.Ieee154Packet" qname="Ieee154Packet"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="ieee154_saddr_t" ref="0x40441178"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="45:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="msg" ref="0x40849240">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="45:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="addr" ref="0x40849480">
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="ieee154_saddr_t" ref="0x40441178"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="43:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="setDestination" provided="0" ref="0x4084ae28">
+        <interfacedef-ref nicename="tos.interfaces.Ieee154Packet" qname="Ieee154Packet"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="ieee154_saddr_t" ref="0x40441178"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="43:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="msg" ref="0x4084aa88">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="43:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="addr" ref="0x4084acc8">
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="ieee154_saddr_t" ref="0x40441178"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="49:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="pan" provided="0" ref="0x40848168">
+        <interfacedef-ref nicename="tos.interfaces.Ieee154Packet" qname="Ieee154Packet"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="ieee154_panid_t" ref="0x40438ec8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="49:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="msg" ref="0x40848010">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="51:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="setPan" provided="0" ref="0x408488d8">
+        <interfacedef-ref nicename="tos.interfaces.Ieee154Packet" qname="Ieee154Packet"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="ieee154_panid_t" ref="0x40438ec8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="51:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="msg" ref="0x40848548">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+          <variable loc="51:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="grp" ref="0x40848778">
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="ieee154_panid_t" ref="0x40438ec8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="47:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="isForMe" provided="0" ref="0x40849b50">
+        <interfacedef-ref nicename="tos.interfaces.Ieee154Packet" qname="Ieee154Packet"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="47:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="msg" ref="0x408499f8">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:47"><nx_struct-ref name="message_t" ref="0x404544a0"/>
+                <typename><typedef-ref name="message_t" ref="0x40453248"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="53:/usr/src/tinyos/tos/interfaces/Ieee154Packet.nc" name="localPan" provided="0" ref="0x40848d18">
+        <interfacedef-ref nicename="tos.interfaces.Ieee154Packet" qname="Ieee154Packet"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="ieee154_panid_t" ref="0x40438ec8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

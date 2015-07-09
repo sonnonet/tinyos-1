@@ -1,0 +1,64 @@
+<?xml version="1.0" ?><component loc="47:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128AdcP.nc" nicename="tos.chips.atm128rfa1.adc.HplAtm128AdcP" qname="HplAtm128AdcP" safe="">
+      <documentation loc="38:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128AdcP.nc">
+        <short>
+ HPL for the Atmega1281 A/D conversion susbsystem.</short>
+        <long>
+ HPL for the Atmega1281 A/D conversion susbsystem.
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+ @author Hu Siquan &lt;husq@xbow.com&gt;
+ @author David Gay
+ @author Janos Sallai &lt;janos.sallai@vanderbilt.edu&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="49:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128AdcP.nc" name="McuPowerOverride" provided="1" ref="0x4099da78">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128AdcP" qname="HplAtm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerOverride" ref="0x4099da78" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x4099dc50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128AdcP.nc" name="HplAtm128Adc" provided="1" ref="0x4099e2b8">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128AdcP" qname="HplAtm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAtm128Adc" ref="0x4099e2b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setSingle" ref="0x4099e490" scoped=""/>
+        <function-ref name="isAdlarOn" ref="0x4099e570" scoped=""/>
+        <function-ref name="setPrescaler" ref="0x4099e650" scoped=""/>
+        <function-ref name="isEnabled" ref="0x4099e730" scoped=""/>
+        <function-ref name="setChannel" ref="0x4099e810" scoped=""/>
+        <function-ref name="enableAdc" ref="0x4099e8f0" scoped=""/>
+        <function-ref name="setAdlar" ref="0x4099e9d0" scoped=""/>
+        <function-ref name="enableInterruption" ref="0x4099eab0" scoped=""/>
+        <function-ref name="isComplete" ref="0x4099eb90" scoped=""/>
+        <function-ref name="cancel" ref="0x4099ec70" scoped=""/>
+        <function-ref name="disableAdc" ref="0x4099ed50" scoped=""/>
+        <function-ref name="getRef" ref="0x4099ee30" scoped=""/>
+        <function-ref name="disableInterruption" ref="0x4099ef10" scoped=""/>
+        <function-ref name="resetInterrupt" ref="0x4099d090" scoped=""/>
+        <function-ref name="startConversion" ref="0x4099d170" scoped=""/>
+        <function-ref name="isStarted" ref="0x4099d250" scoped=""/>
+        <function-ref name="getChannel" ref="0x4099d330" scoped=""/>
+        <function-ref name="setAdcsra" ref="0x4099d410" scoped=""/>
+        <function-ref name="setRef" ref="0x4099d4f0" scoped=""/>
+        <function-ref name="getAdcsra" ref="0x4099d5d0" scoped=""/>
+        <function-ref name="setContinuous" ref="0x4099d6b0" scoped=""/>
+        <function-ref name="getValue" ref="0x4099d790" scoped=""/>
+        <function-ref name="dataReady" ref="0x4099d870" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/usr/src/tinyos/tos/chips/atm128rfa1/adc/HplAtm128AdcP.nc" name="McuPowerState" provided="0" ref="0x4099de38">
+      <component-ref nicename="tos.chips.atm128rfa1.adc.HplAtm128AdcP" qname="HplAtm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerState" ref="0x4099de38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerState" qname="McuPowerState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="update" ref="0x4099c050" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

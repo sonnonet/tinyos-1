@@ -1,0 +1,154 @@
+<?xml version="1.0" ?><component loc="35:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/HplMs5607C.nc" nicename="tos.platforms.ucmini.chips.ms5607.HplMs5607C" qname="HplMs5607C">
+      <configuration/>
+      <wiring>
+        <wire loc="47:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/HplMs5607C.nc">
+          <from><interface-ref name="BusPowerManager" ref="0x40c05a90" scoped=""/></from>
+          <to><interface-ref name="BusPowerManager" ref="0x40b7df10" scoped=""/></to>
+        </wire>
+        <wire loc="45:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/HplMs5607C.nc">
+          <from><interface-ref name="Resource" ref="0x40c05340" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x40c048d8" scoped=""/></to>
+        </wire>
+        <wire loc="44:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/HplMs5607C.nc">
+          <from><interface-ref name="I2CPacket" ref="0x40c09428" scoped=""/></from>
+          <to><interface-ref name="I2CPacket" ref="0x40c03030" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="38:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/HplMs5607C.nc" name="BusPowerManager" provided="1" ref="0x40c05a90">
+      <component-ref nicename="tos.platforms.ucmini.chips.ms5607.HplMs5607C" qname="HplMs5607C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusPowerManager" ref="0x40c05a90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="powerOn" ref="0x40c05c68" scoped=""/>
+        <function-ref name="requestPower" ref="0x40c05d48" scoped=""/>
+        <function-ref name="powerOff" ref="0x40c05e28" scoped=""/>
+        <function-ref name="configure" ref="0x40c05f08" scoped=""/>
+        <function-ref name="releasePower" ref="0x40c04010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/HplMs5607C.nc" name="Resource" provided="1" ref="0x40c05340">
+      <component-ref nicename="tos.platforms.ucmini.chips.ms5607.HplMs5607C" qname="HplMs5607C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x40c05340" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40c05518" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40c055f8" scoped=""/>
+        <function-ref name="request" ref="0x40c056d8" scoped=""/>
+        <function-ref name="granted" ref="0x40c057b8" scoped=""/>
+        <function-ref name="isOwner" ref="0x40c05898" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/platforms/ucmini/chips/ms5607/HplMs5607C.nc" name="I2CPacket" provided="1" ref="0x40c09428">
+      <component-ref nicename="tos.platforms.ucmini.chips.ms5607.HplMs5607C" qname="HplMs5607C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2CPacket" ref="0x40c09428" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.I2CPacket" qname="I2CPacket"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref ref="0x40a71da8"/>
+            <typename><typedef-ref name="TI2CBasicAddr" ref="0x40a71f10"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c09a70" scoped=""/>
+        <function-ref name="writeDone" ref="0x40c06ce8" scoped=""/>
+        <function-ref name="write" ref="0x40c060a8" scoped=""/>
+        <function-ref name="readDone" ref="0x40c066c8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="45:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterC.nc" name="I2CPacket" provided="1" ref="0x40c03030">
+      <component-ref nicename="tos.chips.atm128.i2c.Atm128I2CMasterC" qname="HplMs5607C.I2CBus"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2CPacket" ref="0x40c03030" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.I2CPacket" qname="I2CPacket"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref ref="0x40a71da8"/>
+            <typename><typedef-ref name="TI2CBasicAddr" ref="0x40a71f10"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40c03678" scoped=""/>
+        <function-ref name="writeDone" ref="0x40c02900" scoped=""/>
+        <function-ref name="write" ref="0x40c03c98" scoped=""/>
+        <function-ref name="readDone" ref="0x40c022e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="36:/usr/src/tinyos/tos/platforms/ucmini/I2CBusPowerManagerC.nc" name="BusPowerManager" provided="1" ref="0x40b7df10">
+      <component-ref nicename="tos.platforms.ucmini.I2CBusPowerManagerC" qname="I2CBusPowerManagerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusPowerManager" ref="0x40b7df10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="powerOn" ref="0x40b7a108" scoped=""/>
+        <function-ref name="requestPower" ref="0x40b7a1e8" scoped=""/>
+        <function-ref name="powerOff" ref="0x40b7a2c8" scoped=""/>
+        <function-ref name="configure" ref="0x40b7a3a8" scoped=""/>
+        <function-ref name="releasePower" ref="0x40b7a488" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterC.nc" name="Resource" provided="1" ref="0x40c048d8">
+      <component-ref nicename="tos.chips.atm128.i2c.Atm128I2CMasterC" qname="HplMs5607C.I2CBus"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x40c048d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40c04ab0" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40c04b90" scoped=""/>
+        <function-ref name="request" ref="0x40c04c70" scoped=""/>
+        <function-ref name="granted" ref="0x40c04d50" scoped=""/>
+        <function-ref name="isOwner" ref="0x40c04e30" scoped=""/>
+      </interface-functions>
+    </interface><component loc="43(HplMs5607C.I2CBus):/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterC.nc" nicename="tos.chips.atm128.i2c.Atm128I2CMasterC" qname="HplMs5607C.I2CBus">
+      <documentation loc="32:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterC.nc">
+        <short>
+ The basic client abstraction of the I2C on the Atmega128.</short>
+        <long>
+ The basic client abstraction of the I2C on the Atmega128. I2C
+ device drivers should instantiate one of these to ensure
+ exclusive access to the I2C bus.
+
+ @author Philip Levis
+ @date   May 28, 2006
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.chips.atm128.i2c.Atm128I2CMasterC" qname="Atm128I2CMasterC"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="53:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterC.nc">
+          <from><interface-ref name="Resource" ref="0x40c048d8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x40aa3260" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="54:/usr/src/tinyos/tos/chips/atm128/i2c/Atm128I2CMasterC.nc">
+          <from><interface-ref name="I2CPacket" ref="0x40c03030" scoped=""/></from>
+          <to><interface-ref name="I2CPacket" ref="0x40aa3d98" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="35:/usr/src/tinyos/tos/platforms/ucmini/I2CBusPowerManagerC.nc" nicename="tos.platforms.ucmini.I2CBusPowerManagerC" qname="I2CBusPowerManagerC">
+      <configuration/>
+      <wiring>
+        <wire loc="45:/usr/src/tinyos/tos/platforms/ucmini/I2CBusPowerManagerC.nc">
+          <from><interface-ref name="BusPowerManager" ref="0x40b7df10" scoped=""/></from>
+          <to><interface-ref name="BusPowerManager" ref="0x40b78730" scoped=""/></to>
+        </wire>
+        <wire loc="43:/usr/src/tinyos/tos/platforms/ucmini/I2CBusPowerManagerC.nc">
+          <from><interface-ref name="GeneralIO" ref="0x40b78de8" scoped=""/></from>
+          <to><interface-ref name="PortF1" ref="0x404f0ce8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

@@ -1,0 +1,145 @@
+<?xml version="1.0" ?><component loc="6:SPlug2P.nc" nicename="SPlug2P" qname="SPlug2P">
+      <module/>
+    <specification><interface loc="14:SPlug2P.nc" name="tTimer" provided="0" ref="0x4096e6c0">
+      <component-ref nicename="SPlug2P" qname="SPlug2P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="tTimer" ref="0x4096e6c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40847720"/>
+            <typename><typedef-ref name="TMilli" ref="0x408478e8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4096b248" scoped=""/>
+        <function-ref name="fired" ref="0x4096c4e8" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4096cbf0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4096c998" scoped=""/>
+        <function-ref name="getdt" ref="0x4096b6f8" scoped=""/>
+        <function-ref name="gett0" ref="0x4096b4a0" scoped=""/>
+        <function-ref name="isRunning" ref="0x4096c740" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x4096ece8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4096cf10" scoped=""/>
+        <function-ref name="startOneShot" ref="0x4096c010" scoped=""/>
+        <function-ref name="stop" ref="0x4096c290" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="16:SPlug2P.nc" name="BusyWait" provided="0" ref="0x40967898">
+      <component-ref nicename="SPlug2P" qname="SPlug2P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="BusyWait" ref="0x40967898" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.BusyWait" qname="BusyWait"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40844010"/>
+            <typename><typedef-ref name="TMicro" ref="0x408441d8"/></typename>
+          </type-tag>
+          <type-int alignment="I:2" cname="unsigned int" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401eb0c0"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="wait" ref="0x40969010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:SPlug2P.nc" name="SPlug2" provided="1" ref="0x4095b238">
+      <component-ref nicename="SPlug2P" qname="SPlug2P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="SPlug2" ref="0x4095b238" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="SPlug2" qname="SPlug2"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4095b410" scoped=""/>
+        <function-ref name="readWattDone" ref="0x4095b4f0" scoped=""/>
+        <function-ref name="readWatt" ref="0x4095b5d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="11:SPlug2P.nc" name="Spi" provided="0" ref="0x40954ea8">
+      <component-ref nicename="SPlug2P" qname="SPlug2P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Spi" ref="0x40954ea8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="..spi.ADE7763" qname="ADE7763"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="Clk_set" ref="0x4095ad80" scoped=""/>
+        <function-ref name="cs_toggle" ref="0x4095a1a0" scoped=""/>
+        <function-ref name="writeData" ref="0x4095a280" scoped=""/>
+        <function-ref name="init" ref="0x4095a360" scoped=""/>
+        <function-ref name="powerOn" ref="0x4095a440" scoped=""/>
+        <function-ref name="powerOff" ref="0x4095a520" scoped=""/>
+        <function-ref name="Clk_clr" ref="0x4095a600" scoped=""/>
+        <function-ref name="writeCommand" ref="0x4095a6e0" scoped=""/>
+        <function-ref name="cs_low" ref="0x4095a7c0" scoped=""/>
+        <function-ref name="readData" ref="0x4095a8a0" scoped=""/>
+        <function-ref name="sck_toggle" ref="0x4095a980" scoped=""/>
+        <function-ref name="setMode" ref="0x4095aa60" scoped=""/>
+        <function-ref name="cs_high" ref="0x4095ab40" scoped=""/>
+        <function-ref name="miso_toggle" ref="0x4095a0c0" scoped=""/>
+        <function-ref name="mosi_toggle" ref="0x4095aca0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="13:SPlug2P.nc" name="eTimer" provided="0" ref="0x40970388">
+      <component-ref nicename="SPlug2P" qname="SPlug2P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="eTimer" ref="0x40970388" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40847720"/>
+            <typename><typedef-ref name="TMilli" ref="0x408478e8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x4096fe78" scoped=""/>
+        <function-ref name="fired" ref="0x4096f130" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x4096f838" scoped=""/>
+        <function-ref name="isOneShot" ref="0x4096f5e0" scoped=""/>
+        <function-ref name="getdt" ref="0x4096e348" scoped=""/>
+        <function-ref name="gett0" ref="0x4096e0f0" scoped=""/>
+        <function-ref name="isRunning" ref="0x4096f388" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x409709b0" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x4096fb58" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40970c30" scoped=""/>
+        <function-ref name="stop" ref="0x40970eb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="15:SPlug2P.nc" name="Leds" provided="0" ref="0x4096b938">
+      <component-ref nicename="SPlug2P" qname="SPlug2P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Leds" ref="0x4096b938" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x4096bb10" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x4096bbf0" scoped=""/>
+        <function-ref name="led1On" ref="0x4096bcd0" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x4096bdb0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x4096be90" scoped=""/>
+        <function-ref name="get" ref="0x4096a010" scoped=""/>
+        <function-ref name="led1Off" ref="0x4096a0f0" scoped=""/>
+        <function-ref name="led2Off" ref="0x4096a470" scoped=""/>
+        <function-ref name="set" ref="0x4096a1d0" scoped=""/>
+        <function-ref name="led0On" ref="0x4096a2b0" scoped=""/>
+        <function-ref name="led2On" ref="0x4096a390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="12:SPlug2P.nc" name="Timer" provided="0" ref="0x40959010">
+      <component-ref nicename="SPlug2P" qname="SPlug2P"/>
+      <type-interface alignment="I:2" size="I:2"><interface-ref name="Timer" ref="0x40959010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:2" size="I:2"><struct-ref ref="0x40847720"/>
+            <typename><typedef-ref name="TMilli" ref="0x408478e8"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40952b00" scoped=""/>
+        <function-ref name="fired" ref="0x40959d90" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x409524c0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40952268" scoped=""/>
+        <function-ref name="getdt" ref="0x40970010" scoped=""/>
+        <function-ref name="gett0" ref="0x40952d58" scoped=""/>
+        <function-ref name="isRunning" ref="0x40952010" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40959638" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x409527e0" scoped=""/>
+        <function-ref name="startOneShot" ref="0x409598b8" scoped=""/>
+        <function-ref name="stop" ref="0x40959b38" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

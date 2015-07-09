@@ -1,0 +1,79 @@
+<?xml version="1.0" ?><component abstract="" loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManagerP.nc" nicename="tos.chips.atm128rfa1.BusPowerManagerP" qname="BusPowerManagerP">
+      <parameters>
+        <constant loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManagerP.nc" name="highIsOn" ref="0x40ebd340">
+          <component-ref nicename="tos.chips.atm128rfa1.BusPowerManagerP" qname="BusPowerManagerP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManagerP.nc" name="initPin" ref="0x40ebd530">
+          <component-ref nicename="tos.chips.atm128rfa1.BusPowerManagerP" qname="BusPowerManagerP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x403246e8"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="37:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManagerP.nc" name="BusPowerManager" provided="1" ref="0x40ebd810">
+      <component-ref nicename="tos.chips.atm128rfa1.BusPowerManagerP" qname="BusPowerManagerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusPowerManager" ref="0x40ebd810" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="powerOn" ref="0x40ebd9e8" scoped=""/>
+        <function-ref name="requestPower" ref="0x40ebdac8" scoped=""/>
+        <function-ref name="powerOff" ref="0x40ebdba8" scoped=""/>
+        <function-ref name="configure" ref="0x40ebdc88" scoped=""/>
+        <function-ref name="releasePower" ref="0x40ebdd68" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManagerP.nc" name="Init" provided="1" ref="0x40eecc28">
+      <component-ref nicename="tos.chips.atm128rfa1.BusPowerManagerP" qname="BusPowerManagerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x40eecc28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40eece00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManagerP.nc" name="GeneralIO" provided="0" ref="0x40eec2a0">
+      <component-ref nicename="tos.chips.atm128rfa1.BusPowerManagerP" qname="BusPowerManagerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="GeneralIO" ref="0x40eec2a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x40eec478" scoped=""/>
+        <function-ref name="isInput" ref="0x40eec558" scoped=""/>
+        <function-ref name="toggle" ref="0x40eec638" scoped=""/>
+        <function-ref name="isOutput" ref="0x40eec718" scoped=""/>
+        <function-ref name="get" ref="0x40eec7f8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x40eec8d8" scoped=""/>
+        <function-ref name="set" ref="0x40eec9b8" scoped=""/>
+        <function-ref name="clr" ref="0x40eeca98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManagerP.nc" name="Timer" provided="0" ref="0x40eef010">
+      <component-ref nicename="tos.chips.atm128rfa1.BusPowerManagerP" qname="BusPowerManagerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x40eef010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421508"/>
+            <typename><typedef-ref name="TMilli" ref="0x404216d0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40eedb00" scoped=""/>
+        <function-ref name="fired" ref="0x40eefd90" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40eed4c0" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40eed268" scoped=""/>
+        <function-ref name="getdt" ref="0x40eec010" scoped=""/>
+        <function-ref name="gett0" ref="0x40eedd58" scoped=""/>
+        <function-ref name="isRunning" ref="0x40eed010" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40eef638" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40eed7e0" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40eef8b8" scoped=""/>
+        <function-ref name="stop" ref="0x40eefb38" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

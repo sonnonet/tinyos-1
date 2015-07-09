@@ -1,0 +1,5 @@
+digraph "tos.chips.sht21.Sht21RawHumidityC" {
+  n0x40cf0c80 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "Sht21ArbitratedC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.sht21.Sht21ArbitratedC.html"];
+  "n0x40cf0c80" -> "Sht21ArbitratedC" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+}

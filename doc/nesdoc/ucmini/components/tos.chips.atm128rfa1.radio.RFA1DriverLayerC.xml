@@ -1,0 +1,984 @@
+<?xml version="1.0" ?><component loc="39:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC">
+      <configuration/>
+      <wiring>
+        <wire loc="78:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="RadioCCA" ref="0x40c00460" scoped=""/></from>
+          <to><interface-ref name="RadioCCA" ref="0x40c15700" scoped=""/></to>
+        </wire>
+        <wire loc="88:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="PacketRSSI" ref="0x40c27618" scoped=""/></from>
+          <to><interface-ref name="PacketRSSI" ref="0x40c3c8a0" scoped=""/></to>
+        </wire>
+        <wire loc="75:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="RadioState" ref="0x40c03250" scoped=""/></from>
+          <to><interface-ref name="RadioState" ref="0x40c164f8" scoped=""/></to>
+        </wire>
+        <wire loc="85:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="PacketTransmitPower" ref="0x40bff288" scoped=""/></from>
+          <to><interface-ref name="PacketTransmitPower" ref="0x40c14538" scoped=""/></to>
+        </wire>
+        <wire loc="79:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="RadioPacket" ref="0x40c008c8" scoped=""/></from>
+          <to><interface-ref name="RadioPacket" ref="0x40c15b68" scoped=""/></to>
+        </wire>
+        <wire loc="77:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="RadioReceive" ref="0x40c00010" scoped=""/></from>
+          <to><interface-ref name="RadioReceive" ref="0x40c152b0" scoped=""/></to>
+        </wire>
+        <wire loc="101:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="Alarm" ref="0x40c20010" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x40cd21f8" scoped=""/></to>
+        </wire>
+        <wire loc="91:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="PacketTimeSyncOffset" ref="0x40c269e8" scoped=""/></from>
+          <to><interface-ref name="PacketTimeSyncOffset" ref="0x40c3bc90" scoped=""/></to>
+        </wire>
+        <wire loc="81:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="LocalTimeRadio" ref="0x40c22508" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x40cab110" scoped=""/></to>
+        </wire>
+        <wire loc="76:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="RadioSend" ref="0x40c03a28" scoped=""/></from>
+          <to><interface-ref name="RadioSend" ref="0x40c16cd0" scoped=""/></to>
+        </wire>
+        <wire loc="94:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="PacketLinkQuality" ref="0x40c25d98" scoped=""/></from>
+          <to><interface-ref name="PacketLinkQuality" ref="0x40c380e0" scoped=""/></to>
+        </wire>
+        <wire loc="96:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="LinkPacketMetadata" ref="0x40c22010" scoped=""/></from>
+          <to><interface-ref name="LinkPacketMetadata" ref="0x40c373c0" scoped=""/></to>
+        </wire>
+        <wire loc="83:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="Config" ref="0x40c305c8" scoped=""/></from>
+          <to><interface-ref name="Config" ref="0x40c1fac0" scoped=""/></to>
+        </wire>
+        <wire loc="86:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="TransmitPowerFlag" ref="0x40c30cb8" scoped=""/></from>
+          <to><interface-ref name="TransmitPowerFlag" ref="0x40c1cb60" scoped=""/></to>
+        </wire>
+        <wire loc="89:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="RSSIFlag" ref="0x40c2f3f0" scoped=""/></from>
+          <to><interface-ref name="RSSIFlag" ref="0x40c1b230" scoped=""/></to>
+        </wire>
+        <wire loc="92:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="TimeSyncFlag" ref="0x40c2fab0" scoped=""/></from>
+          <to><interface-ref name="TimeSyncFlag" ref="0x40c1b8f0" scoped=""/></to>
+        </wire>
+        <wire loc="95:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="PacketTimeStamp" ref="0x40c2e2c8" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStamp" ref="0x40c1e3a0" scoped=""/></to>
+        </wire>
+        <wire loc="98:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="LocalTime" ref="0x40c35ac8" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x40cab110" scoped=""/></to>
+        </wire>
+        <wire loc="99:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="SfdCapture" ref="0x40c34530" scoped=""/></from>
+          <to><interface-ref name="SfdCapture" ref="0x40b7d010" scoped=""/></to>
+        </wire>
+        <wire loc="103:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="Tasklet" ref="0x40c2d988" scoped=""/></from>
+          <to><interface-ref name="Tasklet" ref="0x408d1e18" scoped=""/></to>
+        </wire>
+        <wire loc="104:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="BusyWait" ref="0x40c35010" scoped=""/></from>
+          <to><interface-ref name="BusyWait" ref="0x40cbd340" scoped=""/></to>
+        </wire>
+        <wire loc="112:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x407fa100" scoped=""/></from>
+          <to><interface-ref name="PlatformInit" ref="0x40c17af0" scoped=""/></to>
+        </wire>
+        <wire loc="113:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x4047b4f0" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x40c16178" scoped=""/></to>
+        </wire>
+        <wire loc="116:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="McuPowerState" ref="0x40c2b010" scoped=""/></from>
+          <to><interface-ref name="McuPowerState" ref="0x4040c1a8" scoped=""/></to>
+        </wire>
+        <wire loc="117:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc">
+          <from><interface-ref name="McuPowerOverride" ref="0x4040be50" scoped=""/></from>
+          <to><interface-ref name="McuPowerOverride" ref="0x40c37780" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="46:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="RadioCCA" provided="1" ref="0x40c00460">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioCCA" ref="0x40c00460" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioCCA" qname="RadioCCA"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="done" ref="0x40c00638" scoped=""/>
+        <function-ref name="request" ref="0x40c00718" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="PacketRSSI" provided="1" ref="0x40c27618">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketRSSI" ref="0x40c27618" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketField" qname="PacketField"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c261f8" scoped=""/>
+        <function-ref name="get" ref="0x40c27f20" scoped=""/>
+        <function-ref name="isSet" ref="0x40c27c60" scoped=""/>
+        <function-ref name="set" ref="0x40c264b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="65:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="RSSIFlag" provided="0" ref="0x40c1b230">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RSSIFlag" ref="0x40c1b230" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketFlag" qname="PacketFlag"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c1b408" scoped=""/>
+        <function-ref name="get" ref="0x40c1b4e8" scoped=""/>
+        <function-ref name="setValue" ref="0x40c1b5c8" scoped=""/>
+        <function-ref name="set" ref="0x40c1b6a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="PacketTimeStamp" provided="0" ref="0x40c1e3a0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeStamp" ref="0x40c1e3a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T62khz" ref="0x4043b6e0"/>
+            <typename><typedef-ref name="TRadio" ref="0x40439890"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x40c1eea0" scoped=""/>
+        <function-ref name="clear" ref="0x40c1c280" scoped=""/>
+        <function-ref name="isValid" ref="0x40c1eaf0" scoped=""/>
+        <function-ref name="set" ref="0x40c1c630" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="RadioState" provided="1" ref="0x40c03250">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioState" ref="0x40c03250" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioState" qname="RadioState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="turnOff" ref="0x40c03428" scoped=""/>
+        <function-ref name="turnOn" ref="0x40c03508" scoped=""/>
+        <function-ref name="setChannel" ref="0x40c035e8" scoped=""/>
+        <function-ref name="done" ref="0x40c036c8" scoped=""/>
+        <function-ref name="standby" ref="0x40c037a8" scoped=""/>
+        <function-ref name="getChannel" ref="0x40c03888" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="PacketTransmitPower" provided="1" ref="0x40bff288">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTransmitPower" ref="0x40bff288" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketField" qname="PacketField"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40bffe50" scoped=""/>
+        <function-ref name="get" ref="0x40bffb90" scoped=""/>
+        <function-ref name="isSet" ref="0x40bff8d0" scoped=""/>
+        <function-ref name="set" ref="0x40c27150" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="RadioPacket" provided="1" ref="0x40c008c8">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioPacket" ref="0x40c008c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioPacket" qname="RadioPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c00aa0" scoped=""/>
+        <function-ref name="payloadLength" ref="0x40c00b80" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40c00c60" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x40c00d40" scoped=""/>
+        <function-ref name="headerLength" ref="0x40c00e20" scoped=""/>
+        <function-ref name="metadataLength" ref="0x40c00f00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="Config" provided="0" ref="0x40c1fac0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Config" ref="0x40c1fac0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverConfig" qname="RFA1DriverConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxPayloadLength" ref="0x40c1fd18" scoped=""/>
+        <function-ref name="headerLength" ref="0x40c1fdf8" scoped=""/>
+        <function-ref name="metadataLength" ref="0x40c1fed8" scoped=""/>
+        <function-ref name="requiresRssiCca" ref="0x40c1e010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="RadioReceive" provided="1" ref="0x40c00010">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioReceive" ref="0x40c00010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioReceive" qname="RadioReceive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40c001e8" scoped=""/>
+        <function-ref name="header" ref="0x40c002c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="Alarm" provided="1" ref="0x40c20010">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Alarm" ref="0x40c20010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T62khz" ref="0x4043b6e0"/>
+            <typename><typedef-ref name="TRadio" ref="0x40439890"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="tradio_size" ref="0x40439b38"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40c1f4e0" scoped=""/>
+        <function-ref name="fired" ref="0x40c20c78" scoped=""/>
+        <function-ref name="startAt" ref="0x40c1f1a0" scoped=""/>
+        <function-ref name="isRunning" ref="0x40c20ef0" scoped=""/>
+        <function-ref name="getAlarm" ref="0x40c1f758" scoped=""/>
+        <function-ref name="start" ref="0x40c20760" scoped=""/>
+        <function-ref name="stop" ref="0x40c20a00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="PacketTimeSyncOffset" provided="1" ref="0x40c269e8">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeSyncOffset" ref="0x40c269e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketField" qname="PacketField"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c255c8" scoped=""/>
+        <function-ref name="get" ref="0x40c25308" scoped=""/>
+        <function-ref name="isSet" ref="0x40c25048" scoped=""/>
+        <function-ref name="set" ref="0x40c25888" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="LocalTimeRadio" provided="1" ref="0x40c22508">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LocalTimeRadio" ref="0x40c22508" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T62khz" ref="0x4043b6e0"/>
+            <typename><typedef-ref name="TRadio" ref="0x40439890"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40c22b50" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="RadioSend" provided="1" ref="0x40c03a28">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioSend" ref="0x40c03a28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioSend" qname="RadioSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40c03c00" scoped=""/>
+        <function-ref name="ready" ref="0x40c03ce0" scoped=""/>
+        <function-ref name="sendDone" ref="0x40c03dc0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="PacketLinkQuality" provided="1" ref="0x40c25d98">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketLinkQuality" ref="0x40c25d98" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketField" qname="PacketField"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c23980" scoped=""/>
+        <function-ref name="get" ref="0x40c236c0" scoped=""/>
+        <function-ref name="isSet" ref="0x40c23400" scoped=""/>
+        <function-ref name="set" ref="0x40c23c40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="66:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="TimeSyncFlag" provided="0" ref="0x40c1b8f0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TimeSyncFlag" ref="0x40c1b8f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketFlag" qname="PacketFlag"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c1bac8" scoped=""/>
+        <function-ref name="get" ref="0x40c1bba8" scoped=""/>
+        <function-ref name="setValue" ref="0x40c1bc88" scoped=""/>
+        <function-ref name="set" ref="0x40c1bd68" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="64:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="TransmitPowerFlag" provided="0" ref="0x40c1cb60">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TransmitPowerFlag" ref="0x40c1cb60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketFlag" qname="PacketFlag"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c1cd38" scoped=""/>
+        <function-ref name="get" ref="0x40c1ce18" scoped=""/>
+        <function-ref name="setValue" ref="0x40c1cef8" scoped=""/>
+        <function-ref name="set" ref="0x40c1b010" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerC.nc" name="LinkPacketMetadata" provided="1" ref="0x40c22010">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerC" qname="RFA1DriverLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LinkPacketMetadata" ref="0x40c22010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LinkPacketMetadata" qname="LinkPacketMetadata"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="highChannelQuality" ref="0x40c221e8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="40:/usr/src/tinyos/tos/chips/atm128rfa1/timer/LocalTime62khzC.nc" name="LocalTime" provided="1" ref="0x40cab110">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.LocalTime62khzC" qname="LocalTime62khzC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LocalTime" ref="0x40cab110" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T62khz" ref="0x4043b6e0"/>
+            <typename><typedef-ref name="T62khz" ref="0x4043b888"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40cab758" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="77:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="PacketTimeStamp" provided="0" ref="0x40c2e2c8">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeStamp" ref="0x40c2e2c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T62khz" ref="0x4043b6e0"/>
+            <typename><typedef-ref name="TRadio" ref="0x40439890"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x40c2edc8" scoped=""/>
+        <function-ref name="clear" ref="0x40c2d198" scoped=""/>
+        <function-ref name="isValid" ref="0x40c2ea18" scoped=""/>
+        <function-ref name="set" ref="0x40c2d548" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="PacketTimeSyncOffset" provided="1" ref="0x40c3bc90">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeSyncOffset" ref="0x40c3bc90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketField" qname="PacketField"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c39868" scoped=""/>
+        <function-ref name="get" ref="0x40c395a8" scoped=""/>
+        <function-ref name="isSet" ref="0x40c392e8" scoped=""/>
+        <function-ref name="set" ref="0x40c39b28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="PlatformInit" provided="1" ref="0x40c17af0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PlatformInit" ref="0x40c17af0" scoped=""/></type-interface>
+      <attribute-value>
+        <attribute-ref name="exactlyonce" ref="0x403287d0"/>
+        <value-structured>
+          <type-tag alignment="I:1" size="I:0"><attribute-ref name="exactlyonce" ref="0x403287d0"/></type-tag>
+        </value-structured>
+      </attribute-value>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40c17cc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="McuPowerOverride" provided="1" ref="0x40c37780">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerOverride" ref="0x40c37780" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x40c379d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc" name="SfdCapture" provided="1" ref="0x40b7d010">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacC" qname="HplAtmRfa1TimerMacC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SfdCapture" ref="0x40b7d010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="setMode" ref="0x40b7ca68" scoped=""/>
+        <function-ref name="test" ref="0x40b7dde8" scoped=""/>
+        <function-ref name="fired" ref="0x40b7db70" scoped=""/>
+        <function-ref name="get" ref="0x40b7d658" scoped=""/>
+        <function-ref name="reset" ref="0x40b7c088" scoped=""/>
+        <function-ref name="getMode" ref="0x40b7cd08" scoped=""/>
+        <function-ref name="isOn" ref="0x40b7c7f0" scoped=""/>
+        <function-ref name="set" ref="0x40b7d8d0" scoped=""/>
+        <function-ref name="start" ref="0x40b7c300" scoped=""/>
+        <function-ref name="stop" ref="0x40b7c578" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="68:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="LocalTime" provided="0" ref="0x40c35ac8">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LocalTime" ref="0x40c35ac8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T62khz" ref="0x4043b6e0"/>
+            <typename><typedef-ref name="TRadio" ref="0x40439890"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x40c34128" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="RadioPacket" provided="1" ref="0x40c15b68">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioPacket" ref="0x40c15b68" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioPacket" qname="RadioPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c15d40" scoped=""/>
+        <function-ref name="payloadLength" ref="0x40c15e20" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x40c15f00" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x40c14010" scoped=""/>
+        <function-ref name="headerLength" ref="0x40c140f0" scoped=""/>
+        <function-ref name="metadataLength" ref="0x40c141d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/usr/src/tinyos/tos/system/RealMainP.nc" name="PlatformInit" provided="0" ref="0x407fa100">
+      <component-ref nicename="tos.system.RealMainP" qname="RealMainP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PlatformInit" ref="0x407fa100" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x407fa2d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="71:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="Config" provided="0" ref="0x40c305c8">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Config" ref="0x40c305c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverConfig" qname="RFA1DriverConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="maxPayloadLength" ref="0x40c307a0" scoped=""/>
+        <function-ref name="headerLength" ref="0x40c30880" scoped=""/>
+        <function-ref name="metadataLength" ref="0x40c30960" scoped=""/>
+        <function-ref name="requiresRssiCca" ref="0x40c30a40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="PacketTransmitPower" provided="1" ref="0x40c14538">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTransmitPower" ref="0x40c14538" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketField" qname="PacketField"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c3c118" scoped=""/>
+        <function-ref name="get" ref="0x40c14e40" scoped=""/>
+        <function-ref name="isSet" ref="0x40c14b80" scoped=""/>
+        <function-ref name="set" ref="0x40c3c3d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/chips/atm128rfa1/timer/Alarm62khz32C.nc" name="Alarm" provided="1" ref="0x40cd21f8">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.Alarm62khz32C" qname="RFA1DriverLayerC.Alarm62khz32C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Alarm" ref="0x40cd21f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Alarm" qname="Alarm"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref name="T62khz" ref="0x4043b6e0"/>
+            <typename><typedef-ref name="T62khz" ref="0x4043b888"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40cd96c8" scoped=""/>
+        <function-ref name="fired" ref="0x40cd2e60" scoped=""/>
+        <function-ref name="startAt" ref="0x40cd9388" scoped=""/>
+        <function-ref name="isRunning" ref="0x40cd9110" scoped=""/>
+        <function-ref name="getAlarm" ref="0x40cd9940" scoped=""/>
+        <function-ref name="start" ref="0x40cd2948" scoped=""/>
+        <function-ref name="stop" ref="0x40cd2be8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="RadioCCA" provided="1" ref="0x40c15700">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioCCA" ref="0x40c15700" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioCCA" qname="RadioCCA"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="done" ref="0x40c158d8" scoped=""/>
+        <function-ref name="request" ref="0x40c159b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/usr/src/tinyos/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x4047b4f0">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SoftwareInit" ref="0x4047b4f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x4047b6c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="LinkPacketMetadata" provided="1" ref="0x40c373c0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LinkPacketMetadata" ref="0x40c373c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.LinkPacketMetadata" qname="LinkPacketMetadata"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="highChannelQuality" ref="0x40c37598" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="BusyWait" provided="0" ref="0x40c35010">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusyWait" ref="0x40c35010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.BusyWait" qname="BusyWait"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421d88"/>
+            <typename><typedef-ref name="TMicro" ref="0x40420010"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="wait" ref="0x40c35760" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="RadioReceive" provided="1" ref="0x40c152b0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioReceive" ref="0x40c152b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioReceive" qname="RadioReceive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x40c15488" scoped=""/>
+        <function-ref name="header" ref="0x40c15568" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="PacketRSSI" provided="1" ref="0x40c3c8a0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketRSSI" ref="0x40c3c8a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketField" qname="PacketField"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c3b4a0" scoped=""/>
+        <function-ref name="get" ref="0x40c3b1e0" scoped=""/>
+        <function-ref name="isSet" ref="0x40c3cee8" scoped=""/>
+        <function-ref name="set" ref="0x40c3b760" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="79:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="Tasklet" provided="0" ref="0x40c2d988">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Tasklet" ref="0x40c2d988" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.Tasklet" qname="Tasklet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="schedule" ref="0x40c2db60" scoped=""/>
+        <function-ref name="suspend" ref="0x40c2dc40" scoped=""/>
+        <function-ref name="resume" ref="0x40c2dd20" scoped=""/>
+        <function-ref name="run" ref="0x40c2de00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="RadioSend" provided="1" ref="0x40c16cd0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioSend" ref="0x40c16cd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioSend" qname="RadioSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x40c16ea8" scoped=""/>
+        <function-ref name="ready" ref="0x40c15010" scoped=""/>
+        <function-ref name="sendDone" ref="0x40c150f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/lib/rfxlink/util/TaskletC.nc" name="Tasklet" provided="1" ref="0x408d1e18">
+      <component-ref nicename="tos.lib.rfxlink.util.TaskletC" qname="TaskletC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Tasklet" ref="0x408d1e18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.Tasklet" qname="Tasklet"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="schedule" ref="0x408ce010" scoped=""/>
+        <function-ref name="suspend" ref="0x408ce0f0" scoped=""/>
+        <function-ref name="resume" ref="0x408ce1d0" scoped=""/>
+        <function-ref name="run" ref="0x408ce2b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="69:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="SfdCapture" provided="0" ref="0x40c34530">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SfdCapture" ref="0x40c34530" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.timer.AtmegaCapture" qname="AtmegaCapture"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x401ea848"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="setMode" ref="0x40c30010" scoped=""/>
+        <function-ref name="test" ref="0x40c32320" scoped=""/>
+        <function-ref name="fired" ref="0x40c320a8" scoped=""/>
+        <function-ref name="get" ref="0x40c34b78" scoped=""/>
+        <function-ref name="reset" ref="0x40c32598" scoped=""/>
+        <function-ref name="getMode" ref="0x40c302b0" scoped=""/>
+        <function-ref name="isOn" ref="0x40c32d00" scoped=""/>
+        <function-ref name="set" ref="0x40c34df0" scoped=""/>
+        <function-ref name="start" ref="0x40c32810" scoped=""/>
+        <function-ref name="stop" ref="0x40c32a88" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc" name="McuPowerOverride" provided="0" ref="0x4040be50">
+      <component-ref nicename="tos.chips.atm128rfa1.McuSleepC" qname="McuSleepC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerOverride" ref="0x4040be50" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x4040e050" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="80:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="McuPowerState" provided="0" ref="0x40c2b010">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerState" ref="0x40c2b010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerState" qname="McuPowerState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="update" ref="0x40c2b1e8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="74:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="RSSIFlag" provided="0" ref="0x40c2f3f0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RSSIFlag" ref="0x40c2f3f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketFlag" qname="PacketFlag"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c2f5c8" scoped=""/>
+        <function-ref name="get" ref="0x40c2f6a8" scoped=""/>
+        <function-ref name="setValue" ref="0x40c2f788" scoped=""/>
+        <function-ref name="set" ref="0x40c2f868" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/chips/atm128rfa1/timer/BusyWaitMicroC.nc" name="BusyWait" provided="1" ref="0x40cbd340">
+      <component-ref nicename="tos.chips.atm128rfa1.timer.BusyWaitMicroC" qname="BusyWaitMicroC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusyWait" ref="0x40cbd340" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.BusyWait" qname="BusyWait"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40421d88"/>
+            <typename><typedef-ref name="TMicro" ref="0x40420010"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="wait" ref="0x40cbda90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc" name="McuPowerState" provided="1" ref="0x4040c1a8">
+      <component-ref nicename="tos.chips.atm128rfa1.McuSleepC" qname="McuSleepC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerState" ref="0x4040c1a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerState" qname="McuPowerState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="update" ref="0x4040c380" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="RadioState" provided="1" ref="0x40c164f8">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioState" ref="0x40c164f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioState" qname="RadioState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="turnOff" ref="0x40c166d0" scoped=""/>
+        <function-ref name="turnOn" ref="0x40c167b0" scoped=""/>
+        <function-ref name="setChannel" ref="0x40c16890" scoped=""/>
+        <function-ref name="done" ref="0x40c16970" scoped=""/>
+        <function-ref name="standby" ref="0x40c16a50" scoped=""/>
+        <function-ref name="getChannel" ref="0x40c16b30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="SoftwareInit" provided="1" ref="0x40c16178">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SoftwareInit" ref="0x40c16178" scoped=""/></type-interface>
+      <attribute-value>
+        <attribute-ref name="exactlyonce" ref="0x403287d0"/>
+        <value-structured>
+          <type-tag alignment="I:1" size="I:0"><attribute-ref name="exactlyonce" ref="0x403287d0"/></type-tag>
+        </value-structured>
+      </attribute-value>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40c16350" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="75:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="TimeSyncFlag" provided="0" ref="0x40c2fab0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TimeSyncFlag" ref="0x40c2fab0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketFlag" qname="PacketFlag"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c2fc88" scoped=""/>
+        <function-ref name="get" ref="0x40c2fd68" scoped=""/>
+        <function-ref name="setValue" ref="0x40c2fe48" scoped=""/>
+        <function-ref name="set" ref="0x40c2ff28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="73:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="TransmitPowerFlag" provided="0" ref="0x40c30cb8">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TransmitPowerFlag" ref="0x40c30cb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketFlag" qname="PacketFlag"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c30e90" scoped=""/>
+        <function-ref name="get" ref="0x40c2f010" scoped=""/>
+        <function-ref name="setValue" ref="0x40c2f0f0" scoped=""/>
+        <function-ref name="set" ref="0x40c2f1d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" name="PacketLinkQuality" provided="1" ref="0x40c380e0">
+      <component-ref nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketLinkQuality" ref="0x40c380e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketField" qname="PacketField"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x40039b78"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x40c38ca8" scoped=""/>
+        <function-ref name="get" ref="0x40c389e8" scoped=""/>
+        <function-ref name="isSet" ref="0x40c38728" scoped=""/>
+        <function-ref name="set" ref="0x40c37010" scoped=""/>
+      </interface-functions>
+    </interface><component loc="37:/usr/src/tinyos/tos/chips/atm128rfa1/timer/BusyWaitMicroC.nc" nicename="tos.chips.atm128rfa1.timer.BusyWaitMicroC" qname="BusyWaitMicroC">
+      <configuration/>
+      <wiring>
+        <wire loc="45:/usr/src/tinyos/tos/chips/atm128rfa1/timer/BusyWaitMicroC.nc">
+          <from><interface-ref name="BusyWait" ref="0x40cbd340" scoped=""/></from>
+          <to><interface-ref name="BusyWait" ref="0x40cbb950" scoped=""/></to>
+        </wire>
+        <wire loc="46:/usr/src/tinyos/tos/chips/atm128rfa1/timer/BusyWaitMicroC.nc">
+          <from><interface-ref name="Counter" ref="0x40cba430" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x40cb0320" scoped=""/></to>
+        </wire>
+        <wire loc="53:/usr/src/tinyos/tos/chips/atm128rfa1/timer/BusyWaitMicroC.nc">
+          <from><interface-ref name="CounterFrom" ref="0x40cae5f8" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x4073cb68" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="37(RFA1DriverLayerC.Alarm62khz32C):/usr/src/tinyos/tos/chips/atm128rfa1/timer/Alarm62khz32C.nc" nicename="tos.chips.atm128rfa1.timer.Alarm62khz32C" qname="RFA1DriverLayerC.Alarm62khz32C">
+      <instance number="0">
+        <component-ref nicename="tos.chips.atm128rfa1.timer.Alarm62khz32C" qname="Alarm62khz32C"/>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="45:/usr/src/tinyos/tos/chips/atm128rfa1/timer/Alarm62khz32C.nc">
+          <from><interface-ref name="Alarm" ref="0x40cd21f8" scoped=""/></from>
+          <to><interface-ref name="Alarm" ref="0x4117cad0" scoped=""/></to>
+        </wire>
+        <wire loc="48:/usr/src/tinyos/tos/chips/atm128rfa1/timer/Alarm62khz32C.nc">
+          <from><interface-ref name="TimerInit" ref="0x40487010" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4117c698" scoped=""/></to>
+        </wire>
+        <wire loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/timer/Alarm62khz32C.nc">
+          <from><interface-ref name="AtmegaCounter" ref="0x4117a558" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x40b5e828" scoped=""/></to>
+        </wire>
+        <wire loc="52:/usr/src/tinyos/tos/chips/atm128rfa1/timer/Alarm62khz32C.nc">
+          <from><interface-ref name="AtmegaCompare" ref="0x41177550" scoped=""/></from>
+          <to><interface-ref name="Compare" ref="0x40b81c28" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="38:/usr/src/tinyos/tos/chips/atm128rfa1/timer/LocalTime62khzC.nc" nicename="tos.chips.atm128rfa1.timer.LocalTime62khzC" qname="LocalTime62khzC">
+      <configuration/>
+      <wiring>
+        <wire loc="49:/usr/src/tinyos/tos/chips/atm128rfa1/timer/LocalTime62khzC.nc">
+          <from><interface-ref name="LocalTime" ref="0x40cab110" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x40caa538" scoped=""/></to>
+        </wire>
+        <wire loc="48:/usr/src/tinyos/tos/chips/atm128rfa1/timer/LocalTime62khzC.nc">
+          <from><interface-ref name="Counter" ref="0x40caaed0" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x40b65128" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="56:/usr/src/tinyos/tos/system/RealMainP.nc" nicename="tos.system.RealMainP" qname="RealMainP" safe="">
+      <documentation loc="49:/usr/src/tinyos/tos/system/RealMainP.nc">
+        <short>
+ RealMain implements the TinyOS boot sequence, as documented in TEP 107.</short>
+        <long>
+ RealMain implements the TinyOS boot sequence, as documented in TEP 107.
+
+ @author Philip Levis
+ @date   January 17 2005
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="38:/usr/src/tinyos/tos/lib/rfxlink/util/TaskletC.nc" nicename="tos.lib.rfxlink.util.TaskletC" qname="TaskletC">
+      <module/>
+    </component><component loc="40:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc" nicename="tos.chips.atm128rfa1.McuSleepC" qname="McuSleepC" safe="">
+      <documentation loc="34:/usr/src/tinyos/tos/chips/atm128rfa1/McuSleepC.nc">
+        <short>
+ </short>
+        <long>
+ @author Philip Levis
+ @author Robert Szewczyk
+ @author Janos Sallai &lt;janos.sallai@vanderbilt.edu&gt;
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="56:/usr/src/tinyos/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="1:/usr/src/tinyos/tos/platforms/ucmini/hardware.h">
+        <short>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</short>
+        <long>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
+  downloading, copying, installing or using the software you agree to
+  this license.  If you do not agree to this license, do not download,
+  install, copy or use the software.
+
+  Copyright (c) 2004-2005 Crossbow Technology, Inc.
+  Copyright (c) 2002-2003 Intel Corporation.
+  Copyright (c) 2000-2003 The Regents of the University  of California.    
+  All rights reserved.
+
+  Permission to use, copy, modify, and distribute this software and its
+  documentation for any purpose, without fee, and without written
+  agreement is hereby granted, provided that the above copyright
+  notice, the (updated) modification history and the author appear in
+  all copies of this source code.
+
+  Permission is also granted to distribute this software under the
+  standard BSD license as contained in the TinyOS distribution.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+  PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE INTEL OR ITS
+  CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+  PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+  LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  @author Jason Hill, Philip Levis, Nelson Lee, David Gay
+  @author Alan Broad &lt;abroad@xbow.com&gt;
+  @author Matt Miller &lt;mmiller@xbow.com&gt;
+  @author Martin Turon &lt;mturon@xbow.com&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x4047e8b0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x4047d778" scoped=""/></to>
+        </wire>
+        <wire loc="67:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x4047db10" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x4032fb58" scoped=""/></to>
+        </wire>
+        <wire loc="68:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x407fa100" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x4047bcc8" scoped=""/></to>
+        </wire>
+        <wire loc="71:/usr/src/tinyos/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x407fa508" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x4047b4f0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="43:/usr/src/tinyos/tos/chips/atm128rfa1/radio/RFA1DriverLayerP.nc" nicename="tos.chips.atm128rfa1.radio.RFA1DriverLayerP" qname="RFA1DriverLayerP">
+      <module/>
+    </component><component loc="37:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc" nicename="tos.chips.atm128rfa1.timer.HplAtmRfa1TimerMacC" qname="HplAtmRfa1TimerMacC">
+      <configuration/>
+      <wiring>
+        <wire loc="51:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="Counter" ref="0x40b5e828" scoped=""/></from>
+          <to><interface-ref name="Counter" ref="0x40b7b8b0" scoped=""/></to>
+        </wire>
+        <wire loc="55:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="SfdCapture" ref="0x40b7d010" scoped=""/></from>
+          <to><interface-ref name="SfdCapture" ref="0x40b955a8" scoped=""/></to>
+        </wire>
+        <wire loc="52:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="Compare" ref="0x40b81c28" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareA" ref="0x40b769c8" scoped=""/></to>
+        </wire>
+        <wire loc="53:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="Compare" ref="0x40b81c28" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareB" ref="0x40b73e10" scoped=""/></to>
+        </wire>
+        <wire loc="54:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="Compare" ref="0x40b81c28" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="CompareC" ref="0x40b971a0" scoped=""/></to>
+        </wire>
+        <wire loc="58:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="McuPowerState" ref="0x40b92958" scoped=""/></from>
+          <to><interface-ref name="McuPowerState" ref="0x4040c1a8" scoped=""/></to>
+        </wire>
+        <wire loc="59:/usr/src/tinyos/tos/chips/atm128rfa1/timer/HplAtmRfa1TimerMacC.nc">
+          <from><interface-ref name="McuPowerOverride" ref="0x4040be50" scoped=""/></from>
+          <to><interface-ref name="McuPowerOverride" ref="0x40b92568" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

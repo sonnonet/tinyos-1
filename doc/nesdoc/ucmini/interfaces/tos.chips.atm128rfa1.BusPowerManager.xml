@@ -1,0 +1,114 @@
+<?xml version="1.0" ?><interfacedef loc="35:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc" nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager">
+      <function event="" loc="63:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc" name="powerOn" provided="0" ref="0x40dbbe40">
+        <documentation loc="58:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc">
+          <short>
+ This event is called when the bus is powered on and the maximum 
+ specified startup time has elapsed.</short>
+          <long>
+ This event is called when the bus is powered on and the maximum 
+ specified startup time has elapsed. Implementations should
+ initialize the chip or go into power down mode.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="48:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc" name="requestPower" provided="0" ref="0x40dbb4f8">
+        <documentation loc="44:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc">
+          <short>
+ Requests to power up this bus.</short>
+          <long>
+ Requests to power up this bus. The bus might be already powered
+ up, in which case the powerOn event will not come.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="69:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc" name="powerOff" provided="0" ref="0x40db93a0">
+        <documentation loc="65:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc">
+          <short>
+ This event is called when there are no outstanding power requests
+ and the keepalive timeout value has expired.</short>
+          <long>
+ This event is called when there are no outstanding power requests
+ and the keepalive timeout value has expired.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="42:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc" name="configure" provided="0" ref="0x40dbb010">
+        <documentation loc="37:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc">
+          <short>
+ Sets the startup and keepalive timeout values in milliseconds.</short>
+          <long>
+ Sets the startup and keepalive timeout values in milliseconds.
+ Only the largest numbers are remembered, as the bus might not
+ be operational if one of the chips on it is not operational.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="42:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc" name="startup" ref="0x40dbebb0">
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="42:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc" name="keepalive" ref="0x40dbede0">
+            <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+              <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="56:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc" name="releasePower" provided="0" ref="0x40dbb978">
+        <documentation loc="50:/usr/src/tinyos/tos/chips/atm128rfa1/BusPowerManager.nc">
+          <short>
+ Releases the power up request.</short>
+          <long>
+ Releases the power up request. You must call this command exactly
+ the same number of times as you have called requestPower. If other
+ chips still want to keep the power (e.g. a measurement is in
+ progress), then powerOff will not be called.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

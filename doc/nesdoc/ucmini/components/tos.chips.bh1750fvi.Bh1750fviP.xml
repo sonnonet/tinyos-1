@@ -1,0 +1,114 @@
+<?xml version="1.0" ?><component loc="35:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviP.nc" nicename="tos.chips.bh1750fvi.Bh1750fviP" qname="Bh1750fviP">
+      <module/>
+    <specification><interface loc="36:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviP.nc" name="Light" provided="1" ref="0x40a74b20">
+      <component-ref nicename="tos.chips.bh1750fvi.Bh1750fviP" qname="Bh1750fviP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Light" ref="0x40a74b20" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x401ea1e8"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40a711e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40a71438" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviP.nc" name="BusPowerManager" provided="0" ref="0x40a84e08">
+      <component-ref nicename="tos.chips.bh1750fvi.Bh1750fviP" qname="Bh1750fviP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusPowerManager" ref="0x40a84e08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128rfa1.BusPowerManager" qname="BusPowerManager"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="powerOn" ref="0x40a86010" scoped=""/>
+        <function-ref name="requestPower" ref="0x40a860f0" scoped=""/>
+        <function-ref name="powerOff" ref="0x40a861d0" scoped=""/>
+        <function-ref name="configure" ref="0x40a862b0" scoped=""/>
+        <function-ref name="releasePower" ref="0x40a86390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="121:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviP.nc" name="startTimeout" provided="0" ref="0x40a9b010">
+      <component-ref nicename="tos.chips.bh1750fvi.Bh1750fviP" qname="Bh1750fviP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="startTimeout" ref="0x40a9b010" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x40a9b1e8" scoped=""/>
+        <function-ref name="runTask" ref="0x40a9b2c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviP.nc" name="Init" provided="1" ref="0x40a86520">
+      <component-ref nicename="tos.chips.bh1750fvi.Bh1750fviP" qname="Bh1750fviP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x40a86520" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x40a866f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviP.nc" name="I2CResource" provided="0" ref="0x40a89810">
+      <component-ref nicename="tos.chips.bh1750fvi.Bh1750fviP" qname="Bh1750fviP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2CResource" ref="0x40a89810" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x40a899e8" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x40a89ac8" scoped=""/>
+        <function-ref name="request" ref="0x40a89ba8" scoped=""/>
+        <function-ref name="granted" ref="0x40a89c88" scoped=""/>
+        <function-ref name="isOwner" ref="0x40a89d68" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviP.nc" name="I2CPacket" provided="0" ref="0x40a8b528">
+      <component-ref nicename="tos.chips.bh1750fvi.Bh1750fviP" qname="Bh1750fviP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="I2CPacket" ref="0x40a8b528" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.I2CPacket" qname="I2CPacket"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:0"><struct-ref ref="0x40a71da8"/>
+            <typename><typedef-ref name="TI2CBasicAddr" ref="0x40a71f10"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x40a8bb70" scoped=""/>
+        <function-ref name="writeDone" ref="0x40a70e20" scoped=""/>
+        <function-ref name="write" ref="0x40a701e0" scoped=""/>
+        <function-ref name="readDone" ref="0x40a70800" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="102:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviP.nc" name="signalReadDone" provided="0" ref="0x40aa0200">
+      <component-ref nicename="tos.chips.bh1750fvi.Bh1750fviP" qname="Bh1750fviP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="signalReadDone" ref="0x40aa0200" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x40aa03d8" scoped=""/>
+        <function-ref name="runTask" ref="0x40aa04b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/usr/src/tinyos/tos/chips/bh1750fvi/Bh1750fviP.nc" name="Timer" provided="0" ref="0x40a6f520">
+      <component-ref nicename="tos.chips.bh1750fvi.Bh1750fviP" qname="Bh1750fviP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x40a6f520" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x40453928"/>
+            <typename><typedef-ref name="TMilli" ref="0x40453af0"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x40a89048" scoped=""/>
+        <function-ref name="fired" ref="0x40a8e2c0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x40a8e9c8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x40a8e770" scoped=""/>
+        <function-ref name="getdt" ref="0x40a894f8" scoped=""/>
+        <function-ref name="gett0" ref="0x40a892a0" scoped=""/>
+        <function-ref name="isRunning" ref="0x40a8e518" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x40a6fb48" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x40a8ece8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x40a6fdc8" scoped=""/>
+        <function-ref name="stop" ref="0x40a8e068" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

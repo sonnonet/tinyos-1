@@ -1,0 +1,139 @@
+<?xml version="1.0" ?><component loc="112:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP">
+      <documentation loc="102:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc">
+        <short> 
+ Private component of the Atmega1281 serial port HPL.</short>
+        <long> 
+ Private component of the Atmega1281 serial port HPL.
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+ @author David Gay
+ @author Janos Sallai &lt;janos.sallai@vanderbilt.edu&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="114:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" name="Uart0Init" provided="1" ref="0x406e9458">
+      <component-ref nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Uart0Init" ref="0x406e9458" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x406e9630" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="117:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" name="HplUart0" provided="1" ref="0x406e6350">
+      <component-ref nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplUart0" ref="0x406e6350" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="isTxEmpty" ref="0x406e6528" scoped=""/>
+        <function-ref name="enableRxIntr" ref="0x406e6608" scoped=""/>
+        <function-ref name="rxDone" ref="0x406e66e8" scoped=""/>
+        <function-ref name="txDone" ref="0x406e67c8" scoped=""/>
+        <function-ref name="enableTxIntr" ref="0x406e68a8" scoped=""/>
+        <function-ref name="disableTxIntr" ref="0x406e6988" scoped=""/>
+        <function-ref name="disableRxIntr" ref="0x406e6a68" scoped=""/>
+        <function-ref name="isRxEmpty" ref="0x406e6b48" scoped=""/>
+        <function-ref name="tx" ref="0x406e6c28" scoped=""/>
+        <function-ref name="rx" ref="0x406e6d08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="124:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" name="McuPowerOverride" provided="1" ref="0x406e49f8">
+      <component-ref nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerOverride" ref="0x406e49f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerOverride" qname="McuPowerOverride"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="lowestState" ref="0x406e4bd0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="119:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" name="Uart1Init" provided="1" ref="0x406e6f18">
+      <component-ref nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Uart1Init" ref="0x406e6f18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x406e5108" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="122:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" name="HplUart1" provided="1" ref="0x406e5dc8">
+      <component-ref nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplUart1" ref="0x406e5dc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="isTxEmpty" ref="0x406e4010" scoped=""/>
+        <function-ref name="enableRxIntr" ref="0x406e40f0" scoped=""/>
+        <function-ref name="rxDone" ref="0x406e41d0" scoped=""/>
+        <function-ref name="txDone" ref="0x406e42b0" scoped=""/>
+        <function-ref name="enableTxIntr" ref="0x406e4390" scoped=""/>
+        <function-ref name="disableTxIntr" ref="0x406e4470" scoped=""/>
+        <function-ref name="disableRxIntr" ref="0x406e4550" scoped=""/>
+        <function-ref name="isRxEmpty" ref="0x406e4630" scoped=""/>
+        <function-ref name="tx" ref="0x406e4710" scoped=""/>
+        <function-ref name="rx" ref="0x406e47f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="116:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" name="Uart0RxControl" provided="1" ref="0x406e9dd8">
+      <component-ref nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Uart0RxControl" ref="0x406e9dd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x406e6010" scoped=""/>
+        <function-ref name="stop" ref="0x406e60f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="120:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" name="Uart1TxControl" provided="1" ref="0x406e5380">
+      <component-ref nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Uart1TxControl" ref="0x406e5380" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x406e5558" scoped=""/>
+        <function-ref name="stop" ref="0x406e5638" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="121:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" name="Uart1RxControl" provided="1" ref="0x406e58b0">
+      <component-ref nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Uart1RxControl" ref="0x406e58b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x406e5a88" scoped=""/>
+        <function-ref name="stop" ref="0x406e5b68" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="126:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" name="Atm128Calibrate" provided="0" ref="0x406e4dc8">
+      <component-ref nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128Calibrate" ref="0x406e4dc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.timer.Atm128Calibrate" qname="Atm128Calibrate"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="baudrateRegister" ref="0x406e3010" scoped=""/>
+        <function-ref name="cyclesPerJiffy" ref="0x406e30f0" scoped=""/>
+        <function-ref name="calibrateMicro" ref="0x406e31d0" scoped=""/>
+        <function-ref name="actualMicro" ref="0x406e32b0" scoped=""/>
+        <function-ref name="adcPrescaler" ref="0x406e3390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="127:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" name="McuPowerState" provided="0" ref="0x406e3578">
+      <component-ref nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerState" ref="0x406e3578" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerState" qname="McuPowerState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="update" ref="0x406e3750" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="115:/usr/src/tinyos/tos/chips/atm128rfa1/HplAtm128UartP.nc" name="Uart0TxControl" provided="1" ref="0x406e98a8">
+      <component-ref nicename="tos.chips.atm128rfa1.HplAtm128UartP" qname="HplAtm128UartP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Uart0TxControl" ref="0x406e98a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x406e9a80" scoped=""/>
+        <function-ref name="stop" ref="0x406e9b60" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

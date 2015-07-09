@@ -1,0 +1,47 @@
+// $Id: BlinkC.nc,v 1.6 2010-06-29 22:07:16 scipio Exp $
+
+#include "Timer.h"
+
+module BlinkC @safe()
+{
+  uses interface Timer<TMilli> as Timer0;
+  uses interface Timer<TMilli> as Timer1;
+  uses interface Timer<TMilli> as Timer2;
+  uses interface Leds;
+  uses interface Boot;
+
+	uses interface StdControl as SerialControl;
+	uses interface UartStream;
+}
+implementation
+{ 
+	int cnt=0;
+  event void Boot.booted()
+  {
+    call Timer0.startPeriodic( 512 );
+  }
+ 
+  event void Timer0.fired()
+  {
+//		call Leds.set(cnt;
+//		call Leds.led0Toggle();
+//		call Leds.led1Toggle();
+		call Leds.led2Toggle();
+		cnt++;
+  }
+  
+  event void Timer1.fired()
+  { 
+  }
+  
+  event void Timer2.fired()
+  {
+  }
+
+	async event void UartStream.receivedByte(uint8_t byte){
+	}
+	async event void UartStream.sendDone(uint8_t* buf, uint16_t len, error_t error){
+	}
+	async event void UartStream.receiveDone(uint8_t* buf, uint16_t len, error_t error){
+	}
+}
