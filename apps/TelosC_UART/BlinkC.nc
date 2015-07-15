@@ -1,4 +1,5 @@
 // $Id: BlinkC.nc,v 1.6 2010-06-29 22:07:16 scipio Exp $
+// 
 
 #include "Timer.h"
 
@@ -14,20 +15,17 @@ module BlinkC @safe()
 	uses interface UartStream;
 }
 implementation
-{ 
-	uint8_t SEND[6] = "ABC\n\r";
-	int cnt=0;
+{
+  uint8_t SEND[6] = "ABC\n\r";  // Uart Test Charter
+  int cnt=0;
   event void Boot.booted()
   {
     call Timer0.startPeriodic( 512 );
-		call SerialControl.start();
+    call SerialControl.start();
   }
  
   event void Timer0.fired()
   {
-//		call Leds.set(cnt;
-//		call Leds.led0Toggle();
-//		call Leds.led1Toggle();
 		call Leds.led2Toggle();
 		call UartStream.send(SEND, 6);
 		cnt++;
