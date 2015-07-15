@@ -1,5 +1,7 @@
-// $Id: BlinkAppC.nc,v 1.6 2010-06-29 22:07:14 scipio Exp $
-
+// $Id: BlinkAppC.nc,v 1.6 2015-07-01
+// Edited by TJ
+// work with Sonnonet & KETI 
+// 
 configuration BlinkAppC
 {
 }
