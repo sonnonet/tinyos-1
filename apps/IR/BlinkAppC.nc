@@ -16,5 +16,8 @@ implementation
   BlinkC.Timer1 -> Timer1;
   BlinkC.Timer2 -> Timer2;
   BlinkC.Leds -> LedsC;
+
+	components IRRemoteConC;
+	BlinkC.SplitControl -> IRRemoteConC;
 }
 

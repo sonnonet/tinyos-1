@@ -13,8 +13,8 @@ configuration IRRemoteConC
 {
   provides {
     interface SplitControl;
-    interface Read<uint16_t>;
-    interface SensingCommand;
+//    interface Read<uint16_t>;
+//    interface SensingCommand;
   }
 }
 
@@ -22,8 +22,8 @@ implementation
 {
   components IRRemoteConP as IRP;
   SplitControl = IRP;
-  Read = IRP;
-  SensingCommand = IRP;
+//  Read = IRP;
+//  SensingCommand = IRP;
 
   components LedsC ,
          new TimerMilliC() as TimerC,
@@ -33,6 +33,29 @@ implementation
   IRP.Leds -> LedsC;
 
 #if defined(PLATFORM_TELOSB)
+  components HplMsp430InterruptC;
+  components new Msp430InterruptC() as port27i;
+  port27i.HplInterrupt -> HplMsp430InterruptC.Port27;
+  IRP.Int27 -> port27i;
+
+  components HplMsp430GeneralIOC , new Msp430GpioC() as port27g;
+  port27g.HplGeneralIO -> HplMsp430GeneralIOC.Port27;
+  IRP.IO27 -> port27g;
+  components new Msp430GpioC() as port21g;
+  port21g.HplGeneralIO -> HplMsp430GeneralIOC.Port21;
+  IRP.IO21 -> port21g;
+  components new Msp430GpioC() as port50g;
+  port50g.HplGeneralIO -> HplMsp430GeneralIOC.Port50;
+  IRP.IO50 -> port50g;
+  components new Msp430GpioC() as port51g;
+  port51g.HplGeneralIO -> HplMsp430GeneralIOC.Port51;
+  IRP.IO51 -> port51g;
+  components new Msp430GpioC() as port52g;
+  port52g.HplGeneralIO -> HplMsp430GeneralIOC.Port52;
+  IRP.IO52 -> port52g;
+  components new Msp430GpioC() as port53g;
+  port53g.HplGeneralIO -> HplMsp430GeneralIOC.Port53;
+  IRP.IO53 -> port53g;
   //not implementation
 #elif defined(PLATFORM_MANGO2)
   components HplMG245XInterruptC, 

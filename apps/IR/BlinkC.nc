@@ -8,12 +8,13 @@ module BlinkC @safe()
   uses interface Timer<TMilli> as Timer2;
   uses interface Leds;
   uses interface Boot;
+  uses interface SplitControl;
 }
 implementation
 { 
-	int cnt=0;
   event void Boot.booted()
   {
+		call SplitControl.start();
     call Timer0.startPeriodic( 512 );
   }
  
@@ -22,8 +23,7 @@ implementation
 //		call Leds.set(cnt;
 //		call Leds.led0Toggle();
 //		call Leds.led1Toggle();
-		call Leds.led2Toggle();
-		cnt++;
+//		call Leds.led2Toggle();
   }
   
   event void Timer1.fired()
@@ -33,4 +33,10 @@ implementation
   event void Timer2.fired()
   {
   }
+
+	event void SplitControl.startDone(error_t result){
+	}
+
+	event void SplitControl.stopDone(error_t result){
+	}
 }

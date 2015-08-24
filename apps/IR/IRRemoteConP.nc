@@ -15,17 +15,20 @@ module IRRemoteConP
 {
   provides {
     interface SplitControl;
-    interface Read<uint16_t>;
-    interface SensingCommand;
-  } uses {
+    //interface Read<uint16_t>;
+    //interface SensingCommand;
+  } 
+	uses {
     interface Leds;
     interface Timer<TMilli> as MilliTimer;
     interface Timer<TMilli> as SchedulerTimer;
-    interface GpioInterrupt as GIO1;
-    interface GeneralIO as GPIO1;
-    interface GeneralIO as PWR;
-    interface GeneralIO as IRControl;
-
+    interface GpioInterrupt as Int27;
+    interface GeneralIO as IO27;
+    interface GeneralIO as IO21;
+    interface GeneralIO as IO50;
+    interface GeneralIO as IO51;
+    interface GeneralIO as IO52;
+    interface GeneralIO as IO53;
 
 #ifdef WIZBRIDGE_ENABLE
     interface Wizbridge;
@@ -38,68 +41,89 @@ implementation
   uint32_t schedulerTimerPeriod=0;
 
   task void startDoneTask();
+  task void stopDoneTask();
+
   command error_t SplitControl.start() {
     return post startDoneTask();
   }
 
   task void startDoneTask() {
-    call PWR.makeOutput();
-    call PWR.clr();
-    call GPIO1.makeInput();
-    call GIO1.enableFallingEdge();
-    call IRControl.makeOutput();
-    call IRControl.clr();
-    schedulerTimerPeriod = 61440U * IRREMOTECON_SCHEDULER_TIMER_PERIOD; //wrong period
+		call Leds.led0On();
+    call IO50.makeOutput();
+    call IO50.set();
+    call IO51.makeOutput();
+    call IO51.set();
+    call IO52.makeOutput();
+    call IO52.set();
+    call IO53.makeOutput();
+    call IO53.set();
+    call IO27.makeInput();
+    call IO27.set();
+    //call Int27.enableRisingEdge();		// BTN poll
+    call Int27.enableFallingEdge();		// BTN Push
     signal SplitControl.startDone(SUCCESS);
-  }
-
-  task void stopDoneTask();
-  command error_t SplitControl.stop() {
-    return post stopDoneTask();
   }
 
   task void stopDoneTask() {
     signal SplitControl.stopDone(SUCCESS);
   }
 
+  command error_t SplitControl.stop() {
+    return post stopDoneTask();
+  }
+/*
   command error_t Read.read() {
     signal Read.readDone(SUCCESS, 0x1111);
     return SUCCESS;
   }
-
+*/
   // ir remote controler's power toggle
   void remoteControl() {
     atomic {
-      call IRControl.set();
-      call IRControl.clr();
+      call IO51.set();
+      call IO51.clr();
     }
   }
 
   task void onOffTaskDone() {
-    call IRControl.clr();
-    call GIO1.enableFallingEdge();
-    signal Read.readDone(SUCCESS, 0x1111);
+    //call IO51.clr();
+    //call Int27.enableFallingEdge();
+//    signal Read.readDone(SUCCESS, 0x1111);
   }
 
+	uint8_t ispush=0;
+	uint16_t cnt=0;
   task void onOffFired() {
-    if(!call GPIO1.get()) call MilliTimer.startOneShot(102);
-    else {
-      post onOffTaskDone();
-    }
+		if(ispush){
+			ispush = 0;
+			call Leds.led0Off();
+			call Int27.enableFallingEdge();		// BTN push
+			call MilliTimer.stop();
+    	call IO50.set();
+		}
+		else{
+			ispush = 1;
+			cnt=0;
+			call Leds.led0On();
+			call Int27.enableRisingEdge();		// BTN poll
+			call MilliTimer.startPeriodic(50);
+    	call IO50.clr();
+		}
   }
 
-  async event void GIO1.fired() {
-    /*
-    call GIO1.disable();
-    atomic call IRControl.set();
-    call Leds.led1Toggle();
-    post onOffFired();
-    */
+  async event void Int27.fired() {
+		call Int27.disable();
+		post onOffFired();
     return;
   }
 
   event void MilliTimer.fired() {
-    post onOffFired();
+		if(cnt < 40){
+			call Leds.led1Toggle();
+		}
+		else
+			call Leds.led1Off();
+		cnt++;
   }
 
   bool schedulerIsOn=FALSE;
@@ -138,12 +162,10 @@ implementation
   }
 
   uint16_t cmdCode=0, cmdVal=0;
-  sensing_cmd_msg_t cmdMsg;
+  //sensing_cmd_msg_t cmdMsg;
 
   task void exeCmd() {
-    //error_t result=SUCCESS;
-
-    switch (cmdMsg.cmdCode)
+   /* switch (cmdMsg.cmdCode)
     {
       case IRREMOTECON_SET_SCHEDULER_TIMER_SET :
         schedulerTimerSet(0); //not implementation
@@ -165,14 +187,15 @@ implementation
       default : ;//result = FALSE;
       break;
     }
+		*/
     //signal SensingCommand.cmdDone(result, );
   }
 
-  command error_t SensingCommand.cmd(sensing_cmd_msg_t msg) {
-    cmdMsg = msg;
-    post exeCmd();
-    return SUCCESS;
-  }
+//  command error_t SensingCommand.cmd(uint16_t msg) {
+//    cmdMsg = msg;
+//    post exeCmd();
+//    return SUCCESS;
+//  }
 
 #ifdef WIZBRIDGE_ENABLE
   task void wizbridgeAlarm() {
