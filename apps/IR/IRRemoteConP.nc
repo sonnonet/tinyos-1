@@ -57,8 +57,9 @@ implementation
     call IO52.set();
     call IO53.makeOutput();
     call IO53.set();
+    call IO21.makeOutput();
+    call IO21.set();
     call IO27.makeInput();
-    call IO27.set();
     //call Int27.enableRisingEdge();		// BTN poll
     call Int27.enableFallingEdge();		// BTN Push
     signal SplitControl.startDone(SUCCESS);
@@ -99,7 +100,7 @@ implementation
 			call Leds.led0Off();
 			call Int27.enableFallingEdge();		// BTN push
 			call MilliTimer.stop();
-    	call IO50.set();
+    	call IO50.clr();
 		}
 		else{
 			ispush = 1;
@@ -107,7 +108,7 @@ implementation
 			call Leds.led0On();
 			call Int27.enableRisingEdge();		// BTN poll
 			call MilliTimer.startPeriodic(50);
-    	call IO50.clr();
+    	call IO50.set();
 		}
   }
 

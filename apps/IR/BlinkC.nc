@@ -20,10 +20,6 @@ implementation
  
   event void Timer0.fired()
   {
-//		call Leds.set(cnt;
-//		call Leds.led0Toggle();
-//		call Leds.led1Toggle();
-//		call Leds.led2Toggle();
   }
   
   event void Timer1.fired()
